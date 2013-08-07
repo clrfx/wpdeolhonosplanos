@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Attachments pt_BR version\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-09 09:08-0600\n"
+"PO-Revision-Date: 2013-05-14 01:41-0300\n"
+"Last-Translator: Pedro Markun <pedro@esfera.mobi>\n"
+"Language-Team: Miriam de Paula (Tecsite Estúdio Digital) <tecsite@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: attachments.php:53
+msgid "Attachments requires PHP 5.2 or higher, as does WordPress 3.2+. Attachments has been automatically deactivated."
+msgstr "Attachments pede o PHP 5.2"
+
+#: attachments.php:339
+msgid "Attach"
+msgstr "Anexos"
+
+#: attachments.php:388
+msgid "Delete"
+msgstr "Apagar"
+
+#: attachments.php:392
+msgid "Title"
+msgstr "Título"
+
+#: attachments.php:396
+msgid "Caption"
+msgstr "Descrição do arquivo"
+
+#: attachments.php:444
+msgid "Attachments"
+msgstr "Anexos"
+
+#~ msgid "Attachments Options"
+#~ msgstr "Opções do Attachments"
+
+#~ msgid "Users can only see their own attachments"
+#~ msgstr "Os usuários só poderão ver seus próprios anexos"
+
+#~ msgid "Save"
+#~ msgstr "Salvar"
+
+#~ msgid "Browse Existing"
+#~ msgstr "Pesquisar os anexos existentes"
+
+#~ msgid "Add to Media Library"
+#~ msgstr "Adicionar um arquivo à Biblioteca de Mídia"
+
+#~ msgid ""
+#~ "Available attachments are listed from your <strong>Media Library</"
+#~ "strong>. If you need to upload a new attachment, please close this dialog "
+#~ "and use the available <strong>Add to Media Library</strong> button."
+#~ msgstr ""
+#~ "Os anexos disponíveis são listados em sua <strong>Biblioteca de Mídia</"
+#~ "strong>. Se for necessário fazer upload de um novo anexo, por favor feche "
+#~ "esta janela e use o botão <strong>Adicionar à Biblioteca de Mídia</strong>"
+
+#~ msgid ""
+#~ "Select/deselect an attachment by clicking its thumbnail. When you're done "
+#~ "managing your attachments, click <strong>Apply</strong>."
+#~ msgstr ""
+#~ "Selecionar/ deselecionar um anexo, clicando em sua miniatura. Quando você "
+#~ "terminar de gerenciar seus anexos, clique no botão <strong>Aplicar</"
+#~ "strong>"
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgid "Images"
+#~ msgstr "Imagens"
+
+#~ msgid "Videos"
+#~ msgstr "Vídeos"
+
+#~ msgid "Documents"
+#~ msgstr "Documentos"
+
+#~ msgid "Audio"
+#~ msgstr "Áudio"
+
+#~ msgid "Icon"
+#~ msgstr "Ícone"
+
+#~ msgid "File"
+#~ msgstr "Arquivo"
+
+#~ msgid "Available attachments are listed from your"
+#~ msgstr "Anexos disponíveis estão listados desde"
+
+#, fuzzy
+#~ msgid "Media Library"
+#~ msgstr "Biblioteca de Mídia"
+
+#~ msgid ""
+#~ "If you need to upload a new attachment, please close this dialog and use "
+#~ "the available"
+#~ msgstr ""
+#~ "Se você precisar fazer upload de um novo anexo, por favor feche esta "
+#~ "janela e use o disponível"
+
+#~ msgid "button"
+#~ msgstr "botão"

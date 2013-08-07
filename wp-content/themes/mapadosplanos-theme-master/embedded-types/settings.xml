@@ -1,0 +1,2895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <groups>
+        <group>
+            <ID>1162</ID>
+            <post_content>Etapa de elaboração do Plano</post_content>
+            <post_title>Etapa</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,qs_etapa01,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>a:2:{s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+            </meta>
+            <hash>49d402429d74df0d964f321406214539</hash>
+            <checksum>49d402429d74df0d964f321406214539</checksum>
+            <__types_id>etapa</__types_id>
+            <__types_title>Etapa</__types_title>
+        </group>
+        <group>
+            <ID>1163</ID>
+            <post_content></post_content>
+            <post_title>Questionário - Tem Plano</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>a:3:{s:10:&quot;conditions&quot;;a:1:{s:44:&quot;condition_78588ad415bb2e5d858994925aaf939f-1&quot;;a:3:{s:5:&quot;field&quot;;s:10:&quot;qs_etapa01&quot;;s:9:&quot;operation&quot;;s:1:&quot;=&quot;;s:5:&quot;value&quot;;s:3:&quot;Sim&quot;;}}s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+                <_wp_types_group_fields>,qs_plano01,qs_plano02,qs_plano03,qs_plano04,qs_plano05,qs_plano06_complano,qs_plano07_complano,qs_plano08_complano,qs_plano09,qs_plano10,qs_plano11,qs_plano12,qs_plano13,qs_plano13_other,qs_plano14,qs_plano14_other,qs_plano15,qs_plano16,qs_plano16_other,qs_plano17,qs_plano17_other,qs_plano18,qs_plano18_other,qs_plano19,qs_plano19_other,qs_plano20,qs_plano21,qs_plano22,qs_plano23,qs_plano24,qs_plano24_other,qs_plano25,qs_plano25_other,qs_plano26,</_wp_types_group_fields>
+            </meta>
+            <hash>835574930e22d369f0d6e316f4e51e45</hash>
+            <checksum>835574930e22d369f0d6e316f4e51e45</checksum>
+            <__types_id>questionario-tem-plano</__types_id>
+            <__types_title>Questionário - Tem Plano</__types_title>
+        </group>
+        <group>
+            <ID>1164</ID>
+            <post_content></post_content>
+            <post_title>Questionário - Plano em Elaboração</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,qs_plano01,qs_plano02,qs_plano03,qs_plano04,qs_plano05,qs_plano06_elaboracao,qs_plano07_elaboracao,qs_plano07_elaboracao_other,qs_plano09,qs_plano10,qs_plano11,qs_plano12,qs_plano13,qs_plano13_other,qs_plano14,qs_plano14_other,qs_plano15,qs_plano16,qs_plano16_other,qs_plano17,qs_plano17_other,qs_plano18,qs_plano18_other,qs_plano19,qs_plano19_other,qs_plano20,qs_plano21,qs_plano22,qs_plano23,qs_plano24,qs_plano24_other,qs_plano25,qs_plano25_other,qs_plano26,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>a:3:{s:10:&quot;conditions&quot;;a:1:{s:44:&quot;condition_91761f8cd956d7c2e8977318f1873a74-1&quot;;a:3:{s:5:&quot;field&quot;;s:10:&quot;qs_etapa01&quot;;s:9:&quot;operation&quot;;s:1:&quot;=&quot;;s:5:&quot;value&quot;;s:12:&quot;Elaboração&quot;;}}s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+            </meta>
+            <hash>18430596327b3ead536300cecf345780</hash>
+            <checksum>18430596327b3ead536300cecf345780</checksum>
+            <__types_id>questionario-plano-em-elaboracao</__types_id>
+            <__types_title>Questionário - Plano em Elaboração</__types_title>
+        </group>
+        <group>
+            <ID>1165</ID>
+            <post_content></post_content>
+            <post_title>Questionário - Não tem Plano</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,qs_plano01,qs_plano02,qs_plano03,qs_plano04,qs_plano05,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>a:3:{s:10:&quot;conditions&quot;;a:1:{s:44:&quot;condition_37d51bf76984b4a2a16dd1e17d789872-1&quot;;a:3:{s:5:&quot;field&quot;;s:10:&quot;qs_etapa01&quot;;s:9:&quot;operation&quot;;s:1:&quot;=&quot;;s:5:&quot;value&quot;;s:4:&quot;Não&quot;;}}s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+            </meta>
+            <hash>770abefe704bbdf201085a45154ca912</hash>
+            <checksum>770abefe704bbdf201085a45154ca912</checksum>
+            <__types_id>questionario-nao-tem-plano</__types_id>
+            <__types_title>Questionário - Não tem Plano</__types_title>
+        </group>
+        <group>
+            <ID>1166</ID>
+            <post_content>Este questionário tem como objetivo entender como os munícipios vêm se organizando para elaborar ou revisar seus Planos de Educação. O novo Plano Nacional de Educação definirá um prazo para que todos os municípios brasileiros construam ou revisem seus planos de educação. 
+
+As informações preenchidas neste questionário serão divulgadas publicamente, logo é fundamental que o/a responsável pelo preenchimento pela gestão municipal preencha as informações com o máximo de fidedignidade.</post_content>
+            <post_title>Questionário - Cadastro</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>a:2:{s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+                <_wp_types_group_fields>,qs_cadastro01,qs_cadastro02,qs_cadastro03,qs_cadastro03_other,qs_cadastro04,qs_cadastro05,qs_cadastro06,</_wp_types_group_fields>
+            </meta>
+            <hash>b4e543055138f09f1437f5ff56058807</hash>
+            <checksum>b4e543055138f09f1437f5ff56058807</checksum>
+            <__types_id>questionario-cadastro</__types_id>
+            <__types_title>Questionário - Cadastro</__types_title>
+        </group>
+        <group>
+            <ID>1167</ID>
+            <post_content></post_content>
+            <post_title>Munic2011</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,municipio,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wp_types_group_fields>,a187,a171,a195,a188,a183,a184,a185,a186,a168,a169,a167,a489,a173,a174,a175,a176,a177,a178,a179,a180,a181,a182,</_wp_types_group_fields>
+                <_wpcf_conditional_display>a:3:{s:10:&quot;conditions&quot;;a:1:{s:44:&quot;condition_39f1de89200586a9905b7033a60e7d51-1&quot;;a:3:{s:5:&quot;field&quot;;s:13:&quot;qs_cadastro01&quot;;s:9:&quot;operation&quot;;s:1:&quot;=&quot;;s:5:&quot;value&quot;;s:3:&quot;000&quot;;}}s:8:&quot;relation&quot;;s:3:&quot;AND&quot;;s:6:&quot;custom&quot;;s:0:&quot;&quot;;}</_wpcf_conditional_display>
+            </meta>
+            <hash>8edfbe51ff90e402807a376f7b906082</hash>
+            <checksum>8edfbe51ff90e402807a376f7b906082</checksum>
+            <__types_id>munic2011</__types_id>
+            <__types_title>Munic2011</__types_title>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <id>a187</id>
+            <slug>a187</slug>
+            <type>radio</type>
+            <name>Possui Plano</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-f1c8973f0caf7fd5128d0a9faedf4e3d-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-f1c8973f0caf7fd5128d0a9faedf4e3d-2>
+                    <wpcf-fields-radio-option-4f4e2b23b63dbab5edbc3e9da5da0b6b-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-4f4e2b23b63dbab5edbc3e9da5da0b6b-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a187</__types_id>
+            <__types_title>Possui Plano</__types_title>
+            <hash>4487fa5cbcf24bcbd535d2d7fc6e3ab5</hash>
+            <checksum>4487fa5cbcf24bcbd535d2d7fc6e3ab5</checksum>
+        </field>
+        <field>
+            <id>a171</id>
+            <slug>a171</slug>
+            <type>radio</type>
+            <name>Sistema Municipal de Ensino</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-7b2bc9c02a6c1322e6aa348971746ec7-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-7b2bc9c02a6c1322e6aa348971746ec7-2>
+                    <wpcf-fields-radio-option-6351e0f828d6cc17bc70f3e0d3bca679-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-6351e0f828d6cc17bc70f3e0d3bca679-1>
+                    <default>no-default</default>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a171</__types_id>
+            <__types_title>Sistema Municipal de Ensino</__types_title>
+            <hash>1f48ce98bac2b03155a6e3ef883c7ebe</hash>
+            <checksum>1f48ce98bac2b03155a6e3ef883c7ebe</checksum>
+        </field>
+        <field>
+            <id>a195</id>
+            <slug>a195</slug>
+            <type>radio</type>
+            <name>Fundo Municipal de Educação</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-1a67d6a9c16c9b00df19052a26cb559d-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-1a67d6a9c16c9b00df19052a26cb559d-2>
+                    <wpcf-fields-radio-option-3e1b1365217571e9248b7ac7cde8ccca-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-3e1b1365217571e9248b7ac7cde8ccca-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a195</__types_id>
+            <__types_title>Fundo Municipal de Educação</__types_title>
+            <hash>51aa1f2f41bcbca53f8444d9bca80493</hash>
+            <checksum>51aa1f2f41bcbca53f8444d9bca80493</checksum>
+        </field>
+        <field>
+            <id>a188</id>
+            <slug>a188</slug>
+            <type>radio</type>
+            <name>Conselho Municipal de Educação</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-2ca3604d2c4c2ed738f44569624efeb4-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-2ca3604d2c4c2ed738f44569624efeb4-2>
+                    <wpcf-fields-radio-option-a3a6545816d8514e90e64918631c994e-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-a3a6545816d8514e90e64918631c994e-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a188</__types_id>
+            <__types_title>Conselho Municipal de Educação</__types_title>
+            <hash>ad22e7f396c00660a27d19709734388a</hash>
+            <checksum>ad22e7f396c00660a27d19709734388a</checksum>
+        </field>
+        <field>
+            <id>a183</id>
+            <slug>a183</slug>
+            <type>radio</type>
+            <name>Conselho de Controle e Acompanhamento Social do FUNDEB</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-89fd5ecbdfbc702f5a8fb878a26a607e-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-89fd5ecbdfbc702f5a8fb878a26a607e-2>
+                    <wpcf-fields-radio-option-95aff2aca8ed14b5c244eac242e25997-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>Não</display_value>
+                    </wpcf-fields-radio-option-95aff2aca8ed14b5c244eac242e25997-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a183</__types_id>
+            <__types_title>Conselho de Controle e Acompanhamento Social do FUNDEB</__types_title>
+            <hash>0e9e5cbe3f9f21d7283282fc823c49f1</hash>
+            <checksum>0e9e5cbe3f9f21d7283282fc823c49f1</checksum>
+        </field>
+        <field>
+            <id>a184</id>
+            <slug>a184</slug>
+            <type>radio</type>
+            <name>Conselhos escolares</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-a4e3fe73b897df219b5412246be7be67-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-a4e3fe73b897df219b5412246be7be67-2>
+                    <wpcf-fields-radio-option-e818dd0ddb5dcc9b494190b7c1b25fc1-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>Não</display_value>
+                    </wpcf-fields-radio-option-e818dd0ddb5dcc9b494190b7c1b25fc1-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a184</__types_id>
+            <__types_title>Conselhos escolares</__types_title>
+            <hash>cc4f2101ccb921b1b7c04f4c607ac5d6</hash>
+            <checksum>cc4f2101ccb921b1b7c04f4c607ac5d6</checksum>
+        </field>
+        <field>
+            <id>a185</id>
+            <slug>a185</slug>
+            <type>radio</type>
+            <name>Conselho de alimentação escolar</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-e7523afdbb98fe7e3160bdf9884b91c7-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-e7523afdbb98fe7e3160bdf9884b91c7-2>
+                    <wpcf-fields-radio-option-686441d4423402b63cee394cc935f5ed-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>Não</display_value>
+                    </wpcf-fields-radio-option-686441d4423402b63cee394cc935f5ed-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a185</__types_id>
+            <__types_title>Conselho de alimentação escolar</__types_title>
+            <hash>6df845dd08a85eb2073cea638ad69aaa</hash>
+            <checksum>6df845dd08a85eb2073cea638ad69aaa</checksum>
+        </field>
+        <field>
+            <id>a186</id>
+            <slug>a186</slug>
+            <type>radio</type>
+            <name>Conselho de transporte escolar</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-d3eb6f7e30cb2d5305c2f92f3f6517cf-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-d3eb6f7e30cb2d5305c2f92f3f6517cf-2>
+                    <wpcf-fields-radio-option-e55cb756e8f1635bd320e01b20abeb52-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-e55cb756e8f1635bd320e01b20abeb52-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a186</__types_id>
+            <__types_title>Conselho de transporte escolar</__types_title>
+            <hash>68afd78aa55c7056e4e2641e6b82a80d</hash>
+            <checksum>68afd78aa55c7056e4e2641e6b82a80d</checksum>
+        </field>
+        <field>
+            <id>a168</id>
+            <slug>a168</slug>
+            <type>radio</type>
+            <name>Combate à discriminação nas escolas</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-3d3c3823835d37ddeec62fb97b76d0ca-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-3d3c3823835d37ddeec62fb97b76d0ca-2>
+                    <wpcf-fields-radio-option-488767efa12948ddb7848ef974ceebaf-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-488767efa12948ddb7848ef974ceebaf-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a168</__types_id>
+            <__types_title>Combate à discriminação nas escolas</__types_title>
+            <hash>d5f3580d0b7481f68f70736dea0eca3c</hash>
+            <checksum>d5f3580d0b7481f68f70736dea0eca3c</checksum>
+        </field>
+        <field>
+            <id>a169</id>
+            <slug>a169</slug>
+            <type>radio</type>
+            <name>Combate à violência nas escolas</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-b9312e56f5b8e45c428a3226b5354b8b-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-b9312e56f5b8e45c428a3226b5354b8b-2>
+                    <wpcf-fields-radio-option-1cf5247a81a9456711d60c73b7714e5f-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-1cf5247a81a9456711d60c73b7714e5f-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a169</__types_id>
+            <__types_title>Combate à violência nas escolas</__types_title>
+            <hash>b3c7f71ef310e9b88fb002b09ad5a1b7</hash>
+            <checksum>b3c7f71ef310e9b88fb002b09ad5a1b7</checksum>
+        </field>
+        <field>
+            <id>a167</id>
+            <slug>a167</slug>
+            <type>radio</type>
+            <name>Formação continuada de professores na educação especial</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-3f61004a25d637e47c319cbe71374719-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-3f61004a25d637e47c319cbe71374719-2>
+                    <wpcf-fields-radio-option-90d1f65ce5aec8eb168bf78294a55b4b-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-90d1f65ce5aec8eb168bf78294a55b4b-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a167</__types_id>
+            <__types_title>Formação continuada de professores na educação especial</__types_title>
+            <hash>1b1ba81fc540057abee36d3e0c2ab473</hash>
+            <checksum>1b1ba81fc540057abee36d3e0c2ab473</checksum>
+        </field>
+        <field>
+            <id>a489</id>
+            <slug>a489</slug>
+            <type>radio</type>
+            <name>No município, há programa ou ações de educação em direitos humanos?</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-f0f819c9098b0ed1281d383354662db5-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-f0f819c9098b0ed1281d383354662db5-2>
+                    <wpcf-fields-radio-option-db3d7d9957b7881e4d57e9926af79734-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-db3d7d9957b7881e4d57e9926af79734-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a489</__types_id>
+            <__types_title>No município, há programa ou ações de educação em direitos humanos?</__types_title>
+            <hash>82db7828c5240c5d567883e97051f20e</hash>
+            <checksum>82db7828c5240c5d567883e97051f20e</checksum>
+        </field>
+        <field>
+            <id>a164</id>
+            <name>Possui Plano</name>
+            <description></description>
+            <type>radio</type>
+            <slug>a164</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-f1c8973f0caf7fd5128d0a9faedf4e3d-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-f1c8973f0caf7fd5128d0a9faedf4e3d-2>
+                    <wpcf-fields-radio-option-4f4e2b23b63dbab5edbc3e9da5da0b6b-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-4f4e2b23b63dbab5edbc3e9da5da0b6b-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a164</__types_id>
+            <__types_title>Possui Plano</__types_title>
+            <hash>cbbe87a6f4eb33f6465eb2ec778ddf08</hash>
+            <checksum>cbbe87a6f4eb33f6465eb2ec778ddf08</checksum>
+        </field>
+        <field>
+            <id>a173</id>
+            <slug>a173</slug>
+            <type>radio</type>
+            <name>Ensino fundamental</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-aa8c875e7f97ea0bc8333815211bfe43-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-aa8c875e7f97ea0bc8333815211bfe43-2>
+                    <wpcf-fields-radio-option-88823bb6b8537a65ed51caebddf120bf-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-88823bb6b8537a65ed51caebddf120bf-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a173</__types_id>
+            <__types_title>Ensino fundamental</__types_title>
+            <hash>d15e4f473f7a1611340a64c331bfcac0</hash>
+            <checksum>d15e4f473f7a1611340a64c331bfcac0</checksum>
+        </field>
+        <field>
+            <id>a174</id>
+            <slug>a174</slug>
+            <type>radio</type>
+            <name>Educação infantil</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-1230d45880b2a75e0caca82440e6d4e7-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-1230d45880b2a75e0caca82440e6d4e7-2>
+                    <wpcf-fields-radio-option-af8fa1c0af11f8cfc4838b3ae9328dc2-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-af8fa1c0af11f8cfc4838b3ae9328dc2-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a174</__types_id>
+            <__types_title>Educação infantil</__types_title>
+            <hash>d473ac81abc6ba67d8592ad90b5e7cc4</hash>
+            <checksum>d473ac81abc6ba67d8592ad90b5e7cc4</checksum>
+        </field>
+        <field>
+            <id>a175</id>
+            <slug>a175</slug>
+            <type>radio</type>
+            <name>Educação de jovens e adultos</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-d9d6024c6664d948b8219f8142b7fe70-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-d9d6024c6664d948b8219f8142b7fe70-2>
+                    <wpcf-fields-radio-option-f9161117b2957efa1ce87f76af8d1b8c-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-f9161117b2957efa1ce87f76af8d1b8c-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a175</__types_id>
+            <__types_title>Educação de jovens e adultos</__types_title>
+            <hash>97f06ce2b2ed642ceb969d4a65baf8da</hash>
+            <checksum>97f06ce2b2ed642ceb969d4a65baf8da</checksum>
+        </field>
+        <field>
+            <id>a176</id>
+            <slug>a176</slug>
+            <type>radio</type>
+            <name>Educação especial</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-efb3c4275571bc63df7e19790cf0b69f-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-efb3c4275571bc63df7e19790cf0b69f-2>
+                    <wpcf-fields-radio-option-b905059506214191249296142c4df456-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-b905059506214191249296142c4df456-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a176</__types_id>
+            <__types_title>Educação especial</__types_title>
+            <hash>190a631149e3541a85a6efc95eb6d608</hash>
+            <checksum>190a631149e3541a85a6efc95eb6d608</checksum>
+        </field>
+        <field>
+            <id>a177</id>
+            <slug>a177</slug>
+            <type>radio</type>
+            <name>Ensino médio</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-c4c68f549ff6e36a68f68f06c9e50314-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-c4c68f549ff6e36a68f68f06c9e50314-2>
+                    <wpcf-fields-radio-option-b28432d6fecb4285048b118055bf5628-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-b28432d6fecb4285048b118055bf5628-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a177</__types_id>
+            <__types_title>Ensino médio</__types_title>
+            <hash>1cc35f5eb43c17032bd3f8ad6af21759</hash>
+            <checksum>1cc35f5eb43c17032bd3f8ad6af21759</checksum>
+        </field>
+        <field>
+            <id>a178</id>
+            <slug>a178</slug>
+            <type>radio</type>
+            <name>Ensino profissional</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-9e57f15406252b8d3b06e2296f8be3f7-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-9e57f15406252b8d3b06e2296f8be3f7-2>
+                    <wpcf-fields-radio-option-9fac5e55048c1a8d55b013557529ab35-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-9fac5e55048c1a8d55b013557529ab35-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a178</__types_id>
+            <__types_title>Ensino profissional</__types_title>
+            <hash>bc5084c9308ebb30c3d595faeec5c3bc</hash>
+            <checksum>bc5084c9308ebb30c3d595faeec5c3bc</checksum>
+        </field>
+        <field>
+            <id>a179</id>
+            <slug>a179</slug>
+            <type>radio</type>
+            <name>Ensino superior</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-79c92e03244eebc492241c8f4a0194d9-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-79c92e03244eebc492241c8f4a0194d9-2>
+                    <wpcf-fields-radio-option-0d0cfd6afbb14c9b27c17d431dda1217-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-0d0cfd6afbb14c9b27c17d431dda1217-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a179</__types_id>
+            <__types_title>Ensino superior</__types_title>
+            <hash>5301bbd6ed88cad28aa7da92f50a3d1b</hash>
+            <checksum>5301bbd6ed88cad28aa7da92f50a3d1b</checksum>
+        </field>
+        <field>
+            <id>a180</id>
+            <slug>a180</slug>
+            <type>radio</type>
+            <name>Educação no campo</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-e6f0d0e7f2710faa1d7237d845165b64-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-e6f0d0e7f2710faa1d7237d845165b64-2>
+                    <wpcf-fields-radio-option-1188481a9847e6a5d7b55eab2915bcfb-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-1188481a9847e6a5d7b55eab2915bcfb-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a180</__types_id>
+            <__types_title>Educação no campo</__types_title>
+            <hash>037320f09797400115dfbe309c36d4de</hash>
+            <checksum>037320f09797400115dfbe309c36d4de</checksum>
+        </field>
+        <field>
+            <id>a181</id>
+            <slug>a181</slug>
+            <type>radio</type>
+            <name>Educação indigena</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-02ff2f1af732202cb2d3130a9b795aaa-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-02ff2f1af732202cb2d3130a9b795aaa-2>
+                    <wpcf-fields-radio-option-5f2e675c45607bee1b2ddfa00a84b319-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-5f2e675c45607bee1b2ddfa00a84b319-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a181</__types_id>
+            <__types_title>Educação indigena</__types_title>
+            <hash>2588b48cf8e117460a0312bf90165af0</hash>
+            <checksum>2588b48cf8e117460a0312bf90165af0</checksum>
+        </field>
+        <field>
+            <id>a182</id>
+            <slug>a182</slug>
+            <type>radio</type>
+            <name>Educação ambiental</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-4f76575c678e2e08471131e1a4d2db41-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-4f76575c678e2e08471131e1a4d2db41-2>
+                    <wpcf-fields-radio-option-9def2d67a97f2bdb8bbede1b7367bc31-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-9def2d67a97f2bdb8bbede1b7367bc31-1>
+                    <default>no-default</default>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>a182</__types_id>
+            <__types_title>Educação ambiental</__types_title>
+            <hash>5cd61d89386bc9b5022611abb7d72be2</hash>
+            <checksum>5cd61d89386bc9b5022611abb7d72be2</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro01</id>
+            <name>Nome do Secretário(a)</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro01</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro01</__types_id>
+            <__types_title>Nome do Secretário(a)</__types_title>
+            <hash>e2b4bd1f45d0aa9354270ccb15d0cb65</hash>
+            <checksum>e2b4bd1f45d0aa9354270ccb15d0cb65</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro02</id>
+            <name>Nome da pessoa responsável pelo preenchimento</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro02</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro02</__types_id>
+            <__types_title>Nome da pessoa responsável pelo preenchimento</__types_title>
+            <hash>58812e67e779b5a85917240580b90a31</hash>
+            <checksum>58812e67e779b5a85917240580b90a31</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro03</id>
+            <name>Cargo/função da pessoa responsável pelo preenchimento</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_cadastro03</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-e3d8eda35c4219887e57908612c51baa-2>
+                        <title>Dirigente Municipal de Educação</title>
+                        <value>Dirigente Municipal de Educação</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-e3d8eda35c4219887e57908612c51baa-2>
+                    <wpcf-fields-radio-option-5b53f20b53c0b030fca626dabf555ff4-1>
+                        <title>Assessor(a) do(a) Dirigente Municipal de Educação</title>
+                        <value>Assessor(a) do(a) Dirigente Municipal de Educação</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-5b53f20b53c0b030fca626dabf555ff4-1>
+                    <wpcf-fields-radio-option-7ca8802dd41feed467e8b53adb93c8cc-1>
+                        <title>Coordenador(a) de área/programa da Secretaria</title>
+                        <value>Coordenador(a) de área/programa da Secretaria</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-7ca8802dd41feed467e8b53adb93c8cc-1>
+                    <wpcf-fields-radio-option-843710f13040f4af387dd76714eb39cb-1>
+                        <title>Diretor(a) regional de ensino</title>
+                        <value>Diretor(a) regional de ensino</value>
+                        <display_value>4</display_value>
+                    </wpcf-fields-radio-option-843710f13040f4af387dd76714eb39cb-1>
+                    <wpcf-fields-radio-option-864c83a8cb18bd4791bbcebba7c7776e-1>
+                        <title>Outras</title>
+                        <value>Outras</value>
+                        <display_value>5</display_value>
+                    </wpcf-fields-radio-option-864c83a8cb18bd4791bbcebba7c7776e-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro03</__types_id>
+            <__types_title>Cargo/função da pessoa responsável pelo preenchimento</__types_title>
+            <hash>d5cdb855031d94f52048e16586b496a8</hash>
+            <checksum>d5cdb855031d94f52048e16586b496a8</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro03_other</id>
+            <name>Quais?</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro03_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <conditions>
+                        <condition_c4b81c79a8820291ed1b4ea8c9b31985-1>
+                            <field>qs_cadastro03</field>
+                            <operation>=</operation>
+                            <value>Outras</value>
+                        </condition_c4b81c79a8820291ed1b4ea8c9b31985-1>
+                    </conditions>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro03_other</__types_id>
+            <__types_title>Quais?</__types_title>
+            <hash>dd7d0effb081b4831b9bd259704850c2</hash>
+            <checksum>dd7d0effb081b4831b9bd259704850c2</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro04</id>
+            <name>Telefone</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro04</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro04</__types_id>
+            <__types_title>Telefone</__types_title>
+            <hash>90c69b8b73fe06e86199011d185c4aa5</hash>
+            <checksum>90c69b8b73fe06e86199011d185c4aa5</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro05</id>
+            <name>E-mail</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro05</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro05</__types_id>
+            <__types_title>E-mail</__types_title>
+            <hash>c31a00738bd77e4da4bc74bf92824f04</hash>
+            <checksum>c31a00738bd77e4da4bc74bf92824f04</checksum>
+        </field>
+        <field>
+            <id>qs_cadastro06</id>
+            <name>Endereço postal</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_cadastro06</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_cadastro06</__types_id>
+            <__types_title>Endereço postal</__types_title>
+            <hash>f148329b5d6e85667987d7e498fa2e10</hash>
+            <checksum>f148329b5d6e85667987d7e498fa2e10</checksum>
+        </field>
+        <field>
+            <id>qs_plano01</id>
+            <name>Seu município possui Sistema Municipal de Ensino?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano01</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-84c78e625443dd7a96cc07d9db4d3c44-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-84c78e625443dd7a96cc07d9db4d3c44-2>
+                    <wpcf-fields-radio-option-8d7e75e39c1609fbfbd1df49bf65a1ba-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-8d7e75e39c1609fbfbd1df49bf65a1ba-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano01</__types_id>
+            <__types_title>Seu município possui Sistema Municipal de Ensino?</__types_title>
+            <hash>2fc70eef849de1ac4c07152189ba3ed6</hash>
+            <checksum>2fc70eef849de1ac4c07152189ba3ed6</checksum>
+        </field>
+        <field>
+            <id>qs_plano02</id>
+            <name>Seu município possui Conselho Municipal de Educação em atividade?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano02</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-0dd1bde21a2c891267e43ce50a55f843-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-0dd1bde21a2c891267e43ce50a55f843-2>
+                    <wpcf-fields-radio-option-d3ca9e5dd23c75fca29130e4bf206101-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-d3ca9e5dd23c75fca29130e4bf206101-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano02</__types_id>
+            <__types_title>Seu município possui Conselho Municipal de Educação em atividade?</__types_title>
+            <hash>b289af5e66dbb0e35fa9c6d37979852f</hash>
+            <checksum>b289af5e66dbb0e35fa9c6d37979852f</checksum>
+        </field>
+        <field>
+            <id>qs_plano03</id>
+            <name>Seu município possui plano de carreira e de remuneração para o magistério?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano03</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-aac9578522896baba3346ab99cb5c861-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-aac9578522896baba3346ab99cb5c861-2>
+                    <wpcf-fields-radio-option-9a95c1444869cae12221192aac61acfe-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-9a95c1444869cae12221192aac61acfe-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano03</__types_id>
+            <__types_title>Seu município possui plano de carreira e de remuneração para o magistério?</__types_title>
+            <hash>ce17aa1786f9153de79e6668b90a4d1b</hash>
+            <checksum>ce17aa1786f9153de79e6668b90a4d1b</checksum>
+        </field>
+        <field>
+            <id>qs_plano04</id>
+            <name>O Secretário ou a Secretária de Educação de seu município é ordenador(a) de despesas?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano04</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-d78be35ac2f2eb89239de62d0e005c13-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-d78be35ac2f2eb89239de62d0e005c13-2>
+                    <wpcf-fields-radio-option-c19c3a4ec14c68c669b39a2ae1825638-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-c19c3a4ec14c68c669b39a2ae1825638-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano04</__types_id>
+            <__types_title>O Secretário ou a Secretária de Educação de seu município é ordenador(a) de despesas?</__types_title>
+            <hash>12a665334732dcbb63a2ab2b8ad84231</hash>
+            <checksum>12a665334732dcbb63a2ab2b8ad84231</checksum>
+        </field>
+        <field>
+            <id>qs_plano05</id>
+            <name>Seu município possui Plano de Educação em vigência?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano05</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-eff56b3c6cadbabee2210225b0ff887b-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-eff56b3c6cadbabee2210225b0ff887b-2>
+                    <wpcf-fields-radio-option-5157089fb04cb09e904af689ca97cfe3-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-5157089fb04cb09e904af689ca97cfe3-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano05</__types_id>
+            <__types_title>Seu município possui Plano de Educação em vigência?</__types_title>
+            <hash>fad67acec65ff51971d8fe971b5fef81</hash>
+            <checksum>fad67acec65ff51971d8fe971b5fef81</checksum>
+        </field>
+        <field>
+            <id>qs_plano06_elaboracao</id>
+            <name>Seu município está elaborando o Plano de Educação?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano06_elaboracao</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-02d941da53369bb5c4b2ca8766bd582d-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-02d941da53369bb5c4b2ca8766bd582d-2>
+                    <wpcf-fields-radio-option-b5ec713c987cab783efeb74fed34a4e0-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-b5ec713c987cab783efeb74fed34a4e0-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano06_elaboracao</__types_id>
+            <__types_title>Seu município está elaborando o Plano de Educação?</__types_title>
+            <hash>0affa55b16c00585d40d7336d1c02a52</hash>
+            <checksum>0affa55b16c00585d40d7336d1c02a52</checksum>
+        </field>
+        <field>
+            <id>qs_plano07_elaboracao</id>
+            <name>Em qual momento se encontra o processo de elaboração do Plano de Educação de seu município?</name>
+            <description>Se necessário, assinale mais de uma alternativa</description>
+            <type>checkboxes</type>
+            <slug>qs_plano07_elaboracao</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-8a6e0bb4c8d7bbdaae6f1ecc2715b7eb-2>
+                        <title>Definição de grupo/setor/instância coordenadora do processo</title>
+                        <set_value>Definição de grupo/setor/instância coordenadora do processo</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8a6e0bb4c8d7bbdaae6f1ecc2715b7eb-2>
+                    <wpcf-fields-checkboxes-option-b5242eb798681ce76a85c0686de03bcf-1>
+                        <title>Diagnóstico da situação educacional do município</title>
+                        <set_value>Diagnóstico da situação educacional do município</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b5242eb798681ce76a85c0686de03bcf-1>
+                    <wpcf-fields-checkboxes-option-2d7e0038cceb72fdee0e1b00423b4ac4-1>
+                        <title>Levantamento de propostas junto à sociedade civil e/ou a outros setores</title>
+                        <set_value>Levantamento de propostas junto à sociedade civil e/ou a outros setores</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-2d7e0038cceb72fdee0e1b00423b4ac4-1>
+                    <wpcf-fields-checkboxes-option-c5842c724167884d7ae0abb131a598bb-1>
+                        <title>Conferência Municipal de Educação</title>
+                        <set_value>Conferência Municipal de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-c5842c724167884d7ae0abb131a598bb-1>
+                    <wpcf-fields-checkboxes-option-29a29334f73f9854d2ddf5bc4f7d8424-1>
+                        <title>Em fase de elaboração do Projeto de Lei pelo Poder Executivo Municipal</title>
+                        <set_value>Em fase de elaboração do Projeto de Lei pelo Poder Executivo Municipal</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-29a29334f73f9854d2ddf5bc4f7d8424-1>
+                    <wpcf-fields-checkboxes-option-61201f78fac373051a80909ce53c2ecb-1>
+                        <title>Tramitação do Projeto de Lei na Câmara Municipal</title>
+                        <set_value>Tramitação do Projeto de Lei na Câmara Municipal</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-61201f78fac373051a80909ce53c2ecb-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano07_elaboracao</__types_id>
+            <__types_title>Em qual momento se encontra o processo de elaboração do Plano de Educação de seu município?</__types_title>
+            <hash>52e13f31a1c88db01857c3e829ecd95d</hash>
+            <checksum>52e13f31a1c88db01857c3e829ecd95d</checksum>
+        </field>
+        <field>
+            <id>qs_plano07_elaboracao_other</id>
+            <name>Outras</name>
+            <description>Quais?</description>
+            <type>textfield</type>
+            <slug>qs_plano07_elaboracao_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano07_elaboracao_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>bf523493c927ce406346fe61b5338c06</hash>
+            <checksum>bf523493c927ce406346fe61b5338c06</checksum>
+        </field>
+        <field>
+            <id>qs_plano06_complano</id>
+            <name>Quando o Plano de Educação foi aprovado pelo Legislativo e entrou em vigência?</name>
+            <description>Ano</description>
+            <type>textfield</type>
+            <slug>qs_plano06_complano</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano06_complano</__types_id>
+            <__types_title>Quando o Plano de Educação foi aprovado pelo Legislativo e entrou em vigência?</__types_title>
+            <hash>b7a4c759b522e289ba3d094812689958</hash>
+            <checksum>b7a4c759b522e289ba3d094812689958</checksum>
+        </field>
+        <field>
+            <id>qs_plano07_complano</id>
+            <name>O Plano de Educação já foi avaliado nos últimos quatro anos?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano07_complano</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-d25451955940cc60d5b9a106ae3ee7bf-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-d25451955940cc60d5b9a106ae3ee7bf-2>
+                    <wpcf-fields-radio-option-82af8180c9869e115b6db14530dfd23e-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-82af8180c9869e115b6db14530dfd23e-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano07_complano</__types_id>
+            <__types_title>O Plano de Educação já foi avaliado nos últimos quatro anos?</__types_title>
+            <hash>ad843c7494ab2899dda5083e1d84d965</hash>
+            <checksum>ad843c7494ab2899dda5083e1d84d965</checksum>
+        </field>
+        <field>
+            <id>qs_plano08_complano</id>
+            <name>As metas do Plano de Educação estão contempladas no Plano Plurianual do Município (PPA) e nas leis orçamentárias?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano08_complano</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-de2dc98d5044ac678a01e712a4847f9f-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-de2dc98d5044ac678a01e712a4847f9f-2>
+                    <wpcf-fields-radio-option-6253b2c287208c23d63ee634242268dd-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-6253b2c287208c23d63ee634242268dd-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano08_complano</__types_id>
+            <__types_title>As metas do Plano de Educação estão contempladas no Plano Plurianual do Município (PPA) e nas leis orçamentárias?</__types_title>
+            <hash>339be2907fb169919b82ac5af35c809f</hash>
+            <checksum>339be2907fb169919b82ac5af35c809f</checksum>
+        </field>
+        <field>
+            <id>qs_etapa01</id>
+            <name>Tem plano?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_etapa01</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-3fc1ea8ccf6fbb2686e1dbfaf6d961a9-2>
+                        <title>Não tem plano</title>
+                        <value>Não</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-3fc1ea8ccf6fbb2686e1dbfaf6d961a9-2>
+                    <wpcf-fields-radio-option-30f938525caebc9ae98d017a6d9d53ed-1>
+                        <title>Plano em elaboração</title>
+                        <value>Elaboração</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-30f938525caebc9ae98d017a6d9d53ed-1>
+                    <wpcf-fields-radio-option-5de06addb1a05b101538671f00f46936-1>
+                        <title>Tem plano</title>
+                        <value>Sim</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-5de06addb1a05b101538671f00f46936-1>
+                </options>
+                <display>db</display>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This Field is required</message>
+                    </required>
+                </validate>
+                <is_new>1</is_new>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_etapa01</__types_id>
+            <__types_title>Tem plano?</__types_title>
+            <hash>0d2272b4612a7039a5e066ed8ae9442f</hash>
+            <checksum>0d2272b4612a7039a5e066ed8ae9442f</checksum>
+        </field>
+        <field>
+            <id>qs_plano09</id>
+            <name>Há investimento na comunicação sobre o processo de elaboração do Plano de Educação?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano09</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-18a3d1136daa66081f39151389a058f0-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-18a3d1136daa66081f39151389a058f0-2>
+                    <wpcf-fields-radio-option-61825108bc87a254b49b1abf86ae6956-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-61825108bc87a254b49b1abf86ae6956-1>
+                    <wpcf-fields-radio-option-1bf361b38cdabc244ff31248097bad14-1>
+                        <title>Não sabe</title>
+                        <value>Não sabe</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-1bf361b38cdabc244ff31248097bad14-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano09</__types_id>
+            <__types_title>Há investimento na comunicação sobre o processo de elaboração do Plano de Educação?</__types_title>
+            <hash>1c47382cf08495f00ec74bad44b6bd56</hash>
+            <checksum>1c47382cf08495f00ec74bad44b6bd56</checksum>
+        </field>
+        <field>
+            <id>qs_plano10</id>
+            <name>Quais são os instrumentos/meios de comunicação utilizados?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano10</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-ede801120807f06e356b0bb2be7f274b-2>
+                        <title>Rádio e televisão</title>
+                        <set_value>Rádio e televisão</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-ede801120807f06e356b0bb2be7f274b-2>
+                    <wpcf-fields-checkboxes-option-4ace4354a6649e27a7a7b0218deee768-1>
+                        <title>Cartazes, jornais e comunicados no sistema de transporte público (ônibus, vans, trem, metrô etc)</title>
+                        <set_value>Cartazes, jornais e comunicados no sistema de transporte público (ônibus, vans, trem, metrô etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-4ace4354a6649e27a7a7b0218deee768-1>
+                    <wpcf-fields-checkboxes-option-8e81be587ccd2d9eef9c81d8e008453b-1>
+                        <title>Folhetos e cartazes para unidades educacionais (públicas e privadas)</title>
+                        <set_value>Folhetos e cartazes para unidades educacionais (públicas e privadas)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8e81be587ccd2d9eef9c81d8e008453b-1>
+                    <wpcf-fields-checkboxes-option-8b1d79538062e4bf8f4fe482e1599b6a-1>
+                        <title>Carros de som nas ruas e praças</title>
+                        <set_value>Carros de som nas ruas e praças</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8b1d79538062e4bf8f4fe482e1599b6a-1>
+                    <wpcf-fields-checkboxes-option-223a97d62e551588cca28b9b76bfe99d-1>
+                        <title>Internet e redes sociais</title>
+                        <set_value>Internet e redes sociais</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-223a97d62e551588cca28b9b76bfe99d-1>
+                    <wpcf-fields-checkboxes-option-273bea1ad216652f3032796c1034c485-1>
+                        <title>Outdoors em espaços públicos</title>
+                        <set_value>Outdoors em espaços públicos</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-273bea1ad216652f3032796c1034c485-1>
+                    <wpcf-fields-checkboxes-option-219acb58842b4c48a53d99999f237621-1>
+                        <title>Folhetos e cartazes em espaços públicos (postos de saúde, bibliotecas, centro comunitários, centros culturais, etc.)</title>
+                        <set_value>Folhetos e cartazes em espaços públicos (postos de saúde, bibliotecas, centro comunitários, centros culturais, etc.)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-219acb58842b4c48a53d99999f237621-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano10</__types_id>
+            <__types_title>Quais são os instrumentos/meios de comunicação utilizados?</__types_title>
+            <hash>85384c9ebe4ff4f5c262f8368b57e0e5</hash>
+            <checksum>85384c9ebe4ff4f5c262f8368b57e0e5</checksum>
+        </field>
+        <field>
+            <id>qs_plano11</id>
+            <name>A comunicação do processo se dá</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano11</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-7b3460e16ad9f28f94902763cd1fc07b-2>
+                        <title>Junto à rede de ensino municipal</title>
+                        <set_value>Junto à rede de ensino municipal</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-7b3460e16ad9f28f94902763cd1fc07b-2>
+                    <wpcf-fields-checkboxes-option-84f6f070c453192416b3fc4f59b03f30-1>
+                        <title>Junto às redes de ensino estadual</title>
+                        <set_value>Junto às redes de ensino estadual</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-84f6f070c453192416b3fc4f59b03f30-1>
+                    <wpcf-fields-checkboxes-option-f4c80691dec86700f173354749c3ee7f-1>
+                        <title>Junto à rede de ensino federal</title>
+                        <set_value>Junto à rede de ensino federal</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f4c80691dec86700f173354749c3ee7f-1>
+                    <wpcf-fields-checkboxes-option-05b179ba995d4688891b7ac31ccc485a-1>
+                        <title>Junto às instituições privadas de ensino</title>
+                        <set_value>Junto às instituições privadas de ensino</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-05b179ba995d4688891b7ac31ccc485a-1>
+                    <wpcf-fields-checkboxes-option-edfc9fa8417f4ac3e2c2107904af5b56-1>
+                        <title>Junto à população em geral (via meios de comunicação públicos e comerciais)</title>
+                        <set_value>Junto à população em geral (via meios de comunicação públicos e comerciais)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-edfc9fa8417f4ac3e2c2107904af5b56-1>
+                    <wpcf-fields-checkboxes-option-7e1567b20513d752cfb7755437b58b57-1>
+                        <title>Junto a outros órgãos do poder público (saúde, assistência social, conselhos de direitos etc)</title>
+                        <set_value>Junto a outros órgãos do poder público (saúde, assistência social, conselhos de direitos etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-7e1567b20513d752cfb7755437b58b57-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano11</__types_id>
+            <__types_title>A comunicação do processo se dá</__types_title>
+            <hash>0dc66d160d0f49955d3b020de4d237c0</hash>
+            <checksum>0dc66d160d0f49955d3b020de4d237c0</checksum>
+        </field>
+        <field>
+            <id>qs_plano12</id>
+            <name>Há assessoria no processo de elaboração do Plano de Educação de seu município?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano12</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-6a95dc99cc0f75584b99125b1467a7ef-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-6a95dc99cc0f75584b99125b1467a7ef-2>
+                    <wpcf-fields-radio-option-005b3c1de6c10ceffb8c2ea66e8de347-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-005b3c1de6c10ceffb8c2ea66e8de347-1>
+                    <wpcf-fields-radio-option-c71f4ca5552f27fcc29e58a820560d3c-1>
+                        <title>Não sabe</title>
+                        <value>Não sabe</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-c71f4ca5552f27fcc29e58a820560d3c-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano12</__types_id>
+            <__types_title>Há assessoria no processo de elaboração do Plano de Educação de seu município?</__types_title>
+            <hash>834602be2d0daa964e81eb1c4613fdc5</hash>
+            <checksum>834602be2d0daa964e81eb1c4613fdc5</checksum>
+        </field>
+        <field>
+            <id>qs_plano13</id>
+            <name>Em caso afirmativo, informe quem são os assessores:</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano13</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-e9dfe0db334d1722f77a9994e9b88ccb-2>
+                        <title>Pesquisadores(as) de universidades/faculdades</title>
+                        <set_value>Pesquisadores(as) de universidades/faculdades</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-e9dfe0db334d1722f77a9994e9b88ccb-2>
+                    <wpcf-fields-checkboxes-option-8b1506bd21dc5adeb14123a1ab8a46c6-1>
+                        <title>Consultores(as)/assessores(as) especializados (privados)</title>
+                        <set_value>Consultores(as)/assessores(as) especializados (privados)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8b1506bd21dc5adeb14123a1ab8a46c6-1>
+                    <wpcf-fields-checkboxes-option-327ecc4446798bf087b80ea1b055faa1-1>
+                        <title>Consultores do MEC</title>
+                        <set_value>Consultores do MEC</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-327ecc4446798bf087b80ea1b055faa1-1>
+                    <wpcf-fields-checkboxes-option-8a26a63e88240ef4dc5032b414acdce0-1>
+                        <title>Consultores da Secretaria Estadual de Educação</title>
+                        <set_value>Consultores da Secretaria Estadual de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8a26a63e88240ef4dc5032b414acdce0-1>
+                    <wpcf-fields-checkboxes-option-dac436fc2947f01ecc74271250ff442c-1>
+                        <title>Consultores da UNDIME</title>
+                        <set_value>Consultores da UNDIME</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-dac436fc2947f01ecc74271250ff442c-1>
+                    <wpcf-fields-checkboxes-option-7a64d323ba9f8420f730e2743e6befe2-1>
+                        <title>Organizações da sociedade civil</title>
+                        <set_value>Organizações da sociedade civil</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-7a64d323ba9f8420f730e2743e6befe2-1>
+                    <wpcf-fields-checkboxes-option-69b21628e5bc14de6cfc76540fcd51de-1>
+                        <title>Outros</title>
+                        <set_value>Outros</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-69b21628e5bc14de6cfc76540fcd51de-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano13</__types_id>
+            <__types_title>Em caso afirmativo, informe quem são os assessores:</__types_title>
+            <hash>76b5071f0ffbb9615a17faaf4c46c8cc</hash>
+            <checksum>76b5071f0ffbb9615a17faaf4c46c8cc</checksum>
+        </field>
+        <field>
+            <id>qs_plano13_other</id>
+            <name>Outros</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano13_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano13_other</__types_id>
+            <__types_title>Outros</__types_title>
+            <hash>487d0b605f2250d0a51b7f768f4b1dab</hash>
+            <checksum>487d0b605f2250d0a51b7f768f4b1dab</checksum>
+        </field>
+        <field>
+            <id>qs_plano14</id>
+            <name>Quais das instituições/entidades que atuam no município participam da elaboração do Plano de Educação?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano14</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-3af4a419bc4508f94d452cf8fe275988-2>
+                        <title>Conselho Municipal de Educação</title>
+                        <set_value>Conselho Municipal de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-3af4a419bc4508f94d452cf8fe275988-2>
+                    <wpcf-fields-checkboxes-option-20b07d966f18c1140f8302138d421d87-1>
+                        <title>Conselhos Escolares</title>
+                        <set_value>Conselhos Escolares</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-20b07d966f18c1140f8302138d421d87-1>
+                    <wpcf-fields-checkboxes-option-f804f58bab73e045e0c0eeacba9818f1-1>
+                        <title>Conselhos Tutelares</title>
+                        <set_value>Conselhos Tutelares</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f804f58bab73e045e0c0eeacba9818f1-1>
+                    <wpcf-fields-checkboxes-option-6830f53445598f683704383f868be433-1>
+                        <title>Outras Secretarias Municipais (Planejamento, Fazenda, Saúde, Assistência Social, Cultura, Esportes, Meio Ambiente, etc).</title>
+                        <set_value>Outras Secretarias Municipais (Planejamento, Fazenda, Saúde, Assistência Social, Cultura, Esportes, Meio Ambiente, etc).</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-6830f53445598f683704383f868be433-1>
+                    <wpcf-fields-checkboxes-option-527a45b2bfd5d4ad319da0498f5ecb89-1>
+                        <title>Outros Conselhos Municipais de Direitos (Juventude, Criança e Adolescente, Mulheres, Igualdade Etnicorracial, Idosos, etc)</title>
+                        <set_value>Outros Conselhos Municipais de Direitos (Juventude, Criança e Adolescente, Mulheres, Igualdade Etnicorracial, Idosos, etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-527a45b2bfd5d4ad319da0498f5ecb89-1>
+                    <wpcf-fields-checkboxes-option-8b9790b208fe3411fbbe3260290ba299-1>
+                        <title>Poder Legislativo (Câmara Municipal, Assembléia Legislativa e suas respectivas comissões temáticas)</title>
+                        <set_value>Poder Legislativo (Câmara Municipal, Assembléia Legislativa e suas respectivas comissões temáticas)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8b9790b208fe3411fbbe3260290ba299-1>
+                    <wpcf-fields-checkboxes-option-b84926fa12150dd787f9920eef4258c2-1>
+                        <title>Sistema de Justiça (Ministério Público, Poder Judiciário, Defensoria Pública etc)</title>
+                        <set_value>Sistema de Justiça (Ministério Público, Poder Judiciário, Defensoria Pública etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b84926fa12150dd787f9920eef4258c2-1>
+                    <wpcf-fields-checkboxes-option-d82e9ea7121a2c302a763ae6eaf0912d-1>
+                        <title>Instâncias do Governo Estadual (Secretarias Estaduais de Educação, de Cultura, de Saúde, etc)</title>
+                        <set_value>Instâncias do Governo Estadual (Secretarias Estaduais de Educação, de Cultura, de Saúde, etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-d82e9ea7121a2c302a763ae6eaf0912d-1>
+                    <wpcf-fields-checkboxes-option-c3278a087c59f68d0dd36ced9ea161f7-1>
+                        <title>Instâncias do Governo Federal (Ministério de Educação, da Cultura, da Saúde, etc)</title>
+                        <set_value>Instâncias do Governo Federal (Ministério de Educação, da Cultura, da Saúde, etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-c3278a087c59f68d0dd36ced9ea161f7-1>
+                    <wpcf-fields-checkboxes-option-991e9216d97472c9e112c52890d14b31-1>
+                        <title>Universidades/faculdades</title>
+                        <set_value>Universidades/faculdades</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-991e9216d97472c9e112c52890d14b31-1>
+                    <wpcf-fields-checkboxes-option-90f3784266f69a66529a0e85bbb352e7-1>
+                        <title>Organizações/fóruns de educação</title>
+                        <set_value>Organizações/fóruns de educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-90f3784266f69a66529a0e85bbb352e7-1>
+                    <wpcf-fields-checkboxes-option-e84ea02c0c68647130d857621bbaf3a2-1>
+                        <title>Movimento/grêmio estudantil</title>
+                        <set_value>Movimento/grêmio estudantil</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-e84ea02c0c68647130d857621bbaf3a2-1>
+                    <wpcf-fields-checkboxes-option-b4ac7e87922b8c3f8d7bd65b50658cd6-1>
+                        <title>Organizações do movimento juvenil</title>
+                        <set_value>Organizações do movimento juvenil</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b4ac7e87922b8c3f8d7bd65b50658cd6-1>
+                    <wpcf-fields-checkboxes-option-8aba7febfd2e5fccd6e0384a944cc1e2-1>
+                        <title>Organizações do movimento dos direitos da criança e do adolescente</title>
+                        <set_value>Organizações do movimento dos direitos da criança e do adolescente</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8aba7febfd2e5fccd6e0384a944cc1e2-1>
+                    <wpcf-fields-checkboxes-option-c93073ea3e46663a2f89118bc5840b87-1>
+                        <title>Organizações do movimento negro</title>
+                        <set_value>Organizações do movimento negro</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-c93073ea3e46663a2f89118bc5840b87-1>
+                    <wpcf-fields-checkboxes-option-1a64338439b9daef001e2c6566d7d6f9-1>
+                        <title>Organizações do movimento LGBT</title>
+                        <set_value>Organizações do movimento LGBT</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-1a64338439b9daef001e2c6566d7d6f9-1>
+                    <wpcf-fields-checkboxes-option-b9e2d1c84bd298fa407127a6641a1a93-1>
+                        <title>Organizações do movimento de mulheres</title>
+                        <set_value>Organizações do movimento de mulheres</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b9e2d1c84bd298fa407127a6641a1a93-1>
+                    <wpcf-fields-checkboxes-option-71192a0a74ad2763ef98644d640a4082-1>
+                        <title>Sindicatos/associações de profissionais da educação</title>
+                        <set_value>Sindicatos/associações de profissionais da educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-71192a0a74ad2763ef98644d640a4082-1>
+                    <wpcf-fields-checkboxes-option-8a70b7edbbddca39f7a8fee055b30f41-1>
+                        <title>Associações/organizações/fóruns locais ou comunitários</title>
+                        <set_value>Associações/organizações/fóruns locais ou comunitários</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8a70b7edbbddca39f7a8fee055b30f41-1>
+                    <wpcf-fields-checkboxes-option-81ffaca2eaf6173b117706f4d75058af-1>
+                        <title>Associações religiosas</title>
+                        <set_value>Associações religiosas</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-81ffaca2eaf6173b117706f4d75058af-1>
+                    <wpcf-fields-checkboxes-option-bd44f7b1f7ac4c2a42afa197f4665865-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-bd44f7b1f7ac4c2a42afa197f4665865-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano14</__types_id>
+            <__types_title>Quais das instituições/entidades que atuam no município participam da elaboração do Plano de Educação?</__types_title>
+            <hash>c749b1638542dc146c1045803ef9bb09</hash>
+            <checksum>c749b1638542dc146c1045803ef9bb09</checksum>
+        </field>
+        <field>
+            <id>qs_plano14_other</id>
+            <name>Outros</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano14_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano14_other</__types_id>
+            <__types_title>Outros</__types_title>
+            <hash>1fbbc791415423f5d4c56713afbbb44a</hash>
+            <checksum>1fbbc791415423f5d4c56713afbbb44a</checksum>
+        </field>
+        <field>
+            <id>qs_plano15</id>
+            <name>Dos segmentos da comunidade escolar descritos abaixo, quais participam da elaboração do Plano de Educação de seu município?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano15</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-12bf9838202c481eb78082865810a846-2>
+                        <title>Lideranças da comunidade</title>
+                        <set_value>Lideranças da comunidade</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-12bf9838202c481eb78082865810a846-2>
+                    <wpcf-fields-checkboxes-option-4e9e961f9dab4525377dbc8fb61198b2-1>
+                        <title>Supervisor(a) de ensino</title>
+                        <set_value>Supervisor(a) de ensino</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-4e9e961f9dab4525377dbc8fb61198b2-1>
+                    <wpcf-fields-checkboxes-option-7a5b2fce45683604b23dd65143883ab7-1>
+                        <title>Diretor(a) escolar</title>
+                        <set_value>Diretor(a) escolar</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-7a5b2fce45683604b23dd65143883ab7-1>
+                    <wpcf-fields-checkboxes-option-6726f6a96f0ae5667fcf6f6b2f2c7754-1>
+                        <title>Coordenador(a) pedagógico(a)</title>
+                        <set_value>Coordenador(a) pedagógico(a)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-6726f6a96f0ae5667fcf6f6b2f2c7754-1>
+                    <wpcf-fields-checkboxes-option-77381f256115ca7f229e2aa9a0e3d4ea-1>
+                        <title>Professor(a)</title>
+                        <set_value>Professor(a)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-77381f256115ca7f229e2aa9a0e3d4ea-1>
+                    <wpcf-fields-checkboxes-option-465310e0f51baf203a824c3934fea65e-1>
+                        <title>Funcionário(a) escolares (secretaria, cozinha, limpeza, inspeção, etc.)</title>
+                        <set_value>Funcionário(a) escolares (secretaria, cozinha, limpeza, inspeção, etc.)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-465310e0f51baf203a824c3934fea65e-1>
+                    <wpcf-fields-checkboxes-option-af7800333046547c2f9bc47c21026e7e-1>
+                        <title>Estudantes</title>
+                        <set_value>Estudantes</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-af7800333046547c2f9bc47c21026e7e-1>
+                    <wpcf-fields-checkboxes-option-356fa8cdd421b661ac0acb93f31de5a3-1>
+                        <title>Familiares e/ou responsáveis</title>
+                        <set_value>Familiares e/ou responsáveis</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-356fa8cdd421b661ac0acb93f31de5a3-1>
+                    <wpcf-fields-checkboxes-option-cb80ca0d1b446479c563ec9222ee9349-1>
+                        <title>Conselheiro(a) escolar</title>
+                        <set_value>Conselheiro(a) escolar</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-cb80ca0d1b446479c563ec9222ee9349-1>
+                    <wpcf-fields-checkboxes-option-91835f40669a52541e647a81312abc77-1>
+                        <title>Integrantes de outras instâncias da rede de proteção da criança e do adolescente (conselho tutelar, saúde, assistência, etc)</title>
+                        <set_value>Integrantes de outras instâncias da rede de proteção da criança e do adolescente (conselho tutelar, saúde, assistência, etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-91835f40669a52541e647a81312abc77-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano15</__types_id>
+            <__types_title>Dos segmentos da comunidade escolar descritos abaixo, quais participam da elaboração do Plano de Educação de seu município?</__types_title>
+            <hash>9f7d36a746ce639e79ff863a812b9d39</hash>
+            <checksum>9f7d36a746ce639e79ff863a812b9d39</checksum>
+        </field>
+        <field>
+            <id>qs_plano16</id>
+            <name>Quais são os dados utilizados para a elaboração do diagnóstico do município para o Plano de Educação?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano16</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-1b7062b934a655c4d60546e860628c73-2>
+                        <title>Dados e informações históricas sobre a educação no município</title>
+                        <set_value>Dados e informações históricas sobre a educação no município</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-1b7062b934a655c4d60546e860628c73-2>
+                    <wpcf-fields-checkboxes-option-d73b9f3621eaecb40590bfeb8164562b-1>
+                        <title>Dados demográficos, econômicos e culturais [população, idade, escolaridade, sexo, raça, emprego, renda, etc.]</title>
+                        <set_value>Dados demográficos, econômicos e culturais [população, idade, escolaridade, sexo, raça, emprego, renda, etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-d73b9f3621eaecb40590bfeb8164562b-1>
+                    <wpcf-fields-checkboxes-option-53b0daf07c95d23c25dadf41bbcb616e-1>
+                        <title>Dados gerais das redes [orçamento, etapas, modalidades, unidades, infraestrutura, profissionais, etc.]</title>
+                        <set_value>Dados gerais das redes [orçamento, etapas, modalidades, unidades, infraestrutura, profissionais, etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-53b0daf07c95d23c25dadf41bbcb616e-1>
+                    <wpcf-fields-checkboxes-option-25f6449a0326894fd92e92a8647a6a99-1>
+                        <title>Dados de rendimento das redes [matrícula, aprovação, reprovação, evasão, abandono, etc.]</title>
+                        <set_value>Dados de rendimento das redes [matrícula, aprovação, reprovação, evasão, abandono, etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-25f6449a0326894fd92e92a8647a6a99-1>
+                    <wpcf-fields-checkboxes-option-6ccc1b1add86e5f965c344b6d04476c3-1>
+                        <title>Dados de desempenho de alunos  [Prova e Provinha Brasil, SAEB, sistemas locais, etc.]</title>
+                        <set_value>Dados de desempenho de alunos  [Prova e Provinha Brasil, SAEB, sistemas locais, etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-6ccc1b1add86e5f965c344b6d04476c3-1>
+                    <wpcf-fields-checkboxes-option-cb69ed92f88c3fcdd708dae98ce55362-1>
+                        <title>Dados de diagnósticos participativos [PAR, PDE escola, Indicadores da Qualidade na Educação etc.]</title>
+                        <set_value>Dados de diagnósticos participativos [PAR, PDE escola, Indicadores da Qualidade na Educação etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-cb69ed92f88c3fcdd708dae98ce55362-1>
+                    <wpcf-fields-checkboxes-option-be2dafc94f479d6b6eeca8b1c15eaebf-1>
+                        <title>Dados produzidos pelo município [mini-censo, chamadas públicas, pesquisas temáticas, informações do Orçamento Participativo etc]</title>
+                        <set_value>Dados produzidos pelo município [mini-censo, chamadas públicas, pesquisas temáticas, informações do Orçamento Participativo etc]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-be2dafc94f479d6b6eeca8b1c15eaebf-1>
+                    <wpcf-fields-checkboxes-option-70cf648fcbbb4502126aa83cf42cf3b7-1>
+                        <title>Objetivos e metas dos Planos Estadual e Nacional de Educação</title>
+                        <set_value>Objetivos e metas dos Planos Estadual e Nacional de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-70cf648fcbbb4502126aa83cf42cf3b7-1>
+                    <wpcf-fields-checkboxes-option-22ffa6d719c9db3246859c231ce8b788-1>
+                        <title>Não sabe</title>
+                        <set_value>Não sabe</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-22ffa6d719c9db3246859c231ce8b788-1>
+                    <wpcf-fields-checkboxes-option-ec30df9cbe3402304c701eb454052374-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-ec30df9cbe3402304c701eb454052374-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano16</__types_id>
+            <__types_title>Quais são os dados utilizados para a elaboração do diagnóstico do município para o Plano de Educação?</__types_title>
+            <hash>6bdb448581733c53c1a0ecdffbeeb536</hash>
+            <checksum>6bdb448581733c53c1a0ecdffbeeb536</checksum>
+        </field>
+        <field>
+            <id>qs_plano16_other</id>
+            <name>Outras</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano16_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano16_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>c845dba631122b08c8cf561c064381b2</hash>
+            <checksum>c845dba631122b08c8cf561c064381b2</checksum>
+        </field>
+        <field>
+            <id>qs_plano17</id>
+            <name>Quais são as principais metodologias utilizadas para a elaboração do Plano de Educação de seu município?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano17</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-9e2efb692e89d7fe8d8bf8726a889848-2>
+                        <title>Consulta a dados organizados por outras instituições [IBGE (Censo, PNAD), IPEA, INEP (Ideb, Censo Escolar), MEC, etc.]</title>
+                        <set_value>Consulta a dados organizados por outras instituições [IBGE (Censo, PNAD), IPEA, INEP (Ideb, Censo Escolar), MEC, etc.]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-9e2efb692e89d7fe8d8bf8726a889848-2>
+                    <wpcf-fields-checkboxes-option-4d69061889850bd53f9f33a4aecb1237-1>
+                        <title>Consulta a documentos oficiais e legislação vigente [LDB, Diretrizes e Parâmetros, Deliberações/portarias, legislação municipal/estadual]</title>
+                        <set_value>Consulta a documentos oficiais e legislação vigente [LDB, Diretrizes e Parâmetros, Deliberações/portarias, legislação municipal/estadual]</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-4d69061889850bd53f9f33a4aecb1237-1>
+                    <wpcf-fields-checkboxes-option-dec54a202deb0592c7f70887a54b762a-1>
+                        <title>Plenárias em unidades educacionais</title>
+                        <set_value>Plenárias em unidades educacionais</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-dec54a202deb0592c7f70887a54b762a-1>
+                    <wpcf-fields-checkboxes-option-daa5d63bfc1cd8a26439c726168cc893-1>
+                        <title>Diagnósticos participativos em escolas e comunidades</title>
+                        <set_value>Diagnósticos participativos em escolas e comunidades</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-daa5d63bfc1cd8a26439c726168cc893-1>
+                    <wpcf-fields-checkboxes-option-2ea3fa567d4e560a8008b059081b8616-1>
+                        <title>Plenárias por regiões/localidades</title>
+                        <set_value>Plenárias por regiões/localidades</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-2ea3fa567d4e560a8008b059081b8616-1>
+                    <wpcf-fields-checkboxes-option-46ea74ba4e75a85e0d39d3b3a617a494-1>
+                        <title>Plenárias livres</title>
+                        <set_value>Plenárias livres</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-46ea74ba4e75a85e0d39d3b3a617a494-1>
+                    <wpcf-fields-checkboxes-option-8733e7efbd1e650fc595fe2e5dace2cb-1>
+                        <title>Audiências públicas</title>
+                        <set_value>Audiências públicas</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8733e7efbd1e650fc595fe2e5dace2cb-1>
+                    <wpcf-fields-checkboxes-option-84e25b811e8f6aab1d99081f7351b5c4-1>
+                        <title>Conferências Municipais</title>
+                        <set_value>Conferências Municipais</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-84e25b811e8f6aab1d99081f7351b5c4-1>
+                    <wpcf-fields-checkboxes-option-3524c1c538b22b0d2a39a6695043b0fa-1>
+                        <title>Consulta por meio de internet</title>
+                        <set_value>Consulta por meio de internet</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-3524c1c538b22b0d2a39a6695043b0fa-1>
+                    <wpcf-fields-checkboxes-option-5fd537287b486dbe232e665670bdf6ff-1>
+                        <title>Não sabe</title>
+                        <set_value>Não sabe</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-5fd537287b486dbe232e665670bdf6ff-1>
+                    <wpcf-fields-checkboxes-option-35290a577e684675bee355e46bf00fcc-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-35290a577e684675bee355e46bf00fcc-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano17</__types_id>
+            <__types_title>Quais são as principais metodologias utilizadas para a elaboração do Plano de Educação de seu município?</__types_title>
+            <hash>66c2743a069681d6e4bfb24bc79a3b74</hash>
+            <checksum>66c2743a069681d6e4bfb24bc79a3b74</checksum>
+        </field>
+        <field>
+            <id>qs_plano17_other</id>
+            <name>Outras</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano17_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano17_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>2110a1cd3b6f83a37bbc19efca64b287</hash>
+            <checksum>2110a1cd3b6f83a37bbc19efca64b287</checksum>
+        </field>
+        <field>
+            <id>qs_plano18</id>
+            <name>Quais destes itens estão sendo considerados na elaboração do Plano de Educação de seu município?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano18</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-32524c2edb21edd62e87fdf1312b08cc-2>
+                        <title>Custo aluno-qualidade</title>
+                        <set_value>Custo aluno-qualidade</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-32524c2edb21edd62e87fdf1312b08cc-2>
+                    <wpcf-fields-checkboxes-option-bde1939796190af33426997ce6111669-1>
+                        <title>Ampliação da jornada escolar</title>
+                        <set_value>Ampliação da jornada escolar</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-bde1939796190af33426997ce6111669-1>
+                    <wpcf-fields-checkboxes-option-fa2abf591ed944f3d36354365c8df8ca-1>
+                        <title>Formação continuada de profissionais da educação</title>
+                        <set_value>Formação continuada de profissionais da educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-fa2abf591ed944f3d36354365c8df8ca-1>
+                    <wpcf-fields-checkboxes-option-798c0d5e7af51a2a83509b2136f0225b-1>
+                        <title>Mecanismos e órgãos de acompanhamento e de avaliação</title>
+                        <set_value>Mecanismos e órgãos de acompanhamento e de avaliação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-798c0d5e7af51a2a83509b2136f0225b-1>
+                    <wpcf-fields-checkboxes-option-3d10f267bd7ac1d1dde4289b81b0af0d-1>
+                        <title>O regime de colaboração com o Estado e com a União</title>
+                        <set_value>O regime de colaboração com o Estado e com a União</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-3d10f267bd7ac1d1dde4289b81b0af0d-1>
+                    <wpcf-fields-checkboxes-option-c4d56e821e44b731b5b9eb0169a3e188-1>
+                        <title>Estratégias para incluir as crianças e os jovens que estão fora da escola</title>
+                        <set_value>Estratégias para incluir as crianças e os jovens que estão fora da escola</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-c4d56e821e44b731b5b9eb0169a3e188-1>
+                    <wpcf-fields-checkboxes-option-654717895798d51337f004798bbbd8d2-1>
+                        <title>Estratégias para atender as necessidades de aprendizagem de crianças (combate às causas da reprovação e do atraso escolar)</title>
+                        <set_value>Estratégias para atender as necessidades de aprendizagem de crianças (combate às causas da reprovação e do atraso escolar)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-654717895798d51337f004798bbbd8d2-1>
+                    <wpcf-fields-checkboxes-option-774f8944f05e3fd52f8e05865d31a034-1>
+                        <title>Valorização das diversidades socioeconômicas, étnicorraciais, religiosas, sexual, etc.</title>
+                        <set_value>Valorização das diversidades socioeconômicas, étnicorraciais, religiosas, sexual, etc.</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-774f8944f05e3fd52f8e05865d31a034-1>
+                    <wpcf-fields-checkboxes-option-30759d92763c3026184ca1d62eb6769f-1>
+                        <title>Atendimento às crianças, aos jovens e aos adultos portadores de necessidades especiais e às crianças, aos jovens e aos adultos em situação de vulnerabilidade e risco</title>
+                        <set_value>Atendimento às crianças, aos jovens e aos adultos portadores de necessidades especiais e às crianças, aos jovens e aos adultos em situação de vulnerabilidade e risco</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-30759d92763c3026184ca1d62eb6769f-1>
+                    <wpcf-fields-checkboxes-option-ff3793c3e795b89f53f5708caf9f2aab-1>
+                        <title>Tratamento igualitário para todas as escolas (periferia urbana, centro urbano e área rural)</title>
+                        <set_value>Tratamento igualitário para todas as escolas (periferia urbana, centro urbano e área rural)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-ff3793c3e795b89f53f5708caf9f2aab-1>
+                    <wpcf-fields-checkboxes-option-2980270a42573457e2c5281d0afce921-1>
+                        <title>Estratégias de atendimento (programas, projetos ou ações) às necessidades de aprendizagem de crianças, para combate às causas de reprovação e atraso escolar</title>
+                        <set_value>Estratégias de atendimento (programas, projetos ou ações) às necessidades de aprendizagem de crianças, para combate às causas de reprovação e atraso escolar</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-2980270a42573457e2c5281d0afce921-1>
+                    <wpcf-fields-checkboxes-option-a79831103aa79a0e278242bf4f64ec92-1>
+                        <title>Universalização do atendimento escolar a crianças, jovens e adultos, especialmente na educação básica</title>
+                        <set_value>Universalização do atendimento escolar a crianças, jovens e adultos, especialmente na educação básica</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-a79831103aa79a0e278242bf4f64ec92-1>
+                    <wpcf-fields-checkboxes-option-756f3338c2f8a8c85fb89c0ac5c0aa48-1>
+                        <title>Estratégias intersetoriais de promoção do acesso a bens e serviços que a sociedade oferece (arte, cultura, esportes, tecnologia etc)</title>
+                        <set_value>Estratégias intersetoriais de promoção do acesso a bens e serviços que a sociedade oferece (arte, cultura, esportes, tecnologia etc)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-756f3338c2f8a8c85fb89c0ac5c0aa48-1>
+                    <wpcf-fields-checkboxes-option-71d1ec7426cd5b28ccec1991a444adb3-1>
+                        <title>Promoção de formas diversas de campanhas (inclusive midiáticas) de sensibilização da sociedade para o apoio à educação cidadã, como, por exemplo, eventos de integração da comunidade com a escola</title>
+                        <set_value>Promoção de formas diversas de campanhas (inclusive midiáticas) de sensibilização da sociedade para o apoio à educação cidadã, como, por exemplo, eventos de integração da comunidade com a escola</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-71d1ec7426cd5b28ccec1991a444adb3-1>
+                    <wpcf-fields-checkboxes-option-f9153d9af95247cbfd39e693776c15e5-1>
+                        <title>Articulação com organizações que promovam a educação inclusiva</title>
+                        <set_value>Articulação com organizações que promovam a educação inclusiva</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f9153d9af95247cbfd39e693776c15e5-1>
+                    <wpcf-fields-checkboxes-option-20948f9fc0289504671d5e05d93bd7eb-1>
+                        <title>Estratégias para manter e estimular a frequência escolar das crianças de famílias mais vulneráveis à exclusão social.</title>
+                        <set_value>Estratégias para manter e estimular a frequência escolar das crianças de famílias mais vulneráveis à exclusão social.</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-20948f9fc0289504671d5e05d93bd7eb-1>
+                    <wpcf-fields-checkboxes-option-34563a1187ba881ffb2293661e6c6b9a-1>
+                        <title>Defesa ativa do princípio da laicidade na educação pública</title>
+                        <set_value>Defesa ativa do princípio da laicidade na educação pública</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-34563a1187ba881ffb2293661e6c6b9a-1>
+                    <wpcf-fields-checkboxes-option-b5831ce666d721f4131bb26bd7eb9389-1>
+                        <title>Metas de equalização para superação de desigualdades educacionais dentro do território do município</title>
+                        <set_value>Metas de equalização para superação de desigualdades educacionais dentro do território do município</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b5831ce666d721f4131bb26bd7eb9389-1>
+                    <wpcf-fields-checkboxes-option-06fe4b54a998b329967f030a7eb8725a-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-06fe4b54a998b329967f030a7eb8725a-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano18</__types_id>
+            <__types_title>Quais destes itens estão sendo considerados na elaboração do Plano de Educação de seu município?</__types_title>
+            <hash>a9dac33ac02fd3a0ded47455d13df071</hash>
+            <checksum>a9dac33ac02fd3a0ded47455d13df071</checksum>
+        </field>
+        <field>
+            <id>qs_plano18_other</id>
+            <name>Outras</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano18_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano18_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>fa91bb0eb2b1f7abb62a0297fb831687</hash>
+            <checksum>fa91bb0eb2b1f7abb62a0297fb831687</checksum>
+        </field>
+        <field>
+            <id>qs_plano19</id>
+            <name>O Plano de Educação de seu município em elaboração abrange:</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano19</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-afcec7cba9c54f9a08affdbdf1d1237d-2>
+                        <title>Rede municipal de ensino (atendimento direto)</title>
+                        <set_value>Rede municipal de ensino (atendimento direto)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-afcec7cba9c54f9a08affdbdf1d1237d-2>
+                    <wpcf-fields-checkboxes-option-9a63dc84ac16f2e3e0574d5028e0e950-1>
+                        <title>Rede municipal de ensino (atendimento conveniado)</title>
+                        <set_value>Rede municipal de ensino (atendimento conveniado)</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-9a63dc84ac16f2e3e0574d5028e0e950-1>
+                    <wpcf-fields-checkboxes-option-f33a442c4254e1802f8c1966864d0f33-1>
+                        <title>Governo estadual com a rede estadual de ensino que atua no município</title>
+                        <set_value>Governo estadual com a rede estadual de ensino que atua no município</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f33a442c4254e1802f8c1966864d0f33-1>
+                    <wpcf-fields-checkboxes-option-b818ea748645520135c23c4dad405fc1-1>
+                        <title>Governo federal com a rede federal de ensino que atua no municipio</title>
+                        <set_value>Governo federal com a rede federal de ensino que atua no municipio</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b818ea748645520135c23c4dad405fc1-1>
+                    <wpcf-fields-checkboxes-option-f25d5e20a59185a4483c441279d57715-1>
+                        <title>As instituições educativas privadas</title>
+                        <set_value>As instituições educativas privadas</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f25d5e20a59185a4483c441279d57715-1>
+                    <wpcf-fields-checkboxes-option-ca3d0718bb024618dede66f4cd5d8f4e-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-ca3d0718bb024618dede66f4cd5d8f4e-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano19</__types_id>
+            <__types_title>O Plano de Educação de seu município em elaboração abrange:</__types_title>
+            <hash>136efe593ac7a1ffd3ff7fe8d00cffec</hash>
+            <checksum>136efe593ac7a1ffd3ff7fe8d00cffec</checksum>
+        </field>
+        <field>
+            <id>qs_plano19_other</id>
+            <name>Outras</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano19_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano19_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>b09a2575c0d4d7554864342cad318bce</hash>
+            <checksum>b09a2575c0d4d7554864342cad318bce</checksum>
+        </field>
+        <field>
+            <id>qs_plano20</id>
+            <name>A elaboração do Plano de Educação envolve quais etapas, níveis e modalidades da educação?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano20</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-09b8643711f2bda00c6a340962adecd3-2>
+                        <title>Educação infantil</title>
+                        <set_value>Educação infantil</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-09b8643711f2bda00c6a340962adecd3-2>
+                    <wpcf-fields-checkboxes-option-eefb53605741b249d502f5c2920d3312-1>
+                        <title>Ensino fundamental</title>
+                        <set_value>Ensino fundamental</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-eefb53605741b249d502f5c2920d3312-1>
+                    <wpcf-fields-checkboxes-option-db4191e8896fff480193243140bf5498-1>
+                        <title>Ensino médio</title>
+                        <set_value>Ensino médio</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-db4191e8896fff480193243140bf5498-1>
+                    <wpcf-fields-checkboxes-option-2c0ac068df4226d91e9183d888128437-1>
+                        <title>Ensino superior</title>
+                        <set_value>Ensino superior</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-2c0ac068df4226d91e9183d888128437-1>
+                    <wpcf-fields-checkboxes-option-c65d9513965369aaf6a1afce21157474-1>
+                        <title>Ensino profissional</title>
+                        <set_value>Ensino profissional</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-c65d9513965369aaf6a1afce21157474-1>
+                    <wpcf-fields-checkboxes-option-9bea9bf045cef1e73d3da67176e55523-1>
+                        <title>Educação de jovens e adultos</title>
+                        <set_value>Educação de jovens e adultos</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-9bea9bf045cef1e73d3da67176e55523-1>
+                    <wpcf-fields-checkboxes-option-086c683af75f82a8336a3b111fcf484b-1>
+                        <title>Educação especial</title>
+                        <set_value>Educação especial</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-086c683af75f82a8336a3b111fcf484b-1>
+                    <wpcf-fields-checkboxes-option-73be94cdb44c8ef7cc2e4ef8d220632e-1>
+                        <title>Educação do campo</title>
+                        <set_value>Educação do campo</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-73be94cdb44c8ef7cc2e4ef8d220632e-1>
+                    <wpcf-fields-checkboxes-option-1bd69d03a1a08758e3542d8dae34482b-1>
+                        <title>Educação quilombola</title>
+                        <set_value>Educação quilombola</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-1bd69d03a1a08758e3542d8dae34482b-1>
+                    <wpcf-fields-checkboxes-option-8e5136f05586cab3a4c129c91387cd70-1>
+                        <title>Educação indígena</title>
+                        <set_value>Educação indígena</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-8e5136f05586cab3a4c129c91387cd70-1>
+                    <wpcf-fields-checkboxes-option-dd78460f336c53fb7bf9deaafc0f9ed0-1>
+                        <title>Educação à distância</title>
+                        <set_value>Educação à distância</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-dd78460f336c53fb7bf9deaafc0f9ed0-1>
+                    <wpcf-fields-checkboxes-option-0c2c458e8f19f1ea4a83f51a3a9afcfc-1>
+                        <title>Educação não-formal</title>
+                        <set_value>Educação não-formal</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-0c2c458e8f19f1ea4a83f51a3a9afcfc-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano20</__types_id>
+            <__types_title>A elaboração do Plano de Educação envolve quais etapas, níveis e modalidades da educação?</__types_title>
+            <hash>f10a23d793b4b68793fa57ce4cdd92bc</hash>
+            <checksum>f10a23d793b4b68793fa57ce4cdd92bc</checksum>
+        </field>
+        <field>
+            <id>qs_plano21</id>
+            <name>Há a participação de crianças e adolescentes na elaboração do Plano de Educação?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano21</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-5a722de3f0849083e1fcccb47274b1bc-2>
+                        <title>Sim, somente de crianças</title>
+                        <value>Sim, somente de crianças</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-5a722de3f0849083e1fcccb47274b1bc-2>
+                    <wpcf-fields-radio-option-600224118e043436eed1ac8b98144b00-1>
+                        <title>Sim, somente de adolescentes</title>
+                        <value>Sim, somente de adolescentes</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-600224118e043436eed1ac8b98144b00-1>
+                    <wpcf-fields-radio-option-0992c8a505d733c06db78bfe2cc62f56-1>
+                        <title>Sim, dos dois segmentos</title>
+                        <value>Sim, dos dois segmentos</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-0992c8a505d733c06db78bfe2cc62f56-1>
+                    <wpcf-fields-radio-option-bea70b46f9d06a94f49897cc04b9c6f2-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>4</display_value>
+                    </wpcf-fields-radio-option-bea70b46f9d06a94f49897cc04b9c6f2-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano21</__types_id>
+            <__types_title>Há a participação de crianças e adolescentes na elaboração do Plano de Educação?</__types_title>
+            <hash>96cdd445040890fd7276aead4cacb96c</hash>
+            <checksum>96cdd445040890fd7276aead4cacb96c</checksum>
+        </field>
+        <field>
+            <id>qs_plano22</id>
+            <name>Em caso afirmativo, de que forma?</name>
+            <description></description>
+            <type>textarea</type>
+            <slug>qs_plano22</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano22</__types_id>
+            <__types_title>Em caso afirmativo, de que forma?</__types_title>
+            <hash>ee484aeffeba2a65e4364696d9264c94</hash>
+            <checksum>ee484aeffeba2a65e4364696d9264c94</checksum>
+        </field>
+        <field>
+            <id>qs_plano23</id>
+            <name>Em que ano desta gestão (2013-2016) seu município pretente avaliar o plano decenal de educação?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano23</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-4276016439310477bf2fb0fac79a49aa-2>
+                        <title>Sim, em 2013</title>
+                        <value>Sim, em 2013</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-4276016439310477bf2fb0fac79a49aa-2>
+                    <wpcf-fields-radio-option-addb46443f089b3c59b5b801c7b9ff7a-1>
+                        <title>Sim, em 2014</title>
+                        <value>Sim, em 2014</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-addb46443f089b3c59b5b801c7b9ff7a-1>
+                    <wpcf-fields-radio-option-3951dd56f035e93c29e6ee680c506330-1>
+                        <title>Sim, em 2015</title>
+                        <value>Sim, em 2015</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-3951dd56f035e93c29e6ee680c506330-1>
+                    <wpcf-fields-radio-option-45d5fdc9686242dc6918c7ee08049c64-1>
+                        <title>Sim, em 2016</title>
+                        <value>Sim, em 2016</value>
+                        <display_value>4</display_value>
+                    </wpcf-fields-radio-option-45d5fdc9686242dc6918c7ee08049c64-1>
+                    <wpcf-fields-radio-option-46ed6e6351a3e520ba9c77a56b5bb97f-1>
+                        <title>Não pretende</title>
+                        <value>Não pretende</value>
+                        <display_value>5</display_value>
+                    </wpcf-fields-radio-option-46ed6e6351a3e520ba9c77a56b5bb97f-1>
+                    <wpcf-fields-radio-option-551b580b87520afd0c2076f95d54d973-1>
+                        <title>Não sabe</title>
+                        <value>Não sabe</value>
+                        <display_value>6</display_value>
+                    </wpcf-fields-radio-option-551b580b87520afd0c2076f95d54d973-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano23</__types_id>
+            <__types_title>Em que ano desta gestão (2013-2016) seu município pretente avaliar o plano decenal de educação?</__types_title>
+            <hash>20fff483a21b84927c24dd2c9b101ad5</hash>
+            <checksum>20fff483a21b84927c24dd2c9b101ad5</checksum>
+        </field>
+        <field>
+            <id>qs_plano24</id>
+            <name>A quem cabe a avaliação e o monitoramento da implementação das metas do Plano de Educação de seu município?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano24</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-b9715b9c9d7e9faaee69542a4c527275-2>
+                        <title>Fórum Municipal de Educação</title>
+                        <set_value>Fórum Municipal de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-b9715b9c9d7e9faaee69542a4c527275-2>
+                    <wpcf-fields-checkboxes-option-1512da952b114ff3707335473ab2eb74-1>
+                        <title>Conselho Municipal de Educação</title>
+                        <set_value>Conselho Municipal de Educação</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-1512da952b114ff3707335473ab2eb74-1>
+                    <wpcf-fields-checkboxes-option-e0130d2a1186bde274ce6edc853e9624-1>
+                        <title>Conselhos Escolares</title>
+                        <set_value>Conselhos Escolares</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-e0130d2a1186bde274ce6edc853e9624-1>
+                    <wpcf-fields-checkboxes-option-f8c743e260c0886bdc15427fa6b36d23-1>
+                        <title>Outros</title>
+                        <set_value>Outros</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f8c743e260c0886bdc15427fa6b36d23-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano24</__types_id>
+            <__types_title>A quem cabe a avaliação e o monitoramento da implementação das metas do Plano de Educação de seu município?</__types_title>
+            <hash>d3085f2c4c0229e6e87f4f54f32315fc</hash>
+            <checksum>d3085f2c4c0229e6e87f4f54f32315fc</checksum>
+        </field>
+        <field>
+            <id>qs_plano24_other</id>
+            <name>Outros</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano24_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano24_other</__types_id>
+            <__types_title>Outros</__types_title>
+            <hash>fe489bcb0479fd57c5b74e0ff4321254</hash>
+            <checksum>fe489bcb0479fd57c5b74e0ff4321254</checksum>
+        </field>
+        <field>
+            <id>qs_plano25</id>
+            <name>De que forma?</name>
+            <description></description>
+            <type>checkboxes</type>
+            <slug>qs_plano25</slug>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-f0cf3be069d57b43f36a3b81d3084ba4-2>
+                        <title>Realização de Conferências de Educação de dois em dois anos</title>
+                        <set_value>Realização de Conferências de Educação de dois em dois anos</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-f0cf3be069d57b43f36a3b81d3084ba4-2>
+                    <wpcf-fields-checkboxes-option-d0dea128db7e110cce96e8c4b75dff14-1>
+                        <title>Realização de reuniões periódicas do Fórum</title>
+                        <set_value>Realização de reuniões periódicas do Fórum</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-d0dea128db7e110cce96e8c4b75dff14-1>
+                    <wpcf-fields-checkboxes-option-1cf518452629185383538f93c9ef94bf-1>
+                        <title>Realização de reuniões periódicas do Conselho</title>
+                        <set_value>Realização de reuniões periódicas do Conselho</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-1cf518452629185383538f93c9ef94bf-1>
+                    <wpcf-fields-checkboxes-option-7f66182397ee857faef0f2a4a76edc21-1>
+                        <title>Realização de processos participativos com escolas e comunidades</title>
+                        <set_value>Realização de processos participativos com escolas e comunidades</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-7f66182397ee857faef0f2a4a76edc21-1>
+                    <wpcf-fields-checkboxes-option-ec490018c1d27dd6ad25d62f3f715540-1>
+                        <title>Outras</title>
+                        <set_value>Outras</set_value>
+                        <display>db</display>
+                        <display_value_not_selected></display_value_not_selected>
+                        <display_value_selected></display_value_selected>
+                    </wpcf-fields-checkboxes-option-ec490018c1d27dd6ad25d62f3f715540-1>
+                </options>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano25</__types_id>
+            <__types_title>De que forma?</__types_title>
+            <hash>9e103b8a5a2d4eb0f8a367af4acd07f4</hash>
+            <checksum>9e103b8a5a2d4eb0f8a367af4acd07f4</checksum>
+        </field>
+        <field>
+            <id>qs_plano25_other</id>
+            <name>Outras</name>
+            <description></description>
+            <type>textfield</type>
+            <slug>qs_plano25_other</slug>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano25_other</__types_id>
+            <__types_title>Outras</__types_title>
+            <hash>209ab8f47f1d1f7be7c397b7d4d7a8e5</hash>
+            <checksum>209ab8f47f1d1f7be7c397b7d4d7a8e5</checksum>
+        </field>
+        <field>
+            <id>qs_plano26</id>
+            <name>Seu município já respondeu a alguma demanda baseada na lei de acesso à informação pública (lei 12.527/2011) com relação à área de educação?</name>
+            <description></description>
+            <type>radio</type>
+            <slug>qs_plano26</slug>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-60e232fdaac1413b00f943242cd1836d-2>
+                        <title>Sim</title>
+                        <value>Sim</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-60e232fdaac1413b00f943242cd1836d-2>
+                    <wpcf-fields-radio-option-d47e14663dcbe05de1ca9029ea6c9d32-1>
+                        <title>Não</title>
+                        <value>Não</value>
+                        <display_value>2</display_value>
+                    </wpcf-fields-radio-option-d47e14663dcbe05de1ca9029ea6c9d32-1>
+                    <wpcf-fields-radio-option-49d7a0eeef9f76115436b2c7b8a0e063-1>
+                        <title>Não sabe</title>
+                        <value>Não sabe</value>
+                        <display_value>3</display_value>
+                    </wpcf-fields-radio-option-49d7a0eeef9f76115436b2c7b8a0e063-1>
+                </options>
+                <display>db</display>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <__types_id>qs_plano26</__types_id>
+            <__types_title>Seu município já respondeu a alguma demanda baseada na lei de acesso à informação pública (lei 12.527/2011) com relação à área de educação?</__types_title>
+            <hash>c30f0d8f7a515192fa710e95bb1e0ca0</hash>
+            <checksum>c30f0d8f7a515192fa710e95bb1e0ca0</checksum>
+        </field>
+    </fields>
+    <types>
+        <type>
+            <wpcf-post-type>municipio</wpcf-post-type>
+            <labels>
+                <name>Municípios</name>
+                <singular_name>Município</singular_name>
+                <add_new>Adicionar novo</add_new>
+                <add_new_item>Adicionar %s</add_new_item>
+                <edit_item>Editar %s</edit_item>
+                <new_item>Novo %s</new_item>
+                <view_item>Ver %s</view_item>
+                <search_items>Buscar %s</search_items>
+                <not_found>Nenhum %s encontrado</not_found>
+                <not_found_in_trash>Nenhum %s encontrado na Lixeira</not_found_in_trash>
+                <parent_item_colon>%s mãe</parent_item_colon>
+                <all_items>%s</all_items>
+            </labels>
+            <slug>municipio</slug>
+            <description></description>
+            <public>public</public>
+            <menu_position>5</menu_position>
+            <menu_icon></menu_icon>
+            <supports>
+                <title>1</title>
+                <revisions>1</revisions>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <id>municipio</id>
+            <__types_id>municipio</__types_id>
+            <__types_title>Municípios</__types_title>
+            <hash>d252919dfa5f7e77a87b72b3dd65f799</hash>
+            <checksum>d252919dfa5f7e77a87b72b3dd65f799</checksum>
+        </type>
+    </types>
+</types>
