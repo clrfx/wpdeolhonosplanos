@@ -135,7 +135,7 @@
 .map-legends {
   position:absolute;
   right:10px;
-  bottom:10px;
+  bottom:27px;
   z-index:999999;
   }
   .map-legends .map-legend {
@@ -145,7 +145,7 @@
 .map-tooltip {
   z-index:999999;
   padding:10px;
-  top:10px;
+  top: 81px;
   right:10px;
   max-width:300px;
   opacity:1;

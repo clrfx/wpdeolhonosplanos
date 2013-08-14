@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header('resume'); ?>
 
 	<section id="primary" class="site-content lista-busca">
 		<div id="content" role="main">

@@ -55,7 +55,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <script src="<?php echo child_template_directory ?>/js/css3.js" type="text/javascript"></script>
 <![endif]-->
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -66,16 +66,75 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
 
-<div id="page" class="hfeed site">
+<div id="barra-topo">		
 
-		<header id="masthead" class="site-header" role="banner">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+</div>
 
+<div id="barra-header">	
+
+	<header id="masthead" class="site-header" role="banner">	
+		
+		
 		<a href="<?php echo get_site_url(); ?>" id="site-logo"></a>
 		
-		
+				
 		<div id="tagline">
 			
 			<h1>
+			
+				<?php $blurb = get_post_meta($post->ID, 'blurb', true);
+				$blurb;
+				if( $blurb ): ?>
+				<div class="frontpage-blurb">
+				<?php echo do_shortcode($blurb); ?>
+				</div>
+				<?php endif; ?>
+			
+
+				<? /* php
+
+				$texto = get_bloginfo("description");
+				list ($line1, $line2) = split ("-", $texto);
+				
+				echo $line1."<span>".$line2."</span>"
+
+				*/ ?>
+
+			</h1>
+
+
+		</div>
+		
+
+	</header><!-- #masthead -->
+	
+</div>
+
+<div id="barra-mapa">
+
+	<div id="content-mapa">
+
+		<?php get_template_part( 'mapbox' ); ?>
+	
+		<div id="box-below-map">
+		<span><a href="#"> Como Usar?</a></span>
+		</div>
+		
+		<div id="box-below-map">
+		<span><a href="#"> Participe!</a></span>
+		</div>
+		
+		<div id="box-below-map" class="last">
+		<span class="box-busca-mapa">Busque no Mapa</span>
+		<?php get_template_part( 'searchform-munic' ); ?>
+		</div>
+		<div class="clear"></div>
+		<div id="frase-mapa">
 				<?php
 
 				$texto = get_bloginfo("description");
@@ -83,40 +142,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				
 				echo $line1."<span>".$line2."</span>"
 
-				?>
-
-			</h1>
-
-		<?php
-			/*
-			 * Insere o Tagline no header
-			 * 
-			 * Usei um custom-field no página HOME para puxar o texto.
-			 * 
-			 * É necessário alterar o ID pelo valor correto da instalação WP
-			 * 
-			 * A melhor forma para garantir boa apresentação do Blurb exatamente como
-			 * na tela de mockup é PRIMEIRA LINHA<span>SEGUNDA LINHA</span>
-			 * 
-			 * O resultado deve sair assim:
-			 * 
-			 * <h1 id="tagline">Por um plano de educação que queremos 
-			 * <span> e uma participação que faça a diferença</span>
-			 * 
-			 */
-		 
-			// echo get_post_meta( 498, 'tagline', true); 
-		?>
+				 ?>
 		</div>
+	</div>
+</div>
 		
-		<?php get_search_form(); ?>
-		
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-
-	</header><!-- #masthead -->	
+<div id="page" class="hfeed site">
 
 	<div id="main" class="wrapper">
