@@ -85,7 +85,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				
 		<div id="tagline">
 			
-			<h1>		
+			<h1 class="internas">		
 				<?php
 				$texto = get_bloginfo("description");
 				list ($line1, $line2) = split ("-", $texto);

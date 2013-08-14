@@ -36,6 +36,7 @@ padding: 2em 0 0;
     max-width: 940px;
 	overflow: hidden;
 	min-height: 150px;
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 #box-below-map {
@@ -119,7 +120,7 @@ margin: 0 0 10px 0;
 }
 
 #prateleira  ul li {
-  background: url("img/bg-botao-prateleira.jpg") repeat scroll center -8px transparent;
+  background: url("img/bg-botao-prateleira.jpg") repeat scroll center top transparent;
     float: left;
     margin: 2em 0.5em;
 	border-radius: 5px;
@@ -137,8 +138,22 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
     width: auto !important;
 }
 
-#prateleira ul li  a {
+#prateleira ul li a {
 	color: #FFF;
+}
+
+#prateleira ul li.indicadores-qualidade {
+	background: url("img/botao-indicadores.png") no-repeat scroll center center #EE3360;
+	height:55px;
+}
+
+#prateleira ul li.indicadores-qualidade a{
+    height: 55px;
+    margin: 0 0 0 -65px;
+    position: absolute;
+    text-indent: -999999px;
+    width: 135px;
+	
 }
 
 #title-querys {
@@ -149,7 +164,6 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 }
 
 #title-querys h1 {
-	font-family: "Open Sans", Arial, sans-serif;
 	font-size: 1.5em;
 	padding: 0 2.5%;
 	text-transform: uppercase;
@@ -165,9 +179,46 @@ background: url("img/btn_hover_query.png") no-repeat scroll right 8px transparen
 	color: #F26122;
 }
 
-.noticias a:hover{
+.noticias a:hover {
 	color: #B54726;
 }
+
+.noticias-bg{
+	background-color: #F26122 !important;
+}
+
+
+.noticias-bg:hover{
+	background-color: #B54726 !important;
+}
+
+.triangulo-noticias {
+	border-color:transparent transparent transparent #F26122 !important;
+}
+
+
+
+.downloads a{
+	color: #EBE82B;
+}
+
+.downloads a:hover {
+	color: #D3D023;
+}
+
+.downloads-bg{
+	background-color: #EBE82B !important;
+}
+
+
+.downloads-bg:hover{
+	background-color: #D3D023 !important;
+}
+
+.triangulo-downloads {
+	border-color:transparent transparent transparent #EBE82B !important;
+}
+
 
 #query-posts {
     margin: 0;
@@ -176,7 +227,7 @@ background: url("img/btn_hover_query.png") no-repeat scroll right 8px transparen
 }
 
 .triangulo{
-	border-color:transparent transparent transparent #F26122;
+	border-color:transparent transparent transparent #CCC;
 	border-width: 8px;
     position: absolute;
 	border-style:solid;
@@ -185,8 +236,7 @@ background: url("img/btn_hover_query.png") no-repeat scroll right 8px transparen
 }
 
 h1.entry-title-query {
- font-family: "Open Sans",Arial,sans-serif;
-	font-size: 1.1em;
+	font-size: 1em;
     font-weight: 600;
     line-height: 1.3em;
     margin: 15px 20px 5px;
@@ -195,10 +245,11 @@ h1.entry-title-query {
 
 .entry-content-post-home {
 	margin: 0 20px;
+	font-size: 0.9em;
 }
 
 a.leia-mais {
-    background: none repeat scroll 0 0 #EF6326;
+    background: none repeat scroll 0 0 #CCC;
     float: right;
     margin-bottom: 0.7em;
     margin-right: 0.7em;
@@ -206,7 +257,7 @@ a.leia-mais {
 }
 
 a.leia-mais:hover {
-    background: none repeat scroll 0 0 #B54726;
+    background: none repeat scroll 0 0 #666;
 }
 
 span.mais {
@@ -229,6 +280,51 @@ display: block;
     position: absolute;
 }
 
+/* 
+ZILLA SHORTCODES
+----------------------------------------------- */
+
+.zilla-tabs .zilla-tab {
+    background: url("img/logo-bg-abas.png") no-repeat scroll right bottom #F5E7C2;
+    border:0 !important;
+    padding: 10px;
+}
+
+
+
+.zilla-tabs .zilla-nav li a {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    background: none repeat scroll 0 0 #EA1E43 !important;
+    border-color: #DFDFDF #DFDFDF -moz-use-text-color !important;
+    border-image: none !important;
+    border-radius: 3px 3px 0 0;
+    border-style: none !important;
+    border-width: 0 !important;
+	color: #FFF !important;
+    display: block;
+    height: 30px;
+    margin: 3px 0 0 0 !important;
+    overflow: hidden;
+    padding: 10px 15px 5px !important;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em !important;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.zilla-tabs .zilla-nav li a:hover {
+    background: none repeat scroll 0 0 #D62B4D !important;
+	margin: 3px 0 0 0 !important;
+}
+
+
+.zilla-tabs .zilla-nav .ui-tabs-selected a, .zilla-tabs .zilla-nav .ui-tabs-active a {
+    background: none repeat scroll 0 0 #BC1823 !important;
+    height: 30px;
+}
 
 
 /* Ação Educativa CSS Transparencia Hacker

@@ -122,11 +122,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		<?php get_template_part( 'mapbox' ); ?>
 	
 		<div id="box-below-map">
-		<span><a href="#"> Como Usar?</a></span>
+		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
 		</div>
 		
 		<div id="box-below-map">
-		<span><a href="#"> Participe!</a></span>
+		<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
 		</div>
 		
 		<div id="box-below-map" class="last">
