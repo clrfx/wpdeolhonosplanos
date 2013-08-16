@@ -115,7 +115,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		</div>
 		
 		<div id="box-below-map" class="last">
-		<span class="box-busca-mapa">Pesquisa</span>
+		<span class="box-busca-mapa">Pesquisa no Mapa</span>
 		<?php get_template_part( 'searchform-munic' ); ?>
 		</div>
 		<div class="clear"></div>
