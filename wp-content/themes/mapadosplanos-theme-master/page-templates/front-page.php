@@ -42,7 +42,7 @@ get_header(); ?>
 <div id="query-posts" class="noticias">
 
 	<?php
-			if ( query_posts( array ( 'cat' => '-59','post_status' => 'publish', 'posts_per_page' => 3 )) ) while ( have_posts() ) : the_post(); 
+			if ( query_posts( array ( 'cat' => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 3 )) ) while ( have_posts() ) : the_post(); 
 	?>
 		<div id="cada-post" <?php post_class(); ?>>
 			

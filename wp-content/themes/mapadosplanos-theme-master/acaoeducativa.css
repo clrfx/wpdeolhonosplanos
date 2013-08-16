@@ -411,6 +411,24 @@ span.botao-download {
     text-decoration: none;
 }
 
+.entry-header-page-mae {
+    background: url("img/bg-titulos-ilustra.png") no-repeat scroll 155px -15px transparent;
+    height: 100px;
+    line-height: 1.2;
+    margin-bottom: -3em;
+    padding-top: 2.5em;
+}
+
+.entry-header-page-mae .entry-title {
+  background: none repeat scroll right top #FCF5D9;
+    color: #EC3561;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 1.5em 0.65em 1.5em 0;
+    text-transform: uppercase;
+    width: auto;
+}
+
 /* 
 ZILLA SHORTCODES
 ----------------------------------------------- */

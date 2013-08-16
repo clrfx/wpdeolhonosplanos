@@ -9,7 +9,7 @@ get_header('resume'); ?>
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content', 'page-mae' ); ?>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>
 			
@@ -104,6 +104,6 @@ get_header('resume'); ?>
 
 </div>
 
-<?php get_downloads( 'limit=2' ); ?>
+<?php // get_downloads( 'limit=2' ); ?>
 
 <?php get_footer(); ?>
