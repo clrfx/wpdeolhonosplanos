@@ -5,3 +5,6 @@ wp-content/uploads/
 wp-content/upgrade/
 
 .vagrant
+
+*.swp
+*.swo
