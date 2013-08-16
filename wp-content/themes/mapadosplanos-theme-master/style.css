@@ -194,6 +194,7 @@ img {
 	font-size: 18px;
 	color:#FD6207;
 	margin-bottom: 10px !important;
+    text-transform: uppercase;
 }
 
 /* Shared Post Format styling */
@@ -1319,7 +1320,7 @@ label ~ span.required {
 }
 
 .template-front-page .site-content {
-    margin-bottom: 2%;
+    margin-bottom: -1%;
     margin-right: 2%;
     margin-top: 0;
     width: 60% !important;
@@ -1478,7 +1479,7 @@ img#wpstats {
 	.template-front-page .widget-area .widget,
 	.template-front-page.two-sidebars .widget-area .front-widgets {
 		float: left;
-		margin-bottom: 10px;
+		margin-bottom: 0;
 	}
 	.template-front-page .widget-area .widget:nth-child(odd) {
 		clear: right;
@@ -2327,7 +2328,6 @@ a, a:visited {
 
 a:hover, a:active {
 	color: #017094;
-	text-decoration: none !important;
 }
 
 .site-content article {

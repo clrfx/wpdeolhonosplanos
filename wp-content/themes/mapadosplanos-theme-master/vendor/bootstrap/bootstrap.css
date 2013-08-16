@@ -36,19 +36,17 @@
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
 }
 a {
-  color: #74a200;
+  color: #E92243;
   text-decoration: none;
 }
 a:hover {
-  color: #3d5600;
-  text-decoration: underline;
+  color: #D52D51;
 }
 .img-rounded {
   -webkit-border-radius: 6px;
