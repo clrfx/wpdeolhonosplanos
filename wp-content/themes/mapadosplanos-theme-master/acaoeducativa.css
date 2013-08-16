@@ -428,8 +428,9 @@ span.botao-download {
 
 
 #cada-download {
-    float: left;
+   margin-bottom: 2%;
     margin-left: 2%;
+    margin-top: 1%;
     width: 47%;
 }
 
