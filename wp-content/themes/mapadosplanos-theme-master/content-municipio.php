@@ -29,17 +29,17 @@
 
 	<div id="content-mapa">
 
-<header class="entry-header">
+<header class="entry-header mapas">
 			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title mapas"><?php the_title(); ?></h1>
 			<?php else : ?>
-			<h1 class="entry-title">
+			<h1 class="entry-title mapas">
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
 			<?php if ( $etapa ) : ?>
-				<div class="comments-link">
-					<a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Atualizar o questionário</a>
+				<div class="comments-link mapas">
+					<a class="mapas" href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Atualizar o questionário</a>
 				</a>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -54,20 +54,31 @@
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='700' height='400']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='600' height='400']"); ?>
 		</div><!-- .entry-content -->
-			<?php if ( comments_open() ) : ?>
-				<div class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-				</div><!-- .comments-link -->
-			<?php endif; // comments_open() ?>
+
 		<?php endif; ?>
+		
+		<div id="botao-map">
+		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
+		</div>
+		
+		<?php if ( comments_open() ) : ?>
+		<div id="botao-map">
+			<span>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
+			</span>			
+		</div>
+		<?php endif; // comments_open() ?>
 	
 		<div id="botao-map">
 					<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
 		</div>
 		
-
+		<div id="frase-single-mapa">
+Se voce e Pai/mae, responsavel, Estudante, Professor(a) ou Coordenador(a) e quer participar, preencha o formulario Sociedade Civil.
+		</div>
+		
 	</div>
 </div>
 
@@ -75,8 +86,7 @@
 
 	<div id="main" class="wrapper">
 
-	<div id="primary">
-		<div id="content" role="main">
+		<div id="content" class="full-width">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	

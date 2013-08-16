@@ -1435,8 +1435,12 @@ img#wpstats {
 	}
 	body.single-attachment .site-content,
 	body.full-width .site-content {
-		width: 100%;
+		
 	}
+	.full-width {
+	width: 100% !important;
+	}
+	
 	.widget-area {
 		float: right;
 		width: 27%;
@@ -2405,7 +2409,7 @@ div.wpcf7 {
 
 .lista-busca{
   float: left;
-  width: 600px !important;
+  width: 100% !important;
 }
 .lista-busca #content article.municipio{
     border-bottom: 0 none;
@@ -2415,6 +2419,11 @@ div.wpcf7 {
     width: 150px;
 }
 
+.lista-busca h5.entry-title-municipio {
+	line-height: 1.5 !important;
+	margin: 0 !important;
+    font-size: 0.928571rem;
+}
 
 /* Siderbar Munic */
 .munic-sidebar {

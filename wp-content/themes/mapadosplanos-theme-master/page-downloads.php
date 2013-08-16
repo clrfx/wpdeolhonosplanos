@@ -33,11 +33,11 @@ if ( $downloads->have_posts() ) : ?>
 
 		<div id="cada-download" <?php post_class(); ?>>
 
-				<a class="img-destacada-download" href="<?php echo get_permalink(); ?>">
+				<a class="img-destacada-download" href="<?php $dlm_download->the_download_link(); ?>">
 					<?php $dlm_download->the_image( 'downloads' ); ?>
 				</a>
 
-			<span class="entry-title-download-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php $dlm_download->the_title(); ?></a></span>
+			<span class="entry-title-download-query"><a href="<?php $dlm_download->the_download_link(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php $dlm_download->the_title(); ?></a></span>
 
 			<div class="entry-content-download">
 				<?php $dlm_download->the_short_description(); ?>

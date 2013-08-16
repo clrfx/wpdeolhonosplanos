@@ -9,7 +9,7 @@
 
 get_header('search'); ?>
 
-	<section id="primary" class="site-content lista-busca">
+	<section id="primary" class="lista-busca">
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
