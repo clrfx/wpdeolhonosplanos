@@ -1431,7 +1431,7 @@ img#wpstats {
 	}
 	.site-content {
 		float: left;
-		width: 70%;
+		width: 70% !important;
 	}
 	body.single-attachment .site-content,
 	body.full-width .site-content {

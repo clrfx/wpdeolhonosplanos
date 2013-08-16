@@ -23,18 +23,15 @@
       	}
 	?>
 	</div>
+	
+	
+<div id="barra-mapa">
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-		<div class="featured-post">
-			<?php _e( 'Featured post', 'twentytwelve' ); ?>
-		</div>
-		<?php endif; ?>
-		<header class="entry-header">
-			<?php the_post_thumbnail(); ?>
+	<div id="content-mapa">
+
+<header class="entry-header">
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<p><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></p>
 			<?php else : ?>
 			<h1 class="entry-title">
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -54,19 +51,35 @@
 		</div><!-- .entry-summary -->
 		
 		<?php else : ?>
-		<div class="munic-sidebar">
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='7' width='250' height='250']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='700' height='400']"); ?>
 		</div><!-- .entry-content -->
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
 					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
-		</div>
 		<?php endif; ?>
+	
+		<div id="botao-map">
+					<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
+		</div>
+		
+
+	</div>
+</div>
+
+<div id="page" class="hfeed site">
+
+	<div id="main" class="wrapper">
+
+	<div id="primary">
+		<div id="content" role="main">
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 		<?php if ( is_single() ) : ?>
 
 		<!-- EXIBICAO DOS CUSTOMFIELDS -->

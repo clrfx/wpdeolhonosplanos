@@ -7,14 +7,12 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header('resume'); ?>
+get_header('sem-main'); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', "municipio" ); ?>
+				<?php get_template_part( 'content', 'municipio' ); ?>
 
 				<nav class="nav-single">
 					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>

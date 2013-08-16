@@ -42,6 +42,14 @@ padding: 2em 0 0;
 	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
+#botao-map {
+width:auto;
+float: left;
+background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
+background-color: #0F85AB;
+margin: 1em;
+}
+
 #box-below-map {
 width:32%;
 float: left;
@@ -354,6 +362,7 @@ span.botao-download {
 #cada-noticia{
     float: left;
     margin-right: 5%;
+	margin-bottom: 20px;
     width: 45%;
 	background: #F5E7C2;
 }
@@ -488,7 +497,7 @@ h1.entry-title{
 }
 #mapa {
   float: left;
-  width: 240px;
+  width: auto;
   margin-bottom: -20px;
 }
 #fichaibge {
@@ -506,7 +515,7 @@ h1.entry-title{
 }
 
 #fichaae {
-  width: 66%;
+  width: 95%;
   float: right;
   background: none;
   border: none;
