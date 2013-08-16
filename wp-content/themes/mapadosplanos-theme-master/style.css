@@ -558,6 +558,7 @@ body.custom-font-enabled {
 	float: left;
 	position: absolute;
 	left: 0;
+	margin: 0;
 	z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -1477,9 +1478,7 @@ img#wpstats {
 	.template-front-page .widget-area .widget,
 	.template-front-page.two-sidebars .widget-area .front-widgets {
 		float: left;
-		width: 51.875%;
 		margin-bottom: 10px;
-		/* margin-bottom: 1.714285714rem; */
 	}
 	.template-front-page .widget-area .widget:nth-child(odd) {
 		clear: right;
@@ -2328,6 +2327,7 @@ a, a:visited {
 
 a:hover, a:active {
 	color: #017094;
+	text-decoration: none !important;
 }
 
 .site-content article {

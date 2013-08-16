@@ -13,7 +13,7 @@ width: 100%;
 	box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.3);
 	background-color: #EE3360;
 	position: fixed;
-	z-index: 9999999;
+	z-index: 99999;
 	height: auto;
 }
 
@@ -125,12 +125,14 @@ margin: 0 0 10px 0;
 }
 
 #prateleira  ul li {
-  background: url("img/bg-botao-prateleira.jpg") repeat scroll center top transparent;
-    float: left;
+  background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px transparent;
+    background-color: #F2486F;
+	float: left;
     margin: 2em 0.5em;
+	min-height: 45px;
 	border-radius: 5px;
 	box-shadow: 0 6px 8px rgba(30, 30, 30, 0.7);
-	 padding: 1em 0.5em;
+	padding: 1em 0.5em;
     text-align: center;
     width: 16%;
 }
@@ -211,6 +213,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .noticias a:hover {
 	color: #B54726;
+	text-decoration: none;
 }
 
 .noticias-bg{
@@ -266,9 +269,9 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 }
 
 h1.entry-title-query {
-	font-size: 1em;
+	font-size: 1.2em;
     font-weight: 600;
-    line-height: 1.3em;
+    line-height: 1.2em;
     margin: 15px 20px 5px;
     text-transform: uppercase;
 }
@@ -295,7 +298,7 @@ span.entry-title-download-query {
 
 .entry-content-post-home {
 	margin: 0 20px;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	color: #333333;
 }
 
@@ -371,6 +374,30 @@ span.botao-download {
 #site-navigation ul.sub-menu {
   overflow: hidden;
     position: absolute;
+}
+
+
+#wpcontent_slider_container .cs-prev, #wpcontent_slider_container .cs-next {
+    background: none repeat scroll 0 0 #E92243 !important;
+    color: #FFFFFF !important;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-size: 2em !important;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#wpcontent_slider .cs-title {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    width: 100%;
+}
+
+#wpcontent_slider h4, #wpcontent_slider h4 a {
+    color: #FFFFFF;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 /* 
