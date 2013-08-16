@@ -476,8 +476,7 @@ body.custom-font-enabled {
 	background-color: #fff;
 }
 .site-content {
-	margin: 24px 0 0;
-	margin: 1.714285714rem 0 0;
+	margin: 0;
 }
 .widget-area {
 	margin: 24px 0 0;
@@ -526,7 +525,7 @@ body.custom-font-enabled {
 }
 .main-navigation ul {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 0 20px;
 	padding-left: 0;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -642,7 +641,7 @@ footer[role="contentinfo"] {
 	font-size: 0.857142857rem;
 	line-height: 2;
 	max-width: 980px;
-	margin-top: 2em;
+	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 24px 20px;
@@ -979,17 +978,12 @@ footer.entry-meta {
 .page-header {
 	margin-bottom: 48px;
 	margin-bottom: 3.428571429rem;
-	padding-bottom: 22px;
-	padding-bottom: 1.571428571rem;
-	border-bottom: 1px solid #ededed;
+	padding-bottom: 1em;
 }
 .archive-meta {
 	color: #777;
-	font-size: 12px;
-	font-size: 0.857142857rem;
-	line-height: 2;
-	margin-top: 22px;
-	margin-top: 1.571428571rem;
+	line-height: 1.6;
+	margin-top: 1em;
 }
 
 
@@ -1326,7 +1320,7 @@ label ~ span.required {
 .template-front-page .site-content {
     margin-bottom: 2%;
     margin-right: 2%;
-    margin-top: 2%;
+    margin-top: 0;
     width: 60% !important;
 }
 .template-front-page .widget-area {
@@ -1334,15 +1328,7 @@ label ~ span.required {
     margin: 0;
     width: 38%;
 }
-/*.template-front-page .widget-area .widget li {
-	margin: 8px 0 0;
-	margin: 0.571428571rem 0 0;
-	font-size: 13px;
-	font-size: 0.928571429rem;
-	line-height: 1.714285714;
-	list-style-type: square;
-	list-style-position: inside;
-}*/
+
 .template-front-page .widget-area .widget li a {
 	color: #777;
 }
@@ -1451,7 +1437,7 @@ img#wpstats {
 	}
 	.widget-area {
 		float: right;
-		width: 26.041666667%;
+		width: 27%;
 	}
 	.site-header h1,
 	.site-header h2 {
@@ -2004,7 +1990,7 @@ margin: 0 0 24px;
 
 #main {
   clear: both;
-  padding: 0 20px !important;
+  padding: 20px 20px 0 20px !important;
 }
 
 #masthead {
@@ -2098,20 +2084,19 @@ header #searchform div #searchsubmit {
 }
 
 .archive-title {
-  font-size: 22px;
   background-color: transparent;
   clear: both;
-  color: #00aade;
   display: block;
-  font-weight: normal;
-  height: 26px;
-  line-height: 26px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  line-height: 1em;
   overflow-y: visible;
   text-rendering: optimizelegibility;
   vertical-align: baseline;
   text-transform: none;
+    color: #EC3561;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 15px 20px 0 0;
+    text-transform: uppercase;
 }
 
 .category-sticky h1 {
@@ -2195,6 +2180,7 @@ article.post-thumb p{
     line-height: 1.8em;
     margin-bottom: 0;
     padding-right: 0;
+	font-weight: lighter;
 }
 
 .below-map {
@@ -2305,7 +2291,7 @@ article.post-thumb p{
 }
 
 #secondary{
-	margin-top: 2%;
+	margin-top: 0;
 }
 
 /*Questionário Sociedade*/
@@ -2374,47 +2360,38 @@ div.wpcf7 {
 
 /* FOOTER */
 
-/*
-#colophon{
-  padding-top: 40px;
-}
-
-#colophon > div{
-  border-top: 2px solid #FFCB2B;
-}
-*/
-
 #footer-a {
-	float: left;
-	width: 20%;
+    float: left;
+    width: 20%;
+}
+.row-fluid .span2 {
+    width: 80%;
+}
+#footer-b {
+    float: left;
+    margin-right: 4%;
+    width: 26%;
+}
+#footer-c {
+    float: left;
+    width: 50%;
+}
+#footer-a .widget-title, #footer-b .widget-title, #footer-c .widget-title {
+    color: #F1194C;
+}
+#footer-a .textwidget, #footer-b .textwidget, #footer-c .textwidget {
+    border-top: 2px solid #11A4F1;
+    padding-top: 5px;
+}
+#footer-a .textwidget img, #footer-b .textwidget img, #footer-c .textwidget img {
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    margin-right: 10px;
 }
 
 .row-fluid .span2 {
 	width: 80%;
 }
-
-#footer-b {
-	float: left;
-	width: 80%;
-}
-
-#footer-a .widget-title, #footer-b .widget-title {
-	color: #f1194c;
-  /* position: absolute;
-  margin-top: -30px; */
-}
-
-#footer-a .textwidget, #footer-b .textwidget {
-	border-top: 2px solid #11a4f1;
-  padding-top: 5px;
-} 
-
-#footer-a .textwidget img, #footer-b .textwidget img {
-	margin-right: 10px;
-	border-radius: 0;
-	box-shadow: none;
-}
-
 
 /* Condicional de resposta da sociedade */
 #respostas-sociedade.nao-respondido {

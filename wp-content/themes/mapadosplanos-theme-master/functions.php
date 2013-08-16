@@ -121,6 +121,16 @@ register_sidebar( array(
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5>',
 	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer C', 'twentytwelve' ),
+		'id' => 'footer-c',
+		'description' => __( 'Footer C', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
 
 
 // admin favicon	
