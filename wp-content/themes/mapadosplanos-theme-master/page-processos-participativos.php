@@ -21,7 +21,7 @@ get_header('resume'); ?>
 	
 	
 
-<div id="title-querys">
+<div id="title-querys" class="download">
 
 
 <div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/category/downloads/' ) ); ?>">Downloads</a></h1>
@@ -35,15 +35,15 @@ get_header('resume'); ?>
 
 	<?php
 
-			if ( query_posts( array ( 'cat' => '-59','post_status' => 'publish', 'posts_per_page' => 3 )) ) while ( have_posts() ) : the_post(); 
+			if ( query_posts( array ( 'cat' => '-59','post_status' => 'publish', 'posts_per_page' => 2 )) ) while ( have_posts() ) : the_post(); 
 
 	?>
 
-		<div id="cada-post" <?php post_class(); ?>>
+		<div id="cada-download" <?php post_class(); ?>>
 
 			
 
-				<a class="link-img-destacada" href="<?php echo get_permalink(); ?>">
+				<a class="img-destacada-download" href="<?php echo get_permalink(); ?>">
 
 				<?php 
 
@@ -65,17 +65,17 @@ get_header('resume'); ?>
 
 
 
-			<h1 class="entry-title-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<span class="entry-title-download-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></span>
 
 
 
 				
 
-			<div class="entry-content-post-home">
+			<div class="entry-content-download">
 
 
 
-				<?php echo excerpt( 21 ); //Imprime 21 palavras ?> ...
+				<?php echo excerpt( 13 ); //Imprime 13 palavras ?> ...
 
 
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
@@ -88,29 +88,13 @@ get_header('resume'); ?>
 				</div><!-- .entry-utility -->
 				
 
-				</div><!-- .entry-content -->
+				</div><!-- .entry-content-download -->
 
-
-
-			<div class="entry-meta">
-
-			<?php /*
-
-			$category = get_the_category(); 
-
-			if($category[0]){
-
-			echo '<a href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
-
-			} */ ?>
-
-			</div>
-			
-			<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais downloads-bg"><span class="mais">+</span>
+				<a href="<?php the_permalink(); ?>" rel="bookmark" class="download downloads-bg"><span class="botao-download">DOWNLOAD</span>
 			</a>
-				
+			
 
-		</div><!-- #cada-post -->
+		</div><!-- #cada-download -->
 
 
 
@@ -118,9 +102,8 @@ get_header('resume'); ?>
 
 <?php wp_reset_query(); // reset query ?>
 
-
-
 </div>
 
+<?php get_downloads( 'limit=2' ); ?>
 
 <?php get_footer(); ?>

@@ -35,7 +35,7 @@ get_header(); ?>
 
 </div>
 
-<div id="title-querys">
+<div id="title-querys" class="noticias">
 <div class="triangulo triangulo-noticias"></div><h1 class="noticias"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Noticias</a></h1>
 
 </div>

@@ -25,6 +25,12 @@
 			<?php endif; ?>
 		</div>
 		
+		<div id="footer-c">
+			<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
+				<?php dynamic_sidebar( 'footer-c' ); ?>
+			<?php endif; ?>
+		</div>
+		
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
