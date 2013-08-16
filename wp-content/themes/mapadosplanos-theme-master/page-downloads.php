@@ -1,32 +1,17 @@
 <?php
 /**
- * Template Name: Processos Participativos
+ * Template Name: Downloads
  */
 
 get_header('resume'); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page-mae' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
-			
 		
-<?php wp_reset_query(); // reset query ?>
+		
+		<div id="title-querys" class="download">
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	
-	
-
-<div id="title-querys" class="download">
-
-
-<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Downloads</a></h1>
-
-
+<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/category/downloads/' ) ); ?>">Downloads</a></h1>
 
 </div>
 
@@ -35,7 +20,7 @@ get_header('resume'); ?>
 <?php
 $args = array(
 	    	'post_type'      => 'dlm_download',
-	    	'posts_per_page' => '2',
+			'posts_per_page' => '6',
 	    	'no_found_rows'  => 1,
 	    	'post_status'    => 'publish',
 	    	'meta_query'     => array()
@@ -65,7 +50,7 @@ if ( $downloads->have_posts() ) : ?>
 		</div><!-- #cada-download -->
 
 			<?php endwhile; // end of the loop. ?>
-
+		
 		<?php endif;
 
 		wp_reset_postdata();
@@ -74,4 +59,9 @@ if ( $downloads->have_posts() ) : ?>
 
 </div>
 
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	
+	
 <?php get_footer(); ?>
