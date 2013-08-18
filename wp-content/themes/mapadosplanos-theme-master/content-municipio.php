@@ -76,7 +76,7 @@
 		</div>
 		
 		<div id="frase-single-mapa">
-Se voce e Pai/mae, responsavel, Estudante, Professor(a) ou Coordenador(a) e quer participar, preencha o formulario Sociedade Civil.
+Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e quer participar, preencha abaixo o formul&aacute;rio Sociedade Civil.
 		</div>
 		
 	</div>

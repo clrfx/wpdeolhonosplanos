@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header('search'); ?>
+get_header('resume'); ?>
 
 	<section id="primary" class="lista-busca">
 		<div id="content" role="main">
@@ -53,6 +53,24 @@ get_header('search'); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
+	
+		<div id="barra-mapa">
 
-<?php get_sidebar(); ?>
+		<div id="content-mapa">
+		
+			<div id="box-below-map">
+			<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
+			</div>
+			
+			<div id="box-below-map">
+			<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
+			</div>
+			
+			<div id="box-below-map" class="last">
+			<span class="box-busca-mapa">Pesquisa no Mapa</span>
+			<?php get_template_part( 'searchform-munic' ); ?>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
 <?php get_footer(); ?>

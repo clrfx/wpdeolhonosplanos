@@ -147,7 +147,6 @@ margin: 0 0 10px 0;
     background-color: #F2486F;
 	float: left;
     margin: 2em 0.5em;
-	min-height: 45px;
 	border-radius: 5px;
 	box-shadow: 0 6px 8px rgba(30, 30, 30, 0.7);
 	padding: 1em 0.5em;
@@ -249,15 +248,15 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 
 .downloads a{
-	color: #EBE82B;
-}
-
-.downloads a:hover {
 	color: #D3D023;
 }
 
+.downloads a:hover {
+	color: #D0D020;
+}
+
 .downloads-bg{
-	background-color: #EBE82B !important;
+	background-color: #E3e04f !important;
 }
 
 
@@ -298,6 +297,11 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	margin: 1em 0 1em 2em;
 	}
 
+	#botao-map:hover {
+background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+background-color: #0C6D8D;
+}
+
 
 #botao-map span {
     letter-spacing: 1px;
@@ -313,6 +317,11 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	line-height: 1.2em;
     padding: 1em;
 }
+
+#botao-map span a:hover {
+	color: #FFF;
+}
+
 
 #query-posts {
     margin: 0;
@@ -428,10 +437,11 @@ span.botao-download {
 
 
 #cada-download {
-   margin-bottom: 2%;
+   margin-bottom: 3%;
     margin-left: 2%;
     margin-top: 1%;
     width: 47%;
+	float: left;
 }
 
 

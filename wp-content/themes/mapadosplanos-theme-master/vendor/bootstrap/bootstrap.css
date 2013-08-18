@@ -54,7 +54,7 @@ a:hover {
   border-radius: 6px;
 }
 .img-polaroid {
-  padding: 4px;
+  padding: 4px 4px 0;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
