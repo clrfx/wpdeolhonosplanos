@@ -119,6 +119,57 @@ padding: 0;
 	margin-left: 2em;
 }
 
+#content-headers-internos {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 940px;
+	overflow: hidden;
+	min-height: 80px;
+
+}
+
+#description-headers-internos {
+float: left;
+max-width: 500px;
+overflow: hidden;
+margin-top: 2em;
+}
+
+#barra-downloads {
+width: 100%;
+overflow: hidden;
+background: url("img/bg-header-downloads.jpg") repeat scroll center -2px transparent;
+padding:1em 0;
+margin: 0;
+}
+
+#downloads-title {
+background: url("img/img-header-downloads.png") no-repeat scroll center -5px transparent;
+width: 390px;
+height: 95px;
+margin: 0 3em 0 0;
+padding: 0;
+display: block;
+float: left;
+}
+
+#barra-noticias {
+width: 100%;
+overflow: hidden;
+background: url("img/bg-header-noticias.jpg") repeat scroll center -2px transparent;
+padding:1em 0;
+margin: 0;
+}
+
+#noticias-title {
+background: url("img/img-header-noticias.png") no-repeat scroll center top transparent;
+width: 303px;
+height: 85px;
+margin: 0.6em 3em 0 0;
+padding: 0;
+display: block;
+float: left;
+}
 
 .videosidebar h5.widget-title {
 margin: 0 0 10px 0;
@@ -172,11 +223,12 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 }
 
 #prateleira ul li.indicadores-qualidade {
-	background: url("img/botao-indicadores.png") no-repeat scroll center center #EE3360;
+	background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px #F2486F;
 	height:55px;
 }
 
-#prateleira ul li.indicadores-qualidade a{
+#prateleira ul li a.indicadores-qualidade{
+    background: url("img/botao-indicadores.png") no-repeat scroll center center transparent;
     height: 55px;
     margin: 0 0 0 -65px;
     position: absolute;
@@ -270,6 +322,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .mapas{
 	color: #FFFFFF !important;
+	margin-top: 5px !important;
 }
 
 .mapas a{
@@ -580,6 +633,7 @@ h1.entry-title{
   float: left;
   width: auto;
   margin-bottom: 20px;
+  height: 400px;
 }
 #fichaibge {
   width: 210px;
@@ -602,19 +656,20 @@ h1.entry-title{
   border: none;
   padding-left: 19px;
 	padding-right: 19px;
-	padding-top: 0px !important;
+	padding-top: 15px !important;
 	padding-bottom: 0px;
 	box-shadow: none;
 }
 
 #fichaae .nav-tabs a {
-  background: #87b7c4;
-  color: #15556e;
+  background: #1AAFE0;
+  color: #e2e4e7;
 }
 
 #fichaae .nav-tabs .active a {
-  background: #a2daeb;
-  color: #15556e;
+  background: #3A87AD;
+  color: #FFF;
+  font-weight: bold;
 }
 .search #fichaae {
   width: 355px;
@@ -627,7 +682,7 @@ h1.entry-title{
 #parte1.tab-pane, #parte2.tab-pane, #parte3.tab-pane {
 	
 	padding: 20px;
-	background: rgba(162,218,235,1); /* W3C */
+	background:#e1f0f4;
 }
 
 .fichas .titulo {

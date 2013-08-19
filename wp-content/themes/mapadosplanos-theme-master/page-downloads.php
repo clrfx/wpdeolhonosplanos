@@ -3,17 +3,11 @@
  * Template Name: Downloads
  */
 
-get_header('resume'); ?>
+get_header('downloads'); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
 		
-		
-		<div id="title-querys" class="download">
-
-<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/category/downloads/' ) ); ?>">Downloads</a></h1>
-
-</div>
 
 <div id="query-posts" class="downloads">
 
@@ -62,6 +56,20 @@ if ( $downloads->have_posts() ) : ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
+	
+	<div id="prateleira">
+
+		<ul>
+
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de <br />Experi&ecirc;ncias</a></li>
+
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/category/biblioteca/' ) ); ?>">Mais materiais em <br />nossa Biblioteca</a></li>
+
+	    <li class="indicadores-qualidade planos"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
+
+		</ul>
+
+	</div>	
 	
 	
 <?php get_footer(); ?>
