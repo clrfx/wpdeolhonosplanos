@@ -106,8 +106,12 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 	<div id="content-headers-internos">
 		<div id="noticias-title">
 		</div>
-		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Noticias, Aqui entra a descri&ccedil;&atilde;o da categoria Noticias, Aqui entra a descri&ccedil;&atilde;o da categoria Noticias.
-		</div>
+		<?php if ( have_posts() ) : ?>
+		<?php if ( category_description() ) : // Show an optional category description ?>
+			<div id="description-headers-internos"><?php echo category_description(); ?>
+			</div>
+		<?php endif; ?>
+		<?php endif; ?>
 	</div>
 </div>
 
