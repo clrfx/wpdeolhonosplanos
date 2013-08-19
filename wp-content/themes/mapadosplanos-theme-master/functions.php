@@ -81,10 +81,10 @@ register_sidebar( array(
 	) );
 
 register_sidebar( array(
-		'name' => __( 'Sidebar Categoria', 'twentytwelve' ),
-		'id' => 'sidebar-categoria-widget',
-		'description' => __( 'Sidebar Categoria', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="sidebar-categoria %2$s">',
+		'name' => __( 'Sidebar Noticias', 'twentytwelve' ),
+		'id' => 'sidebar-noticias-widget',
+		'description' => __( 'Sidebar Noticias', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="sidebar-noticias %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5>',

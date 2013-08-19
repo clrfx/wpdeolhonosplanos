@@ -95,14 +95,13 @@ get_header('noticias'); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
-
-	<?php if ( is_active_sidebar( 'sidebar-categoria-widget' ) ) : ?>
-		<div class="categories widget-area">
-			<?php dynamic_sidebar( 'sidebar-categoria-widget' ); ?>
-		</div><!-- .first -->
+	
+	<?php if ( is_active_sidebar( 'sidebar-noticias-widget' ) ) : ?>
+	<div id="secondary" class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-noticias-widget' ); ?>
+	</div><!-- #secondary -->
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
 
 <div class="clear"></div>
 
