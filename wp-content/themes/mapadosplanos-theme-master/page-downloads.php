@@ -14,7 +14,7 @@ get_header('downloads'); ?>
 <?php
 $args = array(
 	    	'post_type'      => 'dlm_download',
-			'posts_per_page' => '6',
+			'posts_per_page' => '8',
 	    	'no_found_rows'  => 1,
 	    	'post_status'    => 'publish',
 	    	'meta_query'     => array()

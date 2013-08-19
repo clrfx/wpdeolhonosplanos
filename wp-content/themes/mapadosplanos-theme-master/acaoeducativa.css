@@ -186,24 +186,27 @@ margin: 0 0 10px 0;
 }
 
 #prateleira ul {
-	display: inline-block !important;
-    float: left;
+	display: inline-block  !important;
     list-style: none outside none;
 	margin: 0 0 0 2%;
 	width: 102%;
 }
 
 #prateleira  ul li {
+	display: inline-block !important;
   background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px transparent;
     background-color: #F2486F;
-	float: left;
     margin: 2em 0.5em;
 	border-radius: 5px;
 	box-shadow: 0 6px 8px rgba(30, 30, 30, 0.7);
 	padding: 1em 0.5em;
     text-align: center;
-    width: 16%;
+	float: left;
+	overflow: hidden;
+	width: 16%;
 }
+
+
 
 #prateleira  ul li.planos {
     width: 29%;
