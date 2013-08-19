@@ -613,12 +613,11 @@ ZILLA SHORTCODES
   max-width: 100% !important;
 }
 
-h1.entry-title{
-	color: #02a6d9;
-	font-family: "Open Sans";
-	font-weight: 600;
-	margin-top:0;
-	margin-bottom: 20px
+h1.entry-title-giant{
+	color: #EC3561;
+	margin-top:30px;
+	margin-bottom: 30px !important;
+	font-size: 6em;
 }
 
 /* Content-Municipio - Questionários
