@@ -33,6 +33,11 @@ background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
 padding: 2em 0 0;
 }
 
+#barra-mapa.search{
+    margin: 0 -20px;
+	width: 105%;
+}
+
 #content-mapa {
     margin: 0 auto;
     padding: 0 20px;
@@ -544,6 +549,63 @@ span.botao-download {
     text-transform: uppercase;
     width: auto;
 }
+
+
+#secondary ul {
+list-style: none;
+margin: 0 0 20px 0;
+}
+
+#secondary ul.menu {
+ 	width: 95%;
+}
+
+#secondary ul.menu li {
+    background: none repeat scroll 0 0 #F26122;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+    height: auto;
+    margin: 0 0 0.5em;
+    padding: 0;
+}
+
+#secondary ul.menu li:hover {
+    background-color: #B54726;
+}
+
+#secondary ul.menu li a{
+    color: #FFF;
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+
+}
+
+#secondary .widget_search {
+    background-color: #fcf8ea;
+    margin-bottom: 20px;
+    padding: 0.8em; 
+}
+
+#secondary. widget_recent_comments {
+    margin-bottom: 20px;
+	}
+	
+	
+#secondary ul#recentcomments {
+	font-size: 0.8em;
+}
+
+#secondary .widget_tag_cloud {
+    margin-bottom: 20px;
+	}
+	
+	
+	
 
 /* 
 ZILLA SHORTCODES
