@@ -23,5 +23,7 @@ get_header('sem-main'); ?>
 					if ( comments_open() || '0' != get_comments_number() )
 						comments_template( '', true );
 				?>
+				
+<?php get_template_part( 'barra-search-munic'); ?>
 
 <?php get_footer(); ?>

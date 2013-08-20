@@ -56,7 +56,12 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <![endif]-->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-
+<script type="text/javascript">
+function Scrolldown() {
+window.scroll(0,180); 
+}
+window.onload = Scrolldown;
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -104,7 +109,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <div id="barra-noticias">
 	<div id="content-headers-internos">
-		<div id="noticias-title">
+		<div id="noticias-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Notícias</a>
 		</div>
 		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Noticias, Aqui entra a descri&ccedil;&atilde;o da categoria Noticias, Aqui entra a descri&ccedil;&atilde;o da categoria Noticias.
 		</div>

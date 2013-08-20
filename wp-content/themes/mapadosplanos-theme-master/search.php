@@ -45,7 +45,6 @@ get_header('resume'); ?>
 				<div class="entry-content">
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
 					<p>Fa&ccedil;a outra Busca por municipios ou estados</p>
-					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Voltar para a Home</a></p>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
 
@@ -54,10 +53,14 @@ get_header('resume'); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 	
-	<?php 
+				<?php 
 				if ( 'municipio' == get_post_type() ) {
 					get_template_part( 'barra-search-munic', get_post_format() ); 
+				}
+				else {
+					get_template_part( 'barra-search-munic', get_post_format() ); 
 				};
-				?>
+					?>
+
 
 <?php get_footer(); ?>

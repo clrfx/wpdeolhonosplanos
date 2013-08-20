@@ -27,15 +27,16 @@ background: url("img/bg-header.jpg") repeat scroll center top transparent;
 }
 
 #barra-mapa {
-width: 100%;
-overflow: hidden;
-background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
-padding: 2em 0 0;
+	width: 100%;
+	overflow: hidden;
+	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
+  padding: 0.5em 0 0;
 }
 
 #barra-mapa.search{
-    margin: 0 -20px;
-	width: 105%;
+    margin: 1em -20px 0;
+    padding: 2em 0 0;
+    width: 105%;
 }
 
 #content-mapa {
@@ -44,21 +45,22 @@ padding: 2em 0 0;
     max-width: 940px;
 	overflow: hidden;
 	min-height: 100px;
-	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 
 #box-below-map {
-width:32%;
-float: left;
-background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
-background-color: #0F85AB;
-margin-right: 1em;
+	width:32%;
+	float: left;
+	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
+	background-color: #0F85AB;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 #box-below-map:hover {
-background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
-background-color: #0C6D8D;
+					background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+					background-color: #0C6D8D;
 }
 
 #box-below-map.last{
@@ -101,20 +103,20 @@ padding: 0;
 #frase-mapa {
     color: #FFFFFF;
     display: block;
-    font-size: 1.7em;
-    font-style: italic;
+    font-size: 1.6em;
     letter-spacing: 1px;
     padding: 1.2em;
     text-align: center;
 	width: auto;
 	min-height: 30px;
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 #frase-single-mapa {
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
     color: #FFFFFF;
     display: block;
     font-size: 1.3em;
-    font-style: italic;
     letter-spacing: 1px;
     margin: 1em 0 1em 2em;
     text-align: center;
@@ -214,6 +216,12 @@ margin: 0 0 10px 0;
     width: 29%;
 }
 
+#prateleira  ul li.home {
+    font-size: 1.2em;
+    padding: 1.8em 0.5em;
+    width: 29%;
+}
+
 
 #prateleira  ul li:hover {
 box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
@@ -229,16 +237,17 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 
 #prateleira ul li.indicadores-qualidade {
 	background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px #F2486F;
-	height:55px;
+	height: 48px;
+	padding: 1em 0;
 }
 
 #prateleira ul li a.indicadores-qualidade{
     background: url("img/botao-indicadores.png") no-repeat scroll center center transparent;
-    height: 55px;
     margin: 0 0 0 -65px;
     position: absolute;
     text-indent: -999999px;
     width: 135px;
+	height: 48px;
 	
 }
 
@@ -327,7 +336,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .mapas{
 	color: #FFFFFF !important;
-	margin-top: 5px !important;
+	margin-top: 20px !important;
 }
 
 .mapas a{
@@ -348,6 +357,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 }
 
 #botao-map {
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 	width:290px;
 	float: left;
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
@@ -533,7 +543,7 @@ span.botao-download {
 }
 
 .entry-header-page-mae {
-    background: url("img/bg-titulos-ilustra.png") no-repeat scroll 155px -15px transparent;
+    background: url("img/bg-titulos-ilustra.png") no-repeat scroll 162px -15px transparent;
     height: 100px;
     line-height: 1.2;
     margin-bottom: -3em;
@@ -545,7 +555,7 @@ span.botao-download {
     color: #EC3561;
     font-size: 2.5em;
     font-weight: bold;
-    padding: 1.5em 0.65em 1.5em 0;
+    padding: 1.5em 0.75em 1.7em 0;
     text-transform: uppercase;
     width: auto;
 }

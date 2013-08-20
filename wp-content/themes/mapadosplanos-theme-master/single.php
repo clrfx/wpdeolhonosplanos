@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header('resume'); ?>
+get_header('noticias'); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
