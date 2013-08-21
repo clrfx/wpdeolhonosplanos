@@ -24,13 +24,14 @@ get_header('resume'); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php 
 				if ( 'municipio' == get_post_type() ) {
-					get_template_part( 'content-search-munic', get_post_format() ); 
+					get_template_part( 'content-search-munic', get_post_format() );
+					
 				}
 				else {
 					get_template_part( 'content', get_post_format() ); 
 				}
 					?>
-
+					
 			<?php endwhile; ?>
 
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
@@ -44,7 +45,11 @@ get_header('resume'); ?>
 
 				<div class="entry-content">
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
-					<p>Fa&ccedil;a outra Busca por municipios ou estados</p>
+					
+					<p>Fa&ccedil;a outra Busca.</p>
+					
+					<p>&nbsp;</p>
+					
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
 
@@ -52,15 +57,12 @@ get_header('resume'); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
-	
 				<?php 
-				if ( 'municipio' == get_post_type() ) {
+				if ( 'municipio' == is_search() ) {
 					get_template_part( 'barra-search-munic', get_post_format() ); 
 				}
-				else {
-					get_template_part( 'barra-search-munic', get_post_format() ); 
-				};
-					?>
+				?>
+				
 
 
 <?php get_footer(); ?>
