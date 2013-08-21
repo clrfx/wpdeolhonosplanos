@@ -196,6 +196,7 @@ img {
 	margin-bottom: 10px !important;
 	margin-top: 0 !important;
     text-transform: uppercase;
+	line-height: 1.5em;
 }
 
 
@@ -556,7 +557,7 @@ body.custom-font-enabled {
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	background: none repeat scroll 0 0 #EC355F;
+	background: none repeat scroll 0 0 #EC556F;
 	display: none;
 	float: left;
 	position: absolute;
@@ -1477,6 +1478,19 @@ img#wpstats {
     margin: 15px 20px 0 0;
     text-transform: uppercase;
 	}
+	
+	.single-post .entry-header .entry-title {
+	color: #FD6207;
+	}
+	
+	.page .widget-title {
+	color: #EC3561;
+	}
+	
+	.page  #secondary { 
+	margin-top: 1em;
+	}
+	
 	#respond form input[type="text"] {
 		width: 46.333333333%;
 	}
@@ -1972,7 +1986,7 @@ margin: 0 0 24px;
 .termometro{
   position: absolute;
   z-index: 1;
-  width: 160px;
+  width: 170px;
   right: 10px;
   top: 10px;
   background-color: white;

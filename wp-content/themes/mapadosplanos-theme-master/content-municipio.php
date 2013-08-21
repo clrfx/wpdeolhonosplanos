@@ -60,7 +60,14 @@
 		<?php endif; ?>
 		
 		<div id="botao-map">
-		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
+		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		Quer participar? preencha o formul&aacute;rio Sociedade Civil
+		</a>
+		</span>			
+		</div>
+		
+		<div id="botao-map">
+			<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
 		</div>
 		
 		<?php if ( comments_open() ) : ?>
@@ -70,17 +77,12 @@
 			</span>			
 		</div>
 		<?php endif; // comments_open() ?>
-	
-		<div id="botao-map">
-					<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
-		</div>
 		
 		<div id="botao-map">
-		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		Quer participar? preencha o formul&aacute;rio Sociedade Civil
-		</a>
-		</span>			
+		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
 		</div>
+	
+		
 		
 		<!-- <div id="frase-single-mapa">
 Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e quer participar, preencha abaixo o formul&aacute;rio Sociedade Civil.

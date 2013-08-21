@@ -218,7 +218,7 @@ margin: 0 0 10px 0;
 
 #prateleira  ul li.home {
     font-size: 1.2em;
-    padding: 1.8em 0.5em;
+	padding: 1.55em 0.5em;
     width: 29%;
 }
 
@@ -238,7 +238,7 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 #prateleira ul li.indicadores-qualidade {
 	background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px #F2486F;
 	height: 48px;
-	padding: 1em 0;
+	padding: 0.7em 0;
 }
 
 #prateleira ul li a.indicadores-qualidade{
