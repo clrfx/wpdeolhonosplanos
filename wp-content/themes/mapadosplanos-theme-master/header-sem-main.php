@@ -26,6 +26,13 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
+<script type="text/javascript">
+$(document).ready( function Scrolldown(){
+window.scroll(0,180); 
+ }); 
+</script>
+
 <!-- Jquery -->
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery.h5validate.js" type="text/javascript"></script>
