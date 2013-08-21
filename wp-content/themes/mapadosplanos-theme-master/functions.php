@@ -71,9 +71,9 @@ register_sidebar( array(
 	) );
 
 register_sidebar( array(
-		'name' => __( 'Front Page Big Below', 'twentytwelve' ),
-		'id' => 'frontpage-below-big',
-		'description' => __( 'Front Page Big Below', 'twentytwelve' ),
+		'name' => __( 'Sidebar Destaques Home', 'twentytwelve' ),
+		'id' => 'sidebar-destaques-home',
+		'description' => __( 'Sidebar Destaques Home', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',

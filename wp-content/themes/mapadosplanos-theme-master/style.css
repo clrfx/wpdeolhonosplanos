@@ -1338,7 +1338,13 @@ label ~ span.required {
     float: left;
     margin: 0;
     width: 38%;
+	margin-top: 0 !important;
 }
+
+.template-front-page .widget-title  {
+	color: #FD6207 !important;
+	}
+	
 
 .template-front-page .widget-area .widget li a {
 	color: #777;
