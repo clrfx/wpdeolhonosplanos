@@ -115,7 +115,7 @@ window.scroll(0,180);
 		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria bilbioteca.
 		</div>
 		<div class="clear"></div>
-		<div class="menu-biblioteca-categorys">
+		<div id="menu-biblioteca-categorys">
 		<?php
 			wp_nav_menu( array('theme_location' => 'biblioteca-menu') );
 		?>

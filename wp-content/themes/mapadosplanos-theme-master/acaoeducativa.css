@@ -146,6 +146,7 @@ margin-top: 2em;
 width: 100%;
 overflow: hidden;
 background: url("img/bg-header-downloads.jpg") repeat scroll center -2px transparent;
+background-color: #F8E04A;
 padding:1em 0;
 margin: 0;
 }
@@ -160,12 +161,55 @@ display: block;
 float: left;
 }
 
+#barra-biblioteca {
+width: 100%;
+overflow: hidden;
+background: url("img/bg-header-biblioteca.jpg") repeat scroll center -2px transparent;
+background-color: #8cc242;
+padding:1em 0;
+margin: 0;
+}
+
+#biblioteca-title {
+background: url("img/img-header-biblioteca.png") no-repeat scroll center -5px transparent;
+width: 390px;
+height: 95px;
+margin: 0 3em 0 0;
+padding: 0;
+display: block;
+float: left;
+}
+
 #barra-noticias {
 width: 100%;
 overflow: hidden;
 background: url("img/bg-header-noticias.jpg") repeat scroll center -2px transparent;
 padding:1em 0;
 margin: 0;
+}
+
+#menu-biblioteca-categorys ul.menu {
+   font-size: 0.9em;
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding-left: 0;
+    text-transform: uppercase;
+}
+
+#menu-biblioteca-categorys li {
+    float: left;
+    position: relative;
+	background: none repeat scroll 0 0 #8CC242;
+	margin-right: 1em;
+}
+#menu-biblioteca-categorys li a {
+    color: #FFFFFF;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+	}
+#menu-biblioteca-categorys li a:hover {	
+	background-color:#7bb033
 }
 
 #noticias-title {
@@ -310,6 +354,23 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .triangulo-noticias {
 	border-color:transparent transparent transparent #F26122 !important;
+}
+
+.biblioteca a{
+	color: #8CC242;
+}
+
+.bilbioteca a:hover {
+	color: #7BB033;
+}
+
+.biblioteca-bg{
+	background-color: #8CC242 !important; 
+}
+
+
+.biblioteca-bg:hover{
+	background-color: #7BB033 !important;
 }
 
 
@@ -468,6 +529,14 @@ a.download {
     width: 150px;
 }
 
+a.biblioteca {
+    background: url("img/biblioteca-icone.png") no-repeat scroll 140px 10px #CCC;
+    float: left;
+    margin: 15px 20px 10px;
+    padding: 1em 1.5em;
+    width: 150px;
+}
+
 span.mais {
 color: #fff;
 	font-size: 2.5em;
@@ -476,6 +545,12 @@ display: block;
 }
 
 span.botao-download {
+    color: #fff;
+	font-size: 1.2em;
+    display: block;
+}
+
+span.botao-biblioteca {
     color: #fff;
 	font-size: 1.2em;
     display: block;
@@ -679,6 +754,15 @@ ZILLA SHORTCODES
   width: 40%;
   float: left;
   background: none repeat scroll 0 0 #EBE82B;
+}
+
+.img-destacada-biblioteca {
+  height: 230px;
+  display: block;
+  overflow: hidden;
+  width: 40%;
+  float: left;
+  background: none repeat scroll 0 0 #8CC242;
 }
 
 #query-posts img {

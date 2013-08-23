@@ -14,6 +14,7 @@ get_header('downloads'); ?>
 <?php
 $args = array(
 	    	'post_type'      => 'dlm_download',
+			'dlm_download_category' => 'download',
 			'posts_per_page' => '6',
 	    	'no_found_rows'  => 1,
 	    	'post_status'    => 'publish',
