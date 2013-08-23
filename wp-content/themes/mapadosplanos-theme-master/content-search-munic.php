@@ -25,4 +25,5 @@
 			</h5>
 		</div><!-- .entry-content -->
 
-</article><!-- #post -->
+	</article><!-- #post -->
+	

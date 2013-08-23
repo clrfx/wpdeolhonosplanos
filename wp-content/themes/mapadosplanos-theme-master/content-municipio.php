@@ -29,7 +29,7 @@
 
 	<div id="content-mapa">
 
-<header class="entry-header mapas">
+		<header class="entry-header mapas">
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title mapas"><?php the_title(); ?></h1>
 			<?php else : ?>
@@ -60,7 +60,14 @@
 		<?php endif; ?>
 		
 		<div id="botao-map">
-		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
+		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		Quer participar? preencha o formul&aacute;rio Sociedade Civil
+		</a>
+		</span>			
+		</div>
+		
+		<div id="botao-map">
+			<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
 		</div>
 		
 		<?php if ( comments_open() ) : ?>
@@ -70,14 +77,16 @@
 			</span>			
 		</div>
 		<?php endif; // comments_open() ?>
-	
-		<div id="botao-map">
-					<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
-		</div>
 		
-		<div id="frase-single-mapa">
-Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e quer participar, preencha abaixo o formul&aacute;rio Sociedade Civil.
+		<div id="botao-map">
+		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
 		</div>
+	
+		
+		
+		<!-- <div id="frase-single-mapa">
+Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e quer participar, preencha abaixo o formul&aacute;rio Sociedade Civil.
+		</div> -->
 		
 	</div>
 </div>

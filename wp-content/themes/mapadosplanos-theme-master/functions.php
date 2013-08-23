@@ -71,9 +71,9 @@ register_sidebar( array(
 	) );
 
 register_sidebar( array(
-		'name' => __( 'Front Page Big Below', 'twentytwelve' ),
-		'id' => 'frontpage-below-big',
-		'description' => __( 'Front Page Big Below', 'twentytwelve' ),
+		'name' => __( 'Sidebar Destaques Home', 'twentytwelve' ),
+		'id' => 'sidebar-destaques-home',
+		'description' => __( 'Sidebar Destaques Home', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',
@@ -81,10 +81,10 @@ register_sidebar( array(
 	) );
 
 register_sidebar( array(
-		'name' => __( 'Sidebar Categoria', 'twentytwelve' ),
-		'id' => 'sidebar-categoria-widget',
-		'description' => __( 'Sidebar Categoria', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="sidebar-categoria %2$s">',
+		'name' => __( 'Sidebar Noticias', 'twentytwelve' ),
+		'id' => 'sidebar-noticias-widget',
+		'description' => __( 'Sidebar Noticias', 'twentytwelve' ),
+		'before_widget' => '<div id="%1$s" class="sidebar-noticias %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5>',
@@ -132,6 +132,8 @@ register_sidebar( array(
 		'after_title' => '</h5>',
 	) );
 
+// Registrando Menu para categorias da Biblioteca	
+register_nav_menu( 'biblioteca-menu', __( 'Menu da Biblioteca', 'twentytwelve' ) );
 
 // admin favicon	
 function admin_favicon() {
@@ -367,8 +369,6 @@ add_shortcode( 'voltaPost', 'mapadosplanos_shortcode_voltapost' );
 
 
 //Adicionando filtro para quantidade de caracteres do the_excerpt
-
-
 // Muda o limite do the_excerpt no child theme do TwentyTwelve
 function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);

@@ -26,6 +26,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
 <!-- Jquery -->
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery.h5validate.js" type="text/javascript"></script>
@@ -57,6 +58,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
+<script type="text/javascript">
+$(document).ready( function Scrolldown(){
+window.scroll(0,180); 
+ }); 
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -85,7 +91,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				
 		<div id="tagline">
 			
-				<h1 class="internas">		
+			<h1 class="internas">		
 				<?php
 				$texto = get_bloginfo("description");
 				list ($line1, $line2) = split ("-", $texto);
@@ -102,26 +108,23 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 	
 </div>
 
-<div id="barra-mapa">
-
-	<div id="content-mapa">
-	
-		<div id="box-below-map">
-		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
+<div id="barra-biblioteca">
+	<div id="content-headers-internos">
+		<div id="biblioteca-title">
 		</div>
-		
-		<div id="box-below-map">
-		<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
-		</div>
-		
-		<div id="box-below-map" class="last">
-		<span class="box-busca-mapa">Pesquisa no Mapa</span>
-		<?php get_template_part( 'searchform-munic' ); ?>
+		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria bilbioteca.
 		</div>
 		<div class="clear"></div>
+		<div id="menu-biblioteca-categorys">
+		<?php
+			wp_nav_menu( array('theme_location' => 'biblioteca-menu') );
+		?>
+		</div><!-- .menu-links -->
+		
 	</div>
 </div>
-		
+
+
 <div id="page" class="hfeed site">
 
 	<div id="main" class="wrapper">

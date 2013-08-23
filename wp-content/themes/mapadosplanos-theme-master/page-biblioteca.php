@@ -1,25 +1,20 @@
 <?php
 /**
- * Template Name: Downloads
+ * Template Name: Biblioteca
  */
 
-get_header('downloads'); ?>
+get_header('biblioteca'); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
 		
-
-<div id="query-posts" class="downloads">
+<div id="query-posts" class="biblioteca">
 
 <?php
 $args = array(
 	    	'post_type'      => 'dlm_download',
-<<<<<<< HEAD
 			'posts_per_page' => '8',
-=======
-			'dlm_download_category' => 'download',
-			'posts_per_page' => '6',
->>>>>>> dev
+			'dlm_download_category' => 'biblioteca',
 	    	'no_found_rows'  => 1,
 	    	'post_status'    => 'publish',
 	    	'meta_query'     => array()
@@ -32,7 +27,7 @@ if ( $downloads->have_posts() ) : ?>
 
 		<div id="cada-download" <?php post_class(); ?>>
 
-				<a class="img-destacada-download" href="<?php $dlm_download->the_download_link(); ?>">
+				<a class="img-destacada-biblioteca" href="<?php $dlm_download->the_download_link(); ?>">
 					<?php $dlm_download->the_image( 'downloads' ); ?>
 				</a>
 
@@ -42,8 +37,8 @@ if ( $downloads->have_posts() ) : ?>
 				<?php $dlm_download->the_short_description(); ?>
 			</div><!-- .entry-content-download -->
 
-				<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download downloads-bg">
-                	<span class="botao-download">DOWNLOAD</span>
+				<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="biblioteca biblioteca-bg">
+                	<span class="botao-biblioteca">DOWNLOAD</span>
 				</a>
 
 		</div><!-- #cada-download -->
@@ -68,7 +63,7 @@ if ( $downloads->have_posts() ) : ?>
 
 		<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de <br />Experi&ecirc;ncias</a></li>
 
-		<li class="planos"><a href="<?php echo esc_url( home_url( '/category/biblioteca/' ) ); ?>">Mais materiais em <br />nossa Biblioteca</a></li>
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Mais materiais em <br />Downloads</a></li>
 
 	    <li class="indicadores-qualidade planos"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
 

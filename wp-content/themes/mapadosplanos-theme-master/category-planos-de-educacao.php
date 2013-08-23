@@ -18,10 +18,7 @@ get_header('noticias'); ?>
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-<<<<<<< HEAD
-=======
 
->>>>>>> dev
 	
 			<?php 
 			/* Start the Sticky Loop */ 

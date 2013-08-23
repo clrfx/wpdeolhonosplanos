@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header('resume'); ?>
+get_header('noticias'); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
@@ -29,5 +29,10 @@ get_header('resume'); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php if ( is_active_sidebar( 'sidebar-noticias-widget' ) ) : ?>
+	<div id="secondary" class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-noticias-widget' ); ?>
+	</div><!-- #secondary -->
+	<?php endif; ?>
+	
 <?php get_footer(); ?>

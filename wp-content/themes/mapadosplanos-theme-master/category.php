@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying Category pages.
  *
@@ -38,7 +39,7 @@ get_header('resume'); ?>
 			}
 			$stickyquery = new WP_Query( array( 'post__in' => $sticky, 'cat' => $cat) );
 			while ($stickyquery->have_posts()) : $stickyquery->the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class("category-sticky"); ?>>
+			<div id="cada-noticia-destacada" <?php post_class("category-sticky"); ?>>
 			<a class="link-categoria" href="<?php echo get_permalink(); ?>">
 			<?php 
 			if ( has_post_thumbnail() ) {
@@ -48,17 +49,22 @@ get_header('resume'); ?>
 				echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
 			} 
 			?>
-				<h1 class="category-title"><?php the_title(); ?></h1>
-				<p><?php the_excerpt(); ?></p>
-				<em>Leia mais</em>
+						<h1 class="entry-title-query-destacado noticias"><?php the_title(); ?></h1>
 				</a>
-			</article>		
+				<div class="entry-content-post-home">
+				<?php the_excerpt(); ?>
+				</div>
+				
+				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>
+				</a>
+				
+			</div>		
 			<?php endwhile; ?>
 			<?php
 			/* Start the regular Loop */
 			while (have_posts()) : the_post();  ?>	
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(array("category-regular","post-thumb")); ?>>
+			<div id="cada-noticia" <?php post_class(array("category-regular","post-thumb")); ?>>
 				<a class="link-categoria" href="<?php echo get_permalink(); ?>">
 			<?php 
 			if ( has_post_thumbnail() ) {
@@ -69,11 +75,16 @@ get_header('resume'); ?>
 			}
 			?>
 				
-				<h1 class="category-title"><?php the_title(); ?></h1>
-				<p><?php the_excerpt(); ?></p>
-				<em>Leia mais</em>
+				<h1 class="entry-title-query noticias"><?php the_title(); ?></h1>
 				</a>
-				</article>		
+				<div class="entry-content-post-home">
+				<?php echo excerpt( 17 ); //Imprime 13 palavras ?> ...
+				</div>
+				
+				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>
+				</a>
+				
+		</div>		
 			<?php endwhile; ?>
 
 			
@@ -86,9 +97,9 @@ get_header('resume'); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
-	<?php if ( is_active_sidebar( 'sidebar-categoria-widget' ) ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar-noticias-widget' ) ) : ?>
 		<div class="categories widget-area">
-			<?php dynamic_sidebar( 'sidebar-categoria-widget' ); ?>
+			<?php dynamic_sidebar( 'sidebar-noticias-widget' ); ?>
 		</div><!-- .first -->
 	<?php endif; ?>
 

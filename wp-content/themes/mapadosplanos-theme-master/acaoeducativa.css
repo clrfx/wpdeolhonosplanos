@@ -27,10 +27,16 @@ background: url("img/bg-header.jpg") repeat scroll center top transparent;
 }
 
 #barra-mapa {
-width: 100%;
-overflow: hidden;
-background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
-padding: 2em 0 0;
+	width: 100%;
+	overflow: hidden;
+	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
+  padding: 0.5em 0 0;
+}
+
+#barra-mapa.search{
+    margin: 1em -20px 0;
+    padding: 2em 0 0;
+    width: 105%;
 }
 
 #content-mapa {
@@ -39,21 +45,22 @@ padding: 2em 0 0;
     max-width: 940px;
 	overflow: hidden;
 	min-height: 100px;
-	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 
 #box-below-map {
-width:32%;
-float: left;
-background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
-background-color: #0F85AB;
-margin-right: 1em;
+	width:32%;
+	float: left;
+	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
+	background-color: #0F85AB;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 #box-below-map:hover {
-background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
-background-color: #0C6D8D;
+					background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+					background-color: #0C6D8D;
 }
 
 #box-below-map.last{
@@ -96,20 +103,20 @@ padding: 0;
 #frase-mapa {
     color: #FFFFFF;
     display: block;
-    font-size: 1.7em;
-    font-style: italic;
+    font-size: 1.6em;
     letter-spacing: 1px;
     padding: 1.2em;
     text-align: center;
 	width: auto;
 	min-height: 30px;
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
 #frase-single-mapa {
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
     color: #FFFFFF;
     display: block;
     font-size: 1.3em;
-    font-style: italic;
     letter-spacing: 1px;
     margin: 1em 0 1em 2em;
     text-align: center;
@@ -139,6 +146,7 @@ margin-top: 2em;
 width: 100%;
 overflow: hidden;
 background: url("img/bg-header-downloads.jpg") repeat scroll center -2px transparent;
+background-color: #F8E04A;
 padding:1em 0;
 margin: 0;
 }
@@ -153,12 +161,55 @@ display: block;
 float: left;
 }
 
+#barra-biblioteca {
+width: 100%;
+overflow: hidden;
+background: url("img/bg-header-biblioteca.jpg") repeat scroll center -2px transparent;
+background-color: #8cc242;
+padding:1em 0;
+margin: 0;
+}
+
+#biblioteca-title {
+background: url("img/img-header-biblioteca.png") no-repeat scroll center -5px transparent;
+width: 390px;
+height: 95px;
+margin: 0 3em 0 0;
+padding: 0;
+display: block;
+float: left;
+}
+
 #barra-noticias {
 width: 100%;
 overflow: hidden;
 background: url("img/bg-header-noticias.jpg") repeat scroll center -2px transparent;
 padding:1em 0;
 margin: 0;
+}
+
+#menu-biblioteca-categorys ul.menu {
+   font-size: 0.9em;
+    list-style: none outside none;
+    margin: 0 0 0 20px;
+    padding-left: 0;
+    text-transform: uppercase;
+}
+
+#menu-biblioteca-categorys li {
+    float: left;
+    position: relative;
+	background: none repeat scroll 0 0 #8CC242;
+	margin-right: 1em;
+}
+#menu-biblioteca-categorys li a {
+    color: #FFFFFF;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+	}
+#menu-biblioteca-categorys li a:hover {	
+	background-color:#7bb033
 }
 
 #noticias-title {
@@ -212,6 +263,12 @@ margin: 0 0 10px 0;
     width: 29%;
 }
 
+#prateleira  ul li.home {
+    font-size: 1.2em;
+	padding: 1.55em 0.5em;
+    width: 29%;
+}
+
 
 #prateleira  ul li:hover {
 box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
@@ -227,16 +284,17 @@ box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 
 #prateleira ul li.indicadores-qualidade {
 	background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px #F2486F;
-	height:55px;
+	height: 48px;
+	padding: 0.7em 0;
 }
 
 #prateleira ul li a.indicadores-qualidade{
     background: url("img/botao-indicadores.png") no-repeat scroll center center transparent;
-    height: 55px;
     margin: 0 0 0 -65px;
     position: absolute;
     text-indent: -999999px;
     width: 135px;
+	height: 48px;
 	
 }
 
@@ -301,6 +359,23 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	border-color:transparent transparent transparent #F26122 !important;
 }
 
+.biblioteca a{
+	color: #8CC242;
+}
+
+.bilbioteca a:hover {
+	color: #7BB033;
+}
+
+.biblioteca-bg{
+	background-color: #8CC242 !important; 
+}
+
+
+.biblioteca-bg:hover{
+	background-color: #7BB033 !important;
+}
+
 
 .downloads a{
 	color: #D3D023;
@@ -325,7 +400,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .mapas{
 	color: #FFFFFF !important;
-	margin-top: 5px !important;
+	margin-top: 20px !important;
 }
 
 .mapas a{
@@ -346,6 +421,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 }
 
 #botao-map {
+	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 	width:290px;
 	float: left;
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
@@ -456,6 +532,14 @@ a.download {
     width: 150px;
 }
 
+a.biblioteca {
+    background: url("img/biblioteca-icone.png") no-repeat scroll 140px 10px #CCC;
+    float: left;
+    margin: 15px 20px 10px;
+    padding: 1em 1.5em;
+    width: 150px;
+}
+
 span.mais {
 color: #fff;
 	font-size: 2.5em;
@@ -464,6 +548,12 @@ display: block;
 }
 
 span.botao-download {
+    color: #fff;
+	font-size: 1.2em;
+    display: block;
+}
+
+span.botao-biblioteca {
     color: #fff;
 	font-size: 1.2em;
     display: block;
@@ -531,7 +621,7 @@ span.botao-download {
 }
 
 .entry-header-page-mae {
-    background: url("img/bg-titulos-ilustra.png") no-repeat scroll 155px -15px transparent;
+    background: url("img/bg-titulos-ilustra.png") no-repeat scroll 157px -15px transparent;
     height: 100px;
     line-height: 1.2;
     margin-bottom: -3em;
@@ -543,10 +633,67 @@ span.botao-download {
     color: #EC3561;
     font-size: 2.5em;
     font-weight: bold;
-    padding: 1.5em 0.65em 1.5em 0;
+    padding: 1.5em 0.75em 1.7em 0;
     text-transform: uppercase;
     width: auto;
 }
+
+
+#secondary ul {
+list-style: none;
+margin: 0 0 20px 0;
+}
+
+#secondary ul.menu {
+ 	width: 95%;
+}
+
+#secondary ul.menu li {
+    background: none repeat scroll 0 0 #F26122;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+    height: auto;
+    margin: 0 0 0.5em;
+    padding: 0;
+}
+
+#secondary ul.menu li:hover {
+    background-color: #B54726;
+}
+
+#secondary ul.menu li a{
+    color: #FFF;
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+
+}
+
+#secondary .widget_search {
+    background-color: #fcf8ea;
+    margin-bottom: 20px;
+    padding: 0.8em; 
+}
+
+#secondary. widget_recent_comments {
+    margin-bottom: 20px;
+	}
+	
+	
+#secondary ul#recentcomments {
+	font-size: 0.8em;
+}
+
+#secondary .widget_tag_cloud {
+    margin-bottom: 20px;
+	}
+	
+	
+	
 
 /* 
 ZILLA SHORTCODES
@@ -610,6 +757,15 @@ ZILLA SHORTCODES
   width: 40%;
   float: left;
   background: none repeat scroll 0 0 #EBE82B;
+}
+
+.img-destacada-biblioteca {
+  height: 230px;
+  display: block;
+  overflow: hidden;
+  width: 40%;
+  float: left;
+  background: none repeat scroll 0 0 #8CC242;
 }
 
 #query-posts img {

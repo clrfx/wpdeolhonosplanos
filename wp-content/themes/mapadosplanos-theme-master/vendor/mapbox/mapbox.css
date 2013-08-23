@@ -159,12 +159,8 @@
           user-select:auto;
   }
 
-.map-legends,
-.map-tooltip {
-  min-width:180px;
-  max-width:280px;
-  max-height:400px;
-  width:220px\8; /*< IE 9*/
+.map-legends {
+  width:180px;
   }
 
 .map-movetip {
@@ -173,6 +169,11 @@
   background:#fff;
   padding:10px;
   max-width:300px;
+  }
+  
+.map-tooltip {
+  width:220px;
+  max-height:400px;
   }
 
 .map-fade { opacity:0; }

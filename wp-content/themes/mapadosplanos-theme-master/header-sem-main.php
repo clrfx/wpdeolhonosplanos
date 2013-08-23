@@ -26,6 +26,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
 <!-- Jquery -->
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery.h5validate.js" type="text/javascript"></script>
@@ -56,7 +57,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <![endif]-->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-
+<script type="text/javascript">
+$(document).ready( function Scrolldown(){
+window.scroll(0,180); 
+ }); 
+</script>
 </head>
 
 <body <?php body_class(); ?>>

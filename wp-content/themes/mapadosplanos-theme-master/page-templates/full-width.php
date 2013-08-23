@@ -16,7 +16,7 @@
 
 get_header('resume'); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="full-width">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

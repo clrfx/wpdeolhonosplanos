@@ -26,6 +26,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
 <!-- Jquery -->
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery.h5validate.js" type="text/javascript"></script>
@@ -57,8 +58,13 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
-</head>
+<script type="text/javascript">
+$(document).ready( function Scrolldown(){
+window.scroll(0,180); 
+ }); 
+</script>
 
+</head>
 <body <?php body_class(); ?>>
 
 	<?php $header_image = get_header_image();
@@ -118,6 +124,17 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <div id="barra-mapa">
 
 	<div id="content-mapa">
+	
+		<div id="frase-mapa">
+				<?php
+
+				$texto = get_bloginfo("description");
+				list ($line1, $line2) = split ("-", $texto);
+				
+				echo $line1."<span>".$line2."</span>"
+
+				 ?>
+		</div>
 
 		<?php get_template_part( 'mapbox' ); ?>
 	
@@ -134,16 +151,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		<?php get_template_part( 'searchform-munic' ); ?>
 		</div>
 		<div class="clear"></div>
-		<div id="frase-mapa">
-				<?php
-
-				$texto = get_bloginfo("description");
-				list ($line1, $line2) = split ("-", $texto);
-				
-				echo $line1."<span>".$line2."</span>"
-
-				 ?>
-		</div>
 	</div>
 </div>
 		
