@@ -2,12 +2,12 @@
 	background-color: #fff !important;
 }
 .login #login {
-	margin-top:-10px;
+	margin-top:-40px;
 }
 .login h1 {
-	margin-left:40px;
+	margin-left:115px;
 }
 .login h1 a {
 	background: url('img/logo-small.jpg') no-repeat !important; 
-	height:240px;
+	height:160px;
 }
