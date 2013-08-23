@@ -132,6 +132,8 @@ register_sidebar( array(
 		'after_title' => '</h5>',
 	) );
 
+// Registrando Menu para categorias da Biblioteca	
+register_nav_menu( 'biblioteca-menu', __( 'Menu da Biblioteca', 'twentytwelve' ) );
 
 // admin favicon	
 function admin_favicon() {
@@ -367,8 +369,6 @@ add_shortcode( 'voltaPost', 'mapadosplanos_shortcode_voltapost' );
 
 
 //Adicionando filtro para quantidade de caracteres do the_excerpt
-
-
 // Muda o limite do the_excerpt no child theme do TwentyTwelve
 function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);
