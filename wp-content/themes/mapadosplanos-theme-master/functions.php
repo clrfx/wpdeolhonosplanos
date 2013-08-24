@@ -59,16 +59,7 @@ function mapadosplanos_search_override($query) {
 
 add_filter('pre_get_posts','mapadosplanos_search_override');
 
-//Front Page Widget Big
-register_sidebar( array(
-		'name' => __( 'Front Page Big', 'twentytwelve' ),
-		'id' => 'frontpage-big',
-		'description' => __( 'Front Page Big', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h5 class="widget-title">',
-		'after_title' => '</h5>',
-	) );
+//Registrando Sidebares especificas
 
 register_sidebar( array(
 		'name' => __( 'Sidebar Destaques Home', 'twentytwelve' ),
@@ -85,15 +76,6 @@ register_sidebar( array(
 		'id' => 'sidebar-noticias-widget',
 		'description' => __( 'Sidebar Noticias', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="sidebar-noticias %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h5 class="widget-title">',
-		'after_title' => '</h5>',
-	) );
-register_sidebar( array(
-		'name' => __( 'Abaixo do Mapa', 'twentytwelve' ),
-		'id' => 'frontpage-below-map',
-		'description' => __( 'Abaixo do Mapa', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5>',

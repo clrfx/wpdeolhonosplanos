@@ -111,8 +111,10 @@ window.scroll(0,180);
 
 <div id="barra-noticias">
 	<div id="content-headers-internos">
-		<div id="noticias-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>"> <!-- Noticias --> </a>
+		<a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">
+		<div id="noticias-title"> &nbsp; 
 		</div>
+		</a>
 		<?php if ( have_posts() ) : ?>
 		<?php if ( category_description() ) : // Show an optional category description ?>
 			<div id="description-headers-internos"><?php echo category_description(); ?>

@@ -1,42 +1,20 @@
 <?php
 /**
- * Template Name: Processos Participativos
+ * Template Name: Biblioteca Metodologias participativas
  */
 
-get_header('resume'); ?>
+get_header('biblioteca'); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page-mae' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
-			
 		
-<?php wp_reset_query(); // reset query ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	
-	
-
-<div id="title-querys" class="download">
-
-
-<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Downloads</a></h1>
-
-
-
-</div>
-
-<div id="query-posts" class="downloads">
+<div id="query-posts" class="biblioteca">
 
 <?php
 $args = array(
 	    	'post_type'      => 'dlm_download',
-			'dlm_download_category' => 'download',
-	    	'posts_per_page' => '2',
+			'posts_per_page' => '8',
+			'dlm_download_category' => 'metodologias-participativas-biblioteca',
 	    	'no_found_rows'  => 1,
 	    	'post_status'    => 'publish',
 	    	'meta_query'     => array()
@@ -49,7 +27,7 @@ if ( $downloads->have_posts() ) : ?>
 
 		<div id="cada-download" <?php post_class(); ?>>
 
-				<a class="img-destacada-download" href="<?php $dlm_download->the_download_link(); ?>">
+				<a class="img-destacada-biblioteca" href="<?php $dlm_download->the_download_link(); ?>">
 					<?php $dlm_download->the_image( 'downloads' ); ?>
 				</a>
 
@@ -59,14 +37,14 @@ if ( $downloads->have_posts() ) : ?>
 				<?php $dlm_download->the_short_description(); ?>
 			</div><!-- .entry-content-download -->
 
-				<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download downloads-bg">
-                	<span class="botao-download">DOWNLOAD</span>
+				<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="biblioteca biblioteca-bg">
+                	<span class="botao-biblioteca">DOWNLOAD</span>
 				</a>
 
 		</div><!-- #cada-download -->
 
 			<?php endwhile; // end of the loop. ?>
-
+		
 		<?php endif;
 
 		wp_reset_postdata();
@@ -75,4 +53,23 @@ if ( $downloads->have_posts() ) : ?>
 
 </div>
 
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	
+	<div id="prateleira">
+
+		<ul>
+
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de <br />Experi&ecirc;ncias</a></li>
+
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Mais materiais em <br />Downloads</a></li>
+
+	    <li class="indicadores-qualidade planos"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
+
+		</ul>
+
+	</div>	
+	
+	
 <?php get_footer(); ?>
