@@ -228,6 +228,15 @@ if ($("body").hasClass("single-municipio")) {
     $("#voltaPost").attr("href", source );
    }
 
+    // Botão participar
+    if ($('#municipio-participar').length) {
+        $('#municipio-participar').click(function(e){
+            e.preventDefault();
+            $('ul.nav-tabs li:nth-child(3) a').click();
+            window.location.hash = '#questionario-sociedade';
+        });
+    }
+
 });
 
 

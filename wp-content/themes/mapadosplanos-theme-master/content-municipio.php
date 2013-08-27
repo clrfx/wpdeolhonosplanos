@@ -60,7 +60,7 @@
 		<?php endif; ?>
 		
 		<div id="botao-map">
-		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="municipio-participar">
 		Quer participar? preencha o formul&aacute;rio Sociedade Civil
 		</a>
 		</span>			
