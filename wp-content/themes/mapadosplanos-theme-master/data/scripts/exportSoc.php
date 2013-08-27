@@ -51,7 +51,7 @@ function map_keys($a) {
 }
 
 function writecsv($results) {
-    $fileName = 'municipios.csv';
+    $fileName = 'dados-sociedade-civil.csv';
      
     header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
     header('Content-Description: File Transfer');
