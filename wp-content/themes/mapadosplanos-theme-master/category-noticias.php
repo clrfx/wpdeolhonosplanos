@@ -40,9 +40,10 @@ get_header('noticias'); ?>
 				echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
 			} 
 			?>
-				<h1 class="entry-title-query-destacado noticias"><?php the_title(); ?></h1>
-				</a>
-				<div class="entry-content-post-home">
+			</a>
+				<h1 class="entry-title-query-destacado noticias"><a class="noticias" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
+				
+				<div class="entry-content-post-category">
 				<?php the_excerpt(); ?>
 				</div>
 				
@@ -65,16 +66,16 @@ get_header('noticias'); ?>
 				echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-small.png" />';
 			}
 			?>
-				
-				<h1 class="entry-title-query noticias"><?php the_title(); ?></h1>
 				</a>
-				<div class="entry-content-post-home">
+				<h1 class="entry-title-query noticias"><a class="noticias" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
+				
+				<div class="entry-content-post-category">
 				<?php echo excerpt( 17 ); //Imprime 13 palavras ?> ...
 				</div>
-				
+
 				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>
 				</a>
-				
+
 		</div>		
 			<?php endwhile; ?>
 

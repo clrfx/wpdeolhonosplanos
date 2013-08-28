@@ -420,6 +420,19 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	background-color: #0C6D8D !important;
 }
 
+
+.noticias-sidebar a {
+
+color: #FD6207;
+
+}
+
+.noticias-sidebar a:hover {
+
+color: #B54726;
+
+}
+
 #botao-map {
 	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 	width:290px;
@@ -502,6 +515,12 @@ span.entry-title-download-query {
 .entry-content-post-home {
 	margin: 0 20px;
 	font-size: 0.8em;
+	color: #333333;
+}
+
+.entry-content-post-category {
+	margin: 0 20px;
+	font-size: 0.9em;
 	color: #333333;
 }
 
