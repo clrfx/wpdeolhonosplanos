@@ -87,6 +87,7 @@ get_header('noticias'); ?>
 		<?php endif; ?>
 
 		</div><!-- #content -->
+	
 	</section><!-- #primary -->
 	
 	<?php if ( is_active_sidebar( 'sidebar-noticias-widget' ) ) : ?>
@@ -104,7 +105,7 @@ get_header('noticias'); ?>
 
 	<li class="home"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de Experi&ecirc;ncias</a></li>
 
-	<li class="home"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Downloads</a></li>
+	<li class="home"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
 
 	<li class="indicadores-qualidade home"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
 

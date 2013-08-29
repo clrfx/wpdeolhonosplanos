@@ -65,7 +65,7 @@ if ( $downloads->have_posts() ) : ?>
 
 		<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de <br />Experi&ecirc;ncias</a></li>
 
-		<li class="planos"><a href="<?php echo esc_url( home_url( '/category/biblioteca/' ) ); ?>">Mais materiais em <br />nossa Biblioteca</a></li>
+		<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Mais materiais em <br />nossa Biblioteca</a></li>
 
 	    <li class="indicadores-qualidade planos"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
 

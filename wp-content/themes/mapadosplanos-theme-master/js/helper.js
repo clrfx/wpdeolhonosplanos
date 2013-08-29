@@ -232,7 +232,7 @@ if ($("body").hasClass("single-municipio")) {
     if ($('#municipio-participar').length) {
         $('#municipio-participar').click(function(e){
             e.preventDefault();
-            $('ul.nav-tabs li:nth-child(3) a').click();
+            $('ul.nav-tabs li:nth-child(4) a').click();
             window.location.hash = '#questionario-sociedade';
         });
     }

@@ -112,10 +112,12 @@ window.scroll(0,180);
 	<div id="content-headers-internos">
 		<a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>"> 
 		<div id="biblioteca-title">
-		&nbsp; 
+		Biblioteca
 		</div>
 		</a>
-		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria biblioteca, Aqui entra a descri&ccedil;&atilde;o da categoria bilbioteca.
+		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Biblioteca.
+		<?php global $download_monitor, $dlm_page_addon; ?>
+		<?php echo $category->description; ?>
 		</div>
 		<div class="clear"></div>
 		<div id="menu-biblioteca-categorys">
