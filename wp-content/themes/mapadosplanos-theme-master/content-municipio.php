@@ -381,7 +381,7 @@ Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e q
 					}
 				?>
 				<div id="respostas-sociedade" class="<?php echo $respondido; ?>">
-				<p>O Portal De Olho nos Planos é também um espaço de troca de experiências e você tem lugar especial neste instrumento. Quer colaborar conosco neste levantamento sobre a construção e revisão dos planos de educação em sua cidade? <a href="#questionario-sociedade">Responda aqui o questionário</a> e compartilhe sua opinião sobre este processo de mobilização em defesa de uma educação de qualidade.</p>
+				<p>O Portal De Olho nos Planos é também um espaço de troca de experiências e você tem lugar especial neste instrumento. Quer colaborar conosco neste levantamento sobre a construção e revisão dos planos de educação em sua cidade? <a id="link-p-aba4" href="#questionario-sociedade">Responda aqui o questionário</a> e compartilhe sua opinião sobre este processo de mobilização em defesa de uma educação de qualidade.</p>
 				<strong>Número de respondentes: <?php echo $total; ?></strong>
 				<table class="table table-bordered tab1">
 					<tr>

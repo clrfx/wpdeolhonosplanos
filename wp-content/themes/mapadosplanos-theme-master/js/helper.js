@@ -236,6 +236,15 @@ if ($("body").hasClass("single-municipio")) {
             window.location.hash = '#questionario-sociedade';
         });
     }
+	
+	    // Botão dentro da aba Dados Sociedade Civil
+    if ($('#link-p-aba4').length) {
+        $('#link-p-aba4').click(function(e){
+            e.preventDefault();
+            $('ul.nav-tabs li:nth-child(4) a').click();
+            window.location.hash = '#questionario-sociedade';
+        });
+    }
 
 });
 
