@@ -37,7 +37,7 @@ for line in posts:
 	f_author = {}
 	f_author["user_login"] = line["ibge"]
 	f_author["user_pass"] = line["ibge"]
-	f_author["user_email"] = line["ibge"] + "@mapadosplanos.org.br"
+	f_author["user_email"] = line["ibge"] + "@deolhonosplanos.org.br"
 	f_author["first_name"] = line["wpcf-a570"]
 	f_author["last_name"] = line["wpcf-a569"]
 	f_author["display_name"] = line["wpcf-a570"] + " - " + line["wpcf-a569"]
