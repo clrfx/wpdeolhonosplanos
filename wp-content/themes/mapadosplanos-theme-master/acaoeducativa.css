@@ -830,12 +830,11 @@ h1.entry-title-giant{
 }
 
 #fichaae {
-  width: 95%;
-  float: right;
+  width: 96%;
+  float:none;
+  margin: 0 auto;
   background: none;
   border: none;
-  padding-left: 19px;
-	padding-right: 19px;
 	padding-top: 15px !important;
 	padding-bottom: 0px;
 	box-shadow: none;
