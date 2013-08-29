@@ -30,7 +30,8 @@ background: url("img/bg-header.jpg") repeat scroll center top transparent;
 	width: 100%;
 	overflow: hidden;
 	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
-  padding: 0.5em 0 0;
+	background-color: #05A3D3;
+	padding: 0.5em 0 0;
 }
 
 #barra-mapa.search{
