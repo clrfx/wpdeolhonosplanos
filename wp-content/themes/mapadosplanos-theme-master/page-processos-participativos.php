@@ -24,7 +24,7 @@ get_header('resume'); ?>
 <div id="title-querys" class="download">
 
 
-<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Downloads</a></h1>
+<div class="triangulo triangulo-downloads"></div><h1 class="downloads"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o</a></h1>
 
 
 

@@ -108,7 +108,8 @@ Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e q
 		<ul class="nav nav-tabs">
   			<li <?php echo ($custom_fields['wpcf-qs_etapa01'][0] != "Sim" && $custom_fields['wpcf-qs_etapa01'][0] != "Elaboração" && $custom_fields['wpcf-qs_etapa01'][0] != "Não" ? 'class="active"' : '');  ?>><a href="#parte1" data-toggle="tab">Dados Educacionais</a></li>
   			<li <?php echo ($custom_fields['wpcf-qs_etapa01'][0] != "Sim" && $custom_fields['wpcf-qs_etapa01'][0] != "Elaboração" && $custom_fields['wpcf-qs_etapa01'][0] != "Não" ? '' : 'class="active"');  ?>><a href="#parte2" data-toggle="tab">Gestão Municipal</a></li>
-  			<li><a href="#parte3" data-toggle="tab">Sociedade Civil</a></li>
+  			<li><a href="#parte3" data-toggle="tab">Dados Sociedade Civil</a></li>
+			<li><a href="#parte4" data-toggle="tab">Questionário Sociedade Civil</a></li>
 		</ul>
 
 		
@@ -297,6 +298,7 @@ Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e q
 						<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano21'); ?>"><?php echo types_render_field('qs_plano21'); ?></span></td>
 					</tr>
 				</table>
+				
 				<table class="table table-bordered">
 					<tr><th colspan="2">Avaliação do plano</th></tr>
 					<?php if ($etapa == 'complano') : ?>
@@ -352,7 +354,7 @@ Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e q
 						<td><span class="resposta label label-info ibge-Multi"><?php echo types_render_field('qs_plano23'); ?></span></td>
 					</tr>
 					</table>
-				</table>
+			
 			<?php else : ?>
 				<span class="titulo"><p>O(A) Gestor(a) da área de educação de seu município ainda não compartilhou informações sobre o processo de construção do Plano de Educação local.</p></span>
 				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
@@ -663,18 +665,25 @@ Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e q
 						</td>
 					</tr>
 				</table>
+		
 				<hr><br>
-					</div>
-					<div id="questionario-sociedade">
-			<?php 
-				if (function_exists('mapadosplanos_submit_form')) {
-			?>
-			
-			<?php
-					mapadosplanos_submit_form(get_the_ID()); 
-				} 
-			?>
-					</div>
+				</div>
+				
+							Ainda n&atilde;o temos nenhum question&aacute;rio respondido
+					
+				
+				</div>
+				<div class="tab-pane" id="parte4">				
+				<div id="questionario-sociedade">
+					<?php 
+						if (function_exists('mapadosplanos_submit_form')) {
+					?>
+					
+					<?php
+							mapadosplanos_submit_form(get_the_ID()); 
+						} 
+					?>
+				</div>
 			</div>
 	</div>
 

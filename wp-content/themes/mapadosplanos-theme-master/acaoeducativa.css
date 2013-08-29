@@ -159,6 +159,7 @@ margin: 0 3em 0 0;
 padding: 0;
 display: block;
 float: left;
+text-indent: -999999px;
 }
 
 #barra-biblioteca {
@@ -178,6 +179,7 @@ margin: 0 3em 0 0;
 padding: 0;
 display: block;
 float: left;
+text-indent: -999999px;
 }
 
 #barra-noticias {
@@ -220,6 +222,7 @@ margin: 0.6em 3em 0 0;
 padding: 0;
 display: block;
 float: left;
+text-indent: -999999px;
 }
 
 .videosidebar h5.widget-title {
@@ -264,7 +267,7 @@ margin: 0 0 10px 0;
 }
 
 #prateleira  ul li.home {
-    font-size: 1.2em;
+    font-size: 1.1em;
 	padding: 1.55em 0.5em;
     width: 29%;
 }
@@ -420,6 +423,19 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	background-color: #0C6D8D !important;
 }
 
+
+.noticias-sidebar a {
+
+color: #FD6207;
+
+}
+
+.noticias-sidebar a:hover {
+
+color: #B54726;
+
+}
+
 #botao-map {
 	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 	width:290px;
@@ -502,6 +518,12 @@ span.entry-title-download-query {
 .entry-content-post-home {
 	margin: 0 20px;
 	font-size: 0.8em;
+	color: #333333;
+}
+
+.entry-content-post-category {
+	margin: 0 20px;
+	font-size: 0.9em;
 	color: #333333;
 }
 
@@ -837,7 +859,7 @@ h1.entry-title-giant{
 	margin-top: -20px;
 }
 
-#parte1.tab-pane, #parte2.tab-pane, #parte3.tab-pane {
+#parte1.tab-pane, #parte2.tab-pane, #parte3.tab-pane, #parte4.tab-pane {
 	
 	padding: 20px;
 	background:#e1f0f4;
@@ -929,6 +951,19 @@ h1.entry-title-giant{
   float: left;
 }
 
+#parte4.tab-pane table tr td:first-child{
+  width: 60%;
+}
+
+#parte4 .progress{
+  height: 15px;
+  margin-bottom: 5px;
+  width: 80%;
+  display: inline;
+  float: left;
+}
+
+
 .bar-container{
   clear: both;
 }
@@ -941,6 +976,12 @@ h1.entry-title-giant{
   width: 120px;
   float: right;
 }
+
+#parte4 .bar-container .progress{
+  width: 120px;
+  float: right;
+}
+
 label.bar-porcentagem{
   float: right;
   line-height: 15px;

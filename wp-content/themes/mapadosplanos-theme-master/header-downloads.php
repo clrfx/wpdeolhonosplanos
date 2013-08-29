@@ -110,10 +110,10 @@ window.scroll(0,180);
 
 <div id="barra-downloads">
 	<div id="content-headers-internos">
-		<a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">
-		<div id="downloads-title">&nbsp; </div>
+		<a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">
+		<div id="downloads-title">Cole&ccedil;&atilde;o</div>
 		</a>
-		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Download, Aqui entra a descri&ccedil;&atilde;o da categoria Download, Aqui entra a descri&ccedil;&atilde;o da categoria Download.
+		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da Cole&ccedil;&atilde;o.
 		</div>
 	</div>
 </div>

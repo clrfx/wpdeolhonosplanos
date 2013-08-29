@@ -112,7 +112,7 @@ window.scroll(0,180);
 <div id="barra-noticias">
 	<div id="content-headers-internos">
 		<a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">
-		<div id="noticias-title"> &nbsp; 
+		<div id="noticias-title">Not&iacute;cias
 		</div>
 		</a>
 		<?php if ( have_posts() ) : ?>
