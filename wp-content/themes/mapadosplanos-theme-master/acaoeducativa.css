@@ -26,6 +26,30 @@ overflow: hidden;
 background: url("img/bg-header.jpg") repeat scroll center top transparent;
 }
 
+.site-header-menor {
+    width: 980px;
+	min-height: 200px;
+}
+
+#site-logo-menor {
+    background: url("img/logo-medio.png") no-repeat scroll center top transparent;
+    float: left;
+    height: 220px;
+    margin: 5.5em 1em 1.5em 2em;
+    width: 220px;
+}
+
+#tagline h1.header-menor {
+    color: #696A69;
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-left: 4em;
+    margin-top: 9em;
+    text-align: center;
+    width: 450px;
+}
+
 #barra-mapa {
 	width: 100%;
 	overflow: hidden;
