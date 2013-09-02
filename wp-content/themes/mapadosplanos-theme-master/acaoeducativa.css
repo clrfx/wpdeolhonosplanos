@@ -39,6 +39,15 @@ background: url("img/bg-header.jpg") repeat scroll center top transparent;
     width: 220px;
 }
 
+#site-logo-fixo {
+ background: url("img/logo-maior.png") no-repeat scroll center -115px transparent;
+    float: left;
+    height: 190px;
+    margin: 1.5em 1em 1.5em 2em;
+    width: 300px;
+}
+
+
 #tagline h1.header-menor {
     color: #696A69;
     font-size: 1.3em;
@@ -46,6 +55,17 @@ background: url("img/bg-header.jpg") repeat scroll center top transparent;
     line-height: 1.5em;
     margin-left: 4em;
     margin-top: 9em;
+    text-align: center;
+    width: 450px;
+}
+
+#tagline h1.header-fixo {
+    color: #696A69;
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-left: 4em;
+    margin-top: 6em;
     text-align: center;
     width: 450px;
 }
