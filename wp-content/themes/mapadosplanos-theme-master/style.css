@@ -2051,6 +2051,16 @@ margin: 0 0 24px;
 
 }
 
+#masthead-fixo {
+  padding:0;
+  max-width:980px;
+  min-height:215px;
+  z-index: 2;
+  margin: 0 auto;
+
+}
+
+
 #site-logo {
     background: url("img/logo-maior.png") no-repeat scroll center top transparent;
     float: left;
