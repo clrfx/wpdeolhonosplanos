@@ -674,15 +674,14 @@ fieldset {
   border: 0;
 }
 legend {
+  font-weight: bold;
   display: block;
+  text-align: left;
   width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: 40px;
+  line-height: 20px;
   color: #333333;
   border: 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 0;
 }
 legend small {
   font-size: 15px;
@@ -797,7 +796,7 @@ input[type="color"]:focus,
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 4px 7px 0 0;
   *margin-top: 0;
   /* IE7 */
 

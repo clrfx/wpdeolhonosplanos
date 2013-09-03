@@ -665,14 +665,14 @@
 					</tr>
 				</table>
 		
-				<hr><br>
+				<hr>
 				</div>
 				
 							Ainda n&atilde;o temos nenhum question&aacute;rio respondido
 					
 				
 				</div>
-				<div class="tab-pane" id="parte4">				
+			<div class="tab-pane" id="parte4">				
 				<div id="questionario-sociedade">
 					<?php 
 						if (function_exists('mapadosplanos_submit_form')) {
@@ -688,10 +688,6 @@
 
         <?php endif; ?>
 		<!-- FIM DA EXIBICAO DOS CUSTOMFIELDS -->
-				
-		<footer class="entry-meta">
-		
-		</footer><!-- .entry-meta -->
 		
 				<!-- EXIBICAO DOS ATTACHMENTS -->
         
