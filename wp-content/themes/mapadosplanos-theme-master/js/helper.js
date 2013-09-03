@@ -68,7 +68,6 @@ $(document).ready(function () {
         map.addLayer(markerLayer);
         for (var i = 0; i < markers.length; i++) {
             var m = markers[i];
-            console.log(m);
             var color;
             if (m.qs_etapa01=='Sim') {
                 color='#0d7eed';
@@ -184,7 +183,6 @@ if ($("body").hasClass("single-municipio")) {
     //qs_03
     $("#fs_qs_03 input").click(function () {
         var n = $( "#fs_qs_03 input:checked" ).length;
-        console.log(n);
         if (n >= 3) {
             $("#fs_qs_03 input:not(:checked)").attr('disabled', 'true');
         }
