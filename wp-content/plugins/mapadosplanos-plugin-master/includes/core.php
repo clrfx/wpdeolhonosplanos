@@ -92,7 +92,7 @@ function mapadosplanos_submit_form($post_id) {
 	$recaptcha =  wp_load_alloptions();
 	$recaptcha =  unserialize($recaptcha['recaptcha_options']);
 	if(isset($_POST['submit']) and $_POST['action']=='questionario'):
-		echo '<script>window.location.hash = "#parte3";</script>';
+		echo '<script>window.location.hash = "#parte4";</script>';
 	    //implementar check if recaptcha
   		$resp = recaptcha_check_answer ($recaptcha['private_key'],
                                 $_SERVER["REMOTE_ADDR"],
