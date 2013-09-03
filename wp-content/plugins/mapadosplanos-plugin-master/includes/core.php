@@ -13,7 +13,7 @@ function sum_array_options($questao) {
 
 function get_meta_count( $key = '', $value = '', $type = 'post', $status = 'publish' ) {
     global $wpdb;
-    // Example code only
+    // Example code only //
     // Good idea to add your own arg checking here
     if( empty( $key ) )
         return;
