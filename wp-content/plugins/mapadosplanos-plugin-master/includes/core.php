@@ -1,18 +1,13 @@
 <?
 function sum_array_options($questao) {
-
-    $tmp = 0;
-    if (empty($questao) || !is_array($questao))
-        return $tmp;
-
+  $tmp = 0;
     foreach ($questao as $n => $times) {
       if ($n == '') {
         $n = 0;
       }
       $tmp = $tmp + ($n*$times);
     }
-
-    return $tmp;
+  return $tmp;
 }
 
 
@@ -78,10 +73,7 @@ $summary = array(
    }
   	$summary_count = array();
   	foreach ($summary as $k => $s) {
-        if (!empty($s) && (is_integer($s) || is_string($s)))
-            $summary_count[$k] = array_count_values($s);
-        else
-            $summary_count[$k] = 0;
+  		$summary_count[$k] = array_count_values($s);
   	}
     $summary_count[qs_02_1] = sum_array_options($summary_count[qs_02_1]);
     $summary_count[qs_02_2] = sum_array_options($summary_count[qs_02_2]);

@@ -67,11 +67,6 @@ window.scroll(0,180);
 </head>
 <body <?php body_class(); ?>>
 
-	<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-
 <div id="barra-topo">		
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
