@@ -363,7 +363,7 @@
 			
 			<div class="tab-pane" id="parte3">
 				<?php 
-					//Visualização dos questionários. Falta preparar o resto do HTML. Ainda tem um bug nas questões de multipla escolha.
+					//Visualização dos questionários. Falta preparar o resto do HTML. Ainda tem um bug nas questões de multipla escolha!!.
 
 					$resultados = mapadosplanos_select_questionarios(get_the_ID()); 
 					//print_r($resultados);
@@ -667,10 +667,13 @@
 		
 				<hr>
 				</div>
-				
-							Ainda n&atilde;o temos nenhum question&aacute;rio respondido
-					
-				
+				<?php 
+					$resultados = mapadosplanos_select_questionarios(get_the_ID()); 
+					$total = $resultados['post_id'][get_the_ID()];
+					if ($total == 0) {
+					echo "Ainda n&atilde;o temos nenhum question&aacute;rio respondido";
+					}
+				?>
 				</div>
 			<div class="tab-pane" id="parte4">				
 				<div id="questionario-sociedade">

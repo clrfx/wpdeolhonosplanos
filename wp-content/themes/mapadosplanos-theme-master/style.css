@@ -1267,7 +1267,7 @@ a.comment-reply-link:hover {
 #respond {
 	background: none repeat scroll 0 0 #EFDBA3;
     float: left;
-    margin: 0 2em 2em;
+    margin: 2em 0;
     padding: 2em;
 	width: 70%;
 	-webkit-border-radius: 5px;
