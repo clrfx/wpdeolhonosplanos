@@ -18,8 +18,6 @@ get_header('resume'); ?>
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
-			<?php twentytwelve_content_nav( 'nav-above' ); ?>
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php 
@@ -28,7 +26,7 @@ get_header('resume'); ?>
 					
 				}
 				else {
-					get_template_part( 'content', get_post_format() ); 
+					get_template_part( 'content-search', get_post_format() ); 
 				}
 					?>
 					
@@ -37,6 +35,16 @@ get_header('resume'); ?>
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
+		
+		<?php 
+				if ( 'municipio' == get_post_type() ) {
+					get_template_part( 'content-search-no-matches-munic', get_post_format() );
+					
+				}
+				else {
+					get_template_part( 'content-search-no-matches', get_post_format() ); 
+				}
+					?>
 
 			<article id="post-0" class="post no-results not-found">
 				<header class="entry-header">
@@ -48,6 +56,7 @@ get_header('resume'); ?>
 					
 					<p>Fa&ccedil;a outra Busca.</p>
 					
+					
 					<p>&nbsp;</p>
 					
 				</div><!-- .entry-content -->
@@ -58,9 +67,7 @@ get_header('resume'); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 				<?php 
-				if ( 'municipio' == is_search() ) {
-					get_template_part( 'barra-search-munic', get_post_format() ); 
-				}
+					get_template_part( 'barra-search-munic' ); 
 				?>
 				
 

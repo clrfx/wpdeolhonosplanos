@@ -81,12 +81,6 @@
 		<div id="botao-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
 		</div>
-	
-		
-		
-		<!-- <div id="frase-single-mapa">
-Se voc&ecirc; &eacute; Pai/M&atilde;e, Estudante, Professor@ ou Coordenador@ e quer participar, preencha abaixo o formul&aacute;rio Sociedade Civil.
-		</div> -->
 		
 	</div>
 </div>

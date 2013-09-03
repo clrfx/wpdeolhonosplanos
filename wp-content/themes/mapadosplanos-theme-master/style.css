@@ -182,9 +182,7 @@ img {
 .page-title,
 .entry-content th,
 .comment-content th {
-	font-size: 11px;
-	font-size: 0.785714286rem;
-	line-height: 2.181818182;
+	font-size: 1.5em;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #636363;
@@ -391,9 +389,13 @@ img.wp-smiley,
 	padding: 24px 0;
 	padding: 1.714285714rem 0;
 }
-#nav-above {
-	display: none;
+
+#nav-below {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
 }
+
 .paged #nav-above {
 	display: block;
 }
