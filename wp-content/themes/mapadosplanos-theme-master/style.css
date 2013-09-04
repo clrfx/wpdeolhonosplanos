@@ -212,7 +212,6 @@ article.format-status footer.entry-meta {
 input[type="submit"],
 article.post-password-required input[type=submit],
 li.bypostauthor cite span {
-	margin-top: 2em;
 	padding: 6px 10px;
 	padding: 0.428571429rem 0.714285714rem;
 	line-height: 1.5em;
@@ -552,7 +551,7 @@ body.custom-font-enabled {
 	}
 	
 		.main-navigation li a:visited, a:active {
-		color: #C6CDD3;
+		color: #FFF;
 	}
 
 .main-navigation ul ul {

@@ -1018,3 +1018,8 @@ label.bar-porcentagem{
   margin-left: 2px;
   min-width: 30px;
 }
+
+
+#recaptcha_widget_div {
+margin-bottom: 2em;
+}
