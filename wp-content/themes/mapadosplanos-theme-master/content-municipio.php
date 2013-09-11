@@ -668,8 +668,6 @@
 				<hr>
 				</div>
 				<?php 
-					$resultados = mapadosplanos_select_questionarios(get_the_ID()); 
-					$total = $resultados['post_id'][get_the_ID()];
 					if ($total == 0) {
 					echo "Ainda n&atilde;o temos nenhum question&aacute;rio respondido";
 					}
