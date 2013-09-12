@@ -225,7 +225,7 @@ if ($("body").hasClass("single-municipio")) {
     var source = templateUrl + '/index.php?p=' + GetParam('post');
     $("#voltaPost").attr("href", source );
    }
-
+ 
     // Botão participar
     if ($('#municipio-participar').length) {
         $('#municipio-participar').click(function(e){
@@ -235,12 +235,30 @@ if ($("body").hasClass("single-municipio")) {
         });
     }
 	
-	    // Botão dentro da aba Dados Sociedade Civil
+	// Botão dentro da aba Dados Sociedade Civil
     if ($('#link-p-aba4').length) {
         $('#link-p-aba4').click(function(e){
             e.preventDefault();
             $('ul.nav-tabs li:nth-child(4) a').click();
             window.location.hash = '#questionario-sociedade';
+        });
+    }
+	
+	// Botão 2 dentro da aba Dados Sociedade Civil - quando não preenchido
+    if ($('#link-p-aba4b').length) {
+        $('#link-p-aba4b').click(function(e){
+            e.preventDefault();
+            $('ul.nav-tabs li:nth-child(4) a').click();
+            window.location.hash = '#questionario-sociedade';
+        });
+    }
+	
+		// Botão gestor atualize
+    if ($('#link-p-aba2').length) {
+        $('#link-p-aba2').click(function(e){
+            e.preventDefault();
+            $('ul.nav-tabs li:nth-child(2) a').click();
+            window.location.hash = '#parte2';
         });
     }
 

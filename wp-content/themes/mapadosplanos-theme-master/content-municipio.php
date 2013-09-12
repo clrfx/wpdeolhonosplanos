@@ -61,13 +61,13 @@
 		
 		<div id="botao-map">
 		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="municipio-participar">
-		Quer participar? preencha o formul&aacute;rio Sociedade Civil
+		Quer participar? preencha o Question&aacute;rio Sociedade Civil
 		</a>
 		</span>			
 		</div>
 		
 		<div id="botao-map">
-			<span><a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Gestor, atualize aqui suas informações</a></span>
+			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="link-p-aba2">Gestor, atualize aqui suas informações</a></span>
 		</div>
 		
 		<?php if ( comments_open() ) : ?>
@@ -669,7 +669,7 @@
 				</div>
 				<?php 
 					if ($total == 0) {
-					echo "Ainda n&atilde;o temos nenhum question&aacute;rio respondido";
+					echo " Ainda n&atilde;o temos nenhum question&aacute;rio preenchido. <a id=\"link-p-aba4b\" href=\"#questionario-sociedade\">Responda agora</a> ";
 					}
 				?>
 				</div>
