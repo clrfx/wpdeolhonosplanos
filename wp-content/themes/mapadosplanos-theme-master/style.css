@@ -2050,15 +2050,6 @@ margin: 0 0 24px;
 
 }
 
-#masthead-fixo {
-  padding:0;
-  max-width:980px;
-  min-height:215px;
-  z-index: 2;
-  margin: 0 auto;
-
-}
-
 
 #site-logo {
     background: url("img/logo-maior.png") no-repeat scroll center top transparent;
@@ -2083,19 +2074,8 @@ margin: 0 0 24px;
    font-size: 1em;
     font-weight: 500;
     margin-left: 2.5em;
-    margin-top: 20em;
+    margin-top: 7.6em;
     text-align: left;
-}
-
-#tagline h1.internas{
-   color: #696A69;
-    font-size: 1.3em;
-    font-weight: 500;
-    line-height: 1.5em;
-    margin-left: 4em;
-    margin-top: 16em;
-    text-align: center;
-    width: 450px;
 }
 
 header #searchform {

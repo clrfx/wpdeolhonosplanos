@@ -58,11 +58,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript">
-$(document).ready( function Scrolldown(){
-window.scroll(0,180); 
- }); 
-</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -78,10 +73,10 @@ window.scroll(0,180);
 
 <div id="barra-header">	
 
-	<header id="masthead" class="site-header" role="banner">	
+	<header id="masthead-fixo" class="site-header" role="banner">	
 		
 		
-		<a href="<?php echo get_site_url(); ?>" id="site-logo"></a>
+		<a href="<?php echo get_site_url(); ?>" id="site-logo-fixo"></a>
 		
 				
 		<div id="tagline">

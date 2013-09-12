@@ -25,8 +25,8 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-
 <?php wp_head(); ?>
+
 <!-- Jquery -->
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="<?php echo child_template_directory ?>/vendor/jquery/jquery.h5validate.js" type="text/javascript"></script>
@@ -57,14 +57,15 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <![endif]-->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+$(document).ready( function Scrolldown(){
+window.scroll(0,180); 
+ }); 
+</script>
+
 </head>
-
 <body <?php body_class(); ?>>
-
-	<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
 
 <div id="barra-topo">		
 
@@ -77,20 +78,21 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <div id="barra-header">	
 
-	<header id="masthead" class="site-header-menor" role="banner">	
+	<header id="masthead" class="site-header" role="banner">	
 		
 		
-		<a href="<?php echo get_site_url(); ?>" id="site-logo-menor"></a>
+		<a href="<?php echo get_site_url(); ?>" id="site-logo"></a>
 		
 				
 		<div id="tagline">
 			
-			<h1 class="header-menor">		
+			<h1 class="header-scroll">
+			
 				<?php
 				$texto = get_bloginfo("description");
 				list ($line1, $line2) = split ("-", $texto);
 				echo $line1."<span>".$line2."</span>"
-				 ?>
+				?>
 
 			</h1>
 
@@ -100,7 +102,41 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 	</header><!-- #masthead -->
 	
-</div>	
+</div>
+
+<div id="barra-mapa">
+
+	<div id="content-mapa">
+	
+		<div id="frase-mapa">
+				<?php
+
+				$texto = get_bloginfo("description");
+				list ($line1, $line2) = split ("-", $texto);
+				
+				echo $line1."<span>".$line2."</span>"
+
+				 ?>
+		</div>
+
+		<?php get_template_part( 'mapbox' ); ?>
+	
+		<div id="box-below-map">
+		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
+		</div>
+		
+		<div id="box-below-map">
+		<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
+		</div>
+		
+		<div id="box-below-map" class="last">
+		<span class="box-busca-mapa">Busque no Mapa</span>
+		<?php get_template_part( 'searchform-munic' ); ?>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+		
 <div id="page" class="hfeed site">
 
 	<div id="main" class="wrapper">

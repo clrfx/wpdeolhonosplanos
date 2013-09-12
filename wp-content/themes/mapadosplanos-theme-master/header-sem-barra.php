@@ -58,14 +58,10 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
+
 </head>
 
 <body <?php body_class(); ?>>
-
-	<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
 
 <div id="barra-topo">		
 
@@ -76,32 +72,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		</nav><!-- #site-navigation -->
 </div>
 
-<div id="barra-header">	
-
-		<header id="masthead-fixo" class="site-header" role="banner">	
-		
-		
-		<a href="<?php echo get_site_url(); ?>" id="site-logo-fixo"></a>
-		
-				
-		<div id="tagline">
-			
-			<h1 class="header-fixo">		
-				<?php
-				$texto = get_bloginfo("description");
-				list ($line1, $line2) = split ("-", $texto);
-				echo $line1."<span>".$line2."</span>"
-				 ?>
-
-			</h1>
-
-
-		</div>
-		
-
-	</header><!-- #masthead -->
-	
-</div>	
 <div id="page" class="hfeed site">
 
 	<div id="main" class="wrapper">

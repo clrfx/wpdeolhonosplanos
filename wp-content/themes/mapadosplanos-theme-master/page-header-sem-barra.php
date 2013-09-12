@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Header Menor
+ * Template Name: Sem Barra 
  */
 
-get_header('logo-menor'); ?>
+get_header('sem-barra'); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
