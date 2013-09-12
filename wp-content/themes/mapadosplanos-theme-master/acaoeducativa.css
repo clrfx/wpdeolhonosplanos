@@ -26,6 +26,10 @@ overflow: hidden;
 background: url("img/bg-header.jpg") repeat scroll center top transparent;
 }
 
+#barra-header.space {
+min-height: 60px;
+}
+
 
 #masthead-fixo {
   padding:0;

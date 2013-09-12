@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Sem Barra 
+ * Template Name: Cabecalho Sem Barra 
  */
 
 get_header('sem-barra'); ?>
