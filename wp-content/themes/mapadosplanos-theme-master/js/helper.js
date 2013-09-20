@@ -231,8 +231,12 @@ if ($("body").hasClass("single-municipio")) {
         $('#municipio-participar').click(function(e){
             e.preventDefault();
             $('ul.nav-tabs li:nth-child(4) a').click();
-            window.location.hash = '#questionario-sociedade';
-        });
+			$('html, body').animate({
+				scrollTop: $('#questionario-sociedade').offset().top - 130
+			}, 500);
+		});
+			
+		
     }
 	
 	// Botão dentro da aba Dados Sociedade Civil
@@ -240,7 +244,9 @@ if ($("body").hasClass("single-municipio")) {
         $('#link-p-aba4').click(function(e){
             e.preventDefault();
             $('ul.nav-tabs li:nth-child(4) a').click();
-            window.location.hash = '#questionario-sociedade';
+			$('html, body').animate({
+				scrollTop: $('#questionario-sociedade').offset().top - 130
+			}, 500);
         });
     }
 	
@@ -249,7 +255,6 @@ if ($("body").hasClass("single-municipio")) {
         $('#link-p-aba4b').click(function(e){
             e.preventDefault();
             $('ul.nav-tabs li:nth-child(4) a').click();
-            window.location.hash = '#questionario-sociedade';
         });
     }
 	
@@ -258,7 +263,10 @@ if ($("body").hasClass("single-municipio")) {
         $('#link-p-aba2').click(function(e){
             e.preventDefault();
             $('ul.nav-tabs li:nth-child(2) a').click();
-            window.location.hash = '#parte2';
+			$('html, body').animate({
+				scrollTop: $('#parte2').offset().top - 130
+			}, 500);
+
         });
     }
 

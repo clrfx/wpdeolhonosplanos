@@ -39,7 +39,7 @@
 			<?php endif; // is_single() ?>
 			<?php if ( $etapa ) : ?>
 				<div class="comments-link mapas">
-					<a class="mapas" href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Atualizar o questionário</a>
+					<a class="mapas" href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">Atualizar o questionário</a>
 				</a>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -65,10 +65,18 @@
 		</a>
 		</span>			
 		</div>
-		
+
+		<?php if ( $etapa ) : ?>	
 		<div id="botao-map">
-			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="link-p-aba2">Gestor, atualize aqui suas informações</a></span>
+			<span><a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">Gestor, atualize aqui suas informações</a></span>
 		</div>
+		
+		<?php else: ?>
+		<div id="botao-map">
+			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="link-p-aba2">Gestor Municipal, preencha o Questionário</a></span>
+		</div>
+		
+		<?php endif; ?>		
 		
 		<?php if ( comments_open() ) : ?>
 		<div id="botao-map">
@@ -351,7 +359,7 @@
 			
 			<?php else : ?>
 				<span class="titulo"><p>O(A) Gestor(a) da área de educação de seu município ainda não compartilhou informações sobre o processo de construção do Plano de Educação local.</p></span>
-				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
+				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
 				<p>É da sociedade civil e quer nos ajudar organize uma campanha em seu município para que a administração local participe desta iniciativa. Você pode usar as redes sociais e mobilizar seus amigos e amigas com os nossos <a href="/cartoes-virtuais">cartões virtuais.</a></p>
 				<p>Confira também como a população e os(as) gestores(as) públicos podem se organizar em outras esferas para garantir a participação de todos(as) na construção  dos planos de educação em <a href="/mobilizacao-popular/">Mobilização Popular</a> e <a href="/processos-participativos/">Processos Participativos</a></p>
 				<p>Faça <a href="/download">download do questionário</a> a ser preenchido pela administração pública e conheça quais são as perguntas desse diagnóstico que tem por objetivo entender como os municípios vêm se preparando para elaborar ou revisar seus Planos de Educação.</p>
