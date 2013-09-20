@@ -2395,19 +2395,25 @@ div.wpcf7 {
 
 #footer-a {
     float: left;
-    width: 20%;
+    width: 28%;
+    margin-right: 2%;
+}
+
+#footer-a img {
+max-width: 260px;
 }
 .row-fluid .span2 {
     width: 80%;
 }
 #footer-b {
     float: left;
-    margin-right: 4%;
-    width: 26%;
+    margin-right: 0%;
+    width: 70%;
 }
 #footer-c {
     float: left;
     width: 50%;
+	display: none;
 }
 #footer-a .widget-title, #footer-b .widget-title, #footer-c .widget-title {
     color: #F1194C;
@@ -2419,7 +2425,6 @@ div.wpcf7 {
 #footer-a .textwidget img, #footer-b .textwidget img, #footer-c .textwidget img {
     border-radius: 0 0 0 0;
     box-shadow: none;
-    margin-right: 10px;
 }
 
 .row-fluid .span2 {
