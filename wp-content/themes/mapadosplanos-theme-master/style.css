@@ -762,41 +762,33 @@ article.sticky .featured-post {
 }
 .entry-content h1,
 .comment-content h1 {
-	font-size: 21px;
-	font-size: 1.5rem;
-	line-height: 1.5;
-	color: #EC3561;
+	font-size: 2em;
+	line-height: 1.8;
 }
 .entry-content h2,
 .comment-content h2 {
-	font-size: 18px;
-	font-size: 1.285714286rem;
+	font-size: 1.8em;
 	line-height: 1.6;
-	color: #EC3561;
 }
 .entry-content h3,
 .comment-content h3 {
-    font-size: 1.2em;
-    font-weight: lighter;
-    line-height: 1.5em;
+    font-size: 1.6em;
+    line-height: 1.4;
 }
 .entry-content h4,
 .comment-content h4 {
-	font-size: 14px;
-	font-size: 1rem;
-	line-height: 1.846153846;
+	font-size: 1.4em;
+	line-height: 1.2;
 }
 .entry-content h5,
 .comment-content h5 {
-	font-size: 13px;
-	font-size: 0.928571429rem;
-	line-height: 1.846153846;
+	font-size: 1.2em;
+	line-height: 1.2;
 }
 .entry-content h6,
 .comment-content h6 {
-	font-size: 12px;
-	font-size: 0.857142857rem;
-	line-height: 1.846153846;
+	font-size: 1em;
+	line-height: 1.2;
 }
 .entry-content p,
 .entry-summary p,

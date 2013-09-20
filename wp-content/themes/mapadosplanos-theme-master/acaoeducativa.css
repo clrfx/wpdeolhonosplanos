@@ -756,54 +756,6 @@ margin: 0 0 20px 0;
     margin-bottom: 20px;
 	}
 	
-	
-	
-
-/* 
-ZILLA SHORTCODES
------------------------------------------------ */
-
-.zilla-tabs .zilla-tab {
-    background: url("img/logo-bg-abas.png") no-repeat scroll right bottom #F5E7C2;
-    border:0 !important;
-    padding: 10px;
-}
-
-
-
-.zilla-tabs .zilla-nav li a {
-    -moz-border-bottom-colors: none !important;
-    -moz-border-left-colors: none !important;
-    -moz-border-right-colors: none !important;
-    -moz-border-top-colors: none !important;
-    background: none repeat scroll 0 0 #EA1E43 !important;
-    border-color: #DFDFDF #DFDFDF -moz-use-text-color !important;
-    border-image: none !important;
-    border-radius: 3px 3px 0 0;
-    border-style: none !important;
-    border-width: 0 !important;
-	color: #FFF !important;
-    display: block;
-    height: 30px;
-    margin: 3px 0 0 0 !important;
-    overflow: hidden;
-    padding: 10px 15px 5px !important;
-    text-decoration: none;
-	text-transform: uppercase;
-	font-size: 0.9em !important;
-    font-family: "Open Sans", Arial, sans-serif;
-}
-
-.zilla-tabs .zilla-nav li a:hover {
-    background: none repeat scroll 0 0 #D62B4D !important;
-	margin: 3px 0 0 0 !important;
-}
-
-
-.zilla-tabs .zilla-nav .ui-tabs-selected a, .zilla-tabs .zilla-nav .ui-tabs-active a {
-    background: none repeat scroll 0 0 #BC1823 !important;
-    height: 30px;
-}
 
 
 /* Ação Educativa CSS Transparencia Hacker
@@ -1033,4 +985,280 @@ label.bar-porcentagem{
 
 #recaptcha_widget_div {
 margin-bottom: 2em;
+}	
+
+/* 
+ZILLA SHORTCODES
+----------------------------------------------- */
+
+a.zilla-button,
+a.zilla-button:visited {
+	display: inline-block;
+    font-family: "Open Sans", Arial, sans-serif !important;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #fff!important;
+	letter-spacing: 1px;
+	text-decoration: none!important;
+	text-align: center;
+	text-transform: uppercase;
+	outline: none;
+	line-height: 1em;
+	padding: 7px 13px!important;
+	cursor: pointer;
+	border: 1px solid #0d507a!important;
+	margin: 0 0.1em 1.5em 0!important;
+	vertical-align: middle;
+	background: #0c6fb1;
+	border: 1px solid #8A8A8A;
+	box-shadow: none !important;
+	}
+	
+a.zilla-button.square {
+	border-radius: 2px!important;
+		-webkit-border-radius: 2px!important;
+		-moz-border-radius: 2px!important;
+		-o-border-radius: 2px!important;
+	}
+
+	a.zilla-button.small	{
+	padding: 8px 12px !important;
+	font-size: 12px;
+	border-radius: 8px;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		-o-border-radius: 8px;
+	}
+	
+	
+a.zilla-button.medium {
+	padding: 12px 16px !important;
+	font-size: 16px;
+	border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-o-border-radius: 10px;
+	}
+
+a.zilla-button.large {
+	padding: 15px 20px!important;
+	font-size: 18px;
+	border-radius: 12px;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		-o-border-radius: 12px;
+	}
+
+a.zilla-button:hover {
+	text-decoration: none;
+	}
+	
+a.zilla-button:active {
+	position: relative;
+	}
+	
+a.zilla-button.green {
+	border-color: #76932F!important;
+	background: #94C03E
+	}
+	
+a.zilla-button.green:hover {
+	background: #6E8C23;
+	}
+	
+a.zilla-button.light-blue {
+	border-color: #6CB1C1!important;
+	background: #83D4DB;
+	}
+
+a.zilla-button.light-blue:hover {
+	background: #50BFC9;
+	}
+
+a.zilla-button.blue {
+	background: none repeat scroll 0 0 #2070A1;
+	border: #0d507a!important;
+	}
+	
+a.zilla-button.blue:hover {
+	background: #195B7C;
+	}
+
+a.zilla-button.red {
+	border-color: #ab4b44!important;
+	background: #D54A0D;
+	}
+	
+a.zilla-button.red:hover {
+	background: #BA4820;
+
+	}
+	
+a.zilla-button.orange {
+   border-color: #D1B219!important;
+   background: #F2CD3E;
+	}
+	
+a.zilla-button.orange:hover {
+   background: #EEBC0E;
+
+	}
+
+a.zilla-button.purple {
+   border-color: #996192!important;
+   background: #B463A8;
+	}
+	
+a.zilla-button.purple:hover {
+   background: #A8339A;
+	}
+	
+a.zilla-button.grey {
+	color: #555!important;
+	border-color: #acacac!important;
+	background: #e5e5e5;
+	}
+	
+a.zilla-button.grey:hover {
+	background: #f6f6f6;
+	}
+	
+a.zilla-button.black {
+	border-color: #323232!important;
+	background: #222222;
+	}
+	
+a.zilla-button.black:hover {
+	background: #444444;
+	}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Alert Styles
+/*-----------------------------------------------------------------------------------*/
+
+.zilla-alert {
+    padding: 0.8em;
+    margin: 0 0 1.5em 0;
+    line-height: 1.6em;
+    border-radius: 4px!important;
+		-webkit-border-radius: 4px!important;
+		-moz-border-radius: 4px!important;
+		-o-border-radius: 4px!important;
+	}
+	
+
+.zilla-alert.white {
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    color: #373737;
+	}
+
+.zilla-alert.red {
+    background: #ffe6e3;
+    border: 1px solid #f2c3bf;
+    color: #bf210e;
+	}
+
+.zilla-alert.yellow {
+    background: #fff7d6;
+    border: 1px solid #e9d477;
+    color: #956433;
+	}
+
+.zilla-alert.green {
+    background: #edfdd3;
+    border: 1px solid #c4dba0;
+    color: #657e3c;
+	}
+	
+.zilla-alert.grey {
+    background: #444444;
+    border: 1px solid #dfdfdf;
+    color: #ffffff;
+	}
+	
+	
+/*-----------------------------------------------------------------------------------*/
+/*	Tab Styles
+/*-----------------------------------------------------------------------------------*/
+
+
+.zilla-tabs .zilla-tab {
+    background: url("img/logo-bg-abas.png") no-repeat scroll right bottom #F5E7C2;
+    border:0 !important;
+    padding: 10px;
 }
+
+.zilla-tabs .zilla-nav li a {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    background: none repeat scroll 0 0 #EA1E43 !important;
+    border-color: #DFDFDF #DFDFDF -moz-use-text-color !important;
+    border-image: none !important;
+    border-radius: 3px 3px 0 0;
+    border-style: none !important;
+    border-width: 0 !important;
+	color: #FFF !important;
+    display: block;
+    height: 30px;
+    margin: 3px 0 0 0 !important;
+    overflow: hidden;
+    padding: 10px 15px 5px !important;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em !important;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.zilla-tabs .zilla-nav li a:hover {
+    background: none repeat scroll 0 0 #D62B4D !important;
+	margin: 3px 0 0 0 !important;
+}
+
+
+.zilla-tabs .zilla-nav .ui-tabs-selected a, .zilla-tabs .zilla-nav .ui-tabs-active a {
+    background: none repeat scroll 0 0 #BC1823 !important;
+    height: 30px;
+}
+
+
+.zilla-toggle {
+    background: none repeat scroll 0 0 #FFF !important;
+    border: none !important;
+    cursor: pointer;
+    display: block;
+    outline: medium none;
+    position: relative;
+	border-radius: 0;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+.zilla-toggle-title {
+    background: none repeat scroll 0 0 #BC1823 !important;
+    color: #FFFFFF !important;
+	border: none !important;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    outline: medium none;
+    padding: 3px 10px 5px 35px;
+    text-transform: uppercase;
+	border-radius: 0;
+}
+
+.zilla-toggle-inner {
+    background: none repeat scroll 0 0 #FFF !important;
+    color: #333333;
+    font-size: 1em;
+    line-height: 25px;
+	border-radius: 0;
+	border-width: none 0 0 !important;
+	border: none !important;
+}
+
+a.zilla-button, a.zilla-button:visited {
+    font-family: 'Source Sans Pro', Arial, Geneva,sans-serif;
+}
+

@@ -11,3 +11,14 @@
 	background: url('img/logo-small.jpg') no-repeat !important; 
 	height:160px;
 }
+
+.login #nav, .login #backtoblog {
+    margin: 0 0 0 16px;
+    padding: 16px 16px 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.login #backtoblog a {
+    color: #21759B !important;
+	
+}
