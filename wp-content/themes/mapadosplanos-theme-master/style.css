@@ -772,23 +772,24 @@ article.sticky .featured-post {
 }
 .entry-content h3,
 .comment-content h3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
+	font-weight: lighter !important;
     line-height: 1.4;
 }
 .entry-content h4,
 .comment-content h4 {
-	font-size: 1.4em;
-	line-height: 1.2;
+	font-size: 1.6em;
+    line-height: 1.4;
 }
 .entry-content h5,
 .comment-content h5 {
-	font-size: 1.2em;
-	line-height: 1.2;
+	font-size: 1.4em;
+    line-height: 1.4;
 }
 .entry-content h6,
 .comment-content h6 {
-	font-size: 1em;
-	line-height: 1.2;
+	font-size: 1.2em;
+    line-height: 1.4;
 }
 .entry-content p,
 .entry-summary p,
