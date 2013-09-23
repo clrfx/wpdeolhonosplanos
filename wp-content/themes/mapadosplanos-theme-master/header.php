@@ -106,7 +106,9 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 	<div id="content-mapa">
 	
-		<div id="frase-mapa">
+		<?php get_template_part( 'mapbox' ); ?>
+		
+			<div id="frase-mapa">
 				<?php
 
 				$texto = get_bloginfo("description");
@@ -116,8 +118,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 				 ?>
 		</div>
-
-		<?php get_template_part( 'mapbox' ); ?>
 	
 		<div id="box-below-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
