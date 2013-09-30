@@ -106,20 +106,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 	<div id="content-mapa">
 	
-		<div id="frase-mapa">
-				<?php
-
-				$texto = get_bloginfo("description");
-				list ($line1, $line2) = split ("-", $texto);
-				
-				echo $line1."<span>".$line2."</span>"
-
-				 ?>
-		</div>
-
-		<?php get_template_part( 'mapbox' ); ?>
-	
-		<div id="box-below-map">
+	<div id="box-below-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
 		</div>
 		
@@ -131,7 +118,27 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		<span class="box-busca-mapa">Busque no Mapa</span>
 		<?php get_template_part( 'searchform-munic' ); ?>
 		</div>
+		
 		<div class="clear"></div>
+		
+		<?php get_template_part( 'mapbox' ); ?>
+		
+		<div class="clear"></div>
+	
+		<div id="frase-mapa">
+				<?php
+
+				$texto = get_bloginfo("description");
+				list ($line1, $line2) = split ("-", $texto);
+				
+				echo $line1."<span>".$line2."</span>"
+
+				 ?>
+		</div>
+
+				<div class="clear"></div>
+	
+		
 	</div>
 </div>
 		
