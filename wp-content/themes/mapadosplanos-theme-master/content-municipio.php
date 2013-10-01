@@ -412,7 +412,10 @@
 						</td>
 					</tr>
 					<tr>
-						<th>Participação no processo</th>
+						<th>Participação no processo <br />
+						<span class="lighter">Se houver plano de educação ou se estiver em elaboração</span>
+						</th>
+	
 						<td>
 							<div class="bar-container">
 								<label>Sim</label>
