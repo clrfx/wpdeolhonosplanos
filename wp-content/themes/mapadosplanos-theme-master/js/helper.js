@@ -24,7 +24,7 @@ $(document).ready(function () {
         }));
 
         map.zoom(5).center({ lat: -09.32, lon: -54.15 });
-        map.setZoomRange(5, 10);
+        map.setZoomRange(4, 10);
         map.setPanLimits([{ lat: -34.1618, lon: -75.0146 }, { lat:6.0532 , lon: -31.8603 }]);
         map.addLayer(data[1].layer, function() {
             map.interaction.auto();

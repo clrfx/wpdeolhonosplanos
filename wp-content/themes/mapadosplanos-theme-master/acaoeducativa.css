@@ -81,6 +81,11 @@ min-height: 60px;
 }
 
 
+.table th span.lighter {
+    font-weight: lighter;
+}
+
+
 #barra-mapa {
 	width: 100%;
 	overflow: hidden;
