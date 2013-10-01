@@ -95,7 +95,7 @@ min-height: 60px;
 	overflow: hidden;
 	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
 	background-color: #05A3D3;
-	padding: 1.5em 0 0;
+	padding: 1.2em 0 0;
 }
 
 #barra-mapa.search{
@@ -117,7 +117,7 @@ min-height: 60px;
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
     float: left;
     font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
     margin-right: 1em;
     width: 32%;
 	
@@ -171,7 +171,6 @@ padding: 0;
     font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
-    min-height: 30px;
     padding: 1.2em;
     text-align: center;
     width: auto;
@@ -301,7 +300,7 @@ margin: 0 0 10px 0;
 	display: inline-block !important;
   background: url("img/bg-botao-prateleira.jpg") repeat scroll center -6px transparent;
     background-color: #F2486F;
-    margin: 2em 0.5em;
+    margin: 1.2em 0.5em;
 	border-radius: 5px;
 	box-shadow: 0 6px 8px rgba(30, 30, 30, 0.7);
 	padding: 1em 0.5em;
