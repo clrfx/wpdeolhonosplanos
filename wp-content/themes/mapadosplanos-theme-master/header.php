@@ -106,8 +106,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 	<div id="content-mapa">
 	
-<<<<<<< .merge_file_a05268
-	<div id="box-below-map">
+		<div id="box-below-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
 		</div>
 		
@@ -126,12 +125,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		
 		<div class="clear"></div>
 	
-		<div id="frase-mapa">
-=======
-		<?php get_template_part( 'mapbox' ); ?>
-		
 			<div id="frase-mapa">
->>>>>>> .merge_file_a06320
 				<?php
 
 				$texto = get_bloginfo("description");
@@ -140,14 +134,10 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				echo $line1."<span>".$line2."</span>"
 
 				 ?>
-		</div>
-<<<<<<< .merge_file_a05268
+			</div>
 
 				<div class="clear"></div>
-=======
->>>>>>> .merge_file_a06320
-	
-		
+
 	</div>
 </div>
 		

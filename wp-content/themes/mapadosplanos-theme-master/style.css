@@ -1363,11 +1363,10 @@ label ~ span.required {
 }
 
 .template-front-page #map {
-   float: left;
+
     font-size: 0.8em;
-    height: 405px;
+    height: 450px;
     margin-bottom: 2em;
-    width: 610px;
 	}
 
 /* =Widgets
