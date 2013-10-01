@@ -693,15 +693,15 @@ footer[role="contentinfo"] a:hover {
 }
 .entry-header {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: 1.5em;
 }
 .entry-header img.wp-post-image {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: 1.5em;
 }
 .entry-header .entry-title {
 	font-size: 20px;
-	font-size: 1.428571429rem;
+	font-size: 1.5em;
 	line-height: 1.2;
 	font-weight: normal;
 }
@@ -1363,9 +1363,11 @@ label ~ span.required {
 }
 
 .template-front-page #map {
-	height: 450px;
-	 margin-bottom: 2em;
-	 font-size: 0.8em;
+   float: left;
+    font-size: 0.8em;
+    height: 405px;
+    margin-bottom: 2em;
+    width: 610px;
 	}
 
 /* =Widgets

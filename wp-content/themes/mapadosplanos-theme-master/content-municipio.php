@@ -54,7 +54,7 @@
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='600' height='400']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350']"); ?>
 		</div><!-- .entry-content -->
 
 		<?php endif; ?>
@@ -421,7 +421,9 @@
 						</td>
 					</tr>
 					<tr>
-						<th>Participação no processo</th>
+						<th>Participação no processo<br />
+						<span class="lighter">Se houver plano de educação ou se estiver em elaboração</span>
+						</th>
 						<td>
 							<div class="bar-container">
 								<label>Sim</label>

@@ -23,7 +23,11 @@ $(document).ready(function () {
             map.interaction.auto(); 
         }));
 
+<<<<<<< HEAD
         map.zoom(5).center({ lat: -09.32, lon: -54.15 });
+=======
+        map.zoom(4).center({ lat: -09.32, lon: -54.15 });
+>>>>>>> 68c1981fb960e2819af29b91961b6dea9816c148
         map.setZoomRange(4, 10);
         map.setPanLimits([{ lat: -34.1618, lon: -75.0146 }, { lat:6.0532 , lon: -31.8603 }]);
         map.addLayer(data[1].layer, function() {

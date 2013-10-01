@@ -80,6 +80,10 @@ min-height: 60px;
     width: 450px;
 }
 
+.table th span.lighter {
+    font-weight: lighter;
+}
+
 
 .table th span.lighter {
     font-weight: lighter;
@@ -91,7 +95,7 @@ min-height: 60px;
 	overflow: hidden;
 	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
 	background-color: #05A3D3;
-	padding: 0.5em 0 0;
+	padding: 1.5em 0 0;
 }
 
 #barra-mapa.search{
@@ -110,13 +114,13 @@ min-height: 60px;
 
 
 #box-below-map {
-	width:32%;
-	float: left;
-	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
-	background-color: #0F85AB;
-	margin-right: 1em;
-	margin-bottom: 2em;
-	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
+    float: left;
+    font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+    width: 32%;
 }
 
 #box-below-map:hover {
@@ -162,15 +166,18 @@ padding: 0;
 
 
 #frase-mapa {
-    color: #FFFFFF;
+   color: #FFFFFF;
     display: block;
+    float: left;
+    font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
-    padding: 1.2em;
-    text-align: center;
-	width: auto;
-	min-height: 30px;
-	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0.5em 0;
+    min-height: 30px;
+    padding: 0 0 0 1em;
+    text-align: right;
+    width: 30%;
 }
 
 #content-headers-internos {
@@ -450,7 +457,7 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 
 .mapas{
 	color: #FFFFFF !important;
-	margin-top: 20px !important;
+	margin-top: 5px !important;
 }
 
 .mapas a{
@@ -485,11 +492,11 @@ color: #B54726;
 
 #botao-map {
 	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
-	width:290px;
 	float: left;
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
 	background-color: #0F85AB;
-	margin: 1em 0 1em 2em;
+	 margin: 0 0 1.5em 2em;
+    width: 380px;
 	}
 
 	#botao-map:hover {
@@ -812,7 +819,7 @@ h1.entry-title-giant{
   float: left;
   width: auto;
   margin-bottom: 20px;
-  height: 400px;
+  height: 350px;
 }
 #fichaibge {
   width: 210px;
