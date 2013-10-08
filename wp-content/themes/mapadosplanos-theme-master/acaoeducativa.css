@@ -1270,3 +1270,43 @@ a.zilla-button, a.zilla-button:visited {
     font-family: 'Source Sans Pro', Arial, Geneva,sans-serif;
 }
 
+/* FOOTER */
+
+#footer-a {
+    float: left;
+    width: 100%;
+}
+
+#footer-a img {
+max-width: 940px;
+}
+.row-fluid .span2 {
+    width: 80%;
+}
+#footer-b {
+    float: left;
+    margin-right: 0%;
+    width: 70%;
+	display: none;
+}
+#footer-c {
+    float: left;
+    width: 50%;
+	display: none;
+}
+#footer-a .widget-title, #footer-b .widget-title, #footer-c .widget-title {
+    color: #F1194C;
+	display: none;
+}
+#footer-a .textwidget, #footer-b .textwidget, #footer-c .textwidget {
+    border-top: none;
+    padding-top: 5px;
+}
+#footer-a .textwidget img, #footer-b .textwidget img, #footer-c .textwidget img {
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+}
+
+.row-fluid .span2 {
+	width: 80%;
+}

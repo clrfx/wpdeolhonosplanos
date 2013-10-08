@@ -85,20 +85,10 @@ register_sidebar( array(
 //Footer widgets
 
 register_sidebar( array(
-		'name' => __( 'Footer A', 'twentytwelve' ),
+		'name' => __( 'Rodap&eacute;', 'twentytwelve' ),
 		'id' => 'footer-a',
-		'description' => __( 'Footer A', 'twentytwelve' ),
+		'description' => __( 'Rodap&eacute;', 'twentytwelve' ),
 		'before_widget' => '<div id="%1$s" class="span2 widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h5 class="widget-title">',
-		'after_title' => '</h5>',
-	) );
-
-register_sidebar( array(
-		'name' => __( 'Footer B', 'twentytwelve' ),
-		'id' => 'footer-b',
-		'description' => __( 'Footer B', 'twentytwelve' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5>',
