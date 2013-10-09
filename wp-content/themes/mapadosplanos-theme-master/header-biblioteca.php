@@ -105,9 +105,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		Biblioteca
 		</div>
 		</a>
-		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da categoria Biblioteca.
-		<?php global $download_monitor, $dlm_page_addon; ?>
-		<?php echo $category->description; ?>
+		<div id="description-headers-internos">
+			<?php 
+			$desc_download = get_term_by('name', 'biblioteca', 'dlm_download_category');
+			echo $desc_download->description;
+			?>
 		</div>
 		<div class="clear"></div>
 		<div id="menu-biblioteca-categorys">
