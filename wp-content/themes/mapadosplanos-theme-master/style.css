@@ -2064,11 +2064,11 @@ margin: 0 0 24px;
 
 #tagline h1{
     color: #696A69;
-   font-size: 1em;
-    font-weight: 500;
     margin-left: 2.5em;
-    margin-top: 7.6em;
+    margin-top: 6.5em;
     text-align: left;
+	font-size: 1.2em;
+	font-weight: 500;
 }
 
 header #searchform {
@@ -2203,8 +2203,8 @@ article.post-thumb p{
 /* FRONTPAGE */
 
 .frontpage-blurb {
-    color: #555;
-    line-height: 2em;
+    color: #696A69;
+	line-height: 1.5;
     margin-bottom: 0;
     padding-right: 0;
 }
