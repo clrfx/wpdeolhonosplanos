@@ -26,7 +26,7 @@ global $messages, $postdata;
                 <form action="." id="recadastro-form" method="POST">
 
                     <p><label for="s-recadastro">Município</label>
-                    <input type="text" placeholder="Procure pelo seu município" autocomplete="false" id="s-recadastro" name="busca_municipio" value="" class="ui-state-valid">
+                    <input type="text" placeholder="Procure pelo seu município" autocomplete="false" id="s-recadastro" name="s" value="" class="ui-state-valid">
                     <div id="autocomplete"></div>
                     <div id="selected">
                     <?php if ( !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ) ) : ?>
