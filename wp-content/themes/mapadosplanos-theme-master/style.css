@@ -643,12 +643,12 @@ footer[role="contentinfo"] {
 	clear: both;
 	font-size: 12px;
 	font-size: 0.857142857rem;
-	line-height: 2;
+	line-height: 1;
 	max-width: 980px;
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 24px 20px;
+	padding: 20px;
 	background: url("img/bg-header.jpg") repeat scroll center top;
 }
 footer[role="contentinfo"] a {
@@ -693,15 +693,15 @@ footer[role="contentinfo"] a:hover {
 }
 .entry-header {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: 1.5em;
 }
 .entry-header img.wp-post-image {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: 1.5em;
 }
 .entry-header .entry-title {
 	font-size: 20px;
-	font-size: 1.428571429rem;
+	font-size: 1.5em;
 	line-height: 1.2;
 	font-weight: normal;
 }
@@ -1363,9 +1363,9 @@ label ~ span.required {
 }
 
 .template-front-page #map {
-	height: 450px;
-	 margin-bottom: 2em;
-	 font-size: 0.8em;
+
+    font-size: 0.8em;
+    height: 450px;
 	}
 
 /* =Widgets
@@ -2064,11 +2064,11 @@ margin: 0 0 24px;
 
 #tagline h1{
     color: #696A69;
-   font-size: 1em;
-    font-weight: 500;
     margin-left: 2.5em;
-    margin-top: 7.6em;
+    margin-top: 6.5em;
     text-align: left;
+	font-size: 1.2em;
+	font-weight: 500;
 }
 
 header #searchform {
@@ -2203,8 +2203,8 @@ article.post-thumb p{
 /* FRONTPAGE */
 
 .frontpage-blurb {
-    color: #555;
-    line-height: 2em;
+    color: #696A69;
+	line-height: 1.5;
     margin-bottom: 0;
     padding-right: 0;
 }
@@ -2382,47 +2382,6 @@ div.wpcf7 {
   width: 100%;
 }
 
-
-
-/* FOOTER */
-
-#footer-a {
-    float: left;
-    width: 28%;
-    margin-right: 2%;
-}
-
-#footer-a img {
-max-width: 260px;
-}
-.row-fluid .span2 {
-    width: 80%;
-}
-#footer-b {
-    float: left;
-    margin-right: 0%;
-    width: 70%;
-}
-#footer-c {
-    float: left;
-    width: 50%;
-	display: none;
-}
-#footer-a .widget-title, #footer-b .widget-title, #footer-c .widget-title {
-    color: #F1194C;
-}
-#footer-a .textwidget, #footer-b .textwidget, #footer-c .textwidget {
-    border-top: 2px solid #11A4F1;
-    padding-top: 5px;
-}
-#footer-a .textwidget img, #footer-b .textwidget img, #footer-c .textwidget img {
-    border-radius: 0 0 0 0;
-    box-shadow: none;
-}
-
-.row-fluid .span2 {
-	width: 80%;
-}
 
 /* Condicional de resposta da sociedade */
 #respostas-sociedade.nao-respondido {

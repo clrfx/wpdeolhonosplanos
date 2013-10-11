@@ -106,7 +106,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 	<div id="content-mapa">
 	
-	<div id="box-below-map">
+		<div id="box-below-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
 		</div>
 		
@@ -125,7 +125,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		
 		<div class="clear"></div>
 	
-		<div id="frase-mapa">
+			<div id="frase-mapa">
 				<?php
 
 				$texto = get_bloginfo("description");
@@ -134,11 +134,10 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				echo $line1."<span>".$line2."</span>"
 
 				 ?>
-		</div>
+			</div>
 
 				<div class="clear"></div>
-	
-		
+
 	</div>
 </div>
 		

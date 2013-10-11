@@ -27,7 +27,7 @@
 	
 <div id="barra-mapa">
 
-	<div id="content-mapa">
+	<div id="content-mapa-single-municipio">
 
 		<header class="entry-header mapas">
 			<?php if ( is_single() ) : ?>
@@ -39,7 +39,7 @@
 			<?php endif; // is_single() ?>
 			<?php if ( $etapa ) : ?>
 				<div class="comments-link mapas">
-					<a class="mapas" href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">Atualizar o questionário</a>
+					<a class="mapas" href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">Atualizar o questionário</a>
 				</a>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -54,7 +54,7 @@
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='600' height='400']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350']"); ?>
 		</div><!-- .entry-content -->
 
 		<?php endif; ?>
@@ -65,10 +65,18 @@
 		</a>
 		</span>			
 		</div>
-		
+
+		<?php if ( $etapa ) : ?>	
 		<div id="botao-map">
-			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="link-p-aba2">Gestor, atualize aqui suas informações</a></span>
+			<span><a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">Gestor, atualize aqui suas informações</a></span>
 		</div>
+		
+		<?php else: ?>
+		<div id="botao-map">
+			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="link-p-aba2">Gestor Municipal, preencha o Questionário</a></span>
+		</div>
+		
+		<?php endif; ?>		
 		
 		<?php if ( comments_open() ) : ?>
 		<div id="botao-map">
@@ -351,7 +359,8 @@
 			
 			<?php else : ?>
 				<span class="titulo"><p>O(A) Gestor(a) da área de educação de seu município ainda não compartilhou informações sobre o processo de construção do Plano de Educação local.</p></span>
-				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php bloginfo('wpurl');?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
+				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
+				<p>É da sociedade civil e quer nos ajudar organize uma campanha em seu município para que a administração local participe desta iniciativa. Você pode usar as redes sociais e mobilizar seus amigos e amigas com os nossos <a href="/cartoes-virtuais">cartões virtuais.</a></p>
 				<p>Confira também como a população e os(as) gestores(as) públicos podem se organizar em outras esferas para garantir a participação de todos(as) na construção  dos planos de educação em <a href="/mobilizacao-popular/">Mobilização Popular</a> e <a href="/processos-participativos/">Processos Participativos</a></p>
 				<p>Faça <a href="/download">download do questionário</a> a ser preenchido pela administração pública e conheça quais são as perguntas desse diagnóstico que tem por objetivo entender como os municípios vêm se preparando para elaborar ou revisar seus Planos de Educação.</p>
 
@@ -391,8 +400,9 @@
 							<div class="bar-container">
 								<label>Não</label>
 								<label class="bar-porcentagem"><?php echo intval($resultados['qs_01']['Não']/$total*100)?>%</label>
-								<div class="progress">
-								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_01']['Não']/$total*100)?>%;"></div>
+								<div class="progress">									
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_01']['Não']/$total*100)?>%;">
+								  </div>
 								</div>
 							</div>
 							<div class="bar-container">
@@ -412,10 +422,9 @@
 						</td>
 					</tr>
 					<tr>
-						<th>Participação no processo <br />
+						<th>Participação no processo<br />
 						<span class="lighter">Se houver plano de educação ou se estiver em elaboração</span>
 						</th>
-	
 						<td>
 							<div class="bar-container">
 								<label>Sim</label>
@@ -435,15 +444,25 @@
 					</tr>
 				</table>
 				<table class="table table-bordered">
-					<tr><th colspan="2">Como o Plano pode ajudar a melhorar a educação no município</th></tr>
+					<tr><td style="font-weight: bold;">Como o Plano pode ajudar a melhorar a educação no município</td>
+					<td>
+					<span class="pouco-importante">Pouco<br />Importante</span>
+					<span class="muito-importante">Muito<br />Importante</span>
+					</td>
+					</tr>
 					<tr>
 						<td>Permite que boas iniciativas de uma gestão governamental
 							perdurem entre diferentes mandatos</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_02_1']/$total/5*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval($resultados['qs_02_1']/$total/5*100)?></label>
+							<div class="bola-menos azul">-</div>
 							<div class="progress">
-							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_1']/$total/5*100); ?>%;"></div>
+							  <div class="regua">
+								  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_1']/$total/5*100); ?>%;">
+								  </div>
+							   </div>
 							</div>
+							<div class="bola-mais azul">+</div>
 						</td>
 					</tr>
 					<tr>
@@ -451,9 +470,12 @@
 							escolas de diferentes redes no município (municipal, estadual e
 							federal)</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_02_2']/$total/5*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval['qs_02_2']/$total/5*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_2']/$total/5*100); ?>%;"></div>
+							<div class="regua">
+							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_2']/$total/5*100); ?>%;">
+							  </div>
+							</div>
 							</div>
 						</td>
 					</tr>
@@ -461,9 +483,11 @@
 						<td>Permite identificar os problemas a serem enfrentados, ao se realizar
 							um estudo/diagnóstico sobre a situação educacional local</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_02_3']/$total/5*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval['qs_02_3']/$total/5*100)?></label>
                             <div class="progress">
+							<div class="regua">
 							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_3']/$total/5*100); ?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
@@ -471,9 +495,11 @@
 						<td>Permite o acompanhamento e fiscalização do cumprimento dos
 							objetivos e metas presentes no Plano de Educação</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_02_4']/$total/5*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval($resultados['qs_02_4']/$total/5*100)?></label>
 							<div class="progress">
+							<div class="regua">
 							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_4']/$total/5*100); ?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
@@ -481,9 +507,11 @@
 						<td>Possibilita a participação das escolas (professores/as, funcionários/as, 
 							alunos/as e pais) na definição dos rumos da política educacional local</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_02_5']/$total/5*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval($resultados['qs_02_5']/$total/5*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_5']/$total/5*100); ?>%;"></div>
+								<div class="regua">
+									<div class="bar bar_complano" style="width: <?php echo intval($resultados['qs_02_5']/$total/5*100); ?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -495,45 +523,55 @@
 					<tr>
 						<td>Grandes distâncias e dificuldade de locomoção no município</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Grandes distâncias e dificuldade de locomoção no município']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Grandes distâncias e dificuldade de locomoção no município']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Grandes distâncias e dificuldade de locomoção no município']/$total*100)?>%;"></div>
+								<div class="regua">
+									<div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Grandes distâncias e dificuldade de locomoção no município']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Falta de conhecimento sobre os Planos de Educação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de conhecimento sobre os Planos de Educação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de conhecimento sobre os Planos de Educação']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de conhecimento sobre os Planos de Educação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de conhecimento sobre os Planos de Educação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Falta de tempo</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de tempo']/$total*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de tempo']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de tempo']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de tempo']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Falta de interesse</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de interesse']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de interesse']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de interesse']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de interesse']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Dificuldade de acesso à informação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Dificuldade de acesso à informação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Dificuldade de acesso à informação']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Dificuldade de acesso à informação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Dificuldade de acesso à informação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -541,27 +579,33 @@
 						<td>Falta de divulgação dos eventos relacionados ao processo de
 							construção do Plano</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de divulgação dos eventos relacionados ao processo de construção do Plano']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de divulgação dos eventos relacionados ao processo de construção do Plano']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de divulgação dos eventos relacionados ao processo de construção do Plano']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de divulgação dos eventos relacionados ao processo de construção do Plano']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Falta de diálogo entre as escolas e as famílias</td>
 						<td>
-						    <label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de diálogo entre as escolas e as famílias']/$total*100)?>%</label>
+						    <label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de diálogo entre as escolas e as famílias']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de diálogo entre as escolas e as famílias']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de diálogo entre as escolas e as famílias']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Falta de diálogo entre o poder público e a sociedade</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_03']['Falta de diálogo entre o poder público e a sociedade']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_03']['Falta de diálogo entre o poder público e a sociedade']/$total*100)?></label>
 							<div class="progress">
-							  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de diálogo entre o poder público e a sociedade']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar bar_semplano" style="width: <?php echo intval($resultados['qs_03']['Falta de diálogo entre o poder público e a sociedade']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -574,9 +618,11 @@
 					<tr>
 						<td>Reuniões na escola e/ou outros espaços públicos existentes na comunidade para discutir o que é um Plano de Educação e por que é importante participar de sua construção</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Reuniões na escola e/ou outros espaços públicos existentes na comunidade para discutir o que é um Plano de Educação e por que é importante participar de sua construção']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Reuniões na escola e/ou outros espaços públicos existentes na comunidade para discutir o que é um Plano de Educação e por que é importante participar de sua construção']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Reuniões na escola e/ou outros espaços públicos existentes na comunidade para discutir o que é um Plano de Educação e por que é importante participar de sua construção']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Reuniões na escola e/ou outros espaços públicos existentes na comunidade para discutir o que é um Plano de Educação e por que é importante participar de sua construção']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -584,9 +630,11 @@
 						<td>Ampla divulgação dos eventos realizados para a construção de
 							Planos de Educação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Ampla divulgação dos eventos realizados para a construção de Planos de Educação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Ampla divulgação dos eventos realizados para a construção de Planos de Educação']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Ampla divulgação dos eventos realizados para a construção de Planos de Educação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Ampla divulgação dos eventos realizados para a construção de Planos de Educação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -594,36 +642,44 @@
 						<td>Facilitação do acesso às informações sobre a situação educacional
 							no município</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Facilitação do acesso às informações sobre a situação educacional no município']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Facilitação do acesso às informações sobre a situação educacional no município']/$total*100)?></label>
 							<div class="progress progress-success">
+							<div class="regua">
 							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Facilitação do acesso às informações sobre a situação educacional no município']/$total*100) ?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Ações realizadas em escolas próximas à residência / local de estudo</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Ações realizadas em escolas próximas à residência / local de estudo']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Ações realizadas em escolas próximas à residência / local de estudo']/$total*100)?></label>
 							<div class="progress progress-success">
+							<div class="regua">
 							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Ações realizadas em escolas próximas à residência / local de estudo']/$total*100)?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Apoio para transporte</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Apoio para transporte']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Apoio para transporte']/$total*100)?></label>
 							<div class="progress progress-success">
+							<div class="regua">
 							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Apoio para transporte']/$total*100)?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Apoio para alimentação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Apoio para alimentação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Apoio para alimentação']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Apoio para alimentação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Apoio para alimentação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -631,9 +687,11 @@
 						<td>Apoio com o cuidado dos(as) filhos(as) durante os eventos e
 							reuniões</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Apoio com o cuidado dos(as) filhos(as) durante os eventos e reuniões']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Apoio com o cuidado dos(as) filhos(as) durante os eventos e reuniões']/$total*100)?></label>
 							<div class="progress progress-success">
+							<div class="regua">
 							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Apoio com o cuidado dos(as) filhos(as) durante os eventos e reuniões']/$total*100)?>%;"></div>
+							</div>
 							</div>
 						</td>
 					</tr>
@@ -641,27 +699,33 @@
 						<td>Envolvimento da escola onde estudo ou onde o(a) filho(a) estuda no
 							processo de construção ou revisão do Plano de Educação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Envolvimento da escola onde estudo ou onde o(a) filho(a) estuda no processo de construção ou revisão do Plano de Educação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Envolvimento da escola onde estudo ou onde o(a) filho(a) estuda no processo de construção ou revisão do Plano de Educação']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Envolvimento da escola onde estudo ou onde o(a) filho(a) estuda no processo de construção ou revisão do Plano de Educação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Envolvimento da escola onde estudo ou onde o(a) filho(a) estuda no processo de construção ou revisão do Plano de Educação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Envolvimento do poder público local no processo de construção ou revisão do Plano de Educação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Envolvimento do poder público local no processo de construção ou revisão do Plano de Educação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Envolvimento do poder público local no processo de construção ou revisão do Plano de Educação']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Envolvimento do poder público local no processo de construção ou revisão do Plano de Educação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Envolvimento do poder público local no processo de construção ou revisão do Plano de Educação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>Participação da população nos espaços destinados à construção do Plano de Educação</td>
 						<td>
-							<label class="bar-porcentagem"><?php echo intval($resultados['qs_04']['Participação da população nos espaços destinados à construção do Plano de Educação']/$total*100)?>%</label>
+							<label class="bar-porcentagem"><?php // echo intval($resultados['qs_04']['Participação da população nos espaços destinados à construção do Plano de Educação']/$total*100)?></label>
 							<div class="progress progress-success">
-							  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Participação da população nos espaços destinados à construção do Plano de Educação']/$total*100)?>%;"></div>
+								<div class="regua">
+								  <div class="bar" style="width: <?php echo intval($resultados['qs_04']['Participação da população nos espaços destinados à construção do Plano de Educação']/$total*100)?>%;"></div>
+								</div>
 							</div>
 						</td>
 					</tr>

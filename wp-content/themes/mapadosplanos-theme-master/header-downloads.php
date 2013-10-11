@@ -103,7 +103,11 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		<a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">
 		<div id="downloads-title">Cole&ccedil;&atilde;o</div>
 		</a>
-		<div id="description-headers-internos">Aqui entra a descri&ccedil;&atilde;o da Cole&ccedil;&atilde;o.
+		<div id="description-headers-internos">
+		<?php 
+			$desc_download = get_term_by('name', 'download', 'dlm_download_category');
+			echo $desc_download->description;
+		?>
 		</div>
 	</div>
 </div>
