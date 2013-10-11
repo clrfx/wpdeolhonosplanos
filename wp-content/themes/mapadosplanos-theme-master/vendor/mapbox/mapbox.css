@@ -1,5 +1,5 @@
 .marker-tooltip {
-  z-index:999999;
+  z-index:9999;
   position:absolute;
   }
 .marker-popup {
@@ -88,7 +88,7 @@
   height:30px;
   top:10px;
   left:10px;
-  z-index:2;
+  z-index:9999;
   }
 
 .zoomin {
@@ -115,7 +115,7 @@
   position:absolute;
   top:10px;
   left:74px;
-  z-index:99999;
+  z-index:9999;
   }
 
 .map-fullscreen-map {
@@ -126,7 +126,7 @@
   left:0!important;
   right:0!important;
   bottom:0!important;
-  z-index:99999999999;
+  z-index:999999;
   }
   .map-fullscreen-map .map-fullscreen {
     background-position:-120px 0;
@@ -143,7 +143,7 @@
     }
 
 .map-tooltip {
-  z-index:999999;
+  z-index:9999;
   padding:10px;
   top: 81px;
   right:10px;
@@ -165,7 +165,7 @@
 
 .map-movetip {
   position:absolute;
-  z-index:999999;
+  z-index:9999;
   background:#fff;
   padding:10px;
   max-width:300px;

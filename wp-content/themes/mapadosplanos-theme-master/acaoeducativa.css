@@ -15,7 +15,7 @@
 	box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.3);
 	background-color: #EE3360;
 	position: fixed;
-	z-index: 999999;
+	z-index: 99999;
 	height: auto;
 }
 
@@ -112,6 +112,13 @@ min-height: 60px;
 	min-height: 100px;
 }
 
+#content-mapa-single-municipio {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 900px;
+	overflow: hidden;
+	min-height: 100px;
+}
 
 #box-below-map {
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
@@ -491,8 +498,8 @@ color: #B54726;
 	float: left;
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
 	background-color: #0F85AB;
-	 margin: 0 0 1.5em 2em;
-    width: 380px;
+	 margin: 0 0 1.5em 3em;
+    width: 330px;
 	}
 
 	#botao-map:hover {
@@ -941,13 +948,20 @@ h1.entry-title-giant{
 	white-space:normal;
 }
 #parte3.tab-pane table tr td:first-child{
-  width: 60%;
+   width: 60%;
+
+}
+
+.regua {
+  background: url("img/marcacao-regua.png") repeat-x scroll -37px 7px rgba(0, 0, 0, 0);
+    height: 15px;
+    width: 100%;
 }
 
 #parte3 .progress{
   height: 15px;
   margin-bottom: 5px;
-  width: 80%;
+  width: 100%;
   display: inline;
   float: left;
 }
@@ -959,7 +973,7 @@ h1.entry-title-giant{
 #parte4 .progress{
   height: 15px;
   margin-bottom: 5px;
-  width: 80%;
+  width: 100%;
   display: inline;
   float: left;
 }
@@ -988,12 +1002,80 @@ label.bar-porcentagem{
   line-height: 15px;
   margin-left: 2px;
   min-width: 30px;
+  height: 7px;
 }
 
+span.pouco-importante{
+  float: left;
+     font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.2;
+  margin-left: 5px;
+  min-width: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span.muito-importante{
+  float: right;
+  margin-right: 5px;
+  min-width: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.bola-menos {
+    position: absolute;
+   background-color: #CCC; 
+   -moz-border-radius: 20px; 
+   -webkit-border-radius: 20px; 
+   border-radius: 20px;
+   color: #FFF;
+	height: 24px;
+    padding: 2px 8px 3px;
+    width: 12px;
+	font-weight: bold;
+	font-size: 2.5em;
+    margin-left: -5px;
+    margin-top: 5px;
+	z-index: 9999;
+
+   
+}
+
+.bola-mais{
+  
+	background-color: #CCCCCC;
+   -moz-border-radius: 20px; 
+   -webkit-border-radius: 20px; 
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 2.2em;
+    font-weight: bold;
+    height: 21px;
+    margin-left: 315px;
+    margin-top: 7px;
+    padding: 4px 2px 2px 4px;
+    position: absolute;
+    width: 20px;
+    z-index: 9999;
+	
+}
+
+.azul {
+background-color: #91d2e3 !important;
+}
 
 #recaptcha_widget_div {
 margin-bottom: 2em;
-}	
+}
+
+.progress .bar {
+opacity: 0.8;
+}
 
 /* 
 ZILLA SHORTCODES
