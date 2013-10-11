@@ -128,7 +128,35 @@ $(document).ready(function () {
 			}
 		});
     }
+
     //autosearchbox end
+
+    $('#s-recadastro').keyup(function(e) {
+        clearTimeout($.data(this, 'timer'));
+        if (e.keyCode == 13)
+          search_recadastro(true);
+        else
+          $(this).data('timer', setTimeout(search_recadastro, 500));
+    });
+
+    function search_recadastro(force) {
+        var existingString = $("#s-recadastro").val();
+        if (!force && existingString.length < 3) return; //wasn't enter, not > 2 char
+        $.ajax({
+			url:"/wp-admin/admin-ajax.php",
+			type:'POST',
+			data:'action=recadastro_search&s='+existingString,
+			success:function(results) {
+                $("#autocomplete").html(results);
+			}
+		});
+    }
+
+    $('.page-template-page-recadastro-php #autocomplete li').live('click', function(){
+        $('#selected').html('Município selecionado: ' + $(this).html() + '<input type="hidden" name="municipio" value="' + $(this).data('ibge') + '" />');
+        $('#s-recadastro').val('');
+        $('#autocomplete').html('');
+    });
 
     //abrir munic no link certo
     var hash = location.hash

@@ -352,7 +352,165 @@ function excerpt($limit) {
       } 
       $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
       return nl2br($excerpt);
+}
+
+add_action( 'wp_ajax_recadastro_search', 'ajax_recadastro_search' );
+add_action( 'wp_ajax_nopriv_recadastro_search', 'ajax_recadastro_search' );
+function ajax_recadastro_search() {
+
+    if ( empty( $_POST['s'] ) )
+        die();
+
+    global $wpdb;
+
+    $sql = $wpdb->prepare("
+        SELECT
+            {$wpdb->posts}.ID,
+            {$wpdb->posts}.post_title,
+            {$wpdb->postmeta}.meta_value AS ibge
+        FROM
+            {$wpdb->posts}
+        INNER JOIN {$wpdb->postmeta} ON 1=1
+            AND {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id
+        LEFT JOIN {$wpdb->usermeta} ON 1=1
+            AND {$wpdb->usermeta}.meta_key = 'ibge'
+            AND {$wpdb->usermeta}.meta_value = {$wpdb->postmeta}.meta_value
+        WHERE 1=1
+            AND {$wpdb->posts}.post_type = 'municipio'
+            AND {$wpdb->posts}.post_status = 'publish'
+            AND {$wpdb->postmeta}.meta_key = 'ibge'
+            AND {$wpdb->usermeta}.user_id IS NULL
+            AND LOWER({$wpdb->posts}.post_title) LIKE '%%%s%%'
+        LIMIT 10
+    ", $_POST['s'] );
+
+    $results = $wpdb->get_results( $sql );
+    if ( count( $results ) <= 0 ) {
+        echo '<li class="none">Nenhum item encontrado</li>';
+        exit();
     }
-	
+
+    $out = '<ul>';
+    foreach( $results as $r ) {
+        $out .= sprintf( '<li data-post-id="%s" data-ibge="%s"><a>%s</a></li>' , $r->ID, $r->ibge, $r->post_title );
+    }
+    $out .= '</ul>';
+    echo $out;
+    exit();
+
+}
+
+function get_post_id_from_ibge( $ibge ) {
+    global $wpdb;
+    $sql = $wpdb->prepare( "
+        SELECT ID
+        FROM {$wpdb->posts} p, {$wpdb->postmeta} pm
+        WHERE 1=1
+            AND p.ID = pm.post_id
+            AND pm.meta_key = 'ibge'
+            AND pm.meta_value = '%d'
+        LIMIT 1
+    ", $ibge );
+    $post_id = $wpdb->get_var( $sql );
+    return $post_id;
+}
+
+
+add_action( 'init', 'recadastro_form_submit' );
+function recadastro_form_submit() {
+
+    if ( empty( $_POST['recadastro'] ) )
+        return;
+
+    global $messages, $wpdb, $postdata;
+
+    $postdata = $_POST;
+    unset( $_POST ); // aí o WordPress não enxe o saco
+
+    $error = false;
+    $required_fields = array(
+        'municipio' => 'Município',
+        'responsavel' => 'Responsável',
+        'funcao' => 'Função',
+        'email' => 'E-mail'
+    );
+    foreach( array_keys( $required_fields ) as $r ) {
+        if ( !empty( $postdata[ $r ] ) )
+            continue;
+        $messages[] = array(
+            'class' => 'error',
+            'content' => 'O campo obrigatório "' . $required_fields[ $r ] . '" não foi preenchido.'
+        );
+        $error = true;
+    }
+
+    if ( $error )
+        return;
+
+    if ( !is_email( $postdata['email'] ) ) {
+        $messages[] = array(
+            'class' => 'error',
+            'content' => 'O e-mail fornecido é inválido.'
+        );
+        return;
+    }
+
+    $post_id = get_post_id_from_ibge( $postdata['municipio'] );
+    if ( !$post_id ) {
+        $messages = array(
+            'class' => 'error',
+            'content' => 'Houve uma falha ao tentar gravar as informações para esta cidade. Por favor entre em contato conosco e informe este problema.'
+        );
+        return;
+    }
+
+    $funcoes = array(
+        1 => 'Dirigente Municipal de Educação',
+        2 => 'Assessor(a) do(a) Dirigente Municipal de Educação',
+        3 => 'Coordenador(a) de área/programa da Secretaria',
+        4 => 'Diretor(a) regional de ensino',
+        5 => 'Outras'
+    );
+    if ( empty( $funcoes[ $postdata['funcao'] ] ) ) {
+        $messages = array(
+            'class' => 'error',
+            'content' => 'Função inválida. O formulário não foi preenchido adequadamente.'
+        );
+        return;
+    }
+    $postdata['funcao'] = $funcoes[ $postdata['funcao'] ];
+
+    $userdata = array(
+        'user_login' => $postdata['municipio'],
+        'user_pass' => wp_generate_password(),
+        'user_email' => $postdata['email']
+    );
+    $user_id = wp_insert_user( $userdata );
+    if ( is_wp_error( $user_id ) ) {
+        $messages[] = array(
+            'class' => 'error',
+            'content' => $user_id->get_error_message()
+        );
+        return;
+    }
+    wp_new_user_notification( $user_id, $userdata['user_pass'] );
+
+    $fields = array(
+        'municipio' => 'wpcf-qs_cadastro02',
+        'responsavel' => 'wpcf-qs_cadastro02',
+        'funcao' => 'wpcf-qs_cadastro03',
+        'email' => 'wpcf-qs_cadastro05'
+    );
+    foreach ( $fields as $k => $v ) {
+        update_post_meta( $post_id, $v, $postdata[ $k ] );
+    }
+
+    $messages = array(
+        'class' => 'success',
+        'content' => 'O seu número de usuário <b>' . $postdata['municipio'] . '</b> foi criado com sucesso. Os dados de acesso foram enviados para o e-mail <i>' . $postdata['email'] . '</i>. Não esqueça de verificar na sua caixa de SPAM.'
+    );
+    $postdata = false;
+
+}
 
 ?>
