@@ -509,10 +509,10 @@ function recadastro_form_submit() {
         update_post_meta( $post_id, $v, $postdata[ $k ] );
     }
 
-    $messages = array(
+    $messages = array( array(
         'class' => 'success',
         'content' => 'O seu número de usuário <b>' . $postdata['municipio'] . '</b> foi criado com sucesso. Os dados de acesso foram enviados para o e-mail <i>' . $postdata['email'] . '</i>. Não esqueça de verificar na sua caixa de SPAM.'
-    );
+    ) );
     $postdata = false;
 
 }
