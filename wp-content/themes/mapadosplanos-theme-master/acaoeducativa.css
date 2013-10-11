@@ -1271,4 +1271,6 @@ a.zilla-button, a.zilla-button:visited {
 /* Classes do formulário de recadastro */
 
 .messages { margin:15px 0; padding:0; }
-.messages .error { background: #FF0000; padding: 5px 10px; list-style-type: none; }
+.messages li { padding: 5px 10px; list-style-type: none; font-weight: bold; color: #FFFFFF; }
+.messages li.error { background: #F1043C;  }
+.messages li.success { background: #5EB95E; }
