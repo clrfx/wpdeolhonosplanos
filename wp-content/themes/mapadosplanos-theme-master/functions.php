@@ -456,6 +456,7 @@ function recadastro_form_submit() {
     }
 
     $post_id = get_post_id_from_ibge( $postdata['municipio'] );
+    $post = get_post( $post_id );
     if ( !$post_id ) {
         $messages = array(
             'class' => 'error',
@@ -483,7 +484,9 @@ function recadastro_form_submit() {
     $userdata = array(
         'user_login' => $postdata['municipio'],
         'user_pass' => wp_generate_password(),
-        'user_email' => $postdata['email']
+        'user_email' => $postdata['email'],
+        'first_name' => $post->post_title,
+        'role' => 'author'
     );
     $user_id = wp_insert_user( $userdata );
     if ( is_wp_error( $user_id ) ) {
@@ -493,6 +496,7 @@ function recadastro_form_submit() {
         );
         return;
     }
+    update_user_meta( $user_id, 'ibge', $postdata['municipio'] );
     wp_new_user_notification( $user_id, $userdata['user_pass'] );
 
     $fields = array(
