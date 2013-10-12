@@ -499,6 +499,12 @@ function recadastro_form_submit() {
         update_post_meta( $post_id, $v, $postdata[ $k ] );
     }
 
+    $postarr = array(
+        'ID' => $post_id,
+        'post_author' => $user_id
+    );
+    wp_update_post( $postarr );
+
     $messages = array( array(
         'class' => 'success',
         'content' => 'O seu número de usuário <b>' . $postdata['municipio'] . '</b> foi criado com sucesso. Os dados de acesso foram enviados para o e-mail <i>' . $postdata['email'] . '</i>. Não esqueça de verificar na sua caixa de SPAM.'
