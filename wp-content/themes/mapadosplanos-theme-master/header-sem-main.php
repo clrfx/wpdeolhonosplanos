@@ -60,7 +60,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <script type="text/javascript">
 $(document).ready( function Scrolldown(){
-window.scroll(0,170); 
+window.scroll(0,150); 
  }); 
 </script>
 

@@ -101,6 +101,10 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <div id="barra-mapa">
 
+<div id="img-seta-down">
+<a class="seta-down-home" id="seta-down-home" >&nbsp;</a>
+</div>
+
 	<div id="content-mapa">
 	
 		<div id="box-below-map">

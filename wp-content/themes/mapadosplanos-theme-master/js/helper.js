@@ -308,6 +308,17 @@ if ($("body").hasClass("single-municipio")) {
 
         });
     }
+	
+	// Botão deixe um comentário
+    if ($('#seta-down-home').length) {
+        $('#seta-down-home').click(function(e){
+            e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $('#main').offset().top - 65
+			}, 500);
+
+        });
+    }
 
 
 });
