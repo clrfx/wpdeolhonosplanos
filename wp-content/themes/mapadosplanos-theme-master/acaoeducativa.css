@@ -959,11 +959,12 @@ h1.entry-title-giant{
 }
 
 #parte3 .progress{
-  height: 15px;
-  margin-bottom: 5px;
-  width: 100%;
-  display: inline;
-  float: left;
+	display: inline;
+    float: left;
+    height: 15px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    width: 85%;
 }
 
 #parte4.tab-pane table tr td:first-child{
@@ -990,6 +991,7 @@ h1.entry-title-giant{
 #parte3 .bar-container .progress{
   width: 120px;
   float: right;
+  margin-left: 0;
 }
 
 #parte4 .bar-container .progress{
@@ -1000,8 +1002,16 @@ h1.entry-title-giant{
 label.bar-porcentagem{
   float: right;
   line-height: 15px;
-  margin-left: 2px;
+  margin-left: 5px;
   min-width: 30px;
+  height: 7px;
+}
+
+label.bar-spacer{
+  float: right;
+  line-height: 15px;
+  margin-left: 2px;
+  min-width: 250px;
   height: 7px;
 }
 
@@ -1039,7 +1049,7 @@ span.muito-importante{
     width: 12px;
 	font-weight: bold;
 	font-size: 2.5em;
-    margin-left: -5px;
+    margin-left: 15px;
     margin-top: 5px;
 	z-index: 9999;
 
@@ -1056,7 +1066,7 @@ span.muito-importante{
     font-size: 2.2em;
     font-weight: bold;
     height: 21px;
-    margin-left: 315px;
+    margin-left: 290px;
     margin-top: 7px;
     padding: 4px 2px 2px 4px;
     position: absolute;
@@ -1068,6 +1078,16 @@ span.muito-importante{
 .azul {
 background-color: #91d2e3 !important;
 }
+
+.vermelho{
+background-color: #e4a4b3 !important;
+}
+
+.verde {
+background-color: #a8d6a8 !important;
+}
+
+
 
 #recaptcha_widget_div {
 margin-bottom: 2em;
