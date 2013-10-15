@@ -521,8 +521,9 @@ background-color: #0C6D8D;
     display: block;
     height: 52px;
 	width: 71px;
-    margin: 20% 6% 0 0;
-	float: right;
+	margin: 20% 0 0 6%;
+    position: absolute;
+	z-index: 9999;
 
 }
 
