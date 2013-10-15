@@ -34,7 +34,7 @@ min-height: 60px;
 #masthead-fixo {
   padding:0;
   max-width:980px;
-  min-height:215px;
+  min-height:210px;
   z-index: 2;
   margin: 0 auto;
 
@@ -50,24 +50,13 @@ min-height: 60px;
 }
 
 #site-logo-fixo {
- background: url("img/logo-maior.png") no-repeat scroll center -115px transparent;
+	background: url("img/logo-maior.png") no-repeat scroll center -130px rgba(0, 0, 0, 0);
     float: left;
-    height: 190px;
-    margin: 1.5em 1em 1.5em 2em;
+    height: 175px;
+    margin: 1.5em 1em 1em 2em;
     width: 300px;
 }
 
-
-#tagline h1.header-scroll {
-    color: #696A69;
-    font-size: 1.3em;
-    font-weight: 500;
-    line-height: 1.5em;
-    margin-left: 4em;
-    margin-top: 9em;
-    text-align: center;
-    width: 450px;
-}
 
 #tagline h1.internas{
    color: #696A69;
@@ -75,7 +64,7 @@ min-height: 60px;
     font-weight: 500;
     line-height: 1.5em;
     margin-left: 4em;
-    margin-top: 6.8em;
+    margin-top: 6em;
     text-align: center;
     width: 450px;
 }
@@ -95,7 +84,7 @@ min-height: 60px;
 	overflow: hidden;
 	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
 	background-color: #05A3D3;
-	padding: 1.2em 0 0;
+	padding: 1.2em 0;
 }
 
 #barra-mapa.search{

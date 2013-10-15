@@ -81,16 +81,13 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 				
 		<div id="tagline">
 			
-			<h1>
+			<h1 class="internas">
 			
-				<?php $blurb = get_post_meta($post->ID, 'blurb', true);
-				$blurb;
-				if( $blurb ): ?>
-				<div class="frontpage-blurb">
-				<?php echo do_shortcode($blurb); ?>
-				</div>
-				<?php endif; ?>
-			
+				<?php
+				$texto = get_bloginfo("description");
+				list ($line1, $line2) = split ("-", $texto);
+				echo $line1."<span>".$line2."</span>"
+				 ?>
 
 			</h1>
 
@@ -124,19 +121,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		<?php get_template_part( 'mapbox' ); ?>
 		
 		<div class="clear"></div>
-	
-			<div id="frase-mapa">
-				<?php
-
-				$texto = get_bloginfo("description");
-				list ($line1, $line2) = split ("-", $texto);
-				
-				echo $line1."<span>".$line2."</span>"
-
-				 ?>
-			</div>
-
-				<div class="clear"></div>
 
 	</div>
 </div>
