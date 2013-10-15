@@ -297,6 +297,18 @@ if ($("body").hasClass("single-municipio")) {
 
         });
     }
+	
+	// Botão deixe um comentário
+    if ($('#comment-link').length) {
+        $('#comment-link').click(function(e){
+            e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $('#respond').offset().top - 85
+			}, 500);
+
+        });
+    }
+
 
 });
 

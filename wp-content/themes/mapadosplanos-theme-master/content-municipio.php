@@ -80,7 +80,7 @@
 		
 		<?php if ( comments_open() ) : ?>
 		<div id="botao-map">
-			<span>
+			<span id="comment-link">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Coment&aacute;rio', 'twentytwelve' ), __( '% Coment&aacute;rios', 'twentytwelve' ) ); ?>
 			</span>			
 		</div>
