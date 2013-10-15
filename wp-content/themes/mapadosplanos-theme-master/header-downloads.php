@@ -105,7 +105,7 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 		</a>
 		<div id="description-headers-internos">
 		<?php 
-			$desc_download = get_term_by('name', 'download', 'dlm_download_category');
+			$desc_download = get_term_by('name', 'colecao', 'dlm_download_category');
 			echo $desc_download->description;
 		?>
 		</div>
