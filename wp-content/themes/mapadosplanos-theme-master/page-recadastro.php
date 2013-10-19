@@ -1,6 +1,6 @@
 <?
 /**
- * Template Name: Recadastro
+ * Template Name: Cadastro
  */
 
 global $messages, $postdata;
@@ -8,7 +8,7 @@ global $messages, $postdata;
 ?>
 <?php get_header('resume'); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="cadastro">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -25,8 +25,8 @@ global $messages, $postdata;
 
                 <form action="." id="recadastro-form" method="POST">
 
-                    <p><label for="s-recadastro">Município</label>
-                    <input type="text" placeholder="Procure pelo seu município" autocomplete="false" id="s-recadastro" name="s" value="" class="ui-state-valid">
+                    <p><label for="s-recadastro" class="bolder">Procure pelo seu Município</label>
+                    <input type="text" placeholder=" " autocomplete="false" id="s-recadastro" name="s" value="" class="ui-state-valid">
                     <div id="autocomplete"></div>
                     <div id="selected">
                     <?php if ( !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ) ) : ?>
@@ -36,13 +36,13 @@ global $messages, $postdata;
                     <?php endif; ?>
                     </div></p>
 
-                    <p><label for="responsavel">Nome da pessoa responsável</label>
+                    <p><label for="responsavel" class="bolder">Informe seu Nome Completo</label>
                     <input type="text" id="responsavel" name="responsavel" value="<?php echo !empty( $postdata['responsavel'] ) ? $postdata['responsavel'] : ''; ?>" /></p>
 
-                    <p><label for="email">E-mail da pessoa responsável</label>
+                    <p><label for="email" class="bolder">Cadastre seu E-mail</label>
                     <input type="text" id="email" name="email" value="<?php echo !empty( $postdata['email'] ) ? $postdata['email'] : ''; ?>" /></p>
 
-                    <p>Cargo ou função da pessoa responsável</p>
+                    <p class="bolder">Selecione o seu Cargo ou função</p>
 
                     <p>
                     <label for="funcao1"><input type="radio" value="1" id="funcao1" name="funcao"<?php echo !empty( $postdata['funcao'] ) && 1 == $postdata['funcao'] ? ' checked="checked"' : ''; ?>>Dirigente Municipal de Educação</label>
@@ -52,7 +52,7 @@ global $messages, $postdata;
                     <label for="funcao5"><input type="radio" value="5" id="funcao5" name="funcao"<?php echo !empty( $postdata['funcao'] ) && 5 == $postdata['funcao'] ? ' checked="checked"' : ''; ?>>&nbsp;Outras</label>
                     </p>
 
-                    <p><input type="hidden" name="recadastro" value="1" />
+                    <p class="btn-cadastro"><input type="hidden" name="recadastro" value="1" />
                     <input type="submit" value="Enviar" /></p>
 
                 </form>
@@ -61,6 +61,4 @@ global $messages, $postdata;
 
 		</div>
 	</div>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

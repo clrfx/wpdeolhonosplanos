@@ -344,6 +344,9 @@ function excerpt($limit) {
       return nl2br($excerpt);
 }
 
+
+//Adicionando funções do template reCadastro
+
 add_action( 'wp_ajax_recadastro_search', 'ajax_recadastro_search' );
 add_action( 'wp_ajax_nopriv_recadastro_search', 'ajax_recadastro_search' );
 function ajax_recadastro_search() {
@@ -420,7 +423,7 @@ function recadastro_form_submit() {
     $error = false;
     $required_fields = array(
         'municipio' => 'Município',
-        'responsavel' => 'Responsável',
+        'responsavel' => 'Nome',
         'funcao' => 'Função',
         'email' => 'E-mail'
     );
@@ -450,7 +453,8 @@ function recadastro_form_submit() {
     if ( !$post_id ) {
         $messages = array(
             'class' => 'error',
-            'content' => 'Houve uma falha ao tentar gravar as informações para esta cidade. Por favor entre em contato conosco e informe este problema.'
+            'content' => 'Este município já possui acesso para o preenchimento do questionário. Caso você tenha perdido a senha ou seja o responsável pela atualização do questionário, envie um e-mail para contato@deolhonosplanos.org.br.
+			Assim que possível liberaremos um novo acesso para você. Obrigado!'
         );
         return;
     }
@@ -507,7 +511,7 @@ function recadastro_form_submit() {
 
     $messages = array( array(
         'class' => 'success',
-        'content' => 'O seu número de usuário <b>' . $postdata['municipio'] . '</b> foi criado com sucesso. Os dados de acesso foram enviados para o e-mail <i>' . $postdata['email'] . '</i>. Não esqueça de verificar na sua caixa de SPAM.'
+        'content' => 'Agradecemos seu cadastro. O seu número de usuário foi criado com sucesso e é <b>' . $postdata['municipio'] . '</b>. A senha de acesso foi enviada para o e-mail <i>' . $postdata['email'] . '</i>. Não esqueça de verificar na sua caixa de SPAM.'
     ) );
     $postdata = false;
 

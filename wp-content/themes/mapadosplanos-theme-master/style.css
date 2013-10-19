@@ -1461,6 +1461,37 @@ img#wpstats {
 	width: 100% !important;
 	}
 	
+	.cadastro {
+	width: 41% !important;
+	margin: 0 auto;
+	}
+	
+	.bolder {
+	font-weight: bolder !important;
+	font-size: 1.2em;
+	}
+	
+	.btn-cadastro {
+	width: 25%;
+	margin: 0 auto;
+
+	}
+	
+	.btn-cadastro input {
+	background: linear-gradient(to bottom, #D94253 0%, #EE3360 100%) repeat scroll 0 0 #EE3360;
+	color: #FFF;
+	border: none;
+	padding: 1.2em 1.8rem;
+	margin: 1em 0;
+	}
+	
+	.btn-cadastro input:hover {
+	background-color: #D62B4D;
+    background-image: none;
+    background-repeat: repeat-x;
+	color: #EEE;
+	}
+	
 	.widget-area {
 		float: right;
 		width: 27%;
