@@ -181,6 +181,17 @@ padding: 0;
 
 }
 
+#primary.content-quem-somos {
+
+	background: url("img/bg-content-quem-somos.png") no-repeat scroll center top transparent;
+	margin: 0 auto;
+    padding: 0;
+    max-width: 940px;
+	min-height: 800px;
+	width: 100% !important;
+
+}
+
 #description-headers-internos {
 float: left;
 max-width: 500px;

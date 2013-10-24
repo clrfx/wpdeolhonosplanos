@@ -1,21 +1,17 @@
 <?php
 /**
- * Template Name: Cabecalho Sem Barra 
+ * Template Name: Quem Somos 
  */
 
-get_header('sem-barra'); ?>
+get_header('resume'); ?>
 
-	<div id="primary">
-		<div id="content" role="main">
+	<div id="primary" class="content-quem-somos">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>
 			
-
-		</div><!-- #content -->
 	</div><!-- #primary -->
-
 
 <?php get_footer(); ?>
