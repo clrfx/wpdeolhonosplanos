@@ -2440,17 +2440,21 @@ div.wpcf7 {
 ----------------------------------------------- */
 
 #autocomplete {
-	ackground-color: #FFFFFF;
+	background-color: #FFFFFF;
     color: #555555;
     display: block;
     font-size: 90%;
-    margin-top: -20px;
     overflow: hidden;
     position: absolute;
     width: 255px;
     z-index: 100;
 
 }
+
+body.page-template-page-recadastro-php #autocomplete {
+    margin-top: -20px;
+}
+
 #autocomplete ul {
         margin: 0;
         padding: 0;
@@ -2484,15 +2488,17 @@ div.wpcf7 {
 
 #selected a {
 color: #1E4A7F;
-}
-
-#selected.bolder {
 font-weight: bold;
 }
 
 #s-recadastro.loading {
 background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 }
+
+#s-munic.loading {
+background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
+}
+
 
 body .post-type-municipio {
 

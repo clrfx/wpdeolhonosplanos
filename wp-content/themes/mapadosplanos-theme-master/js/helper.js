@@ -104,9 +104,13 @@ $(document).ready(function () {
     
     function search(force) {
         var existingString = $("#s-munic").val();
-        if (!force && existingString.length < 3) return; //wasn't enter, not > 2 char
+        if (!force && existingString.length < 2) { //wasn't enter, not > 2 char
+			$("#autocomplete").html('');
+			return;
+		} 
+		$("#s-munic").addClass ('loading');
         $.ajax({
-			url:"wp-admin/admin-ajax.php",
+			url:"/wp-admin/admin-ajax.php",
 			type:'POST',
 			data:'action=ae_search&s='+existingString,
 			success:function(results) {
@@ -124,7 +128,7 @@ $(document).ready(function () {
                     map.ease.location({ lat: -13.32, lon: -51.15 }).zoom(4).optimal();
                     $("#autocomplete").html('');
                 });
-				
+				$("#s-munic").removeClass ('loading');
 			}
 		});
     }
@@ -147,7 +151,7 @@ $(document).ready(function () {
 		} 
 		$("#s-recadastro").addClass ('loading');
 	   $.ajax({
-			url:"/mapadeolhonosplanos/wp-admin/admin-ajax.php",
+			url:"/wp-admin/admin-ajax.php",
 			type:'POST',
 			data:'action=recadastro_search&s='+existingString,
 			success:function(results) {
@@ -159,7 +163,7 @@ $(document).ready(function () {
     }
 
     $('.page-template-page-recadastro-php #autocomplete li').live('click', function(){
-        $('#selected').html('Município selecionado: ' + $(this).html() + '<input type="hidden" class="bolder" name="municipio" value="' + $(this).data('ibge') + '" />');
+        $('#selected').html('Município selecionado: ' + $(this).html() + '<input type="hidden" name="municipio" value="' + $(this).data('ibge') + '" />');
         $('#s-recadastro').val('');
         $('#autocomplete').html('');
 		$("#selected").fadeIn();
