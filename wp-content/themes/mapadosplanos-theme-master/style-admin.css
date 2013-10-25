@@ -1,0 +1,7 @@
+body.post-type-municipio #edit-slug-box {
+display: none;
+}
+
+body.post-type-municipio #misc-publishing-actions .misc-pub-section  {
+display: none;
+}

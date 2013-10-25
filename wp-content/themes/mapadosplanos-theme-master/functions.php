@@ -145,11 +145,17 @@ function mapadosplanos_login_footer() {
 
 	add_filter('login_footer', 'mapadosplanos_login_footer');
 
+// Customizing Admin
+
+function mapadosplanos_admin_stylesheet() { 
+	wp_enqueue_style('mapadosplanos_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/style-admin.css');
+}
+add_action( 'admin_enqueue_scripts', 'mapadosplanos_admin_stylesheet' );
 	
 add_filter ('admin_body_class', 'mapadosplanos_body_class');
 function mapadosplanos_body_class ($body_class) { 
 	$post_type = get_post_type ();
-	$body_class [] =  'post-type-' . $post_type;
+	$body_class .=  ' post-type-' . $post_type;
 	return $body_class;
 }
 	
@@ -394,7 +400,7 @@ function ajax_recadastro_search() {
 
     $results = $wpdb->get_results( $sql );
     if ( count( $results ) <= 0 ) {
-        echo '<li class="none">Nenhum item encontrado</li>';
+        echo '<li class="none"><span>Nenhum item encontrado</span><br /><small>Somente estão disponíveis municípios sem cadastro. Em caso de dúvida envie um e-mail para contato@deolhonosplanos.org.br </small></li>';
         exit();
     }
 
@@ -468,8 +474,7 @@ function recadastro_form_submit() {
     if ( !$post_id ) {
         $messages = array(
             'class' => 'error',
-            'content' => 'Este município já possui acesso para o preenchimento do questionário. Caso você tenha perdido a senha ou seja o responsável pela atualização do questionário, envie um e-mail para contato@deolhonosplanos.org.br.
-			Assim que possível liberaremos um novo acesso para você. Obrigado!'
+            'content' => 'Houve um erro ao gravar as informações de seu município. Por favor, envie um e-mail para contato@deolhonosplanos.org.br informando o ocorrido.'
         );
         return;
     }

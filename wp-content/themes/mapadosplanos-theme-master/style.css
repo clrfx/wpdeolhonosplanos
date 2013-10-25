@@ -2500,8 +2500,21 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 }
 
 
-body .post-type-municipio {
 
+#autocomplete li.none {
+	background: none repeat scroll 0 0 #EAE618;
+    line-height: 1em;
+    padding: 7px;
+}
+
+#autocomplete li.none span {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+#autocomplete li.none small {
+	display: block;
+    margin-top: 7px;
 }
 
 .scree-reader-text {
