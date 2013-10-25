@@ -141,21 +141,28 @@ $(document).ready(function () {
 
     function search_recadastro(force) {
         var existingString = $("#s-recadastro").val();
-        if (!force && existingString.length < 3) return; //wasn't enter, not > 2 char
-        $.ajax({
-			url:"/wp-admin/admin-ajax.php",
+        if (!force && existingString.length < 2) { //wasn't enter, not > 2 char
+			$("#autocomplete").html('');
+			return;
+		} 
+		$("#s-recadastro").addClass ('loading');
+	   $.ajax({
+			url:"/mapadeolhonosplanos/wp-admin/admin-ajax.php",
 			type:'POST',
 			data:'action=recadastro_search&s='+existingString,
 			success:function(results) {
                 $("#autocomplete").html(results);
+				$("#s-recadastro").removeClass ('loading');
+				
 			}
 		});
     }
 
     $('.page-template-page-recadastro-php #autocomplete li').live('click', function(){
-        $('#selected').html('Município selecionado: ' + $(this).html() + '<input type="hidden" name="municipio" value="' + $(this).data('ibge') + '" />');
+        $('#selected').html('Município selecionado: ' + $(this).html() + '<input type="hidden" class="bolder" name="municipio" value="' + $(this).data('ibge') + '" />');
         $('#s-recadastro').val('');
         $('#autocomplete').html('');
+		$("#selected").fadeIn();
     });
 
     //abrir munic no link certo

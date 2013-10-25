@@ -125,17 +125,30 @@ function types_render_checkboxes($checkboxes, $classes) {
 
 // Customizing Login
 
-function mapadosplanos_login_stylesheet() { ?>
+function mapadosplanos_login_stylesheet() { 
+	?>
     <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/style-login.css'; ?>" type="text/css" media="all" />
-	<?php }
+	<?php 
+}
 add_action( 'login_enqueue_scripts', 'mapadosplanos_login_stylesheet' );
 
-function mapadosplanos_login_footer() { ?>
+function mapadosplanos_login_footer() { 
+	?>
 	<script type='text/javascript' src='<?php echo get_bloginfo( 'stylesheet_directory' ) . '/js/wp-login.js'; ?>'></script>
 
-	<?php }
+	<?php
+}
 
 	add_filter('login_footer', 'mapadosplanos_login_footer');
+
+	
+add_filter ('admin_body_class', 'mapadosplanos_body_class');
+function mapadosplanos_body_class ($body_class) { 
+	$post_type = get_post_type ();
+	$body_class [] =  'post-type-' . $post_type;
+	return $body_class;
+}
+	
 
 //Cleaning up admin area
 
@@ -192,8 +205,6 @@ function mapadosplanos_remove_post_meta_boxes() {
 	remove_meta_box('wpcf-marketing', 'municipio', 'side');
 	remove_meta_box('munic2011', 'municipio', 'normal');
 }
-
-
 
 if ( !is_super_admin() ) {
 	add_action('admin_menu', 'remove_menu_items');

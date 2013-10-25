@@ -8,8 +8,8 @@ global $messages, $postdata;
 ?>
 <?php get_header('resume'); ?>
 
-	<div id="primary" class="cadastro">
-		<div id="content" role="main">
+	<div id="primary" class="content-quem-somos">
+		<div id="content" class="cadastro">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +26,7 @@ global $messages, $postdata;
                 <form action="." id="recadastro-form" method="POST">
 
                     <p><label for="s-recadastro" class="bolder">Procure pelo seu Município</label>
-                    <input type="text" placeholder=" " autocomplete="false" id="s-recadastro" name="s" value="" class="ui-state-valid">
+                    <input type="text" placeholder=" " autocomplete="off" id="s-recadastro" name="s" value="" class="ui-state-valid">
                     <div id="autocomplete"></div>
                     <div id="selected">
                     <?php if ( !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ) ) : ?>
