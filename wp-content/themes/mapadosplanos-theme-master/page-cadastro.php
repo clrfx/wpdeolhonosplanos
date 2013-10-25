@@ -8,8 +8,8 @@ global $messages, $postdata;
 ?>
 <?php get_header('resume'); ?>
 
-	<div id="primary" class="content-quem-somos">
-		<div id="content" class="cadastro">
+	<div id="primary" class="cadastro">
+		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -31,7 +31,7 @@ global $messages, $postdata;
                     <div id="selected">
                     <?php if ( !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ) ) : ?>
                         <?php $post = get_post( $p ); ?>
-                        Município selecionado: <a><?php echo $post->post_title; ?></a></li>
+                        Município selecionado: <a><?php echo $post->post_title; ?></a>
                         <input type="hidden" name="municipio" value="<?php echo $postdata['municipio']; ?>" />
                     <?php endif; ?>
                     </div></p>
