@@ -1,5 +1,9 @@
 <?php
 
+// LigthBox Magnific!
+wp_enqueue_script( 'jquery.magnific-popup', get_template_directory_uri() . '/js/jquery.magnific-popup.js' );
+wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup.css' );
+
 //require_once(dirname(__FILE__).'/embedded-types/types.php');
 define('child_template_directory', dirname(get_bloginfo('stylesheet_url')));
 
