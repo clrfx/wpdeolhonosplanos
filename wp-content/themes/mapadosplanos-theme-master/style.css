@@ -2106,15 +2106,19 @@ header #searchform div {
 	border-radius: 10px;
 }
 
-header #searchform div #searchsubmit {
-	width: 18%;
-}
 #searchform div #searchsubmit {
   font-family: 'Open Sans';
   font-size: 9px;
   font-weight: bold;
   height: 28px;
+  width: 60px;
 }
+
+
+#box-below-map.last #searchform div #searchsubmit {
+width: 17% !important;
+}
+
 #searchform input[type="text"] {
   font-style: italic;
   font-family: 'Open Sans';
@@ -2486,6 +2490,10 @@ body.page-template-page-recadastro-php #autocomplete {
 	display: none;
 }
 
+#selected.show {
+	display: block;
+}
+
 #selected a {
 color: #1E4A7F;
 font-weight: bold;
@@ -2519,6 +2527,48 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 
 .scree-reader-text {
 	display:none;
+}
+
+/* ESTRUTURA RESPONSIVA */
+
+/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
+
+@media screen and (max-width: 650px) {
+
+.main-navigation ul {
+    font-size: 0.8em;
+	}
+	
+	#tagline {
+    float:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	}
+	
+	
+	#tagline h1.internas {
+	
+	margin: 2em auto;
+	text-align: none;
+	
+	}
+	
+	
+}
+
+@media (max-width: 400px) {
+
+#box-below-map {
+	margin-right: 0;
+    width: 100%;
+}
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+	
+
 }
 
 
