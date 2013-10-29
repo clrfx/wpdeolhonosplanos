@@ -25,16 +25,18 @@ global $messages, $postdata;
 
                 <form action="." id="recadastro-form" method="POST">
 
-                    <p><label for="s-recadastro" class="bolder">Procure pelo seu Município</label>
-                    <input type="text" placeholder=" " autocomplete="off" id="s-recadastro" name="s" value="" class="ui-state-valid">
-                    <div id="autocomplete"></div>
-                    <div id="selected">
-                    <?php if ( !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ) ) : ?>
-                        <?php $post = get_post( $p ); ?>
-                        Município selecionado: <a><?php echo $post->post_title; ?></a>
-                        <input type="hidden" name="municipio" value="<?php echo $postdata['municipio']; ?>" />
-                    <?php endif; ?>
-                    </div></p>
+					
+				  <p><label for="s-recadastro" class="bolder">Procure pelo seu Município</label>
+				  <input type="text" placeholder=" " autocomplete="off" id="s-recadastro" name="s" value="" class="ui-state-valid">
+				  <div id="autocomplete"></div>
+				  <?php $selected = !empty( $postdata ) && $p = get_post_id_from_ibge( $postdata['municipio'] ); ?>
+				  <div id="selected"<?php echo $selected ? ' class="show"' : ''; ?>>
+				  <?php if ( $selected ) : ?>
+				  <?php $post = get_post( $p ); ?>
+				  Município selecionado: <a><?php echo $post->post_title; ?></a>
+				  <input type="hidden" name="municipio" value="<?php echo $postdata['municipio']; ?>" />
+				  <?php endif; ?>
+				  </div></p>
 
                     <p><label for="responsavel" class="bolder">Informe seu Nome Completo</label>
                     <input type="text" id="responsavel" name="responsavel" value="<?php echo !empty( $postdata['responsavel'] ) ? $postdata['responsavel'] : ''; ?>" /></p>
