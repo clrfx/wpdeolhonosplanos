@@ -2450,7 +2450,7 @@ div.wpcf7 {
     font-size: 90%;
     overflow: hidden;
     position: absolute;
-    width: 255px;
+    width: 350px;
     z-index: 100;
 
 }
@@ -2510,9 +2510,10 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 
 
 #autocomplete li.none {
-	background: none repeat scroll 0 0 #EAE618;
-    line-height: 1em;
-    padding: 7px;
+   background: none repeat scroll 0 0 #F1043C;
+    color: #FFFFFF;
+    line-height: 1.1em;
+    padding: 10px;
 }
 
 #autocomplete li.none span {

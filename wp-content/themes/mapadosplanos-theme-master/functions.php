@@ -400,7 +400,7 @@ function ajax_recadastro_search() {
 
     $results = $wpdb->get_results( $sql );
     if ( count( $results ) <= 0 ) {
-        echo '<li class="none"><span>Nenhum item encontrado</span><br /><small>Somente estão disponíveis municípios sem cadastro. Em caso de dúvida envie um e-mail para contato@deolhonosplanos.org.br </small></li>';
+        echo '<li class="none"><span>Nenhum município encontrado</span><br /><small>Provavelmente o município que buscou já possui acesso para o preenchimento do questionário. Caso você tenha perdido a senha ou seja o responsável pela atualização do questionário, envie um e-mail para contato@deolhonosplanos.org.br. Assim que possível liberaremos um novo acesso para você. Obrigado!</small></li>';
         exit();
     }
 
