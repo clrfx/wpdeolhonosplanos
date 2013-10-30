@@ -368,6 +368,7 @@
 			</div>
 			
 					<div id="download-popup" class="white-popup mfp-hide">
+					
 					<?php $page = get_post( $id = 17105 );
 						echo apply_filters( 'the_content', $page->post_content);
 					?>

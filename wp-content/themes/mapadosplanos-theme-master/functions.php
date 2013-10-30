@@ -1,7 +1,7 @@
 <?php
 
 // LigthBox Magnific!
-wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery') );
+wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
 wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
 
 //require_once(dirname(__FILE__).'/embedded-types/types.php');
