@@ -64,6 +64,17 @@ window.scroll(0,150);
  }); 
 </script>
 
+<script>
+// Example 1: From an element in DOM
+jQuery(function() {
+       jQuery('.open-popup-link').magnificPopup({
+         type:'inline',
+         midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+       });
+});
+
+</script>
+
 </head>
 
 <body <?php body_class(); ?>>
