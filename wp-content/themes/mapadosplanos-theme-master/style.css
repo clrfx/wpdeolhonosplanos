@@ -2529,6 +2529,15 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 	display:none;
 }
 
+.white-popup {
+ position: relative;
+ background: #FFF;
+ padding: 20px;
+ width: auto;
+ max-width: 500px;
+ margin: 20px auto;
+}
+
 /* ESTRUTURA RESPONSIVA */
 
 /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
@@ -2553,7 +2562,6 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 	text-align: none;
 	
 	}
-	
 	
 }
 
