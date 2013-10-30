@@ -58,9 +58,13 @@ $(document).ready(function () {
         // Zoomer
         map.ui.zoomer.add();
 
+        // location
+        map.ui.location.add();
+		
+		
         // Attribute map
         map.ui.attribution.add()
-            .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+            .content('<a href="http://deolhonosplanos.org.br/termo-de-uso/">Termo de Uso</a>');
     
         //Place markers
         var markerLayer = mapbox.markers.layer();
