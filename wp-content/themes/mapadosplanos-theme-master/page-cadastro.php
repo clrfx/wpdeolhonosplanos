@@ -6,7 +6,7 @@
 global $messages, $postdata;
 
 ?>
-<?php get_header('resume'); ?>
+<?php get_header('cadastro'); ?>
 
 	<div id="primary" class="cadastro">
 		<div id="content" role="main">

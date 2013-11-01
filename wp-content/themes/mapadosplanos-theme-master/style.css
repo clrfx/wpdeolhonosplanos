@@ -1143,9 +1143,10 @@ article.format-quote .entry-content blockquote {
 -------------------------------------------------------------- */
 
 #comments {
- margin: 0 20px;
-overflow: hidden;
-float: left;
+	margin: 0 20px;
+	overflow: hidden;
+	float: left;
+	width: 100%;
 }
 
 ol.commentlist {
@@ -1449,6 +1450,14 @@ img#wpstats {
 		max-width: 980px;
 		overflow: hidden;
 	}
+	
+	.cadastro-site {
+		background: url(img/cadastro-bg.png) no-repeat scroll right top #FCF5D9 !important;
+		margin: 0 auto;
+		max-width: 980px;
+		overflow: hidden;
+	}
+	
 	.site-content {
 		float: left;
 		width: 70% !important;
@@ -1462,8 +1471,8 @@ img#wpstats {
 	}
 	
 	.cadastro {
-	width: 41% !important;
-	margin: 0 auto;
+	margin: 2% 0 15% 10%;
+    width: 42% !important;
 	}
 	
 	.bolder {
