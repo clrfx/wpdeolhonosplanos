@@ -56,6 +56,9 @@ global $messages, $postdata;
 
                     <p class="btn-cadastro"><input type="hidden" name="recadastro" value="1" />
                     <input type="submit" value="Enviar" /></p>
+					
+					<p class="btn-ja-cadastrado"><a href="<?php echo get_site_url(); ?>/wp-admin">
+                    Já estou cadastrado</a></p>
 
                 </form>
 

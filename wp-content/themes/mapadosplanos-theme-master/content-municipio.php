@@ -359,7 +359,8 @@
 			
 			<?php else : ?>
 				<span class="titulo"><p>O(A) Gestor(a) da área de educação de seu município ainda não compartilhou informações sobre o processo de construção do Plano de Educação local.</p></span>
-				<p>Se você é gestor, colabore conosco nesta coleta de informações e <a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">preencha o questionário</a> sobre a elaboração do Plano de Educação do seu Município. </p>
+				<p>Se você é gestor, colabore conosco nesta coleta de informações e preencha o formulário sobre a elaboração do Plano de Educação do seu Município.
+				<p>Clique <a href="<?php echo get_site_url(); ?>/cadastro">aqui</a> para realizar seu cadastro. Se você já está cadastrado, acesse <a href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">aqui</a> o questionário.</p>
 				<p>É da sociedade civil e quer nos ajudar organize uma campanha em seu município para que a administração local participe desta iniciativa.</p>
 				<p>Confira também como a população e os(as) gestores(as) públicos podem se organizar em outras esferas para garantir a participação de todos(as) na construção  dos planos de educação em <a href="/mobilizacao-popular/">Mobilização Popular</a> e <a href="/processos-participativos/">Processos Participativos</a></p>
 				<p>Faça <a href="#download-popup" class="open-popup-link">download do questionário</a> a ser preenchido pela administração pública e conheça quais são as perguntas desse diagnóstico que tem por objetivo entender como os municípios vêm se preparando para elaborar ou revisar seus Planos de Educação.</p>
