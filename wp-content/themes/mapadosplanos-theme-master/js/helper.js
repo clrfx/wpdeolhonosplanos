@@ -324,7 +324,7 @@ if ($("body").hasClass("single-municipio")) {
         });
     }
 	
-	// Botão deixe um comentário
+	// Botão seta para baixo
     if ($('#seta-down-home').length) {
         $('#seta-down-home').click(function(e){
             e.preventDefault();

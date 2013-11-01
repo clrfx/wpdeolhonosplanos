@@ -111,7 +111,7 @@ function mapadosplanos_submit_form($post_id) {
         		AND `post_id` = %d
     			", $_POST['qs_cpf'], $_POST['post_id'] ) );
     		if ($r != 0) {
-    			echo "Você já respondeu esse questionario. Obrigado!";
+    			echo "Você já respondeu esse questionário. Obrigado!";
     		}
     		
     		else {
