@@ -1,5 +1,18 @@
 <?php
 
+//Filtro para tirar campos do Perfil de usuários abaixo de administradores
+
+if( !current_user_can('administrator') ) {
+add_filter('user_contactmethods','remove_profile_fields', 10, 1);
+	function remove_profile_fields($contactmethods) {
+		   unset($contactmethods['aim']);
+		   unset($contactmethods['jabber']);
+		   unset($contactmethods['yim']);
+		   return $contactmethods;
+	} 
+	
+}
+
 // LigthBox Magnific!
 wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
 wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
