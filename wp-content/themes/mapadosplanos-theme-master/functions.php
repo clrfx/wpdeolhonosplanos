@@ -4,6 +4,7 @@
 
 if( !current_user_can('administrator') ) {
 add_filter('user_contactmethods','remove_profile_fields', 10, 1);
+add_action( 'admin_enqueue_scripts', 'mapadosplanos_admin_stylesheet' );
 	function remove_profile_fields($contactmethods) {
 		   unset($contactmethods['aim']);
 		   unset($contactmethods['jabber']);
@@ -11,9 +12,40 @@ add_filter('user_contactmethods','remove_profile_fields', 10, 1);
 		   return $contactmethods;
 	} 
 	
+	// Customizing Admin
+
+function mapadosplanos_admin_stylesheet() { 
+	wp_enqueue_style('mapadosplanos_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/style-admin.css');
 }
 
-// LigthBox Magnific!
+	//ocultar campos ao editar profile e ao criar novo usuario para  usuários abaixo de administradores
+	function hide_personal_options(){
+	echo "\n" . '<script type="text/javascript">jQuery(document).ready(function($) {
+
+	$(\'form#your-profile > h3\').hide();
+	$(\'form#your-profile\').show();
+	$(\'form#your-profile > h3:first\').hide();
+	$(\'form#your-profile > table:first\').hide();
+	$(\'form#your-profile label[for=first_name], form#your-profile input#first_name, #first_name\').hide();
+	$(\'form#your-profile label[for=last_name], form#your-profile input#last_name, #last_name\').hide();
+	$(\'form#your-profile label[for=nickname], form#your-profile input#nickname, #nickname\').hide();
+	$(\'form#your-profile label[for=ea_sub_publish_post], form#your-profile input#ea_sub_publish_post, #ea_sub_publish_post\').hide();
+	$(\'form#your-profile label[for=ea_sub_pending_post], form#your-profile input#ea_sub_pending_post, #ea_sub_pending_post\').hide();
+	$(\'form#your-profile label[for=display_name], form#your-profile input#display_name, #display_name\').hide();
+	$(\'form#your-profile label[for=url], form#your-profile input#url\').hide();
+	$(\'form#your-profile label[for=description], form#your-profile textarea#description\').hide();
+	$(\'form#createuser label[for=role], form#createuser select#role\').hide();
+	$(\'form#createuser label[for=url], form#createuser input#url\').hide();
+	$(\'form#createuser label[for=nickname], form#createuser input#nickname\').hide();
+	$(\'form#createuser label[for=display_name], form#your-profile input#display_name, #display_name\').hide();
+	});
+	</script>' . "\n";
+	}
+	add_action('admin_head','hide_personal_options');
+		
+}
+
+// Chamando o LigthBox Magnific!
 wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
 wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
 
@@ -158,12 +190,8 @@ function mapadosplanos_login_footer() {
 
 	add_filter('login_footer', 'mapadosplanos_login_footer');
 
-// Customizing Admin
 
-function mapadosplanos_admin_stylesheet() { 
-	wp_enqueue_style('mapadosplanos_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/style-admin.css');
-}
-add_action( 'admin_enqueue_scripts', 'mapadosplanos_admin_stylesheet' );
+// Filtro para criar class do CPT no body do Admin
 	
 add_filter ('admin_body_class', 'mapadosplanos_body_class');
 function mapadosplanos_body_class ($body_class) { 
@@ -188,8 +216,6 @@ function remove_menu_items() {
 			unset($menu[key($menu)]);
 		}
 	}
-	//only on 3.1
-	remove_menu_page('profile.php');
 }
 
 

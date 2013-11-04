@@ -5,3 +5,15 @@ display: none;
 body.post-type-municipio #misc-publishing-actions .misc-pub-section  {
 display: none;
 }
+
+body.post-type-municipio #minor-publishing-actions {
+    display: none;
+}
+
+body.post-type-municipio #misc-publishing-actions {
+    padding: 0;
+}
+
+body.post-type-municipio #delete-action {
+    display: none;
+}
