@@ -37,11 +37,6 @@
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
-			<?php if ( $etapa ) : ?>
-				<div class="comments-link mapas">
-					<a class="mapas" href="<?php echo admin_url('post.php?post='. get_the_ID(). '&action=edit');?>">Atualizar o questionário</a>
-				</a>
-			<?php endif; ?>
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -806,6 +801,9 @@
 					}
 				?>
 				</div>
+				
+        <?php endif; ?>
+		
 			<div class="tab-pane" id="parte4">				
 				<div id="questionario-sociedade">
 					<?php 
