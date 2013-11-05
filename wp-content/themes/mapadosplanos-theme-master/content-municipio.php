@@ -49,7 +49,7 @@
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350' share='off']"); ?>
 		</div><!-- .entry-content -->
 
 		<?php endif; ?>
@@ -801,9 +801,6 @@
 					}
 				?>
 				</div>
-				
-        <?php endif; ?>
-		
 			<div class="tab-pane" id="parte4">				
 				<div id="questionario-sociedade">
 					<?php 
@@ -816,9 +813,8 @@
 					?>
 				</div>
 			</div>
+			        <?php endif; ?>
 	</div>
-
-        <?php endif; ?>
 		<!-- FIM DA EXIBICAO DOS CUSTOMFIELDS -->
 		
 				<!-- EXIBICAO DOS ATTACHMENTS -->
