@@ -49,7 +49,7 @@
 		<div class="img-polaroid" id="mapa">
             <?php 
 			global $custom_fields;
-			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350' share='off']"); ?>
+			echo do_shortcode("[mapbox layers='acaoeducativa.mapadosplanos' api='' options='' lat='" . $custom_fields['lat'][0] . "' lon='" . $custom_fields['lng'][0] . "' z='9' width='500' height='350']"); ?>
 		</div><!-- .entry-content -->
 
 		<?php endif; ?>

@@ -1143,7 +1143,7 @@ article.format-quote .entry-content blockquote {
 -------------------------------------------------------------- */
 
 #comments {
-	margin: 0 20px;
+	margin: 20px;
 	overflow: hidden;
 	float: left;
 	width: 100%;
@@ -1157,10 +1157,9 @@ ol.commentlist {
 margin-bottom: 10px;
 }
 .comments-title {
-	font-size: 16px;
-	font-size: 1.142857143rem;
+	font-size: 1.8em;
 	line-height: 1.5;
-	font-weight: normal;
+	font-weight:bold;
 }
 .comments-area article {
 	margin: 1.5em 0;

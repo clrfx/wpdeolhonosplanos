@@ -318,7 +318,7 @@ if ($("body").hasClass("single-municipio")) {
         $('#comment-link').click(function(e){
             e.preventDefault();
 			$('html, body').animate({
-				scrollTop: $('#respond').offset().top - 85
+				scrollTop: $('#comments').offset().top - 85
 			}, 500);
 
         });

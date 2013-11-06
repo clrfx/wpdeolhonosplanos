@@ -7,7 +7,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-		<div id="barra-mapa" class="search">
+	<div id="barra-mapa" class="search">
 
 		<div id="content-mapa">
 		
