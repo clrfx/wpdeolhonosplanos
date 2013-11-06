@@ -1,5 +1,5 @@
 .marker-tooltip {
-  z-index:9999;
+  z-index:998;
   position:absolute;
   }
 .marker-popup {
@@ -88,7 +88,7 @@
   height:30px;
   top:10px;
   left:10px;
-  z-index:9999;
+  z-index:998;
   }
 
 .zoomin {
@@ -115,7 +115,7 @@
   position:absolute;
   top:10px;
   left:74px;
-  z-index:9999;
+  z-index:998;
   }
 
 .map-fullscreen-map {
@@ -126,7 +126,7 @@
   left:0!important;
   right:0!important;
   bottom:0!important;
-  z-index:999999;
+  z-index:998;
   }
   .map-fullscreen-map .map-fullscreen {
     background-position:-120px 0;
@@ -136,14 +136,14 @@
   position:absolute;
   right:10px;
   bottom:27px;
-  z-index:9999;
+  z-index:998;
   }
   .map-legends .map-legend {
     padding:10px;
     }
 
 .map-tooltip {
-  z-index:9999;
+  z-index:998;
   padding:10px;
   top: 81px;
   right:10px;
@@ -165,7 +165,7 @@
 
 .map-movetip {
   position:absolute;
-  z-index:9999;
+  z-index:998;
   background:#fff;
   padding:10px;
   max-width:300px;
@@ -221,7 +221,7 @@
   color:#333;
   font-size:11px;
   line-height:20px;
-  z-index:9999;
+  z-index:998;
   text-align:center;
   padding:0 5px;
   bottom:0;
