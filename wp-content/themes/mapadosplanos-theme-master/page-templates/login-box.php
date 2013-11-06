@@ -9,7 +9,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header('resume'); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
@@ -17,7 +17,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 				
-				<h4>Para preencher o questionário com as informações do seu município, faça login aqui</h4><p>Informando os dados do seu município, vocẽ automaticamente estará concordando com os <a href='#'>termos de uso</a> do site.</p>
+				<h4>Para preencher o questionário com as informações do seu município, faça login aqui</h4><p>Informando os dados do seu município, vocẽ automaticamente estará concordando com os <a href='http://deolhonosplanos.org.br/termo-de-uso/'>termos de uso</a> do site.</p>
 				<form>
 				Aceito os termos de uso <input id="termo-checkbox" type="checkbox" NAME="termo-de-uso" VALUE="agree" onclick="">
 				</form>
@@ -45,8 +45,10 @@ get_header(); ?>
 					wp_register('', ''); // Display "Site Admin" link.
 				}
 				?>
+				<br />
+				<br />
 			<?php endwhile; // end of the loop. ?>
-
+			
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
