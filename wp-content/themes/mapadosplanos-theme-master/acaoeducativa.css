@@ -267,6 +267,13 @@ margin: 0;
     padding: 0.5em 1em;
     text-decoration: none;
 	}
+	
+#menu-biblioteca-categorys li.current-menu-item {
+
+	background-color:#7bb033;
+	font-weight: bold;
+}
+	
 #menu-biblioteca-categorys li a:hover {	
 	background-color:#7bb033
 }
