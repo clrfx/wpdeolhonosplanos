@@ -49,6 +49,21 @@ function mapadosplanos_admin_stylesheet() {
 wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
 wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
 
+// Filtrando a navegação do twenty twelve
+function twentytwelve_content_nav( $html_id ) {
+	global $wp_query;
+
+	$html_id = esc_attr( $html_id );
+
+	if ( $wp_query->max_num_pages > 1 ) : ?>
+		<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
+			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
+			<div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">← Anteriores</span>', 'twentytwelve' ) ); ?></div>
+			<div class="nav-next alignright"><?php previous_posts_link( __( '<span class="meta-nav">Próximos →</span>', 'twentytwelve' ) ); ?></div>
+		</nav><!-- #<?php echo $html_id; ?> .navigation -->
+	<?php endif;
+}
+
 //require_once(dirname(__FILE__).'/embedded-types/types.php');
 define('child_template_directory', dirname(get_bloginfo('stylesheet_url')));
 
