@@ -1440,9 +1440,41 @@ max-width: 940px;
 #footer-a .textwidget img, #footer-b .textwidget img, #footer-c .textwidget img {
     border-radius: 0 0 0 0;
     box-shadow: none;
+	height: auto;
+    width: 100%;
 }
 
 .row-fluid .span2 {
 	width: 80%;
 }
 
+
+@media (max-width: 600px) {
+
+#box-below-map {
+	margin-right: 0;
+    width: 100%;
+}
+
+.template-front-page .widget-area {
+	width: 100%;
+	margin-top: 20px !important;
+}
+
+.template-front-page .site-content {
+    width: 100%;
+}
+
+#prateleira ul li.home {
+    width: 88%;
+}
+
+
+#cada-post {
+    margin-bottom: 5%;
+    margin-right: 0;
+    width: 96%;
+}
+
+
+}

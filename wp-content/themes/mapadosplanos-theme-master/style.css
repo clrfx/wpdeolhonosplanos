@@ -2606,11 +2606,6 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 
 @media (max-width: 400px) {
 
-#box-below-map {
-	margin-right: 0;
-    width: 100%;
-}
-
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
