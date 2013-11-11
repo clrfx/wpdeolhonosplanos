@@ -341,10 +341,6 @@ margin: 0 0 10px 0;
 box-shadow: 0 2px 5px rgba(30, 30, 30, 0.7);
 }
 
-.row-fluid .span2 {
-    width: auto !important;
-}
-
 #prateleira ul li a {
 	color: #FFF;
 }
@@ -1445,7 +1441,13 @@ max-width: 940px;
 }
 
 .row-fluid .span2 {
-	width: 80%;
+	width: 100%;
+}
+
+.site-info {
+	margin-top: 15px;
+	font-size: 0.9em;
+	text-align: center;
 }
 
 

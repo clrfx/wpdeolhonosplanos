@@ -17,7 +17,7 @@ $(document).ready(function () {
     mapbox.load(['acaoeducativa.mapadosplanos-estados', 'acaoeducativa.mapadosplanos'], function(data) {
 
         map = mapbox.map('map');
-
+			
         // add static baselayer
         map.addLayer(mapbox.layer().id('mapbox.world-blank-light', function() {
             map.interaction.auto(); 
@@ -54,7 +54,8 @@ $(document).ready(function () {
             map.draw();
           });
         });
-
+	
+	
         // Zoomer
         map.ui.zoomer.add();
 
@@ -65,7 +66,7 @@ $(document).ready(function () {
         // Attribute map
         map.ui.attribution.add()
             .content('<a href="http://deolhonosplanos.org.br/termo-de-uso/">Termo de Uso</a>');
-    
+		
         //Place markers
         var markerLayer = mapbox.markers.layer();
         mapbox.markers.interaction(markerLayer).add();
@@ -95,6 +96,7 @@ $(document).ready(function () {
             };
             markerLayer.add_feature(p);
         }
+				
     });
 
     //autosearchbox start
@@ -139,6 +141,7 @@ $(document).ready(function () {
 
     //autosearchbox end
 
+	
     $('#s-recadastro').keyup(function(e) {
         clearTimeout($.data(this, 'timer'));
         if (e.keyCode == 13)

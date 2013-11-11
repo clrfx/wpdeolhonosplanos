@@ -652,10 +652,10 @@ footer[role="contentinfo"] {
 	background: url("img/bg-header.jpg") repeat scroll center top;
 }
 footer[role="contentinfo"] a {
-	color: #686868;
+	color: #F26122;
 }
 footer[role="contentinfo"] a:hover {
-	color: #21759b;
+	color: #B54726;
 }
 
 /* Mapa */

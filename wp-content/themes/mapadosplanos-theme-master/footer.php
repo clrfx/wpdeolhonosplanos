@@ -32,6 +32,12 @@
 		</div>
 		
 		</div>
+			<div class="site-info">
+				<?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?> - 
+				Sob uma Licen&ccedil;a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.pt" target="_blank">Creative Commons</a> - 
+				<a href="<?php echo esc_url( home_url( '/creditos/' ) ); ?>">Cr&eacute;ditos</a> - 
+				<a href="<?php echo esc_url( __( 'http://br.wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Desenvolvido com WordPress', 'twentytwelve' ); ?>"><?php printf( __( 'Desenvolvido com %s', 'twentytwelve' ), 'WordPress' ); ?></a>
+			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
