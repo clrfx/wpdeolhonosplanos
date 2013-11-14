@@ -13,7 +13,6 @@ add_action( 'admin_enqueue_scripts', 'mapadosplanos_admin_stylesheet' );
 	} 
 	
 	// Customizing Admin
-
 function mapadosplanos_admin_stylesheet() { 
 	wp_enqueue_style('mapadosplanos_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/style-admin.css');
 }
