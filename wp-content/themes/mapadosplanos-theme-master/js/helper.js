@@ -60,7 +60,7 @@ $(document).ready(function () {
         map.ui.zoomer.add();
 
         // location
-        map.ui.location.add();
+        // map.ui.location.add();
 		
 		
         // Attribute map
