@@ -59,13 +59,10 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
-$(document).ready( function Scrolldown(){
+jQuery(document).ready( function Scrolldown(){
 window.scroll(0,150); 
  }); 
-</script>
 
-<script>
-// Example 1: From an element in DOM
 jQuery(function() {
        jQuery('.open-popup-link').magnificPopup({
          type:'inline',
