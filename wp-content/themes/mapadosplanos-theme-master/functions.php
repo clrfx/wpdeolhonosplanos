@@ -3,7 +3,7 @@
 //Modo de manutenção
 function maintenace_mode() {
   if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
-    die('<div style="text-align: center;"><h1>Em manutenção</h1><p>Por favor volte em 30 minutos.</p><p>Acesse o site da <a href="http://www.acaoeducativa.org/">Ação Educativa</a>.</p></div>');
+    die('<div style="text-align: center;"><h1>Em manutenção</h1><p>Por favor volte em 30 minutos.</p><p>Enquanto isso, acesse o site da <a href="http://www.acaoeducativa.org/">Ação Educativa</a>.</p></div>');
   }
 }
 // Comente a seguinte linha para sair no "Modo de manutenção"
