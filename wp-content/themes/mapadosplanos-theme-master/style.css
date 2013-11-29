@@ -1332,17 +1332,17 @@ label ~ span.required {
 	margin-bottom: 1rem;
 }
 
-.template-front-page .site-content {
+.template-front-page .site-home {
     margin-bottom: -1%;
     margin-right: 2%;
     margin-top: 0;
-    width: 60% !important;
+    width: 560px !important;
+	float: left;
 }
 .template-front-page .widget-area {
     float: left;
     margin: 0;
-    width: 38%;
-	margin-top: 0 !important;
+    width: 355px;
 }
 
 .template-front-page .widget-title  {
@@ -1576,7 +1576,6 @@ img#wpstats {
 	#respond form textarea.blog-textarea {
 		width: 79.666666667%;
 	}
-	.template-front-page .site-content,
 	.template-front-page article {
 		overflow: hidden;
 	}
@@ -1708,8 +1707,6 @@ img#wpstats {
 		float: left;
 		margin: 0;
 		width: 100%;
-	}
-	.site-content {
 		margin: 0;
 		width: auto;
 	}
@@ -2126,7 +2123,7 @@ margin: 0 0 24px;
 	margin: 0;
 	padding: 0;
 	float: left;
-	width: 62%;
+	width: 600px;
 	  
 }
 
@@ -2764,47 +2761,47 @@ padding: 0;
 
 	background: url("img/bg-content-quem-somos.png") no-repeat scroll center top transparent;
 	margin: 0 auto;
-    padding: 0;
-    max-width: 940px;
+   	padding: 0;
+    	max-width: 940px;
 	min-height: 800px;
 	width: 100% !important;
 
 }
 
 #description-headers-internos {
-float: left;
-max-width: 500px;
-overflow: hidden;
-margin-top: 2em;
+	float: left;
+	max-width: 500px;
+	overflow: hidden;
+	margin-top: 2em;
 }
 
 #barra-downloads {
-width: 100%;
-overflow: hidden;
-background: url("img/bg-header-downloads.jpg") repeat scroll center -2px transparent;
-background-color: #F8E04A;
-padding:1em 0;
-margin: 0;
+	width: 100%;
+	overflow: hidden;
+	background: url("img/bg-header-downloads.jpg") repeat scroll center -2px transparent;
+	background-color: #F8E04A;
+	padding:1em 0;
+	margin: 0;
 }
 
 #downloads-title {
-background: url("img/img-header-downloads.png") no-repeat scroll center -5px transparent;
-width: 390px;
-height: 95px;
-margin: 0 3em 0 0;
-padding: 0;
-display: block;
-float: left;
-text-indent: -999999px;
+	background: url("img/img-header-downloads.png") no-repeat scroll center -5px transparent;
+	width: 390px;
+	height: 95px;
+	margin: 0 3em 0 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-indent: -999999px;
 }
 
 #barra-biblioteca {
-width: 100%;
-overflow: hidden;
-background: url("img/bg-header-biblioteca.jpg") repeat scroll center -2px transparent;
-background-color: #8cc242;
-padding:1em 0;
-margin: 0;
+	width: 100%;
+	overflow: hidden;
+	background: url("img/bg-header-biblioteca.jpg") repeat scroll center -2px transparent;
+	background-color: #8cc242;
+	padding:1em 0;
+	margin: 0;
 }
 
 #biblioteca-title {
@@ -4038,55 +4035,68 @@ width: auto;
 
 /* ESTRUTURA RESPONSIVA */
 
-@media (max-width: 650px) {
+@media (max-width: 960px) {
+
+	.site-header {
+	    width: auto;
+	}
+
+	#prateleira ul {
+	    display: inline-block !important;
+	    list-style: none outside none;
+	    margin: 0 0 0 2%;
+	    width: 100%;
+	}
 
 	.main-navigation ul {
-    font-size: 0.8em;
-	}
-	
-	#tagline {
-    float:left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-	}
-	
-	
-	#tagline h1.internas {
-	text-align: none;
-	margin-left: 0;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	}
-	
-	#box-below-map {
-	margin-right: 0;
-    width: 100%;
+    	font-size: 0.8em;
 	}
 
 	.template-front-page .widget-area {
-	display:none;
+	display: none;
 	}
 
-	.template-front-page .site-content {
-	display:none;
+
+	#site-logo-fixo {
+	    margin: 1.5em 1em 1em 16em;
+	}
+
+	#tagline {
+	    float:left;
+	    margin: 0 auto;
+	    padding: 0;
+	    width: 100%;
+	}
+	
+	#tagline h1.internas {
+	margin: 1em;
+	width: auto;
+	}
+
+}
+
+@media (max-width: 700px) {
+
+	
+	#box-below-map {
+	margin-right: 0;
+    	width: 100%;
 	}
 	
 	#prateleira ul li.home {
 	width: 88%;
 	}
 	
-	
 	#prateleira ul li.indicadores-qualidade {
-		padding: 0.7em 0.5em;
+	padding: 0.7em 0.5em;
 	}
 	
 	#prateleira ul li.planos {
-    width: 88%;
+  	  width: 88%;
 	}
 	
 	#cada-download {
-    width: 95%;
+  	  width: 95%;
 	}
 
 	#cada-post {
@@ -4094,16 +4104,32 @@ width: auto;
 	margin-right: 0;
 	width: 96%;
 	}
-		
+
+
+	.triangulo {
+	display: none;
+	}
+
+	#title-querys h1 {
+	    width: 90%;
+	}
+
+
 }
 
-@media (max-width: 400px) {
+@media (max-width: 560px) {
 
+	.template-front-page .site-home {
+		display: none;
+	}
 
+	#site-logo-fixo {
+	    margin: 1.5em 1em 1em 2em;
+	}
+	
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
-	
 
 }
