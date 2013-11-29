@@ -51,8 +51,9 @@ function map_keys($a) {
 }
 
 function writecsv($results) {
+
     $fileName = 'dados-municipios.csv';
-     
+
     header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
     header('Content-Description: File Transfer');
     header("Content-type: text/csv");
@@ -68,7 +69,7 @@ function writecsv($results) {
         // Add a header row if it hasn't been added yet
         if ( !$headerDisplayed ) {
             // Use the keys from $data as the titles
-            fputcsv($fh, array_keys($data));
+            fputcsv( $fh, array_keys( $data ) );
             $headerDisplayed = true;
         }
      
@@ -91,45 +92,83 @@ include_once $path . '/wp-load.php';
 include_once $path . '/wp-includes/wp-db.php';
 include_once $path . '/wp-includes/pluggable.php';
 
-    global $wpdb;
-    if ( $_GET["export"] != 'true') {
-      die("You don't have the power! :)");
+global $wpdb;
+
+if ( $_GET["export"] != 'true') {
+  die("You don't have the power! :)");
+}
+
+$fields = get_municipio_fields();
+
+if ( $_GET['type'] == 'csv' ) {
+    header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+    header('Content-Description: File Transfer');
+    header("Content-type: text/csv");
+    header("Content-Disposition: attachment; filename=dados-municipios-" . date( 'YmdHis' ) . ".csv");
+    header("Expires: 0");
+    header("Pragma: public");
+    $fh = @fopen( 'php://output', 'w' );
+    fputcsv( $fh, array_merge( array( 'id', 'cidade' ), $fields ) );
+}
+
+// Formulários respondidos
+$municipios = $wpdb->get_results("
+    SELECT p.ID, p.post_title
+    FROM
+        {$wpdb->posts} p,
+        {$wpdb->postmeta} pm,
+        {$wpdb->users} u
+    WHERE 1=1
+        AND pm.post_id = p.ID
+        AND pm.meta_key = 'ibge'
+        AND pm.meta_value = u.user_login
+        AND p.post_type = 'municipio'
+        AND p.post_status = 'publish'
+    ORDER BY post_title",
+    ARRAY_A
+);
+
+
+foreach ( $municipios as $m ) {
+
+    $metas = array();
+    $_metas = $wpdb->get_results("
+        SELECT meta_key, meta_value
+        FROM {$wpdb->postmeta}
+        WHERE 1=1
+            AND post_id = {$m['ID']}
+            AND meta_key LIKE 'wpcf-qs%'
+        ORDER BY meta_key ASC",
+        ARRAY_A
+    );
+
+    if ( count( $_metas ) == 0 )
+        continue;
+
+    foreach( $_metas as $_meta ) {
+        $metas[ $_meta['meta_key'] ] = $_meta['meta_value'];
     }
 
-    //$query = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "mapadosplanos_quest", ARRAY_A);
-    $query = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "posts JOIN ".$wpdb->prefix."postmeta ON ID=post_id WHERE post_type='municipio' AND meta_key LIKE 'wpcf-qs%' LIMIT 1000", ARRAY_A);
-    
-    $posts = array();
+    $post = array( 'id' => $m['ID'], 'municipio' => $m['post_title'] );
+    foreach( $fields as $f ) {
 
-    //Flattening
-    foreach ($query as $key => $post) {
-      $clean_post = $array_model;
-      //$clean_post = $post;
-      $clean_post[ID] = $post[ID];
-      $clean_post[municipio] = $post[post_title];
-      $clean_post[$post[meta_key]] = $post[meta_value];
-      $posts[$post[ID]] = array_merge((array) $posts[$post[ID]], (array) $clean_post);
+        if ( empty( $metas[ $f ] ) ) {
+            $post[ $f ] = '';
+            continue;
+        }
+
+        if ( is_serialized( $metas[ $f ] ) )
+            $metas[ $f ] = implode( ', ', unserialize( $metas[ $f ] ) );
+
+        $post[ $f ] = $metas[ $f ];
+
     }
 
-    $posts = flatten_query($posts);
-    //Creating field model
-    $array_model = array();
-    foreach ($posts as $key => $post) {
-      foreach ($post as $key_post => $key_value) {
-        $array_model[$key_post] = null;
-      }
-    }
-    //Populating
-    foreach ($posts as $key => $post) {
-      $posts[$key] = $post + $array_model;
-      ksort($posts[$key]);
-    }
-  
-    
-    if ($_GET["type"] == "csv") {
-      writecsv($posts);
-    }
-    else if ($_GET["type"] == "json") {
-      echo json_encode($posts);
-    }
-?>
+    if ( $_GET["type"] == "csv" )
+        fputcsv( $fh, $post );
+    else if ( $_GET["type"] == "json" )
+        echo json_encode( $posts );
+}
+
+if ( $_GET['type'] = 'csv' )
+    fclose($fh);
