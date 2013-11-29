@@ -207,8 +207,50 @@ article.format-status footer.entry-meta {
 	line-height: 2.181818182;
 }
 
+.menu-toggle {
+	padding: 6px 10px;
+	padding: 0.428571429rem 0.714285714rem;
+	margin: 0.5em 0.5em 0.5em 2em;
+	line-height: 1.5em;
+	color: #FFF;
+	background: none;
+	border: 1px solid #FFF;
+	border-radius: 3px;
+	font-size: 1em;
+	}
+
+.menu-toggle:hover {
+background: #D62B4D;
+}
+
+.menu-toggle:active, .menu-toggle.toggled-on, input[type="submit"].toggled-on {
+	background-color: #D62B4D;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -ms-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -webkit-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -o-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: linear-gradient(top, #ebebeb, #e1e1e1);
+	box-shadow: inset 0 0 8px 2px #c6c6c6, 0 1px 0 0 #f4f4f4;
+	color: #EE3360;
+}
+
+.nav-menu.toggled-on {
+	display: block;
+	width: 80%;
+	font-size: 1em;
+}
+
+.nav-menu.toggled-on li {
+	float: none;
+	display: inline;
+}
+
+.nav-menu.toggled-on li ul.sub-menu {
+	display: none !important;
+}
+
 /* Buttons */
-.menu-toggle,
 input[type="submit"],
 article.post-password-required input[type=submit],
 li.bypostauthor cite span {
@@ -228,12 +270,12 @@ li.bypostauthor cite span {
 	box-shadow: 0 1px 2px #c5c5c5;
 	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
 }
-.menu-toggle,
+
 input[type="submit"],
 article.post-password-required input[type=submit] {
 	cursor: pointer;
 }
-.menu-toggle:hover,
+
 input[type="submit"]:hover,
 article.post-password-required input[type=submit]:hover {
 	color: #5e5e5e;
@@ -245,11 +287,8 @@ article.post-password-required input[type=submit]:hover {
 	background-image: -o-linear-gradient(top, #f9f9f9, #ebebeb);
 	background-image: linear-gradient(top, #f9f9f9, #ebebeb);
 }
-.menu-toggle:active,
-.menu-toggle.toggled-on,
 input[type="submit"]:active,
-article.post-password-required input[type=submit]:active,
-input[type="submit"].toggled-on {
+article.post-password-required input[type=submit]:active {
 	color: #777;
 	background-color: #e1e1e1;
 	background-repeat: repeat-x;
@@ -592,23 +631,6 @@ body.custom-font-enabled {
 
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a {
-}
-
-/* Small menu */
-.menu-toggle {
-	display: none;
-	cursor: pointer;
-}
-
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
 }
 
 
@@ -1503,8 +1525,8 @@ img#wpstats {
 	
 	
 	.btn-ja-cadastrado {
-    margin: 30px 0 50px 10%;
-    width: 50%;
+   	 margin: 30px 0 50px 10%;
+   	 width: 200px;
 	float: left;
 	}
 	
@@ -4126,6 +4148,36 @@ width: auto;
 
 
 }
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		float: right;
+		width: 10%;
+	}
+
+	.main-navigation ul {
+		display: none;
+		margin: 0;
+	}
+
+
+	#barra-topo {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: -4em;
+	}
+
+}
+
+
 
 @media (max-width: 560px) {
 
