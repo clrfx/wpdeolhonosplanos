@@ -599,4 +599,29 @@ function recadastro_form_submit() {
 
 }
 
-?>
+function get_municipio_fields() {
+    return array(
+        'wpcf-qs_etapa01',
+        'wpcf-qs_cadastro01',
+        'wpcf-qs_cadastro02',
+        'wpcf-qs_cadastro03',
+        'wpcf-qs_cadastro03_other',
+        'wpcf-qs_cadastro05',
+        'wpcf-qs_plano01',
+        'wpcf-qs_plano02',
+        'wpcf-qs_plano03',
+        'wpcf-qs_plano04',
+        'wpcf-qs_plano09',
+        'wpcf-qs_plano12',
+        'wpcf-qs_plano13',
+        'wpcf-qs_plano14',
+        'wpcf-qs_plano15',
+        'wpcf-qs_plano16',
+        'wpcf-qs_plano21',
+        'wpcf-qs_plano23',
+        'wpcf-qs_plano26',
+        'wpcf-qs_plano06_complano',
+        'wpcf-qs_plano07_complano',
+        'wpcf-qs_plano08_complano'
+    );
+}
