@@ -1569,6 +1569,11 @@ img#wpstats {
 	.page  #secondary { 
 	margin-top: 1em;
 	}
+
+	
+	.template-front-page #secondary { 
+	margin-top:0;
+	}
 	
 	#respond form input[type="text"] {
 		width: 46.333333333%;
@@ -3259,11 +3264,12 @@ span.botao-biblioteca {
 
 
 #cada-download {
-   margin-bottom: 3%;
-    margin-left: 2%;
-    margin-top: 1%;
-    width: 47%;
+	margin-bottom: 3%;
+	margin-left: 2%;
+	margin-top: 1%;
+	width: 47%;
 	float: left;
+	min-height: 320px;
 }
 
 
@@ -4050,6 +4056,10 @@ width: auto;
 
 	.main-navigation ul {
     	font-size: 0.8em;
+	}
+
+	.main-navigation ul ul a {
+	    letter-spacing: 0;
 	}
 
 	.template-front-page .widget-area {
