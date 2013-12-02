@@ -2713,7 +2713,7 @@ min-height: 60px;
 }
 
 #box-below-map {
-	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
+    background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 transparent;
     float: left;
     font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
     margin-bottom: 1.2em;
@@ -2722,9 +2722,16 @@ min-height: 60px;
 	
 }
 
+[if IE] #box-below-map {
+background: #0F85AB;
+}
+
 #box-below-map:hover {
-					background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
-					background-color: #0C6D8D;
+	background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+}
+
+[if IE] #box-below-map:hover {
+	background: #0C6D8D;
 }
 
 #box-below-map.last{
