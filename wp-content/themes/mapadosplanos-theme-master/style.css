@@ -723,8 +723,10 @@ footer[role="contentinfo"] a:hover {
 }
 .entry-header .entry-title {
 	font-size: 20px;
+	color: #EC3561;
 	font-size: 1.5em;
 	line-height: 1.2;
+	text-transform: uppercase;
 }
 .entry-header .entry-title a {
 	text-decoration: none;
