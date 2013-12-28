@@ -1,3 +1,7 @@
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
 .login {
 	background-color: #fff !important;
 }
@@ -5,11 +9,12 @@
 	margin-top:-60px;
 }
 .login h1 {
-	margin-left:115px;
+	margin-left:40px;
 }
 .login h1 a {
 	background: url('img/logo-small.jpg') no-repeat !important; 
 	height:160px;
+	width: 160px;
 }
 
 .login #nav, .login #backtoblog {
@@ -24,6 +29,7 @@
     border: medium none;
     margin: 1em 0;
     padding: 1em 3.5em;
+	font-size: 0.9em;
 }
 
 .login #backtoblog:hover {
