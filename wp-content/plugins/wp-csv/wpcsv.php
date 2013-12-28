@@ -3,7 +3,7 @@
 Plugin Name: WP CSV
 Plugin URI: http://cpkwebsolutions.com/plugins/wp-csv
 Description: A powerful, yet easy to use, CSV Importer/Exporter for Wordpress posts and pages. 
-Version: 1.3.8
+Version: 1.4.5
 Author: CPK Web Solutions
 Author URI: http://cpkwebsolutions.com
 
@@ -30,11 +30,6 @@ require_once( 'pws_wpcsv_view.php' );
 require_once( 'pws_wpcsv_csv.php' );
 require_once( 'pws_wpcsv_engine.php' );
 
-// Global constants
-define( 'ERROR_MISSING_POST_ID', 1 );
-define( 'ERROR_MISSING_POST_PARENT', 2 );
-define( 'ERROR_INVALID_AUTHOR', 3 );
-
 // Initialise main class
 if ( !class_exists( 'pws_wpcsv' ) ) {
 
@@ -46,6 +41,11 @@ if ( !class_exists( 'pws_wpcsv' ) ) {
 		var $backup_url;
 		var $settings;
 		var $option_name = '_pws_wpcsv_settings';
+
+		const ERROR_MISSING_POST_ID = 1;
+		const ERROR_MISSING_POST_PARENT = 2;
+		const ERROR_MISSING_AUTHOR = 3;
+		const ERROR_INVALID_TAXONOMY_TERM = 4;
 
 		function __construct( ) { // Constructor
 			if ( !session_id( ) ) session_start( );
@@ -59,13 +59,18 @@ if ( !class_exists( 'pws_wpcsv' ) ) {
 				'enclosure' => '"',
 				'date_format' => 'US',
 				'encoding' => 'UTF-8',
-				'csv_path' => $this->get_csv_folder( )
+				'csv_path' => $this->get_csv_folder( ),
+				'export_hidden_custom_fields' => '1',
+				'include_field_list' => Array( '*' ),
+				'exclude_field_list' => Array( ),
+				'limit' => 1000,
+				'offset' => 1
 			);
 
 			add_option( $this->option_name, $settings ); // Does nothing if already exists
 
 			$this->settings = get_option( $this->option_name );
-			$this->settings['version'] = '1.3.7';
+			$this->settings['version'] = '1.4.5';
 
 			$current_keys = array_keys( $this->settings );
 			foreach( array_keys( $settings ) as $key ) {
@@ -152,6 +157,17 @@ if ( !class_exists( 'pws_wpcsv' ) ) {
 				$this->settings['delimiter'] = substr( stripslashes( $_POST['delimiter'] ), 0, 1 );
 				$this->settings['enclosure'] = substr( stripslashes( $_POST['enclosure'] ), 0, 1 );
 
+				if ( isset( $_POST['export_hidden_custom_fields'] ) ) {
+					$this->settings['export_hidden_custom_fields'] = 1;
+				} else {
+					$this->settings['export_hidden_custom_fields'] = 0;
+				}
+				$this->settings['include_field_list'] = preg_split( '/(,|\s)/', $_POST['include_field_list'] );
+				
+				$this->settings['exclude_field_list'] =  preg_split( '/(,|\s)/', $_POST['exclude_field_list'] );
+				$this->settings['limit'] = $_POST['limit'];
+				$this->settings['offset'] = ( $_POST['offset'] > 0 ) ? $_POST['offset'] - 1 : 1;
+
 				$this->save_settings();
 			}
 
@@ -173,9 +189,13 @@ if ( !class_exists( 'pws_wpcsv' ) ) {
 					$options = array_merge( array( 'export_link' => $this->getExportLink( $filename, ( $_POST['custom_post'] != '' ? $_POST['custom_post'] : NULL ) ) ), $this->settings );
 					$this->view->page( 'export', $options );
 					$_SESSION['csvimp']['csv_path'] = $this->settings['csv_path'];
+				
 					break;
 				default:
 					$options = $this->settings;
+					global $wpdb;
+					$sql = "SELECT count(ID) FROM {$wpdb->posts} WHERE post_status IN ( 'publish', 'draft', 'future' )";
+					$options['total_rows'] = $wpdb->get_var( $sql );
 					$options['error'] =  $error;
 					$this->view->page( 'settings', $options );
 			}
@@ -245,7 +265,3 @@ if (class_exists("pws_wpcsv")) {
 	add_action( 'admin_head', 'pws_wpcsv_header');
 
 }
-
-
-
-?>

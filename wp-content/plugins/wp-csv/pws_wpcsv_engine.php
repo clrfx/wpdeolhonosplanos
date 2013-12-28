@@ -2,10 +2,12 @@
 if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 	class pws_wpcsv_engine {
 
-		var $post_fields = array( );
+		private $post_fields = Array( );
+		private $stats = Array( );
 
 		function __construct( $settings ) { // Constructor
-			$this->post_fields = array( 'ID', 'post_date', 'post_status', 'post_title', 'post_content', 'post_excerpt', 'post_parent', 'post_name', 'post_type', 'ping_status', 'comment_status', 'menu_order', 'post_author' );
+			$this->post_fields = Array( 'ID', 'post_date', 'post_status', 'post_title', 'post_content', 'post_excerpt', 'post_parent', 'post_name', 'post_type', 'ping_status', 'comment_status', 'menu_order', 'post_author' );
+			$this->mandatory_fields = Array( 'ID', 'post_date', 'post_title' );
 			$this->settings = $settings;
 		}
 
@@ -15,27 +17,35 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 			$posts_table = $wpdb->prefix . 'posts';
 			$postmeta_table = $wpdb->prefix . 'postmeta';
 			$post_fields = implode( ", ", $this->post_fields );
-			$sql = "SELECT DISTINCT $post_fields FROM $posts_table WHERE post_status in ('publish','future', 'private') AND post_type NOT IN ( 'nav_menu_item' ) ORDER BY post_modified DESC";
-
+			$limit = ( isset( $this->settings['limit'] ) ) ? $this->settings['limit'] : 1000;
+			$offset = ( isset( $this->settings['offset'] ) ) ? $this->settings['offset'] : 0;
+			
 			if ( $post_type ) {
 				$filter = "post_type = '".$post_type."'";
 			} else {
 				$filter = "post_type NOT IN ( 'nav_menu_item' )";
 			}
-			$sql = "SELECT DISTINCT {$post_fields} FROM {$posts_table} WHERE post_status in ('publish','future','private','draft') AND {$filter} ORDER BY post_modified DESC";
+			$sql = "SELECT DISTINCT {$post_fields} FROM {$posts_table} WHERE post_status in ('publish','future','private','draft') AND {$filter} ORDER BY post_modified DESC LIMIT {$offset},{$limit}";
 
 			$posts = $wpdb->get_results( $sql );
-
 			if ( isset( $posts[0] ) ) {
-      	$sql = "SELECT DISTINCT meta_key FROM $postmeta_table WHERE meta_key NOT LIKE '\_%'";
+				if ( $this->settings['export_hidden_custom_fields'] ) {
+				      	$sql = "SELECT DISTINCT meta_key FROM $postmeta_table";
+				} else {
+				      	$sql = "SELECT DISTINCT meta_key FROM $postmeta_table WHERE meta_key NOT LIKE '\_%'";
+				}
 				$custom_fields = $wpdb->get_col( $sql );
 				
 				$post1 = get_object_vars($posts[0]);
 
-		  		$post_array[] = array_merge( array_keys( $post1 ), array( 'post_tags', 'post_categories' ), Array( 'thumbnail' ), $custom_fields );
+		  		$post_array[] = array_merge( array_keys( $post1 ), $this->get_taxonomy_list( ), Array( 'thumbnail' ), $custom_fields );
 
-				$meta_array = array( ); 
+				$post_array[0] = array_keys( $this->include_filter( array_flip( $post_array[0] ), $this->settings['include_field_list'] ) );
+				$post_array[0] = array_keys( $this->exclude_filter( array_flip( $post_array[0] ), $this->settings['exclude_field_list'] ) );
+				
+				$meta_array = Array( ); 
 				foreach ( $custom_fields as $cf ) {
+					if ( !in_array( $cf, $post_array[0] ) ) continue;
 					$cf = mysql_real_escape_string( $cf );
 					$sql = "SELECT post_id, meta_value FROM $postmeta_table WHERE meta_key = '$cf'";
 					$results = $wpdb->get_results( $sql, OBJECT_K );  
@@ -44,66 +54,115 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 
 				foreach ( $posts as $p ) { 
 					$p = get_object_vars( $p );
+					$p = $this->include_filter( $p, $this->settings['include_field_list'] );
+					$p = $this->exclude_filter( $p, $this->settings['exclude_field_list'] );
+					
 					$id = $p['ID'];
 
 					// Process thumb separately
-					$thumb_id = get_post_thumbnail_id( $id );
-					$thumb_src = wp_get_attachment_image_src( $thumb_id, 'full' );
-					$thumb_url = $thumb_src[0];
-					$upload_dir = wp_upload_dir();
-					$thumb_file = preg_replace( '|' . WP_CONTENT_URL . '/' . basename( $upload_dir['baseurl'] ) . '/|', '', $thumb_url );
+					if ( in_array( 'thumbnail', $post_array[0] ) ) {
+						$thumb_id = get_post_thumbnail_id( $id );
+						$thumb_src = wp_get_attachment_image_src( $thumb_id, 'full' );
+						$thumb_url = $thumb_src[0];
+						$upload_dir = wp_upload_dir();
+						$thumb_file = preg_replace( '|' . WP_CONTENT_URL . '/' . basename( $upload_dir['baseurl'] ) . '/|', '', $thumb_url );
+					}
 
-					$cfs = array( );
+					$cfs = Array( );
 					foreach ( $custom_fields as $cf ) {
+						if ( !in_array( $cf, $post_array[0] ) ) continue;
 						$val = $meta_array[$cf][$id]->meta_value;
+						if ( unserialize( $val ) && function_exists( 'json_encode' ) ) {
+							$val = json_encode( unserialize( $val ) );
+						}
 						$cfs[] = $val;
 					}
 
 					# Convert User id to username
-					if ( !empty( $p['post_author'] ) ) {
+					if ( isset( $p['post_author'] ) && !empty( $p['post_author'] ) ) {
 						$user = get_user_by( 'id', $p['post_author'] );
-						$p['post_author'] = $user->get( 'user_login' );
+						if ( gettype( $user ) == 'object' ) {
+							$p['post_author'] = $user->get( 'user_login' );
+						} else { # Author id invalid, so blank the field.
+							$p['post_author'] = '';
+						}
 					}
 
-					// Get post tags for each post
-					$post_tags = wp_get_post_tags( $id );
-					$tags = array();
-
-					foreach($post_tags as $t) {
-						$tag = get_category( $t );
-						$tags[] = trim( $tag->slug );
+					$taxonomy_fields = Array( );
+					$taxonomy_list = $this->get_taxonomy_list( );
+					foreach( $taxonomy_list as $taxonomy ) {
+						if ( !in_array( $taxonomy, $post_array[0] ) ) continue;
+						$taxonomy_fields[] = $this->export_taxonomy( wp_get_object_terms( $p['ID'], $taxonomy ) );
 					}
-
-					// Get post categories for each post
-					$post_categories = wp_get_post_categories( $id );
-					$cats = array();
-	
-					foreach($post_categories as $c){
-						$cat = get_category( $c );
-						$cats[] = trim( $cat->name ) . ':' . trim( $cat->slug );
-					}
-
-					$taxonomy_fields = array( implode( ",", $tags ), implode(",", $cats ) );
-
-					$post_array[] = array_merge( array_values( $p ), array_values( $taxonomy_fields ), Array( $thumb_file ), $cfs );
+					
+					$new_row = array_merge( array_values( $p ), array_values( $taxonomy_fields ) );
+					if ( in_array( 'thumbnail', $post_array[0] ) ) array_push( $new_row, $thumb_file );
+					$new_row = array_merge( $new_row, $cfs );
+					$post_array[] = $new_row;
+					wp_cache_flush( ); # Experimental
 				}
 			}
 
-      return $post_array;
+		      return $post_array;
 		}
 
 	
+		function exclude_filter( Array $elements, Array $rules ) {
+
+			$filtered_array = $elements;
+
+			if ( is_array( $elements ) && !empty( $elements ) ) {
+				foreach( $elements as $key => $val ) {
+					if ( $this->rule_match( $key, $rules ) ) {
+						if ( !in_array( $key, $this->mandatory_fields ) ) unset( $filtered_array[ $key ] );
+					} 
+				} # End foreach
+			} # End if
+
+			return $filtered_array;
+		}
+
+		function include_filter( Array $elements, Array $rules ) {
+
+			$filtered_array = Array( );
+			
+			if ( is_array( $elements ) && !empty( $elements ) ) {
+				foreach( $elements as $key => $val ) {
+					if ( $this->rule_match( $key, $rules ) || in_array( $key, $this->mandatory_fields ) ) {
+						$filtered_array[ $key ] = $val;
+					}
+				} # End foreach
+			} # End if
+
+			return $filtered_array;
+
+		}
+
+		function rule_match( $value, Array $rules ) {
+			
+			if ( is_array( $rules ) && !empty( $rules ) ) {
+				foreach( $rules as $rule ) {
+					if ( $rule == $value ) return TRUE;
+					if ( $rule == '*' ) return TRUE; 
+					if ( substr( $rule, 0, 1 ) == '*' && preg_match( '/' . substr( $rule, 1 ) . '$/', $value ) ) return TRUE;
+					if ( substr( $rule, -1, 1 ) == '*' && preg_match( '/^' . substr( $rule, 0, -1 ) . '/', $value ) ) return TRUE;
+				} # End foreach
+			} # End if
+
+		}
+
 		function import( $posts ) {
-			$stats = array( 'Insert' => array( ), 'Update' => array( ), 'Delete' => array( ), 'Error' => array( ) );
+
+			$this->stats = array( 'Insert' => array( ), 'Update' => array( ), 'Delete' => array( ), 'Error' => array( ) );
 
 			$this->row_index = 0;
 			foreach( $posts as $post ) {
 				$result = $this->import_post( $post, false );
 				foreach( $result as $k => $v ) {
-					$stats[$k][] = $v;
+					$this->stats[$k][] = $v;
 				}
 			}
-			return $stats;
+			return $this->stats;
 		}
 
 		function import_post( $post, $perm_delete ) { 
@@ -113,7 +172,7 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 
 			foreach( $post as $key => $val ) {
 				$attach_id = NULL;
-				if ( ( in_array( $key, $this->post_fields ) ) || ( in_array( $key, array( 'post_categories', 'post_tags') ) ) ) {
+				if ( ( in_array( $key, $this->post_fields ) ) || ( in_array( $key, $this->get_taxonomy_list( ) ) ) ) {
 					$p[$key] = $val;
 				} elseif ( $key != 'thumbnail' ) {
 					$cf[$key] = $val;
@@ -142,7 +201,7 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 				$post_parent = get_post( $p['post_parent'], ARRAY_A );
 				if ( !isset( $post_parent ) || $post_parent['post_type'] != 'page' ) {
 					$id = ( empty( $p['ID'] ) ) ? "[row {$this->row_index}]" : $p['ID'];
-					$action['Error'] = Array( 'id' => $id, 'error_id' => ERROR_MISSING_POST_PARENT );
+					$action['Error'] = Array( 'id' => $id, 'error_id' => pws_wpcsv::ERROR_MISSING_POST_PARENT );
 				}
 			}
 
@@ -154,7 +213,7 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 					$p['post_author'] = $user->get( 'ID' );
 				} else {
 					$id = ( empty( $p['ID'] ) ) ? "[row {$this->row_index}]" : $p['ID'];
-					$action['Error'] = Array( 'id' => $id, 'error_id' => ERROR_INVALID_AUTHOR );
+					$action['Error'] = Array( 'id' => $id, 'error_id' => pws_wpcsv::ERROR_INVALID_AUTHOR );
 				}
 			}
 
@@ -162,25 +221,9 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 			if ( $p['ID'] == "" ) { 
 
 				$id = wp_insert_post( $p );
-
-				// update tags
-				$tags = explode( ",", $p['post_tags'] );
-				array_walk( $tags, create_function( '&$v, $k', '$v = trim($v);' ) );
-
-				foreach( $tags as $tag ) {
-					$tarr = get_term_by( 'slug', $tag, 'post_tag' );
-					$tag_ids[] = $tar['term_id'];
-				}
-
-				$tag_ids = implode( ",", $tags );
-				wp_set_post_tags( $id, $tag_ids, FALSE );
-
-				// update categories
-				if ( !empty( $p['post_categories'] ) ) {
-					$cat_ids = $this->get_cat_ids( $p['post_categories'] );
-					wp_set_object_terms( $id, $cat_ids, 'category', FALSE );
-				} else { // Remove all categories - probably does nothing on creates
-					wp_set_object_terms( $id, array( ), 'category', FALSE );
+				$taxonomy_list = $this->get_taxonomy_list( );
+				foreach( $taxonomy_list as $t ) {
+					$this->import_taxonomy( $id, explode( ',', $p[$t] ), $t );
 				}
 
 				// wp_insert_post and wp_publish_post don't appear to support publishing to the future, so hack required:
@@ -191,6 +234,9 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 				# Custom fields	
 				foreach( $cf as $key => $val ) {
 					if ( !empty( $val ) ) { 
+						if ( function_exists( 'json_decode' ) && json_decode( utf8_encode( $val ) ) ) {
+							$val = json_decode( $val, TRUE );
+						}
 						add_post_meta( $id, $key, $val, true );
 					}
 				}
@@ -254,28 +300,18 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 							$wpdb->update( $posts_table, array( 'post_status' => 'future' ), array( 'ID' => $p['ID'] ) );
 						}
 
-						// update tags
-						$tags = explode( ",", $p['post_tags'] );
-						array_walk( $tags, create_function( '&$v, $k', '$v = trim($v);' ) );
-
-						foreach( $tags as $tag ) {
-							$tarr = get_term_by( 'slug', $tag, 'post_tag' );
-							$tag_ids[] = $tar['term_id'];
-						}
-
-						$tag_ids = implode( ",", $tags );
-						wp_set_post_tags( $p['ID'], $tag_ids, FALSE );
-
-						// update categories
-						if ( !empty( $p['post_categories'] ) ) {
-							$cat_ids = $this->get_cat_ids( $p['post_categories'] );
-							wp_set_object_terms( $p['ID'], $cat_ids, 'category', FALSE );
-						} else { // Remove all categories
-							wp_set_object_terms( $p['ID'], array( ), 'category', FALSE );
+						$taxonomy_list = $this->get_taxonomy_list( );
+						foreach( $taxonomy_list as $t ) {
+							if ( isset( $p[ $t ] ) ) {
+								$this->import_taxonomy( $p['ID'], explode( ',', $p[$t] ), $t );
+							}
 						}
 
 						foreach( $cf as $key => $val ) {
 							if ( !empty( $val ) ) {
+								if ( function_exists( 'json_decode' ) && json_decode( utf8_encode( $val ) ) ) {
+									$val = json_decode( $val, TRUE );
+								}
 								update_post_meta( $p['ID'], $key, $val );
 							} else {
 								delete_post_meta( $p['ID'], $key );
@@ -318,7 +354,7 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 							} else { // No image found but thumb specified
 								// Error message
 							}
-						} else { // If the field is empty, then any thumb should be detached from the post
+						} elseif ( isset( $p['thumbnail'] ) ) { // If the field is empty, then any thumb should be detached from the post
 							delete_post_meta( $p['ID'], '_thumbnail_id' );					
 						}
 
@@ -332,9 +368,11 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 						$action['Delete'] = $pid;
 					}
 				} else { // Post ID doesn't exist
-					$action['Error'] = Array( 'id' => $pid, 'error_id' => ERROR_MISSING_POST_ID );
+					$action['Error'] = Array( 'id' => $pid, 'error_id' => pws_wpcsv::ERROR_MISSING_POST_ID );
 				}
 			}
+			wp_cache_flush( ); # Experimental
+
 			return $action;
 		}
 
@@ -415,6 +453,109 @@ if ( !class_exists( 'pws_wpcsv_engine' ) ) {
 			$this->pwsd = FALSE;
 			
 			return $cat_ids;
+		}
+
+		private function export_taxonomy( Array $items ) {
+
+			$output = Array( );
+			$items = $this->sort_taxonomy( $items );
+			foreach( $items as $i ) {
+				$text = "{$i->slug}:{$i->name}";
+				if ( $i->parent ) {
+					$parent = get_term( $i->parent, $i->taxonomy );
+					$text = $parent->slug . '~' . $text;
+				}
+
+				$output[] = $text;
+			}
+
+			return implode( ',', $output );
+		}
+
+		private function import_taxonomy( $post_id, Array $items, $taxonomy ) {
+			$term_ids = Array( );
+			foreach( $items as $i ) {
+				if ( empty( $i ) ) continue;
+				$split = preg_split( '/(~|:)/', trim( $i ) );
+				# Prevent "one, two, " causing problems (last item is a space)
+				if ( empty( $split[0] ) ) continue;
+				switch( count( $split ) ) {
+					case 1:
+						list( $name ) = $split;
+						$slug = $name;
+						$parent_id = 0;
+						break;
+					case 2:
+						list( $slug, $name ) = $split;
+						$parent_id = 0;
+						break;
+					case 3: list( $parent_slug, $slug, $name ) = $split;
+						$parent = get_term_by( 'slug', $parent_slug, $taxonomy );
+						$parent_id = ( $parent->term_id ) ? $parent->term_id : 0;
+						break;
+					default:
+						return false;
+				}
+				$term = get_term_by( 'slug', $slug, $taxonomy );
+				
+				if ( $term ) {
+					$term = wp_update_term( $term->term_id, $taxonomy, Array( 'slug' => $slug, 'parent' => $parent_id ) );
+				} else {
+					$term = wp_insert_term( $name, $taxonomy, Array( 'slug' => $slug, 'parent' => $parent_id ) );
+				}
+
+				if ( is_wp_error( $term ) ) {
+					$this->stats['Error'][] = Array( 'id' => $post_id, 'error_id' => pws_wpcsv::ERROR_INVALID_TAXONOMY_TERM );
+				} else {
+					$term_ids[] = (int)$term['term_id'];
+				}
+			}
+
+			wp_set_object_terms( $post_id, $term_ids, $taxonomy, FALSE );
+			# MUST do this to flush the term cache ( didn't seem to work reliably however )
+			wp_cache_set( 'last_changed', time( ) - 1800, 'terms' );
+			wp_cache_delete( 'all_ids', $taxonomy );
+			wp_cache_delete( 'get', $taxonomy );
+			delete_option( "{$taxonomy}_children" );
+			_get_term_hierarchy( $taxonomy );
+		}
+
+		private function sort_taxonomy( Array $items ) {
+			
+			if ( empty( $items ) ) return $items;
+
+			foreach( $items as $item ) {
+				$grouped[$item->parent]->children[$item->term_id] = $item;
+				$index[$item->term_id] = $item;
+			}
+
+			foreach( $grouped as $k => $v ) {
+				if ( isset( $index[$k] ) ) {
+					$index[$k]->children = $v->children;
+					unset( $grouped[$k] );
+				}
+			}
+
+			return $this->taxonomy_array_flatten( $grouped );
+		}
+
+		private function taxonomy_array_flatten( Array $array ) {
+			$flat = Array( );
+			foreach( $array as $k => $v ) {
+				if ( !empty( $v->children ) ) {
+					$children = $v->children;
+					unset( $v->children );
+					if ( isset( $v->slug ) ) $flat[] = $v;
+					$flat = array_merge( $flat, $this->taxonomy_array_flatten( $children ) );
+				} else {
+					$flat[] = $v;
+				}
+			}
+			return $flat;
+		}
+
+		private function get_taxonomy_list( ) {
+			return get_taxonomies( Array( 'public' => TRUE ), 'names' );
 		}
 
 

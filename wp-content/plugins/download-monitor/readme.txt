@@ -3,8 +3,8 @@ Contributors: mikejolley
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mike.jolley@me.com&item_name=Donation+for+Download+Monitor
 Tags: download, downloads, monitor, hits, download monitor, tracking, admin, count, counter, files, versions, download count, logging
 Requires at least: 3.5
-Tested up to: 3.5
-Stable tag: 1.0.6
+Tested up to: 3.7
+Stable tag: 1.3.2
 License: GPLv3
 
 Download Monitor is a plugin for uploading and managing downloads, tracking downloads, and displaying links.
@@ -107,6 +107,49 @@ Admin hits are not counted, log out and try!
 4. Display regular download links or fancy ones all using shortcodes and templates.
 
 == Changelog ==
+
+= 1.3.2 =
+* Cleaned up log table queries
+* Tweaked download handler headers
+* Tweaked logging
+* Limit UA to 200
+* Setcookie to prevent double logging
+* Addons page (disable using add_filter( 'dlm_show_addons_page', '__return_false' ); )
+
+= 1.3.1 =
+* Added some new hooks
+* FR and SR_RS updates
+
+= 1.3.0 =
+* Fix 0kb downloads in some hosting enviroments
+* Added button to delete logs
+* Fixed log page when no logs are present
+* FR and HU updates
+* Added dropdown for the default template option to make available templates more obvious
+* Added version-list and title templates
+
+= 1.2.0 =
+* Option to redirect to files only (do not force)
+* Fixed textdomains
+* HU translation by Győző Farkas
+* Fix dlm_upload folder when not using month/day upload folders.
+* Fix IP lookup
+* Resumable download support
+* Tweaked download handler
+
+= 1.1.2 =
+* HTTPS headers for IE fix
+* Italian locale
+
+= 1.1.1 =
+* Specify error statuses on wp_die messages e.g. 404 for missing files.
+* Moved DONOTCACHEPAGE
+
+= 1.1.0 =
+* Fixed admin notices
+* Added download link to admin 'file' column for copying and pasting
+* Farsi localisation
+* Wrapping content in a [download] shortcode will wrap it in a simple link.
 
 = 1.0.6 =
 * Hide taxonomies from nav menus

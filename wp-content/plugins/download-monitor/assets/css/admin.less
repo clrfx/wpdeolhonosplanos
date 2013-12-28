@@ -145,7 +145,7 @@ table.wp-list-table {
 	.column-download_id, .column-version {
 		width: 6%;
 	}
-	td.column-members_only, td.column-featured {
+	td.column-members_only, td.column-redirect_only, td.column-featured {
 		width: 46px;
 		text-align: left;
 		padding-left: 11px;
@@ -155,7 +155,7 @@ table.wp-list-table {
 		text-align: left;
 		padding-left: 11px;
 	}
-	th.column-members_only, th.column-featured {
+	th.column-members_only, th.column-redirect_only, th.column-featured {
 		width: 46px;
 		img {
 			padding-top: 3px !important;
@@ -364,7 +364,7 @@ table.wp-list-table {
 			padding-left: 20px;
 			background: #fefefe url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMklEQVQYV2NkQAK7d+/+D+K6uroywoThDJgkTAKmCKwAXRJZESMuSQwrkE3C6gbaKQAAYS4fOXZlROQAAAAASUVORK5CYII=) no-repeat 7px 5px;
 		}
-		.browse_for_file {
+		.dlm_browse_for_file {
 			padding-left: 20px;
 			background: #fefefe url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYV2NkIAAYd+/e/R+mxtXVlRFdPYoCbIaBFWDTCVIMkqOXAnw+BQCbpycpLX4gIQAAAABJRU5ErkJggg==) no-repeat 7px 5px;
 		}
@@ -449,5 +449,63 @@ table.wp-list-table {
 	}
 	.add_link {
 		float: right;
+	}
+}
+
+/* Addons */
+.dlm_addons_wrap {
+	.items {
+		overflow: hidden;
+		li {
+			display: inline-block;
+			margin: 0 10px 10px 0 !important;
+			padding: 0;
+			vertical-align: top;
+			width: 250px;
+			border: 1px solid #ddd;
+			-webkit-box-shadow:
+				inset 0 1px 0 rgba(255,255,255,0.2),
+				inset 0 -1px 0 rgba(0,0,0,0.1);
+			box-shadow:
+				inset 0 1px 0 rgba(255,255,255,0.2),
+				inset 0 -1px 0 rgba(0,0,0,0.1);
+			overflow: hidden;
+			position: relative;
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 0;
+				background: #fff;
+			}
+			h2 {
+				margin: 0 !important;
+				padding: 10px 20px !important;
+				line-height: 1;
+				background: rgba(255,255,255,0.8);
+				color: #000;
+				position: absolute;
+				max-width: 280px;
+				top: 20px;
+				left: 0;
+				font-size: 18px;
+				text-shadow: none;
+			}
+			.third_party {
+				display: none;
+			}
+			p {
+				padding: 20px !important;
+				margin: 0 !important;
+				border-top: 1px solid #f1f1f1;
+			}
+			.cost {
+				display: none;
+			}
+		}
 	}
 }

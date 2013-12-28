@@ -96,7 +96,9 @@ class WPCF_Repeater extends WPCF_Field
         global $wpcf;
 
         // Delete all fields
+        do_action('wpcf_postmeta_before_delete_repetitive', $this->post, $this->cf);
         delete_post_meta( $this->post->ID, $this->slug );
+        do_action('wpcf_postmeta_after_delete_repetitive', $this->post, $this->cf);
 
         // Allow $data to replace $_POST
         if ( is_null( $data ) && isset( $_POST['wpcf'][$this->cf['slug']] ) ) {
@@ -105,9 +107,12 @@ class WPCF_Repeater extends WPCF_Field
 
         // Set data
         if ( !empty( $data ) ) {
+            
+            do_action('wpcf_postmeta_before_add_repetitive', $this->post, $this->cf);
 
             // Insert new meta and collect all new mids
             $mids = array();
+            $i = 1;
             foreach ( $data as $meta_value ) {
 
                 /*
@@ -127,18 +132,18 @@ class WPCF_Repeater extends WPCF_Field
                 $_meta_value = $this->_filter_save_value( $meta_value );
 
                 // Adding each field will return $mid
-                // $unique = false
-                if ( !empty( $_meta_value ) ) {
-                    $mid = add_post_meta( $this->post->ID, $this->slug,
-                            $_meta_value, false );
-
-                    $mids[] = $mid;
-
-                    // Call insert post actions on each field
-                    $this->_action_save( $this->cf, $_meta_value, $mid,
-                            $meta_value );
+                if ( count($data) == $i++ ) {
+                    do_action('wpcf_postmeta_before_add_last_repetitive', $this->post, $this->cf);
                 }
+                $mid = add_post_meta( $this->post->ID, $this->slug, $_meta_value, false );
+
+                $mids[] = $mid;
+
+                // Call insert post actions on each field
+                $this->_action_save( $this->cf, $_meta_value, $mid, $meta_value );
             }
+            
+            do_action('wpcf_postmeta_after_add_repetitive', $this->post, $this->cf);
 
             // Save order
             if ( !empty( $mids ) ) {
@@ -212,7 +217,7 @@ class WPCF_Repeater extends WPCF_Field
             } else {
                 $_meta['custom_order'] = $_meta['by_meta_id'];
             }
-        } else if ( !is_null( $this->meta_object ) ) {
+        } else if ( !empty( $this->meta_object->meta_id ) ) {
             $_meta = array();
             $_meta['single'] = maybe_unserialize( $this->meta_object->meta_value );
             // Sort by meta_id column
@@ -248,7 +253,7 @@ class WPCF_Repeater extends WPCF_Field
 
         // Process fields
         // Check if has any value
-        if ( empty( $this->meta['single'] ) ) {
+        if ( empty( $this->meta['by_meta_id'] ) ) {
 
             // To prevent passing array to field
             $this->meta = null;
@@ -292,7 +297,11 @@ class WPCF_Repeater extends WPCF_Field
          * Hide if field not passed check
          * TODO Move this to WPCF_Conditional
          */
-        $show = isset( $wpcf->conditional->fields[$this->slug] ) ? (bool) $wpcf->conditional->fields[$this->slug] : true;
+        $show = true;
+        if ( $wpcf->conditional->is_conditional( $this->cf ) ) {
+            $wpcf->conditional->set( $this->post, $this->cf );
+            $show = $wpcf->conditional->evaluate();
+        }
         $css_cd = !$show ? 'display:none;' : '';
 
         /**

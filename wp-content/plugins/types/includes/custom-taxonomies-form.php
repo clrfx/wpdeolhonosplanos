@@ -177,6 +177,10 @@ function wpcf_admin_custom_taxonomies_form() {
         $options[$post_type_slug]['#default_value'] = !empty( $ct['supports'][$post_type_slug] );
         $options[$post_type_slug]['#inline'] = true;
         $options[$post_type_slug]['#after'] = '&nbsp;&nbsp;';
+        if ( is_rtl() ) {
+            $options[$post_type_slug]['#before'] = '<div style="float:right;margin-left:10px;">';
+            $options[$post_type_slug]['#after'] .= '</div>';
+        }
     }
 
     $form['table-3-open'] = array(
@@ -345,6 +349,15 @@ function wpcf_admin_custom_taxonomies_form() {
             ),
         ),
     );
+    if ( wpcf_compare_wp_version( '3.5', '>=' )) {
+         $form['vars']['#options']['show_admin_column'] = array(
+                '#name' => 'ct[show_admin_column]',
+                '#default_value' => !empty( $ct['show_admin_column'] ),
+                '#title' => __( 'show_admin_column', 'wpcf' ),
+                '#description' => __( 'Whether to allow automatic creation of taxonomy columns on associated post-types.', 'wpcf' ) . '<br />' . __( 'Default: false.', 'wpcf' ),
+                '#inline' => true,
+            );
+    }
     $query_var = isset( $ct['query_var'] ) ? $ct['query_var'] : '';
     $hidden = !empty( $ct['query_var_enabled'] ) ? '' : ' class="hidden"';
     $form['query_var'] = array(
@@ -468,6 +481,8 @@ function wpcf_admin_custom_taxonomies_form_submit( $form ) {
         $wpdb->update( $wpdb->term_taxonomy, array('taxonomy' => $tax),
                 array('taxonomy' => $data['wpcf-tax']), array('%s'), array('%s')
         );
+        // Sync action
+        do_action( 'wpcf_taxonomy_renamed', $tax, $data['wpcf-tax'] );
         // Delete old type
         unset( $custom_taxonomies[$data['wpcf-tax']] );
     }

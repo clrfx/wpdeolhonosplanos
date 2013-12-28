@@ -26,9 +26,6 @@ class DLM_Admin_Insert {
 	public function media_buttons( $editor_id = 'content' ) {
 		global $download_monitor, $post;
 
-		if ( ! isset( $post->post_type ) || in_array( $post->post_type, array( 'dlm_download' ) ) )
-			return;
-
 		echo '<a href="#" class="button insert-download add_download" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Insert Download', 'download_monitor' ) . '">' . __( 'Insert Download', 'download_monitor' ) . '</a>';
 
 		ob_start();
@@ -106,6 +103,7 @@ class DLM_Admin_Insert {
 					// Meta
 					update_post_meta( $download_id, '_featured', 'no' );
 					update_post_meta( $download_id, '_members_only', 'no' );
+					update_post_meta( $download_id, '_redirect_only', 'no' );
 					update_post_meta( $download_id, '_download_count', 0 );
 
 					// File

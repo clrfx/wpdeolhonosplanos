@@ -3,11 +3,11 @@
 Plugin Name: Download Monitor
 Plugin URI: http://mikejolley.com/projects/download-monitor/
 Description: A full solution for managing downloadable files, monitoring downloads and outputting download links and file information on your WordPress powered site.
-Version: 1.0.6
+Version: 1.3.2
 Author: Mike Jolley
 Author URI: http://mikejolley.com
 Requires at least: 3.5
-Tested up to: 3.5
+Tested up to: 3.6
 
 	Copyright: © 2013 Mike Jolley.
 	License: GNU General Public License v3.0
@@ -39,7 +39,7 @@ class WP_DLM {
 		global $wpdb;
 
 		// Define constants
-		define( 'DLM_VERSION', '1.0.6' );
+		define( 'DLM_VERSION', '1.3.2' );
 
 		// Table for logs
 		$wpdb->download_log = $wpdb->prefix . 'download_log';
@@ -54,6 +54,7 @@ class WP_DLM {
 		if ( get_option( 'dlm_enable_logging' ) == 1 )
 			include_once( 'includes/class-dlm-logging.php' );
 
+		include_once( 'includes/download-functions.php' );
 		include_once( 'includes/class-dlm-download.php' );
 		include_once( 'includes/class-dlm-download-version.php' );
 		include_once( 'includes/class-dlm-download-handler.php' );
@@ -181,7 +182,6 @@ class WP_DLM {
 
 	    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
-	    // WooCommerce Tables
 	    $dlm_tables = "
 	CREATE TABLE {$wpdb->download_log} (
 	  ID bigint(20) NOT NULL auto_increment,
@@ -299,19 +299,20 @@ class WP_DLM {
 		register_post_type( "dlm_download",
 			apply_filters( 'dlm_cpt_dlm_download_args', array(
 				'labels' => array(
-						'name' 					=> __( 'Downloads', 'download_monitor' ),
-						'singular_name' 		=> __( 'Download', 'download_monitor' ),
-						'add_new' 				=> __( 'Add New', 'download_monitor' ),
-						'add_new_item' 			=> __( 'Add Download', 'download_monitor' ),
-						'edit' 					=> __( 'Edit', 'download_monitor' ),
-						'edit_item' 			=> __( 'Edit Download', 'download_monitor' ),
-						'new_item' 				=> __( 'New Download', 'download_monitor' ),
-						'view' 					=> __( 'View Download', 'download_monitor' ),
-						'view_item' 			=> __( 'View Download', 'download_monitor' ),
-						'search_items' 			=> __( 'Search Downloads', 'download_monitor' ),
-						'not_found' 			=> __( 'No Downloads found', 'download_monitor' ),
-						'not_found_in_trash' 	=> __( 'No Downloads found in trash', 'download_monitor' ),
-						'parent' 				=> __( 'Parent Download', 'download_monitor' )
+						'all_items'          => __( 'All Downloads', 'download_monitor' ),
+						'name'               => __( 'Downloads', 'download_monitor' ),
+						'singular_name'      => __( 'Download', 'download_monitor' ),
+						'add_new'            => __( 'Add New', 'download_monitor' ),
+						'add_new_item'       => __( 'Add Download', 'download_monitor' ),
+						'edit'               => __( 'Edit', 'download_monitor' ),
+						'edit_item'          => __( 'Edit Download', 'download_monitor' ),
+						'new_item'           => __( 'New Download', 'download_monitor' ),
+						'view'               => __( 'View Download', 'download_monitor' ),
+						'view_item'          => __( 'View Download', 'download_monitor' ),
+						'search_items'       => __( 'Search Downloads', 'download_monitor' ),
+						'not_found'          => __( 'No Downloads found', 'download_monitor' ),
+						'not_found_in_trash' => __( 'No Downloads found in trash', 'download_monitor' ),
+						'parent'             => __( 'Parent Download', 'download_monitor' )
 					),
 				'description' => __( 'This is where you can create and manage downloads for your site.', 'download_monitor' ),
 				'public' 				=> false,

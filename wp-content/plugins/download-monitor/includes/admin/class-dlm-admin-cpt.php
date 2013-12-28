@@ -177,6 +177,7 @@ class DLM_Admin_CPT {
 		$columns["download_count"] = '<img src="' . $download_monitor->plugin_url() . '/assets/images/download_count_head.png" alt="' . __("download_count", 'download_monitor') . '" />';
 		$columns["featured"] = '<img src="' . $download_monitor->plugin_url() . '/assets/images/featured_head.png" alt="' . __("Featured", 'download_monitor') . '" />';
 		$columns["members_only"] = '<img src="' . $download_monitor->plugin_url() . '/assets/images/member_head.png" alt="' . __("Members only", 'download_monitor') . '" />';
+		$columns["redirect_only"] = '<img src="' . $download_monitor->plugin_url() . '/assets/images/redirect_head.png" alt="' . __("Redirect only", 'download_monitor') . '" />';
 
 		$columns["date"] 			= __("Date posted", 'download_monitor');
 
@@ -225,12 +226,20 @@ class DLM_Admin_CPT {
 					echo '<span class="na">&ndash;</span>';
 
 			break;
+			case "redirect_only" :
+
+				if ( $download->redirect_only() )
+					echo '<img src="' . $download_monitor->plugin_url() . '/assets/images/on.png" alt="yes" />';
+				else
+					echo '<span class="na">&ndash;</span>';
+
+			break;
 			case "file" :
 				if ( $file ) {
-					echo '<code>' . $file->filename;
+					echo '<a href="' . $download->get_the_download_link() . '"><code>' . $file->filename;
 					if ( $size = $download->get_the_filesize() )
 						echo ' &ndash; ' . $size;
-					echo '</code>';
+					echo '</code></a>';
 				} else
 					echo '<span class="na">&ndash;</span>';
 			break;
@@ -267,6 +276,7 @@ class DLM_Admin_CPT {
 			'download_count' => 'download_count',
 			'featured'       => 'featured',
 			'members_only'   => 'members_only',
+			'redirect_only'  => 'redirect_only',
 		);
 		return wp_parse_args( $custom, $columns );
 	}
@@ -298,6 +308,12 @@ class DLM_Admin_CPT {
 			elseif ( 'members_only' == $vars['orderby'] )
 				$vars = array_merge( $vars, array(
 					'meta_key' 	=> '_members_only',
+					'orderby' 	=> 'meta_value'
+				) );
+
+			elseif ( 'redirect_only' == $vars['orderby'] )
+				$vars = array_merge( $vars, array(
+					'meta_key' 	=> '_redirect_only',
 					'orderby' 	=> 'meta_value'
 				) );
 		}
