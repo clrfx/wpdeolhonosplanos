@@ -25,11 +25,11 @@ get_header('resume'); ?>
 
 <ul>
 
-<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/' ) ); ?>">Historia dos Planos de Educa&ccedil;&atilde;o</a></li>
+<li class="planos"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
 
-<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/' ) ); ?>">Referencias Bibliograficas</a></li>
+<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Biblioteca</a></li>
 
-<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Conhe&ccedil;a o Banco de Experiencias</a></li>
+<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de Experi&ecirc;ncias</a></li>
 
 </ul>
 
