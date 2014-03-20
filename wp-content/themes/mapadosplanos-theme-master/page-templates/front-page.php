@@ -24,8 +24,6 @@ get_header(); ?>
 
 <?php get_sidebar('front'); ?>
 
-<div class="clear"></div>
-
 <div id="prateleira">
 
 	<ul>
