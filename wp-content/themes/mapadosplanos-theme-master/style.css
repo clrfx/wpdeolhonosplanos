@@ -1360,6 +1360,7 @@ label ~ span.required {
     margin-right: 2%;
     margin-top: 0;
     width: 560px !important;
+	float: left;
 }
 .template-front-page .widget-area {
     float: left;
@@ -2617,6 +2618,7 @@ background: url("img/loading.gif") no-repeat scroll right 7px #FFF;
 	background: linear-gradient(to bottom, #D94253 0%, #EE3360 100%) repeat scroll 0 0 #EE3360;
 	box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.3);
 	background-color: #EE3360;
+	position: fixed;
 	z-index: 1001;
 	height: auto;
 }
@@ -3271,6 +3273,7 @@ span.botao-biblioteca {
 #cada-post {
     float: left;
     margin-right: 3%;
+    width: 30%;
 	background: #F5E7C2;
 }
 
@@ -4062,7 +4065,7 @@ max-width: 940px;
 }
 
 #footer-a .span2 {
-	width: auto;
+width: auto;
 }
 
 
