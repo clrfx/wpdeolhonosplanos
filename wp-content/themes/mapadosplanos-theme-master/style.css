@@ -3241,6 +3241,16 @@ a.download {
     margin: 15px 40px 10px 20px;
     padding: 1em 1.5em;
     width: 150px;
+	color: #fff;
+}
+
+a.download-popup {
+	float:none !important;
+    margin: 15px 10px 10px 7px;
+}
+
+a.download:hover {
+	color: #fff;
 }
 
 a.download-hidden {
@@ -3253,6 +3263,11 @@ a.biblioteca {
     margin: 15px 40px 10px 20px;
     padding: 1em 1.5em;
     width: 150px;
+}
+
+a.biblioteca-popup {
+	float:none !important;
+    margin: 15px 10px 10px 7px;
 }
 
 span.mais {
