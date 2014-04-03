@@ -25,7 +25,21 @@ $args = array(
 $downloads = new WP_Query( $args );
 if ( $downloads->have_posts() ) : ?>
 
+<?php $cadastro_download = get_page_by_title( 'Cadastro Download' ); ?>
+
 <?php while ( $downloads->have_posts() ) : $downloads->the_post(); ?>
+		<?php
+			// Pega o ID de cada download
+			$id = $dlm_download->id;
+		?>
+		
+		<?php // Cria cada popup com o conteúdo respectivo ao ID ?>
+		<div class="white-popup mfp-hide" id="<?php echo $id; ?>">Eu sou o ID: <?php echo $id; ?>
+			<?php echo apply_filters( 'the_content', $cadastro_download->post_content ); ?>
+			<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download-hidden download downloads-bg">
+				<span class="botao-download">DOWNLOAD</span>
+			</a>
+		</div>
 
 		<div id="cada-download" <?php post_class(); ?>>
 
@@ -39,9 +53,7 @@ if ( $downloads->have_posts() ) : ?>
 				<?php $dlm_download->the_short_description(); ?>
 			</div><!-- .entry-content-download -->
 
-				<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download downloads-bg">
-                	<span class="botao-download">DOWNLOAD</span>
-				</a>
+			<a href="#<?php /* Linka para o popup montato acima */ echo $id; ?>" class="open-popup-link botao-download download downloads-bg">DOWNLOAD</a>
 
 		</div><!-- #cada-download -->
 

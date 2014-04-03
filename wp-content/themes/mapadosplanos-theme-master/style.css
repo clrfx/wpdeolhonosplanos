@@ -3243,6 +3243,10 @@ a.download {
     width: 150px;
 }
 
+a.download-hidden {
+	display: none;
+}
+
 a.biblioteca {
     background: url("img/biblioteca-icone.png") no-repeat scroll 140px 10px #CCC;
     float: right;
