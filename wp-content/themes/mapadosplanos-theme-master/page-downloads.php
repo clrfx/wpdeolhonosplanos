@@ -34,26 +34,26 @@ if ( $downloads->have_posts() ) : ?>
 		?>
 		
 		<?php // Cria cada popup com o conteúdo respectivo ao ID ?>
-		<div class="white-popup mfp-hide" id="<?php echo $id; ?>">
+		<div class="white-popup mfp-hide" id="<?php echo $id; ?>">Eu sou o ID: <?php echo $id; ?>
 			<?php echo apply_filters( 'the_content', $cadastro_download->post_content ); ?>
-			<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download-hidden download download-popup downloads-bg">
+			<a href="<?php $dlm_download->the_download_link(); ?>" rel="bookmark" class="download-hidden download downloads-bg">
 				<span class="botao-download">DOWNLOAD</span>
 			</a>
 		</div>
 
 		<div id="cada-download" <?php post_class(); ?>>
 
-				<a class="img-destacada-download open-popup-link" href="#<?php /* Linka para o popup montado acima */ echo $id; ?>">
+				<a class="img-destacada-download" href="<?php $dlm_download->the_download_link(); ?>">
 					<?php $dlm_download->the_image( 'downloads' ); ?>
 				</a>
 
-			<span class="entry-title-download-query"><a class="open-popup-link" href="#<?php /* Linka para o popup montado acima */ echo $id; ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php $dlm_download->the_title(); ?></a></span>
+			<span class="entry-title-download-query"><a href="<?php $dlm_download->the_download_link(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php $dlm_download->the_title(); ?></a></span>
 
 			<div class="entry-content-download">
 				<?php $dlm_download->the_short_description(); ?>
 			</div><!-- .entry-content-download -->
 
-			<a href="#<?php /* Linka para o popup montado acima */ echo $id; ?>" class="open-popup-link botao-download download downloads-bg">DOWNLOAD</a>
+			<a href="#<?php /* Linka para o popup montato acima */ echo $id; ?>" class="open-popup-link botao-download download downloads-bg">DOWNLOAD</a>
 
 		</div><!-- #cada-download -->
 

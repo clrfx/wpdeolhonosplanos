@@ -58,20 +58,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript">
-jQuery(document).ready( function Scrolldown(){
-window.scroll(0,150); 
- }); 
-
-jQuery(function() {
-       jQuery('.open-popup-link').magnificPopup({
-         type:'inline',
-         midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-       });
-});
-
-</script>
-
 </head>
 
 <body <?php body_class(); ?>>
