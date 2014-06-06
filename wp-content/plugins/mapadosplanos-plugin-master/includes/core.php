@@ -73,7 +73,8 @@ $summary = array(
    }
   	$summary_count = array();
   	foreach ($summary as $k => $s) {
-  		$summary_count[$k] = array_count_values($s);
+  		$ar = array_replace($s,array_fill_keys(array_keys($s, null),''));
+  		$summary_count[$k] = array_count_values($ar);
   	}
     $summary_count[qs_02_1] = sum_array_options($summary_count[qs_02_1]);
     $summary_count[qs_02_2] = sum_array_options($summary_count[qs_02_2]);
