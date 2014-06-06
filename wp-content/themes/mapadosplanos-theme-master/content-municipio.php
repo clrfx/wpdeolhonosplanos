@@ -230,39 +230,39 @@
 								<tr><th colspan="2">Gestão e planejamento da educação</th></tr>
 								<tr>
 									<td>Sistema municial de ensino</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano01'); ?>"><?php echo types_render_field('qs_plano01'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano01', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano01', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Conselho Municipal de Educação</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano02'); ?>"><?php echo types_render_field('qs_plano02'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano02', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano02', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Plano de carreira e de remuneração para o magistério</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano03'); ?>"><?php echo types_render_field('qs_plano03'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano03', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano03', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Secretário(a) é ordenador(a) de despesas</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano04'); ?>"><?php echo types_render_field('qs_plano04'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano04', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano04', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Já respondeu demanda baseada na Lei de Acesso à Informação</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano26'); ?>"><?php echo types_render_field('qs_plano26'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano26', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano26', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 							</table>
 							<table class="table table-bordered">
 								<tr><th colspan="2">Plano de Educação</th></tr>
 								<tr>
 									<td>Tem plano?</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_etapa01'); ?>"><?php echo types_render_field('qs_etapa01'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_etapa01', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_etapa01', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<?php if ($etapa == 'complano') : ?>
 								<tr>
 									<td>Data de aprovação</td>
-									<td><span class="resposta label label-info ibge-Multi"><?php echo types_render_field('qs_plano06_complano'); ?></span></td>
+									<td><span class="resposta label label-info ibge-Multi"><?php echo types_render_field('qs_plano06_complano', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Metas contempladas no Plano Plurianual(PPA) e leis orçamentárias</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano08_complano'); ?>"><?php echo types_render_field('qs_plano08_complano'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano08_complano', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano08_complano', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<?php endif; ?>
 							</table>
@@ -272,11 +272,11 @@
 								</tr>
 								<tr>
 									<td>Investimento em comunicação</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano09'); ?>"><?php echo types_render_field('qs_plano09'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano09', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano09', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Assessoria externa</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano12'); ?>"><?php echo types_render_field('qs_plano12'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano12', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano12', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 											<?php if ($custom_fields['wpcf-qs_plano12'][0] == 'Sim') : ?>
 								<tr>
@@ -294,7 +294,7 @@
 								</tr>
 								<tr>
 									<td>Participação de crianças e adolescentes</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano21'); ?>"><?php echo types_render_field('qs_plano21'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano21', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano21', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 							</table>
 							
@@ -303,12 +303,12 @@
 								<?php if ($etapa == 'complano') : ?>
 								<tr>
 									<th>Já foi avaliado nos últimos quatro anos?</th>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano07_complano'); ?>"><?php echo types_render_field('qs_plano07_complano'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano07_complano', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano07_complano', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<? endif; ?>
 								<tr>
 									<th>Ano desta gestão em que pretende avaliá-lo</th>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano23'); ?>"><?php echo types_render_field('qs_plano23'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano23', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano23', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<th>Quem avalia a implantação de suas metas</th>
@@ -323,34 +323,34 @@
 								<tr><th colspan="2">Gestão e planejamento da educação</th></tr>
 								<tr>
 									<td>Sistema municial de ensino</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano01'); ?>"><?php echo types_render_field('qs_plano01'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano01', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano01', array('raw' => 'false', 'output' => 'html')); ?></span></td>						
 								</tr>
 								<tr>
 									<td>Conselho Municipal de Educação</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano02'); ?>"><?php echo types_render_field('qs_plano02'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano02', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano02', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Plano de carreira e de remuneração para o magistério</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano03'); ?>"><?php echo types_render_field('qs_plano03'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano03', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano03', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Secretário(a) é ordenador(a) de despesas</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano04'); ?>"><?php echo types_render_field('qs_plano04'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano04', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano04', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Já respondeu demanda baseada na Lei de Acesso à Informação</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano26'); ?>"><?php echo types_render_field('qs_plano26'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_plano26', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_plano26', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 							</table>
 							<table class="table table-bordered">
 								<tr><th colspan="2">Plano de Educação</th></tr>
 								<tr>
 									<td>Tem plano?</td>
-									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_etapa01'); ?>"><?php echo types_render_field('qs_etapa01'); ?></span></td>
+									<td><span class="resposta label label-info ibge-<?php echo types_render_field('qs_etapa01', array('raw' => 'true', 'output' => 'html')); ?>"><?php echo types_render_field('qs_etapa01', array('raw' => 'false', 'output' => 'html')); ?></span></td>
 								</tr>
 								<tr>
 									<td>Ano desta gestão em que pretende elaborá-lo</td>
-									<td><span class="resposta label label-info ibge-Multi"><?php echo types_render_field('qs_plano23'); ?></span></td>
+									<td><span class="resposta label label-info ibge-Multi"><?php echo types_render_field('qs_plano23', array('raw' => 'true', 'output' => 'html')); ?></span></td>
 								</tr>
 							</table>
 						
