@@ -9,3 +9,4 @@ wp-content/upgrade/
 *.swp
 *.swo
 *~
+sftp-config.json
