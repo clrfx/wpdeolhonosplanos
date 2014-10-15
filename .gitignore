@@ -10,3 +10,6 @@ wp-content/upgrade/
 *.swo
 *~
 sftp-config.json
+
+*.sublime-project
+*.sublime-workspace
