@@ -772,6 +772,44 @@ footer[role="contentinfo"] a:hover {
 	overflow: hidden;
 }
 
+.media .alignleft {
+	margin-bottom: 0;
+}
+
+/* Featured content */
+
+#wpcontent_slider_container .cs-prev, #wpcontent_slider_container .cs-next {
+    background: none repeat scroll 0 0 #E92243 !important;
+    color: #FFFFFF !important;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-size: 2em !important;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#wpcontent_slider .cs-title {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    width: 100%;
+}
+
+#wpcontent_slider h4, #wpcontent_slider h4 a {
+    color: #FFFFFF;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.news-list .entry-title {
+	font-size: 1em;
+}
+
+.news-main .entry-title-query,
+.news-main .entry-content-post-home {
+	margin: 1em 0 0 0;
+}
+
 
 .entry-meta {
 	clear: both;
@@ -2505,12 +2543,6 @@ a:hover, a:active {
 	border-bottom:0;
 }
 
-/*Hack do Content slider*/
-
-.cs-title {
-	width: 99% !important;
-}
-
 /* Contato */
 
 div.wpcf7 {
@@ -3268,9 +3300,10 @@ span.entry-title-download-query {
 
 
 .entry-content-post-home {
-	margin: 0 20px;
-	font-size: 0.8em;
 	color: #333333;
+	font-size: 0.875em;
+	line-height: 1.5;
+	margin: 0 20px;
 }
 
 .entry-content-post-category {
@@ -3383,30 +3416,6 @@ span.botao-biblioteca {
 #site-navigation ul.sub-menu {
   overflow: hidden;
     position: absolute;
-}
-
-
-#wpcontent_slider_container .cs-prev, #wpcontent_slider_container .cs-next {
-    background: none repeat scroll 0 0 #E92243 !important;
-    color: #FFFFFF !important;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
-    font-size: 2em !important;
-    font-weight: bold;
-    padding: 0 10px;
-}
-
-#wpcontent_slider .cs-title {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
-    width: 100%;
-}
-
-#wpcontent_slider h4, #wpcontent_slider h4 a {
-    color: #FFFFFF;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
-    font-size: 1.5em;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
 }
 
 .entry-header-page-mae {

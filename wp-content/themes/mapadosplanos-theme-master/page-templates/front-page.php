@@ -16,13 +16,84 @@ get_header(); ?>
 
 	<div id="primary" class="site-home">
 
-		<?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
-
+		<?php //if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
+		Aqui ficava o slider
 
 	</div><!-- #primary -->
-	
 
-<?php get_sidebar('front'); ?>
+	<?php get_sidebar('front'); ?>
+
+	<div class="clear"></div>
+
+	<hr/>
+
+	<div class="featured-content">
+		<div class="featured-slider content-slider col-3">
+			<?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
+		</div>
+
+		<div class="news-main col-3">
+			<?php
+			$rs = new WP_Query( array ( 'ignore_sticky_posts' => true, cat => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 1 ) );
+			if ( $rs->have_posts() ) : while ( $rs->have_posts() ) : $rs->the_post(); 
+		?>
+
+			<div <?php post_class(); ?>>
+				<a class="link-img-destacada" href="<?php echo get_permalink(); ?>">
+					<?php 
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail('category-sticky', array('class'	=> "category-image"));
+					}
+					else {
+						echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+					} 
+					?>
+				</a>
+
+				<h1 class="entry-title-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<div class="entry-content-post-home">
+					<?php echo excerpt( 30 ); //Imprime 21 palavras ?> &hellip;
+					<div class="entry-utility">
+						<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+					</div><!-- .entry-utility -->
+				</div><!-- .entry-content -->
+			</div><!-- #cada-post -->
+
+		<?php endwhile; endif; // end of the loop. ?>
+		<?php wp_reset_query(); // reset query ?>
+		</div>
+
+		<div class="news-list col-3">
+			<?php
+
+			$oi = new WP_Query( array ( 'cat' => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 3 ) );
+			if ( $oi->have_posts() ) : while ( $oi->have_posts() ) : $oi->the_post(); 
+			?>
+
+
+				<div <?php post_class( 'media' ); ?>>
+					<a class="alignleft" href="<?php echo get_permalink(); ?>">
+						<?php 
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail('thumbnail-mini');
+						}
+						else {
+							echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+						} 
+						?>
+					</a>
+					<div class="media-body">
+						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+						<div class="entry-utility">
+							<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+						</div><!-- .entry-utility -->
+					</div><!-- .media-body -->
+				</div><!-- #cada-post -->
+
+			<?php endwhile; endif; // end of the loop. ?>
+			<?php wp_reset_query(); // reset query ?>
+		</div>
+	</div><!-- .featured-content -->
 
 <div class="clear"></div>
 
@@ -112,7 +183,6 @@ get_header(); ?>
 
 		<?php endwhile; endif; // end of the loop. ?>
 		<?php wp_reset_query(); // reset query ?>
-
 	</div>
 </div><!-- .col-3 -->
 
