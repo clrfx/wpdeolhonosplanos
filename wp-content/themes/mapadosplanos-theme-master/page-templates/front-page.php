@@ -97,19 +97,68 @@ get_header(); ?>
 
 <div class="clear"></div>
 
-<div id="prateleira">
+<div class="secondary-content">
+	<div class="container-mapa col col-2-3">
+		<h3 class="area-title">De Olho no Mapa</h3>
+		<div id="barra-mapa">
 
-	<ul>
+			<div id="content-mapa">
+			
+				<div id="box-below-map">
+				<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
+				</div>
+				
+				<div id="box-below-map">
+				<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
+				</div>
+				
+				<div id="box-below-map" class="last">
+				<span class="box-busca-mapa">Busque no Mapa</span>
+				<?php get_template_part( 'searchform-munic' ); ?>
+				</div>
+				
+				<div class="clear"></div>
+				
+				<?php get_template_part( 'mapbox' ); ?>
+				
+				<div class="clear"></div>
 
-	<li class="home"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de Experi&ecirc;ncias</a></li>
+			</div>
+		</div>
+	</div><!-- .container-mapa -->
 
-	<li class="home"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
+	<div class="col col-3 container-prateleira">
+		<h3 class="area-title">Prateleira</h3>
+		<div class="prateleira">
+			<ul class="prateleira-list">
+				<li class="prateleira-item">
+					<a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">
+						<h2 class="prateleira-item-title">Rede De Olho</h2>
+						<p class="prateleira-item-description">Participe e troque informações com pessoas de todo o país sobre os Planos Municipais de Educação</p>
+						<span class="mais">+</span>
+					</a>
+				</li>
+				<li class="prateleira-item">
+					<a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">
+						<h2 class="prateleira-item-title">Coleção</h2>
+						<p class="prateleira-item-description">Faça o download dos materiais do De Olho nos Planos e se junte a esta iniciativa!</p>
+						<span class="mais">+</span>
+					</a>
+				</li>
+				<li class="indicadores-qualidade prateleira-item">
+					<a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">
+						<h2 class="prateleira-item-title">Indicadores da Qualidade na Educação</h2>
+						<p class="prateleira-item-description">Avaliação: conheça nossa proposta de autoavaliação participativa para as escolas</p>
+						<span class="mais">+</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-	<li class="indicadores-qualidade home"><a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">Indicadores da Qualidade na Educa&ccedil;&atilde;o</a></li>
+</div><!-- .secondary-content -->
 
-	</ul>
-
-</div>
+<div class="clear"></div>
 
 <div id="title-querys" class="noticias">
 	<div class="triangulo triangulo-noticias">

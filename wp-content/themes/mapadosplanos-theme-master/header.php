@@ -94,36 +94,6 @@ var templateUrl = '<?= get_bloginfo("url"); ?>';
 	</header><!-- #masthead -->
 	
 </div>
-
-<div id="barra-mapa">
-
-<!-- <div id="img-seta-down">
-<a class="seta-down-home" id="seta-down-home" >&nbsp;</a>
-</div> -->
-
-	<div id="content-mapa">
-	
-		<div id="box-below-map">
-		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Como Usar?</a></span>
-		</div>
-		
-		<div id="box-below-map">
-		<span><a href="<?php echo esc_url( home_url( '/participe/' ) ); ?>"> Participe!</a></span>
-		</div>
-		
-		<div id="box-below-map" class="last">
-		<span class="box-busca-mapa">Busque no Mapa</span>
-		<?php get_template_part( 'searchform-munic' ); ?>
-		</div>
-		
-		<div class="clear"></div>
-		
-		<?php get_template_part( 'mapbox' ); ?>
-		
-		<div class="clear"></div>
-
-	</div>
-</div>
 		
 <div id="page" class="hfeed site">
 
