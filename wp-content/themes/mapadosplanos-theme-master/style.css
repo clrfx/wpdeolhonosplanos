@@ -811,6 +811,10 @@ footer[role="contentinfo"] a:hover {
     text-decoration: none;
 }
 
+.home .format-video {
+	background: #f5e7c2;
+}
+
 .news-list .entry-title {
 	font-size: 1em;
 }

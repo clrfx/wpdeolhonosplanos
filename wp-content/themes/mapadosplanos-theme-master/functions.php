@@ -13,6 +13,11 @@ function mapadosplanos_childtheme_formats() {
 }
 add_action( 'after_setup_theme', 'mapadosplanos_childtheme_formats', 11 );
 
+/**
+ * Custom template tags for the theme
+ */
+require get_stylesheet_directory() . '/inc/template-tags.php';
+
 //Modo de manutenção
 function maintenace_mode() {
   if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {

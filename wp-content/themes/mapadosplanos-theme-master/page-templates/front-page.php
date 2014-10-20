@@ -202,8 +202,32 @@ get_header(); ?>
 </div>
 
 <div class="col-3">
-	<h3 class="area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Vídeo</a></h3>
-	tste
+	<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeo</a></h3>
+	<?php
+	$videos = new WP_Query ( array(
+		'ignore_sticky_posts' => true,
+		'posts_per_page' => 1,
+		'tax_query' => array(
+	        array(
+	            'taxonomy' 	=> 'post_format',
+	            'field' 	=> 'slug',
+	            'terms' 	=> 'post-format-video',
+      		)
+      	)
+	));
+	
+	if ( $videos->have_posts() ) : while ( $videos->have_posts() ) : $videos->the_post(); ?>
+
+	<div <?php post_class( 'clearfix' ); ?>>
+		<?php mapadosplanos_the_video(); ?>
+		<h1 class="entry-title-query">
+			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+		</h1>
+		<div class="entry-content-post-home"><?php the_excerpt(); ?></div>
+		<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
+	</div><!-- .post .format-video -->
+
+	<?php endwhile; endif; // end of the loop. ?>
 </div><!-- .col-3 -->
 
 <div class="col-3">
