@@ -33,10 +33,14 @@
 		
 		</div>
 			<div class="site-info">
-				<?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?> - 
-				Sob uma Licen&ccedil;a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.pt" target="_blank">Creative Commons</a> - 
-				<a href="<?php echo esc_url( home_url( '/creditos/' ) ); ?>">Cr&eacute;ditos</a> - 
-				<a href="<?php echo esc_url( __( 'http://br.wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Desenvolvido com WordPress', 'twentytwelve' ); ?>"><?php printf( __( 'Desenvolvido com %s', 'twentytwelve' ), 'WordPress' ); ?></a>
+				<strong><?php bloginfo( 'name' ); ?></strong>
+				<br/>
+				Telefone: (11) 3151-2333 - Ramais 130 e 170 &bull; <a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>">Entre em contato</a>
+				<br/> 
+				<a href="<?php echo esc_url( home_url( '/termo-de-uso/' ) ); ?>">Termo de uso</a> &bull; 
+				<a href="<?php echo esc_url( home_url( '/creditos/' ) ); ?>">Créditos</a> &bull; 
+				<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.pt" target="_blank">Creative Commons</a> &bull; 
+				<a href="<?php echo esc_url( __( 'http://br.wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Desenvolvido com WordPress', 'twentytwelve' ); ?>">WordPress</a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
