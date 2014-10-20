@@ -553,6 +553,10 @@ body.custom-font-enabled {
 	margin: 0;
 }
 
+.home .wrapper {
+	margin-bottom: 1.5em;
+}
+
 /* Header */
 .site-header {
 	width: 980px;

@@ -193,94 +193,98 @@ get_header(); ?>
 
 <div class="clear"></div>
 
-<div class="col-3">
-	<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeo</a></h3>
-	<?php
-	$videos = new WP_Query ( array(
-		'ignore_sticky_posts' => true,
-		'posts_per_page' => 1,
-		'tax_query' => array(
-	        array(
-	            'taxonomy' 	=> 'post_format',
-	            'field' 	=> 'slug',
-	            'terms' 	=> 'post-format-video',
-      		)
-      	)
-	));
-	
-	if ( $videos->have_posts() ) : while ( $videos->have_posts() ) : $videos->the_post(); ?>
-
-	<div <?php post_class( 'clearfix' ); ?>>
-		<?php mapadosplanos_the_video(); ?>
-		<h1 class="entry-title-query">
-			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h1>
-		<div class="entry-content-post-home"><?php the_excerpt(); ?></div>
-		<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
-	</div><!-- .post .format-video -->
-
-	<?php endwhile; endif; // end of the loop. ?>
-</div><!-- .col-3 -->
-
-<div class="col-3">
-	<div id="query-posts" class="noticias">
-		<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Notícias</a></h3>
+<div class="tertiary-content clearfix">
+	<div class="col-3">
+		<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeo</a></h3>
 		<?php
-		$mais_noticias = new WP_Query( array(
+		$videos = new WP_Query ( array(
 			'ignore_sticky_posts' => true,
-			'cat' => '-13,-29,-28,-30',
-			'post_status' => 'publish',
-			'posts_per_page' => 3,
-		    'tax_query' => array(
-		        array(                
-		            'taxonomy' => 'post_format',
-		            'field' => 'slug',
-		            'terms' => array( 
-		                'post-format-aside',
-		                'post-format-audio',
-		                'post-format-chat',
-		                'post-format-gallery',
-		                'post-format-image',
-		                'post-format-link',
-		                'post-format-quote',
-		                'post-format-status',
-		                'post-format-video'
-		            ),
-		            'operator' => 'NOT IN'
-		        )
-		    )
-		) );
+			'posts_per_page' => 1,
+			'tax_query' => array(
+		        array(
+		            'taxonomy' 	=> 'post_format',
+		            'field' 	=> 'slug',
+		            'terms' 	=> 'post-format-video',
+	      		)
+	      	)
+		));
+		
+		if ( $videos->have_posts() ) : while ( $videos->have_posts() ) : $videos->the_post(); ?>
 
-		if ( $mais_noticias->have_posts() ) : while ( $mais_noticias->have_posts() ) : $mais_noticias->the_post(); ?>
-
-		<div <?php post_class( 'media' ); ?>>
-			<a class="alignleft" href="<?php echo get_permalink(); ?>">
-				<?php 
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail('thumbnail-mini');
-				}
-				else {
-					echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
-				} 
-				?>
-			</a>
-			<div class="media-body">
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-				<div class="entry-utility">
-					<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
-				</div><!-- .entry-utility -->
-			</div><!-- .media-body -->
-		</div><!-- #cada-post -->
+		<div <?php post_class( 'clearfix' ); ?>>
+			<?php mapadosplanos_the_video(); ?>
+			<h1 class="entry-title-query">
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+			</h1>
+			<div class="entry-content-post-home"><?php the_excerpt(); ?></div>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
+		</div><!-- .post .format-video -->
 
 		<?php endwhile; endif; // end of the loop. ?>
-		<?php wp_reset_query(); // reset query ?>
-	</div>
-</div><!-- .col-3 -->
+	</div><!-- .col-3 -->
 
-<div class="col-3">
-	<h3 class="area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">No Facebook</a></h3>
-	teste
-</div><!-- .col-3 -->
+	<div class="col-3">
+		<div id="query-posts" class="noticias">
+			<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Notícias</a></h3>
+			<?php
+			$mais_noticias = new WP_Query( array(
+				'ignore_sticky_posts' => true,
+				'cat' => '-13,-29,-28,-30',
+				'post_status' => 'publish',
+				'posts_per_page' => 3,
+			    'tax_query' => array(
+			        array(                
+			            'taxonomy' => 'post_format',
+			            'field' => 'slug',
+			            'terms' => array( 
+			                'post-format-aside',
+			                'post-format-audio',
+			                'post-format-chat',
+			                'post-format-gallery',
+			                'post-format-image',
+			                'post-format-link',
+			                'post-format-quote',
+			                'post-format-status',
+			                'post-format-video'
+			            ),
+			            'operator' => 'NOT IN'
+			        )
+			    )
+			) );
+
+			if ( $mais_noticias->have_posts() ) : while ( $mais_noticias->have_posts() ) : $mais_noticias->the_post(); ?>
+
+			<div <?php post_class( 'media' ); ?>>
+				<a class="alignleft" href="<?php echo get_permalink(); ?>">
+					<?php 
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail('thumbnail-mini');
+					}
+					else {
+						echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+					} 
+					?>
+				</a>
+				<div class="media-body">
+					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<div class="entry-utility">
+						<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+					</div><!-- .entry-utility -->
+				</div><!-- .media-body -->
+			</div><!-- #cada-post -->
+
+			<?php endwhile; endif; // end of the loop. ?>
+			<?php wp_reset_query(); // reset query ?>
+		</div>
+	</div><!-- .col-3 -->
+
+	<div class="col-3">
+		<h3 class="area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">No Facebook</a></h3>
+		teste
+	</div><!-- .col-3 -->
+</div><!-- .tertiary-content -->
+
+<div class="clear"></div>
 
 <?php get_footer(); ?>
 
