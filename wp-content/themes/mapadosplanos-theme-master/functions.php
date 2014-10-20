@@ -658,3 +658,21 @@ function get_municipio_fields() {
 
     );
 }
+
+/**
+ * Define a new excerpt length
+ * @param  int $length Excerpt length
+ */
+function mapadosplanos_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'mapadosplanos_excerpt_length', 999 );
+
+/**
+ * Use ellipsis for the excerpt 'more'
+ * @param  string $more
+ */
+function mapadosplanos_more( $more ) {
+	return '&hellip;';
+}
+add_filter('excerpt_more', 'mapadosplanos_more');
