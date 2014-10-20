@@ -1,4 +1,17 @@
 <?php
+/**
+ * Child Theme Post Formats
+ *
+ * Child Themes inherit the post formats defined by the parent theme. Calling add_theme_support()
+ * for post formats in a child theme must be done at a later priority than that of the parent
+ * theme and will override the existing list, not add to it.
+ *
+ * @link http://codex.wordpress.org/Post_Formats#Formats_in_a_Child_Theme
+ */
+function mapadosplanos_childtheme_formats() {
+	add_theme_support( 'post-formats', array( 'video' ) );
+}
+add_action( 'after_setup_theme', 'mapadosplanos_childtheme_formats', 11 );
 
 //Modo de manutenção
 function maintenace_mode() {
