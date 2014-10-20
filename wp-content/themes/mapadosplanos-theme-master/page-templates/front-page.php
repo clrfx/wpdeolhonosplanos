@@ -195,7 +195,7 @@ get_header(); ?>
 
 <div class="tertiary-content clearfix">
 	<div class="col-3">
-		<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeo</a></h3>
+		<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeos</a></h3>
 		<?php
 		$videos = new WP_Query ( array(
 			'ignore_sticky_posts' => true,
@@ -279,8 +279,8 @@ get_header(); ?>
 	</div><!-- .col-3 -->
 
 	<div class="col-3">
-		<h3 class="area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">No Facebook</a></h3>
-		teste
+		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">No Facebook</a></h3>
+		Feed de atividades do FB
 	</div><!-- .col-3 -->
 </div><!-- .tertiary-content -->
 
