@@ -776,7 +776,7 @@ footer[role="contentinfo"] a:hover {
 
 /* Media object */
 .media .entry-title {
-	font-size: 1.125em;
+	font-size: 1em;
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
