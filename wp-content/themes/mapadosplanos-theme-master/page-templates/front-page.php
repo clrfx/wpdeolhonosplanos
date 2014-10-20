@@ -21,9 +21,32 @@ get_header(); ?>
 
 		<div class="news-main col-3">
 			<?php
-			$rs = new WP_Query( array ( 'ignore_sticky_posts' => true, cat => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 1 ) );
-			if ( $rs->have_posts() ) : while ( $rs->have_posts() ) : $rs->the_post(); 
-		?>
+			$destaques = new WP_Query( array(
+				'ignore_sticky_posts' => true,
+				'cat' => '-13,-29,-28,-30',
+				'post_status' => 'publish',
+				'posts_per_page' => 1,
+			    'tax_query' => array(
+			        array(                
+			            'taxonomy' => 'post_format',
+			            'field' => 'slug',
+			            'terms' => array( 
+			                'post-format-aside',
+			                'post-format-audio',
+			                'post-format-chat',
+			                'post-format-gallery',
+			                'post-format-image',
+			                'post-format-link',
+			                'post-format-quote',
+			                'post-format-status',
+			                'post-format-video'
+			            ),
+			            'operator' => 'NOT IN'
+			        )
+			    )
+			) );
+
+			if ( $destaques->have_posts() ) : while ( $destaques->have_posts() ) : $destaques->the_post(); ?>
 
 			<div <?php post_class(); ?>>
 				<a class="link-img-destacada" href="<?php echo get_permalink(); ?>">
@@ -46,16 +69,39 @@ get_header(); ?>
 				</div><!-- .entry-content -->
 			</div><!-- #cada-post -->
 
-		<?php endwhile; endif; // end of the loop. ?>
+			<?php endwhile; endif; // end of the loop. ?>
 		<?php wp_reset_query(); // reset query ?>
 		</div>
 
 		<div class="news-list col-3">
 			<?php
+			$mais_noticias = new WP_Query( array(
+				'ignore_sticky_posts' => true,
+				'cat' => '-13,-29,-28,-30',
+				'post_status' => 'publish',
+				'posts_per_page' => 3,
+				'offset' => 1,
+			    'tax_query' => array(
+			        array(                
+			            'taxonomy' => 'post_format',
+			            'field' => 'slug',
+			            'terms' => array( 
+			                'post-format-aside',
+			                'post-format-audio',
+			                'post-format-chat',
+			                'post-format-gallery',
+			                'post-format-image',
+			                'post-format-link',
+			                'post-format-quote',
+			                'post-format-status',
+			                'post-format-video'
+			            ),
+			            'operator' => 'NOT IN'
+			        )
+			    )
+			) );
 
-			$oi = new WP_Query( array ( 'cat' => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 3 ) );
-			if ( $oi->have_posts() ) : while ( $oi->have_posts() ) : $oi->the_post(); 
-			?>
+			if ( $mais_noticias->have_posts() ) : while ( $mais_noticias->have_posts() ) : $mais_noticias->the_post(); ?>
 
 
 				<div <?php post_class( 'media' ); ?>>
@@ -179,26 +225,52 @@ get_header(); ?>
 <div class="col-3">
 	<div id="query-posts" class="noticias">
 		<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Notícias</a></h3>
-		<?php if ( query_posts( array ( 'cat' => '-13,-29,-28,-30','post_status' => 'publish', 'posts_per_page' => 3 ) ) ) : while ( have_posts() ) : the_post();  ?>
+		<?php
+		$mais_noticias = new WP_Query( array(
+			'ignore_sticky_posts' => true,
+			'cat' => '-13,-29,-28,-30',
+			'post_status' => 'publish',
+			'posts_per_page' => 3,
+		    'tax_query' => array(
+		        array(                
+		            'taxonomy' => 'post_format',
+		            'field' => 'slug',
+		            'terms' => array( 
+		                'post-format-aside',
+		                'post-format-audio',
+		                'post-format-chat',
+		                'post-format-gallery',
+		                'post-format-image',
+		                'post-format-link',
+		                'post-format-quote',
+		                'post-format-status',
+		                'post-format-video'
+		            ),
+		            'operator' => 'NOT IN'
+		        )
+		    )
+		) );
 
-			<div <?php post_class( 'media' ); ?>>
-				<a class="alignleft" href="<?php echo get_permalink(); ?>">
-					<?php 
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail('thumbnail-mini');
-					}
-					else {
-						echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
-					} 
-					?>
-				</a>
-				<div class="media-body">
-					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-					<div class="entry-utility">
-						<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-utility -->
-				</div><!-- .media-body -->
-			</div><!-- #cada-post -->
+		if ( $mais_noticias->have_posts() ) : while ( $mais_noticias->have_posts() ) : $mais_noticias->the_post(); ?>
+
+		<div <?php post_class( 'media' ); ?>>
+			<a class="alignleft" href="<?php echo get_permalink(); ?>">
+				<?php 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail('thumbnail-mini');
+				}
+				else {
+					echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+				} 
+				?>
+			</a>
+			<div class="media-body">
+				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<div class="entry-utility">
+					<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+				</div><!-- .entry-utility -->
+			</div><!-- .media-body -->
+		</div><!-- #cada-post -->
 
 		<?php endwhile; endif; // end of the loop. ?>
 		<?php wp_reset_query(); // reset query ?>
