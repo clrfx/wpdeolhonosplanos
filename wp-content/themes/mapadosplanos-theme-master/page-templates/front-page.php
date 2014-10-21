@@ -60,7 +60,7 @@ get_header(); ?>
 							the_post_thumbnail('category-sticky', array('class'	=> "category-image"));
 						}
 						else {
-							echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+							echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-small.png" />';
 						} 
 						?>
 					</a>
@@ -85,7 +85,7 @@ get_header(); ?>
 							the_post_thumbnail('thumbnail-mini');
 						}
 						else {
-							echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+							echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-mini.png" />';
 						} 
 						?>
 					</a>
@@ -243,7 +243,7 @@ get_header(); ?>
 						the_post_thumbnail('thumbnail-mini');
 					}
 					else {
-						echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+						echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-mini.png" />';
 					} 
 					?>
 				</a>
