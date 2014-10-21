@@ -553,7 +553,7 @@ body.custom-font-enabled {
 	margin: 0;
 }
 
-.home .wrapper {
+.pane {
 	margin-bottom: 1.5em;
 }
 
@@ -3331,11 +3331,9 @@ a.seta-down-home {
     width: 85px;
 }
 
-
 #query-posts {
     margin: 0;
     overflow: hidden;
-    width: 104%;
 	margin: 0 0 20px;
 }
 
