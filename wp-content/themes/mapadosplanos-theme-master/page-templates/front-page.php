@@ -17,6 +17,9 @@ get_header(); ?>
 <div class="featured-content pane clearfix">
 	<div class="featured-slider content-slider col-3">
 		<?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
+		<?php if ( current_user_can( 'switch_themes' ) ) : ?>
+		<span class="edit-link"><a href="<?php echo admin_url('admin.php?page=content-slide/content_slide.php'); ?>" class="post-edit-link"><?php _e( 'Edit', 'twentyten' ); ?></a></span>
+		<?php endif; ?>
 	</div>
 
 	<?php
@@ -68,10 +71,10 @@ get_header(); ?>
 					<h1 class="entry-title-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					<div class="entry-content-post-home">
 						<?php the_excerpt(); ?>
-						<div class="entry-utility">
-							<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
-						</div><!-- .entry-utility -->
 					</div><!-- .entry-content -->
+					<div class="entry-utility">
+						<?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+					</div><!-- .entry-utility -->
 				</div><!-- .post -->
 			</div><!-- .news-main .col-3 -->
 
@@ -197,7 +200,8 @@ get_header(); ?>
 			<h1 class="entry-title-query">
 				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
-			<div class="entry-content-post-home"><?php the_excerpt(); ?></div>
+			<div class="entry-content-post-home"><?php the_excerpt(); ?><?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?></div>
+
 			<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
 		</div><!-- .post .format-video -->
 
