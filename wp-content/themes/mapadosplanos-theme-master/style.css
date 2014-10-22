@@ -2837,6 +2837,7 @@ min-height: 60px;
 }
 
 #box-below-map {
+	background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
     background: #0C6D8D;
     float: left;
     font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
