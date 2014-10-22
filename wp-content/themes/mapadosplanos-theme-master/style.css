@@ -2309,19 +2309,11 @@ header #searchform div {
   width: 60px;
 }
 
-
-#box-below-map.last #searchform div #searchsubmit {
-width: 17% !important;
-}
-
 #searchform input[type="text"] {
   font-style: italic;
   font-family: 'Open Sans';
   /*box-shadow: none;*/
   border: 1px solid #aaa;
-}
-#searchform input[type="text"] {
-
 }
 
 /* Categorias */
