@@ -2833,7 +2833,7 @@ min-height: 60px;
 }
 
 #box-below-map {
-    background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 transparent;
+    background: #0C6D8D;
     float: left;
     font-family: "Open Sans Condensed",Helvetica,Arial,sans-serif;
     margin-bottom: 1.2em;
@@ -2847,7 +2847,7 @@ background: #0F85AB;
 }
 
 #box-below-map:hover {
-	background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 transparent;
 }
 
 [if IE] #box-below-map:hover {
@@ -2869,18 +2869,18 @@ background: #0F85AB;
 
 #box-below-map span a {
 	display: block;
-	color: #c6cdd3;
+	color: #fff;
 	font-size: 1.2em;
 	padding: 1.35em 1em;
 }
 
 
 #box-below-map span a:hover {
-    color: #FFFFFF;
+    color: #fff;
 }
 
 #box-below-map span.box-busca-mapa {
-   color: #C6CDD3;
+   	color: #fff;
     display: block;
     font-size: 1.2em;
     padding: 0.3em;
