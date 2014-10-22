@@ -145,7 +145,7 @@ get_header(); ?>
 	</div><!-- .container-mapa -->
 
 	<div class="col col-3 container-prateleira">
-		<h3 class="area-title">Prateleira</h3>
+		<h3 class="area-title">Mão na massa</h3>
 		<div class="prateleira">
 			<ul class="prateleira-list">
 				<li class="prateleira-item">
@@ -265,7 +265,7 @@ get_header(); ?>
 	</div><!-- .col-3 -->
 
 	<div class="col-3">
-		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">No Facebook</a></h3>
+		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">Redes Sociais</a></h3>
 		<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FDeOlhoNosPlanos&amp;width&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=true&amp;appId=341357382712484" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:395px;" allowTransparency="true"></iframe>
 	</div><!-- .col-3 -->
 </div><!-- .tertiary-content -->
