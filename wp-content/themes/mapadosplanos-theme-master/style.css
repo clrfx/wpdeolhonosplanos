@@ -828,6 +828,10 @@ footer[role="contentinfo"] a:hover {
 	background: #f5e7c2;
 }
 
+.format-video .wrapper-video iframe {
+	min-height: 215px;
+}
+
 .news-list .entry-title {
 	font-size: 1em;
 }

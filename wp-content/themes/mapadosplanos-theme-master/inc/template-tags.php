@@ -20,7 +20,12 @@ function mapadosplanos_the_video() {
 
 			// Remove predefined proportions
 			$v = preg_replace( '/(width|height)="\d*"\s/', "", $value );
-			echo $v[0];
+			
+			if ( ! empty( $v[0] ) ) {
+				echo '<div class="wrapper-video">';
+				echo $v[0];
+				echo '</div>';
+			}
 
 			// We just want the first one
 			break;
