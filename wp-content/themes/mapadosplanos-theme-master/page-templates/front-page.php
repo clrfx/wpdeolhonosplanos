@@ -216,7 +216,7 @@ get_header(); ?>
 				'ignore_sticky_posts' 	=> true,
 				'cat' 					=> '-13,-29,-28,-30',
 				'post_status' 			=> 'publish',
-				'posts_per_page' 		=> 3,
+				'posts_per_page' 		=> 4,
 				'offset'				=> 4,
 			    'tax_query' 			=> array(
 			        array(                
