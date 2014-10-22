@@ -266,7 +266,7 @@ get_header(); ?>
 
 	<div class="col-3">
 		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">Redes Sociais</a></h3>
-		<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FDeOlhoNosPlanos&amp;width&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=true&amp;appId=341357382712484" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:395px;" allowTransparency="true"></iframe>
+		<div class="fb-like-box" data-href="https://www.facebook.com/DeOlhoNosPlanos" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
 	</div><!-- .col-3 -->
 </div><!-- .tertiary-content -->
 
