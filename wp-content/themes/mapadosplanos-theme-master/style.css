@@ -3292,18 +3292,23 @@ color: #B54726;
 
 }
 
+.botao-map-wrapper {
+	float: left;
+	width: 38%;
+}
+
 #botao-map {
+	background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
+	background-color: #0C6D8D;
 	font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
 	float: left;
+	margin: 0 0 1.5em 3em;
+    width: 100%;
+}
+
+#botao-map:hover {
 	background: linear-gradient(to bottom, #0F85AB 0%, #2EA2C9 100%) repeat scroll 0 0 #0F85AB;
 	background-color: #0F85AB;
-	 margin: 0 0 1.5em 3em;
-    width: 330px;
-	}
-
-	#botao-map:hover {
-background: linear-gradient(to bottom, #0C6D8D 0%, #2786A6 100%) repeat scroll 0 0 #0C6D8D;
-background-color: #0C6D8D;
 }
 
 
@@ -3625,12 +3630,13 @@ h1.entry-title-giant{
 .single-municipio .site-content {
   width: 100%;
 }
+
 #mapa {
   float: left;
-  width: auto;
+  width: 62%;
   margin-bottom: 20px;
-  height: 350px;
 }
+
 #fichaibge {
   width: 210px;
   margin-top: 340px;

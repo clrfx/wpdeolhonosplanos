@@ -54,6 +54,7 @@
 
 		<?php endif; ?>
 		
+		<div class="botao-map-wrapper">
 		<div id="botao-map">
 		<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="municipio-participar">
 		Quer participar? preencha o Question&aacute;rio Sociedade Civil
@@ -84,6 +85,7 @@
 		<div id="botao-map">
 		<span><a href="<?php echo esc_url( home_url( '/ajuda/' ) ); ?>"> Entenda o Portal</a></span>
 		</div>
+		</div><!-- .botao-map-wrapper -->
 		
 	</div>
 </div>
