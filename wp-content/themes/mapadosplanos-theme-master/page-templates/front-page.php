@@ -202,7 +202,7 @@ get_header(); ?>
 			</h1>
 			<div class="entry-content-post-home"><?php the_excerpt(); ?><?php edit_post_link( __('Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?></div>
 
-			<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg--video"><span class="mais">+</span></a>
 		</div><!-- .post .format-video -->
 
 		<?php endwhile; endif; // end of the loop. ?>

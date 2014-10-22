@@ -3202,6 +3202,10 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 	background-color: #F26122 !important;
 }
 
+.noticias-bg--video {
+	background-color: #00aade !important;
+}
+
 
 .noticias-bg:hover{
 	background-color: #B54726 !important;
