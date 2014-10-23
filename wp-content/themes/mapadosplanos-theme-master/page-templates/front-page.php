@@ -22,8 +22,7 @@ get_header(); ?>
 			
 			$campanha_id = get_category_by_slug( 'campanhas' )->term_id;
 			?>
-
-			<a href="<?php echo get_category_link( $campanha_id ); ?>" class="leia-mais">Conheça outras campanhas</a>
+			<a href="<?php echo get_category_link( $campanha_id ); ?>" class="leia-mais">Conheça as outras campanhas</a>
 			<?php if ( current_user_can( 'switch_themes' ) ) : ?>
 				<span class="edit-link"><a href="<?php echo admin_url('admin.php?page=content-slide/content_slide.php'); ?>" class="post-edit-link"><?php _e( 'Edit', 'twentyten' ); ?></a></span>
 			<?php
@@ -276,7 +275,13 @@ get_header(); ?>
 
 	<div class="col-3">
 		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">Redes Sociais</a></h3>
-		<div class="fb-like-box" data-href="https://www.facebook.com/DeOlhoNosPlanos" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
+		<div class="facebook">
+			<div class="fb-like-box" data-href="https://www.facebook.com/DeOlhoNosPlanos" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false" data-max-rows="6"></div>
+		</div>
+		<div class="twitter">
+			<a class="twitter-timeline" href="https://twitter.com/DeOlhonosPlanos" data-chrome="transparent" data-border-color="#f26122" data-link-color="#f26122" data-widget-id="525350313385922560" height="380" width="100%">Tweets by @DeOlhonosPlanos</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
 	</div><!-- .col-3 -->
 </div><!-- .tertiary-content -->
 

@@ -712,6 +712,11 @@ footer[role="contentinfo"] a:hover {
 	color: #B54726;
 }
 
+/* Redes sociais */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+
 /* Mapa */
 
 .info {
