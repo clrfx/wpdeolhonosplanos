@@ -824,6 +824,35 @@ footer[role="contentinfo"] a:hover {
     text-decoration: none;
 }
 
+.featured-slider .leia-mais {
+	background-color: #f5e7c2;
+	color: #333;
+	display: inline-block;
+	font-size: 0.875em;
+	margin: 0.5em 0 0 0;
+	padding: 0 0 0 0.25em;
+	text-align: right;
+}
+
+.featured-slider .leia-mais:after {
+	background-color: #fd6207;
+	display: inline-block;
+	color: #fff;
+	content: "+";
+	font-size: 2em;
+	font-weight: bold;
+	margin-left: 0.25em;
+	right: 0;
+	padding: 0.1em 0.2em;
+	vertical-align: middle;
+}
+
+.featured-slider .leia-mais:hover {
+	background-color: #f5e7c2;
+	color: #b54726;
+}
+
+
 .home .format-video {
 	background: #f5e7c2;
 }

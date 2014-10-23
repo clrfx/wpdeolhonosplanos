@@ -16,10 +16,20 @@ get_header(); ?>
 
 <div class="featured-content pane clearfix">
 	<div class="featured-slider content-slider col-3">
-		<?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
-		<?php if ( current_user_can( 'switch_themes' ) ) : ?>
-		<span class="edit-link"><a href="<?php echo admin_url('admin.php?page=content-slide/content_slide.php'); ?>" class="post-edit-link"><?php _e( 'Edit', 'twentyten' ); ?></a></span>
-		<?php endif; ?>
+		<?php
+		if ( function_exists( 'wp_content_slider' ) ) :
+			wp_content_slider();
+			
+			$campanha_id = get_category_by_slug( 'campanhas' )->term_id;
+			?>
+
+			<a href="<?php echo get_category_link( $campanha_id ); ?>" class="leia-mais">Conheça outras campanhas</a>
+			<?php if ( current_user_can( 'switch_themes' ) ) : ?>
+				<span class="edit-link"><a href="<?php echo admin_url('admin.php?page=content-slide/content_slide.php'); ?>" class="post-edit-link"><?php _e( 'Edit', 'twentyten' ); ?></a></span>
+			<?php
+			endif;
+		endif;
+		?>
 	</div>
 
 	<?php
