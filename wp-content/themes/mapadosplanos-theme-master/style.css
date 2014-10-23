@@ -4275,11 +4275,18 @@ max-width: 940px;
 	margin-top: 1.5em;
 	font-size: 0.875em;
 	line-height: 1.4;
-	text-align: center;
+}
+
+.site-info-col {
+	width: 50%;
 }
 
 .site-credits {
 	margin: 0;
+}
+
+.site-info-general {
+	float: left;
 }
 
 .site-info-general .site-name {
@@ -4289,7 +4296,9 @@ max-width: 940px;
 .site-info-cc {
 	color: #696a69;
 	font-size: 0.875em;
-	margin-top: 1.375em;
+	float: right;
+	padding-left: 6em;
+	text-align: right;
 }
 
 
