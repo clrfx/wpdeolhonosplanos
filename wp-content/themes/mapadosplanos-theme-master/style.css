@@ -68,10 +68,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
 	line-height: 1;
 }
-/*ol,
-ul {
-	list-style: none;
-}*/
+
+/*Sobreposição dos valores dos elementos*/
+
+a:link,
+a:visited {
+	color:#00aade; 
+}
+
+a:hover, a:active {
+	color: #017094;
+}
 
 blockquote,
 q {
@@ -2581,17 +2588,6 @@ article.post-thumb p{
     font-size: 1.2em;
     margin: 4em 2em 0 0;
 	}
-
-/*Sobreposição dos valores dos elementos*/
-
-a:link,
-a:visited {
-	color:#00aade; 
-}
-
-a:hover, a:active {
-	color: #017094;
-}
 
 .site-content article {
 	border-bottom:0;
