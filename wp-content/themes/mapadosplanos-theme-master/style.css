@@ -2584,7 +2584,8 @@ article.post-thumb p{
 
 /*Sobreposição dos valores dos elementos*/
 
-a, a:visited {
+a:link,
+a:visited {
 	color:#00aade; 
 }
 
