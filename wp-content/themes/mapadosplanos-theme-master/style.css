@@ -3107,6 +3107,14 @@ margin: 0 0 10px 0;
 	margin: 0 0 0.35em 0;
 }
 
+body:not(.home) .prateleira {
+	margin: 0 -1.5em;
+}
+
+body:not(.home) .prateleira-item-title {
+	font-size: 1.25em;
+}
+
 #prateleira {
 	background: url("img/bg-prateleira.jpg") repeat scroll center top transparent;
     margin-left: -20px;
@@ -4318,6 +4326,16 @@ max-width: 940px;
 	/* Campo de busca do mapa */
 	#box-below-map.last {
 		width: 57%;
+	}
+
+	/* Prateleira / Mão na Massa */
+	body:not(.home) .prateleira-item {
+		display: inline-block;
+		width: 33%;
+	}
+
+	body:not(.home) .prateleira-item-description {
+		display: none;
 	}
 
 	/* Footer */
