@@ -664,7 +664,7 @@ function get_municipio_fields() {
  * @param  int $length Excerpt length
  */
 function mapadosplanos_excerpt_length( $length ) {
-	return 20;
+	return 25;
 }
 add_filter( 'excerpt_length', 'mapadosplanos_excerpt_length', 999 );
 
