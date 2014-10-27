@@ -219,7 +219,7 @@ get_header(); ?>
 
 	<div class="col-3">
 		<div id="query-posts" class="noticias">
-			<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Notícias</a></h3>
+			<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Outras notícias</a></h3>
 			<?php
 			$mais_noticias = new WP_Query( array(
 				'ignore_sticky_posts' 	=> true,
