@@ -32,3 +32,36 @@ function mapadosplanos_the_video() {
 		}					
 	}
 }
+
+/**
+ * Show quick links for the Prateleira / Mão na Massa section
+ */
+function mapadosplanos_the_prateleira_list() {
+	?>
+	<div class="prateleira clearfix">
+		<ul class="prateleira-list">
+			<li class="prateleira-item">
+				<a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">
+					<h2 class="prateleira-item-title">Rede De Olho</h2>
+					<p class="prateleira-item-description">Participe e troque informações com pessoas de todo o país sobre os Planos Municipais de Educação</p>
+					<span class="mais">+</span>
+				</a>
+			</li>
+			<li class="prateleira-item">
+				<a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">
+					<h2 class="prateleira-item-title">Coleção</h2>
+					<p class="prateleira-item-description">Faça o download dos materiais do De Olho nos Planos e se junte a esta iniciativa!</p>
+					<span class="mais">+</span>
+				</a>
+			</li>
+			<li class="indicadores-qualidade prateleira-item">
+				<a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">
+					<h2 class="prateleira-item-title">Indicadores da Qualidade na Educação</h2>
+					<p class="prateleira-item-description">Avaliação: conheça nossa proposta de autoavaliação participativa para as escolas</p>
+					<span class="mais">+</span>
+				</a>
+			</li>
+		</ul>
+	</div><!-- .prateleira -->
+	<?php
+}
