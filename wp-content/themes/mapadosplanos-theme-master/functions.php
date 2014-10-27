@@ -678,3 +678,20 @@ function mapadosplanos_fb_sdk() {
 	<?php
 }
 add_action( 'wp_head', 'mapadosplanos_fb_sdk' );
+
+/**
+ * Add a hack for WP Content Slider to work responsively
+ */
+function mapadosplanos_wp_content_slider_css() {
+	?>
+	<!-- WP Content Slider Hack -->
+	<style type="text/css" media="screen">
+		#wpcontent_slider_container,
+		#wpcontent_slider,
+		.cs-wpcontent_slider {
+			width: 100% !important;
+		}
+	</style>
+<?php
+}
+add_action( 'wp_head', 'mapadosplanos_wp_content_slider_css', 11 );
