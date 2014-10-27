@@ -2895,8 +2895,8 @@ background: #0F85AB;
 #box-below-map span a {
 	display: block;
 	color: #fff;
-	font-size: 1.2em;
-	padding: 1.35em 1em;
+	font-size: 1em;
+	padding: 1.5em 1em;
 }
 
 
@@ -2907,7 +2907,7 @@ background: #0F85AB;
 #box-below-map span.box-busca-mapa {
    	color: #fff;
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0.3em;
 }
 
