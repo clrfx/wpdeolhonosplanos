@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div class="featured-content pane clearfix">
-	<div class="featured-slider content-slider col-3">
+	<div class="featured-slider content-slider col col-3">
 		<?php
 		if ( function_exists( 'wp_content_slider' ) ) :
 			wp_content_slider();
@@ -187,7 +187,7 @@ get_header(); ?>
 <div class="clear"></div>
 
 <div class="tertiary-content pane clearfix">
-	<div class="col-3">
+	<div class="col col-3">
 		<h3 class="area-title"><a href="<?php echo get_post_format_link( 'video' ); ?>">Vídeos</a></h3>
 		<?php
 		$videos = new WP_Query ( array(
@@ -217,7 +217,7 @@ get_header(); ?>
 		<?php endwhile; endif; // end of the loop. ?>
 	</div><!-- .col-3 -->
 
-	<div class="col-3">
+	<div class="col col-3">
 		<div id="query-posts" class="noticias">
 			<h3 class="noticias area-title"><a href="<?php echo esc_url( home_url( '/category/noticias/' ) ); ?>">Outras notícias</a></h3>
 			<?php
@@ -273,7 +273,7 @@ get_header(); ?>
 		</div>
 	</div><!-- .col-3 -->
 
-	<div class="col-3">
+	<div class="col col-3">
 		<h3 class="area-title"><a href="https://www.facebook.com/DeOlhoNosPlanos">Redes Sociais</a></h3>
 		<div class="facebook">
 			<div class="fb-like-box" data-href="https://www.facebook.com/DeOlhoNosPlanos" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false" data-max-rows="6"></div>

@@ -511,25 +511,8 @@ body.custom-font-enabled {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-/* General classes */
 .col {
-	float: left;
-}
-
-.col-2-3 {
-	margin-right: 3%;
-	width: 65%;
-}
-
-.col-3 {
-    float: left;
-    margin-right: 3%;
-    width: 31%;
-}
-
-.col:last-child,
-.col-3:last-child {
-	margin-right: 0;
+	margin-bottom: 1.5em;
 }
 
 /* Assistive text */
@@ -717,6 +700,10 @@ footer[role="contentinfo"] a:hover {
     width: 100% !important;
 }
 
+.twitter-timeline {
+	width: 100% !important;
+}
+
 /* Mapa */
 
 .info {
@@ -806,6 +793,12 @@ footer[role="contentinfo"] a:hover {
 
 /* Featured content */
 
+
+
+#wpcontent_slider img {
+	width: 100% !important;
+}
+
 #wpcontent_slider_container .cs-prev, #wpcontent_slider_container .cs-next {
     background: none repeat scroll 0 0 #E92243 !important;
     color: #FFFFFF !important;
@@ -827,6 +820,10 @@ footer[role="contentinfo"] a:hover {
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+.featured-slider {
+	overflow: hidden;
 }
 
 .featured-slider .leia-mais {
@@ -864,6 +861,7 @@ footer[role="contentinfo"] a:hover {
 
 .format-video .wrapper-video iframe {
 	min-height: 215px;
+	width: 100%;
 }
 
 .news-list .entry-title {
@@ -2805,9 +2803,9 @@ min-height: 60px;
 
 #site-logo-fixo {
 	background: url("img/logo-maior.png") no-repeat scroll center -130px rgba(0, 0, 0, 0);
-    float: left;
+	display: block;
     height: 175px;
-    margin: 1.5em 1em 1em 2em;
+	margin: 0 auto;
     width: 300px;
 }
 
@@ -2836,7 +2834,7 @@ min-height: 60px;
 	overflow: hidden;
 	background: url("img/bg-mapa.jpg") repeat scroll center top transparent;
 	background-color: #05A3D3;
-	padding: 1.2em 0;
+	padding: 1.2em;
 }
 
 #barra-mapa.search{
@@ -2847,7 +2845,6 @@ min-height: 60px;
 
 #content-mapa {
     margin: 0 auto;
-    max-width: 582px;
 	overflow: hidden;
 	min-height: 100px;
 }
@@ -2883,10 +2880,9 @@ background: #0F85AB;
 	background: #0C6D8D;
 }
 
-#box-below-map.last{
+#box-below-map.last {
 	margin-right: 0;
 	padding: 0;
-	width: 57%;
 }
 
 #box-below-map span {
@@ -4273,18 +4269,11 @@ max-width: 940px;
 	margin-top: 1.5em;
 	font-size: 0.875em;
 	line-height: 1.4;
-}
-
-.site-info-col {
-	width: 50%;
+	text-align: center;
 }
 
 .site-credits {
 	margin: 0;
-}
-
-.site-info-general {
-	float: left;
 }
 
 .site-info-general .site-name {
@@ -4294,13 +4283,63 @@ max-width: 940px;
 .site-info-cc {
 	color: #696a69;
 	font-size: 0.875em;
-	float: right;
-	padding-left: 6em;
-	text-align: right;
+	margin-top: 2em;
 }
 
 
 /* ESTRUTURA RESPONSIVA */
+
+@media (min-width: 720px) {
+	/* General classes */
+	.col {
+		float: left;
+		margin-bottom: 0;
+	}
+
+	.col-2-3 {
+		margin-right: 3%;
+		width: 65%;
+	}
+
+	.col-3 {
+	    float: left;
+	    margin-right: 3%;
+	    width: 31%;
+	}
+
+	.col:last-child,
+	.col-3:last-child {
+		margin-right: 0;
+	}
+
+	/* Site logo */
+	#site-logo-fixo {
+		float: left;
+		margin-top: 1.2em;
+	}
+
+	/* Campo de busca do mapa */
+	#box-below-map.last {
+		width: 57%;
+	}
+
+	/* Footer */
+	.site-info-col {
+		width: 50%;
+	}
+
+	.site-info-general {
+		float: left;
+		text-align: left;
+	}
+
+	.site-info-cc {
+		float: right;
+		margin-top: 0;
+		padding-left: 6em;
+		text-align: right;
+	}
+}
 
 @media (max-width: 960px) {
 
@@ -4325,11 +4364,6 @@ max-width: 940px;
 
 	.template-front-page .widget-area {
 	display: none;
-	}
-
-
-	#site-logo-fixo {
-	    margin: 1.5em 1em 1em 16em;
 	}
 
 	#tagline {
@@ -4394,12 +4428,11 @@ max-width: 940px;
 	cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 		float: right;
-		width: 10%;
 	}
 
 	.main-navigation ul {
@@ -4417,10 +4450,6 @@ max-width: 940px;
 
 	.template-front-page .site-home {
 		display: none;
-	}
-
-	#site-logo-fixo {
-	margin: 0 1em 1em 2em;
 	}
 
 	.entry-header-page-mae {
@@ -4469,6 +4498,5 @@ max-width: 940px;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-
 
 }
