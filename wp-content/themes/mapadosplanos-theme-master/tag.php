@@ -43,8 +43,7 @@ get_header('resume'); ?>
 				<h1 class="entry-title-query noticias"><?php the_title(); ?></h1>
 				</a>
 				<div class="entry-content-post-home">
-				<?php echo excerpt( 17 ); //Imprime 13 palavras ?> ...
-
+					<?php the_excerpt(); ?>
 				</div>
 				
 				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>

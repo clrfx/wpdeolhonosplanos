@@ -431,22 +431,6 @@ function mapadosplanos_shortcode_voltapost( $atts ){
 
 add_shortcode( 'voltaPost', 'mapadosplanos_shortcode_voltapost' );
 
-
-//Adicionando filtro para quantidade de caracteres do the_excerpt
-// Muda o limite do the_excerpt no child theme do TwentyTwelve
-function excerpt($limit) {
-      $excerpt = explode(' ', get_the_excerpt(), $limit);
-      if (count($excerpt)>=$limit) {
-        array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'';
-      } else {
-        $excerpt = implode(" ",$excerpt);
-      } 
-      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-      return nl2br($excerpt);
-}
-
-
 //Adicionando funções do template reCadastro
 
 add_action( 'wp_ajax_recadastro_search', 'ajax_recadastro_search' );

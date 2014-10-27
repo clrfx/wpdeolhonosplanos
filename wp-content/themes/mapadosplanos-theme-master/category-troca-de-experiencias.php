@@ -70,7 +70,7 @@ get_header('noticias'); ?>
 				<h1 class="entry-title-query noticias"><a class="noticias" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
 				
 				<div class="entry-content-post-category">
-				<?php echo excerpt( 17 ); //Imprime 13 palavras ?> ...
+					<?php the_excerpt(); ?>
 				</div>
 
 				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>
