@@ -3543,18 +3543,18 @@ span.botao-biblioteca {
 
 .entry-header-page-mae {
     background: url("img/bg-titulos-ilustra.png") no-repeat scroll 157px -15px transparent;
-    height: 100px;
+    height: 157px;
     line-height: 1.2;
     margin-bottom: -3em;
-    padding-top: 2.5em;
+    padding-top: 3.5em;
 }
 
 .entry-header-page-mae .entry-title {
-  background: none repeat scroll right top #FCF5D9;
+  	background: rgba(252,245,217,0.9);
     color: #EC3561;
     font-size: 2.5em;
     font-weight: bold;
-    padding: 1.5em 0.75em 1.7em 0;
+    padding: 0 0.5em;
     text-transform: uppercase;
     width: auto;
 }
