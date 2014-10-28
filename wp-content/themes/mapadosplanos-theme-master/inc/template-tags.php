@@ -11,7 +11,7 @@ function mapadosplanos_the_video() {
 	global $post;
 
 	// Get all the post meta
-	$post_meta = get_post_custom();
+	$post_meta = get_post_custom( $post->ID );
 
 	foreach ( $post_meta as $key => $value ) {
 		// Search for _oembed_ keys
@@ -21,7 +21,7 @@ function mapadosplanos_the_video() {
 			// Remove predefined proportions
 			$v = preg_replace( '/(width|height)="\d*"\s/', "", $value );
 			
-			if ( ! empty( $v[0] ) ) {
+			if ( ! empty( $v[0] ) && $v[0] != '{{unknown}}'  ) {
 				echo '<div class="wrapper-video">';
 				echo $v[0];
 				echo '</div>';
