@@ -42,7 +42,7 @@ function mapadosplanos_the_prateleira_list() {
 				</a>
 			</li>
 			<li class="indicadores-qualidade prateleira-item">
-				<a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/">
+				<a class="indicadores-qualidade" href="http://www.indicadoreseducacao.org.br/" target="_blank">
 					<h2 class="prateleira-item-title">Indicadores da Qualidade na Educação</h2>
 					<p class="prateleira-item-description">Avaliação: conheça nossa proposta de autoavaliação participativa para as escolas</p>
 					<span class="mais">+</span>
