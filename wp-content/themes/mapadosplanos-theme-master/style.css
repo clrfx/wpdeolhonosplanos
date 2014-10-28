@@ -3275,12 +3275,12 @@ background: url("img/btn_hover_query-downloads.png") no-repeat scroll right 8px 
 }
 
 .downloads-bg{
-	background-color: #E3e04f !important;
+	background-color: #D3D023 !important;
 }
 
 
 .downloads-bg:hover{
-	background-color: #D3D023 !important;
+	background-color: #E3e04f !important;
 }
 
 .triangulo-downloads {
@@ -3455,7 +3455,7 @@ a.leia-mais:hover {
 }
 
 a.download {
-    background: url("img/download-icone.png") no-repeat scroll 140px 10px #CCC;
+    background: url("img/download-icone.png") no-repeat scroll 105px 10px #CCC;
     float: right;
     margin: 15px 40px 10px 20px;
     padding: 1em 1.5em;
