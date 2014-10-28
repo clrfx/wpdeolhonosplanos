@@ -48,7 +48,7 @@
 			<div class="site-info-cc site-info-col">
 				Este trabalho está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons &ndash; Atribuição 4.0 Internacional</a>.
 				Esta licença permite que outros distribuam, remixem, adaptem e criem a partir do seu trabalho, mesmo para fins comerciais, desde que lhe atribuam o devido crédito pela criação original.
-				<br/><br/><a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/" title="Este obra está licenciado com uma Licença Creative Commons Atribuição 3.0 Brasil"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/80x15.png" /></a>
+				<br/><br/><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" title="Este obra está licenciado com uma Licença Creative Commons Atribuição 3.0 Brasil"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/80x15.png" /></a>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
