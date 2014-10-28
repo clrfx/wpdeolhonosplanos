@@ -702,3 +702,20 @@ function mapadosplanos_wp_content_slider_css() {
 <?php
 }
 add_action( 'wp_head', 'mapadosplanos_wp_content_slider_css', 11 );
+
+/**
+ * Replace the default "_" (underscore) with "-" (hyphen) in protected custom fields for debugging purposes
+ * 
+ * @param bool $protected The default value
+ * @param string $meta_key The meta key
+ * @return bool True for meta keys starting with "-" (hyphen), false otherwise
+ */
+function unprotected_meta( $protected, $meta_key ) {
+
+  $protected = ( '-' == $meta_key[0] );
+	
+	return $protected;
+	
+}
+
+add_filter( 'is_protected_meta', 'unprotected_meta', 10, 2 );
