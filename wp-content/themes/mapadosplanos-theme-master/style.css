@@ -3477,8 +3477,9 @@ a.download-hidden {
 }
 
 a.biblioteca {
-    background: url("img/biblioteca-icone.png") no-repeat scroll 140px 10px #CCC;
+    background: url("img/biblioteca-icone.png") no-repeat scroll 105px 10px #CCC;
     float: right;
+    font-size: 0.875em;
     margin: 15px 40px 10px 20px;
     padding: 1em 1.5em;
     width: 150px;
