@@ -10,27 +10,14 @@ function mapadosplanos_the_video() {
 
 	global $post;
 
-	// Get all the post meta
-	$post_meta = get_post_custom( $post->ID );
+	$video_url = get_post_meta( $post->ID, '_featured_video', true );
 
-	foreach ( $post_meta as $key => $value ) {
-		// Search for _oembed_ keys
-		$pos = strpos($key, '_oembed_');
-		if ( $pos !== false ) {
-
-			// Remove predefined proportions
-			$v = preg_replace( '/(width|height)="\d*"\s/', "", $value );
-			
-			if ( ! empty( $v[0] ) && $v[0] != '{{unknown}}'  ) {
-				echo '<div class="wrapper-video">';
-				echo $v[0];
-				echo '</div>';
-			}
-
-			// We just want the first one
-			break;
-		}					
+	if ( ! empty ( $video_url ) ) {
+		echo '<div class="wrapper-video">';
+		echo wp_oembed_get( $video_url, array( 'height' => 215 ) );
+		echo '</div>';
 	}
+	
 }
 
 /**

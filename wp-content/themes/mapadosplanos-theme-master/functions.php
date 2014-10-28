@@ -18,6 +18,13 @@ add_action( 'after_setup_theme', 'mapadosplanos_childtheme_formats', 11 );
  */
 require get_stylesheet_directory() . '/inc/template-tags.php';
 
+/**
+ * WP Featured Video
+ *
+ * @link https://gist.github.com/eduardozulian/5365161
+ */
+require get_stylesheet_directory() . '/inc/wp-featured-video.php';
+
 //Modo de manutenção
 function maintenace_mode() {
   if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
