@@ -3551,11 +3551,11 @@ span.botao-biblioteca {
 }
 
 .entry-header-page-mae .entry-title {
-  	background: rgba(252,245,217,0.9);
+  	background: none repeat scroll right top #FCF5D9;
     color: #EC3561;
     font-size: 2.5em;
     font-weight: bold;
-    padding: 0 0.5em;
+    padding: 1.5em 0.75em 1.7em 0;
     text-transform: uppercase;
     width: auto;
 }
