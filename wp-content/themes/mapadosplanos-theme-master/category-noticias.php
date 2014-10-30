@@ -28,30 +28,32 @@ get_header('noticias'); ?>
 			else {
 				$sticky = array();
 			}
-			$stickyquery = new WP_Query( array( 'post__in' => $sticky, 'cat' => $cat) );
-			while ($stickyquery->have_posts()) : $stickyquery->the_post(); ?>
-			<div id="cada-noticia-destacada" <?php post_class("category-sticky"); ?>>
-			<a class="link-categoria" href="<?php echo get_permalink(); ?>">
-			<?php 
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail('category-sticky', array('class'	=> "category-image"));
-			}
-			else {
-				echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
-			} 
-			?>
-			</a>
-				<h1 class="entry-title-query-destacado noticias"><a class="noticias" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
-				
-				<div class="entry-content-post-category">
-					<?php the_excerpt(); ?>
-				</div>
-				
-				<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span>
-				</a>
-				
-			</div>		
-			<?php endwhile; ?>
+			
+			if ( ! empty ( $sticky ) ) :
+				$stickyquery = new WP_Query( array( 'post__in' => $sticky, 'cat' => $cat) );
+				while ($stickyquery->have_posts()) : $stickyquery->the_post(); ?>
+					<div id="cada-noticia-destacada" <?php post_class("category-sticky"); ?>>
+						<a class="link-categoria" href="<?php echo get_permalink(); ?>">
+							<?php 
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail('category-sticky', array('class'	=> "category-image"));
+							}
+							else {
+								echo '<img class="category-image" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/thumbnail-default-large.png" />';
+							} 
+							?>
+						</a>
+						<h1 class="entry-title-query-destacado noticias"><a class="noticias" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<div class="entry-content-post-category">
+							<?php the_excerpt(); ?>
+						</div>
+						<a href="<?php the_permalink(); ?>" rel="bookmark" class="leia-mais noticias-bg"><span class="mais">+</span></a>
+					</div><!-- .category-sticky -->	
+			<?php
+				endwhile;
+			endif; ?>
+
+
 			<?php
 			/* Start the regular Loop */
 			while (have_posts()) : the_post();  ?>	
