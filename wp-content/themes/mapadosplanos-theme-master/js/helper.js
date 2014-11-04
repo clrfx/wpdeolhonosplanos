@@ -65,7 +65,7 @@ $(document).ready(function () {
 		
         // Attribute map
         map.ui.attribution.add()
-            .content('<a href="http://deolhonosplanos.org.br/termo-de-uso/">Termo de Uso</a>');
+            .content('<a href="http://www.deolhonosplanos.org.br/termo-de-uso/">Termo de Uso</a>');
 		
         //Place markers
         var markerLayer = mapbox.markers.layer();
