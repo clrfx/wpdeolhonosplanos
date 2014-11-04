@@ -20,22 +20,11 @@ get_header('resume'); ?>
 	</div><!-- #primary -->
 	
 	<div id="prateleira">
-
-
-
-<ul>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Biblioteca</a></li>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de Experi&ecirc;ncias</a></li>
-
-</ul>
-
-
-
-</div>
-
+		<ul>
+			<li class="planos"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
+			<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Biblioteca</a></li>
+			<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Rede de Olho nos Planos</a></li>
+		</ul>
+	</div><!-- #prateleira -->
 
 <?php get_footer(); ?>

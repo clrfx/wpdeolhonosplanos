@@ -24,18 +24,9 @@ get_header('resume'); ?>
 
 
 <ul>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Como fazer uma peti&ccedil;&atilde;o?</a></li>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/processos-participativos/' ) ); ?>">Comiss&otilde;es Permanentes</a></li>
-
-<li class="planos"><a href="<?php echo esc_url( home_url( '/mobilizacao-popular/criancas-e-adolescentes/' ) ); ?>">Mobiliza&ccedil;&atilde;o de Crian&ccedil;as e Adolescentes</a></li>
-
-    
-   
-    
-
-
+	<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Biblioteca</a></li>
+	<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Rede De Olho nos Planos</a></li>
+	<li class="planos"><a href="<?php echo esc_url( home_url( '/mobilizacao-popular/criancas-e-adolescentes/' ) ); ?>">Mobiliza&ccedil;&atilde;o de Crian&ccedil;as e Adolescentes</a></li>
 </ul>
 
 

@@ -103,7 +103,7 @@ get_header('noticias'); ?>
 
 	<ul>
 
-	<li class="home"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de Experi&ecirc;ncias</a></li>
+	<li class="home"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Rede de Olho nos Planos</a></li>
 
 	<li class="home"><a href="<?php echo esc_url( home_url( '/downloads/' ) ); ?>">Downloads</a></li>
 
