@@ -19,11 +19,19 @@ add_action( 'after_setup_theme', 'mapadosplanos_childtheme_formats', 11 );
 require get_stylesheet_directory() . '/inc/template-tags.php';
 
 /**
+ * WP Featured Video Metabox
+ *
+ * A temporary substitute for the oEmbed discovery
+ *
+ */
+require get_stylesheet_directory() . '/inc/wp-video-metabox.php';
+
+/**
  * WP Featured Video
  *
  * @link https://gist.github.com/eduardozulian/5365161
  */
-require get_stylesheet_directory() . '/inc/wp-featured-video.php';
+//require get_stylesheet_directory() . '/inc/wp-featured-video.php';
 
 //Modo de manutenção
 function maintenace_mode() {
