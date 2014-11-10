@@ -86,9 +86,15 @@ function mapadosplanos_admin_stylesheet() {
 		
 }
 
-// Chamando o LigthBox Magnific!
-wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
-wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
+/**
+ * Enqueue scripts and styles.
+ */
+function mapadosplanos_scripts() {
+	// LigthBox Magnific!
+	wp_enqueue_script( 'jquery.magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '', true );
+	wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/js/magnific-popup.css' );
+}
+add_action( 'wp_enqueue_scripts', 'mapadosplanos_scripts' );
 
 // Filtrando a navegação do twenty twelve
 function twentytwelve_content_nav( $html_id ) {
