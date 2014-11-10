@@ -10,11 +10,12 @@ function mapadosplanos_the_video() {
 
 	global $post;
 
-	$video_url = get_post_meta( $post->ID, '_featured_video', true );
+	$video_ID = get_post_meta( $post->ID, '_featured_video', true );
 
-	if ( ! empty ( $video_url ) ) {
+	if ( ! empty ( $video_ID ) ) {
 		echo '<div class="wrapper-video">';
-		echo wp_oembed_get( $video_url, array( 'height' => 215 ) );
+		//echo wp_oembed_get( $video_url, array( 'height' => 215 ) );
+		echo '<iframe height="215" src="http://www.youtube.com/embed/' . $video_ID . '?feature=oembed" frameborder="0" allowfullscreen></iframe>';
 		echo '</div>';
 	}
 	

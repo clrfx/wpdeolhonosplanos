@@ -11,7 +11,7 @@ function mapadosplanos_add_meta_box() {
 
 		add_meta_box(
 			'mapadosplanos_video',
-			__( 'Vídeo destaque', 'mapadosplanos_textdomain' ),
+			__( 'Vídeo do YouTube em destaque', 'mapadosplanos' ),
 			'mapadosplanos_meta_box_callback',
 			$screen,
 			'normal',
@@ -38,7 +38,7 @@ function mapadosplanos_meta_box_callback( $post ) {
 	$value = get_post_meta( $post->ID, '_featured_video', true );
 
 	echo '<p><label for="mapadosplanos_new_field">';
-	_e( 'Endereço do vídeo que estará em destaque na capa. Exemplo: <em>https://www.youtube.com/watch?v=ioKRBe3KVVY</em>.', 'mapadosplanos_textdomain' );
+	_e( 'ID do vídeo que estará em destaque na capa. Exemplo: no endereço <em>https://www.youtube.com/watch?v=ioKRBe3KVVY</em>, <strong><em>ioKRBe3KVVY</em></strong> é o ID do vídeo.', 'mapadosplanos' );
 	echo '</label></p>';
 	echo '<input type="text" id="mapadosplanos_new_field" name="mapadosplanos_new_field" value="' . esc_attr( $value ) . '" size="25" class="widefat" />';
 }
