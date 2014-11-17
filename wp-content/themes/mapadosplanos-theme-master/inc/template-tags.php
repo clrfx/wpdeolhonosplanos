@@ -29,7 +29,7 @@ function mapadosplanos_the_prateleira_list() {
 	<div class="prateleira clearfix">
 		<ul class="prateleira-list">
 			<li class="prateleira-item">
-				<a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">
+				<a href="http://www.rededeolhonosplanos.org.br" target="_blank">
 					<h2 class="prateleira-item-title">Rede De Olho</h2>
 					<p class="prateleira-item-description">Participe e troque informações com pessoas de todo o país sobre os Planos Municipais de Educação</p>
 					<span class="mais">+</span>

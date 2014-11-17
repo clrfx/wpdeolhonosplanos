@@ -23,7 +23,7 @@ get_header('resume'); ?>
 		<ul>
 			<li class="planos"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o De Olho nos Planos</a></li>
 			<li class="planos"><a href="<?php echo esc_url( home_url( '/biblioteca/' ) ); ?>">Biblioteca</a></li>
-			<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Rede de Olho nos Planos</a></li>
+			<li class="planos"><a href="http://www.rededeolhonosplanos.org.br" target="_blank">Rede de Olho nos Planos</a></li>
 		</ul>
 	</div><!-- #prateleira -->
 
