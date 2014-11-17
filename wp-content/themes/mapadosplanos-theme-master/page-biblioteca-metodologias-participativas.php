@@ -61,7 +61,7 @@ if ( $downloads->have_posts() ) : ?>
 
 		<ul>
 
-		<li class="planos"><a href="<?php echo esc_url( home_url( '/planos-de-educacao/banco-de-experiencia/' ) ); ?>">Banco de <br />Experi&ecirc;ncias</a></li>
+		<li class="planos"><a href="http://www.rededeolhonosplanos.org.br" target="_blank">Rede<br/>De Olho nos Planos</a></li>
 
 		<li class="planos"><a href="<?php echo esc_url( home_url( '/colecao/' ) ); ?>">Cole&ccedil;&atilde;o <br />De Olho nos Planos</a></li>
 
